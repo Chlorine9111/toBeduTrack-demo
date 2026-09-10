@@ -1,0 +1,608 @@
+@import 'tailwindcss';
+@import '@heroui/styles';
+
+@plugin 'tailwindcss-animate';
+
+@theme {
+  --spacing-sidebar: var(--sidebar-width);
+  --spacing-sidebar-expanded: var(--sidebar-expanded);
+  --spacing-navbar: var(--navbar-height);
+
+  --container-product: var(--content-max-product);
+  --container-marketing: var(--content-max-marketing);
+
+  --animate-fade-in-up: fade-in-up 0.3s ease-out forwards;
+  --animate-fade-in: fade-in 0.3s ease-out forwards;
+  --animate-scale-in: scale-in 0.2s ease-out forwards;
+  --animate-ink-spread: ink-spread 2s ease-in-out infinite;
+
+  --font-sans: var(--font-body), var(--font-cjk), sans-serif;
+
+  @keyframes ink-spread {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility ws-animate-fade-in {
+  animation: ws-fade-in 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility ws-animate-fade-out {
+  animation: ws-fade-out 200ms cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+@utility ws-animate-slide-up {
+  animation: ws-slide-up 150ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility ws-animate-slide-down {
+  animation: ws-slide-down 150ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility ws-animate-scale-fade-out {
+  animation: ws-scale-fade-out 200ms cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+@utility ws-animate-scale-fade-in {
+  animation: ws-scale-fade-in 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility ws-shimmer-skeleton {
+  background: linear-gradient(90deg, #F7F7F7 25%, #FAFAFA 50%, #F7F7F7 75%);
+  background-size: 200% 100%;
+  animation: ws-shimmer 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+@utility ws-animate-pulse-opacity {
+  animation: ws-pulse-opacity 1.2s ease-in-out infinite;
+}
+
+@utility ws-msg-enter {
+  animation: ws-msg-enter 150ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@layer base {
+  :root {
+    /* Key measurements */
+    --sidebar-width: 56px;
+    --sidebar-expanded: 240px;
+    --navbar-height: 48px;
+    --content-max-product: 720px;
+    --content-max-marketing: 1100px;
+
+    /* HeroUI primary/accent → #FF8B5A 珊瑚橙 */
+    --accent: oklch(0.7547 0.1546 42.86);
+    --accent-foreground: oklch(1 0 0);
+    --focus: var(--accent);
+  }
+}
+
+@layer base {
+  html {
+    background: var(--heroui-background);
+  }
+  body {
+    background: var(--heroui-background);
+    color: var(--heroui-foreground);
+    font-family: var(--font-body), var(--font-cjk), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  /* Scrollbar */
+  .landing-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .landing-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .landing-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+  }
+  .landing-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.12);
+  }
+
+  /* Skeleton */
+  @keyframes skeleton-shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  .skeleton-line {
+    background: linear-gradient(90deg, #F7F7F7 25%, #FAFAFA 50%, #F7F7F7 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+    border-radius: 4px;
+  }
+
+  /* AI Panel slide-down */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Typewriter */
+  @keyframes typewriter-cursor {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  .typewriter-cursor::after {
+    content: '\2588';
+    animation: typewriter-cursor 0.8s step-end infinite;
+    color: #c4c4c4;
+    margin-left: 1px;
+  }
+
+  /* Dot pulse for animated ellipsis */
+  @keyframes dotPulse {
+    0%,
+    60%,
+    100% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+  }
+
+  /* Breath dots */
+  @keyframes breath {
+    0%, 100% { opacity: 0.2; transform: scale(0.75); }
+    50% { opacity: 0.7; transform: scale(1); }
+  }
+
+  /* Workspace animation keyframes */
+  @keyframes ws-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes ws-fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes ws-slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes ws-slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes ws-scale-fade-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+  }
+  @keyframes ws-scale-fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes ws-shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  @keyframes ws-pulse-opacity {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+  @keyframes ws-msg-enter {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px) translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) translateY(-50%);
+    }
+  }
+
+  /* Question bank card enter animation */
+  @keyframes qb-card-enter {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+.animate-qb-card-enter {
+  animation: qb-card-enter 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Reduced motion: disable all workspace animations */
+@media (prefers-reduced-motion: reduce) {
+  .ws-animate-fade-in,
+  .ws-animate-fade-out,
+  .ws-animate-slide-up,
+  .ws-animate-slide-down,
+  .ws-animate-scale-fade-out,
+  .ws-animate-scale-fade-in,
+  .ws-shimmer-skeleton,
+  .ws-animate-pulse-opacity,
+  .ws-msg-enter {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}
+
+/* Tiptap image styles */
+.tiptap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease;
+}
+.tiptap img.ProseMirror-selectednode {
+  outline: 2px solid #5E6AD2;
+  outline-offset: 2px;
+}
+
+/* TipTap table column resize handle */
+.tiptap .tableWrapper {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.tiptap table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+.tiptap table td,
+.tiptap table th {
+  position: relative;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  padding: 6px 10px;
+  min-width: 80px;
+  vertical-align: top;
+}
+
+.tiptap table th {
+  background-color: #F7F7F7;
+  font-weight: 500;
+}
+
+.tiptap .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: -2px;
+  width: 4px;
+  cursor: col-resize;
+  background-color: transparent;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.tiptap .column-resize-handle:hover,
+.tiptap .column-resize-handle.active {
+  background-color: rgba(94, 106, 210, 0.3);
+}
+
+.tiptap.resize-cursor {
+  cursor: col-resize !important;
+}
+
+.tiptap table .selectedCell {
+  background-color: rgba(94, 106, 210, 0.08);
+}
+
+.tiptap table .selectedCell::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 2px solid #5E6AD2;
+  pointer-events: none;
+}
+
+.deskmate-math-text {
+  display: inline;
+}
+
+.deskmate-doc-preview {
+  display: block;
+}
+
+.deskmate-doc-preview .deskmate-math-display {
+  display: block;
+  margin: 0.7em 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.deskmate-doc-preview .deskmate-math-display .katex-display {
+  margin: 0;
+}
+
+.deskmate-doc-preview .deskmate-math-inline {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.deskmate-doc-preview .katex {
+  line-height: 1.45;
+}
+
+.deskmate-doc-preview .katex-display > .katex {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.deskmate-math-text .deskmate-math-display {
+  display: block;
+  margin: 0.7em 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.deskmate-math-text .deskmate-math-display .katex-display {
+  margin: 0;
+}
+
+.deskmate-math-text .deskmate-math-inline {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.deskmate-math-text .katex {
+  line-height: 1.45;
+}
+
+.deskmate-math-text .katex-display > .katex {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-line { animation: none; background: #F7F7F7; }
+}
+
+/* Print styles */
+@media print {
+  html, body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  [data-print-content],
+  [data-print-content] * {
+    visibility: visible !important;
+  }
+
+  [data-print-content] {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 15mm 20mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: white !important;
+  }
+
+  [data-print-hide],
+  .no-print,
+  [data-print-content] [data-print-hide],
+  [data-print-content] .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  [data-print-content] input,
+  [data-print-content] textarea {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    resize: none !important;
+    visibility: visible !important;
+  }
+
+  .print-break-avoid { break-inside: avoid; }
+  .print-break-before { break-before: page; }
+  .print-break-after { break-after: page; }
+
+  @page {
+    margin: 15mm 20mm;
+    size: A4;
+  }
+}
+
+/* Route enter animation */
+@keyframes route-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-route-enter {
+  animation: route-enter 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* List item enter animation */
+@keyframes list-item-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-list-item-enter {
+  animation: list-item-enter 250ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  main { transition: none !important; }
+  .animate-route-enter { animation: none; }
+  .animate-list-item-enter { animation: none; }
+  [style*="animation-delay"] { animation: none !important; }
+  .animate-qb-card-enter { animation-duration: 0ms !important; }
+}

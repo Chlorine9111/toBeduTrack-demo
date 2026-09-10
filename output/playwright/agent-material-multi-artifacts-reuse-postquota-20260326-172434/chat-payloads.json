@@ -1,0 +1,129 @@
+[
+  {
+    "message": "请根据我刚上传并引用的资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。\n\n【前置补充说明】\n- 任务目标：lesson_plan\n- 主题：小说章节内容\n- 时长：45 分钟\n- 请生成可直接上课的教案，包含教学目标、流程、时间分配、提问点和板书/活动建议。",
+    "displayMessage": "请根据我刚上传并引用的资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。",
+    "profileKey": "tm_00832049-f218-478f-9025-325e6abc3701",
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "taskContext": {
+      "kind": "lesson_plan",
+      "action": "lesson_plan",
+      "mode": "fresh",
+      "normalizedRequest": "任务类型：教案；任务目标：lesson_plan；主题：小说章节内容；时长：45 分钟；附件：1 文件, 0 题；教师原话：请根据我刚上传并引用的资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。",
+      "retrievalQuery": "任务类型：教案；任务目标：lesson_plan；主题：小说章节内容；时长：45 分钟；附件：1 文件, 0 题；教师原话：请根据我刚上传并引用的资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。",
+      "sourcePriority": [
+        "当前教师输入",
+        "当前上传材料",
+        "教师知识库与长期记忆",
+        "最近对话上下文"
+      ],
+      "curriculum": "",
+      "topic": "小说章节内容",
+      "scope": "",
+      "count": "",
+      "duration": "45",
+      "attachmentsSummary": "1 文件, 0 题",
+      "attachmentMode": "material_reference",
+      "attachmentUploadIds": [],
+      "poolQuestionCount": 0,
+      "savePreference": "save_after_confirm"
+    }
+  },
+  {
+    "message": "再基于同一份资料，为学生的 chapter discussion + reading response 写作任务生成一份 rubric。要求：4 个维度，包含内容理解、证据引用、分析深度、表达质量。\n\n【前置补充说明】\n- 任务目标：generate_rubric\n- 请输出结构清晰、可直接评估学生表现的 Rubric。",
+    "displayMessage": "再基于同一份资料，为学生的 chapter discussion + reading response 写作任务生成一份 rubric。要求：4 个维度，包含内容理解、证据引用、分析深度、表达质量。",
+    "conversationId": "1db5ce94-e541-4a15-91ae-ca33e2f6792b",
+    "profileKey": "tm_00832049-f218-478f-9025-325e6abc3701",
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "taskContext": {
+      "kind": "rubric",
+      "action": "generate_rubric",
+      "mode": "fresh",
+      "normalizedRequest": "任务类型：Rubric；任务目标：generate_rubric；附件：1 文件, 0 题；教师原话：再基于同一份资料，为学生的 chapter discussion + reading response 写作任务生成一份 rubric。要求：4 个维度，包含内容理解、证据引用、分析深度、表达质量。",
+      "retrievalQuery": "任务类型：Rubric；任务目标：generate_rubric；附件：1 文件, 0 题；教师原话：再基于同一份资料，为学生的 chapter discussion + reading response 写作任务生成一份 rubric。要求：4 个维度，包含内容理解、证据引用、分析深度、表达质量。",
+      "sourcePriority": [
+        "当前教师输入",
+        "当前上传材料",
+        "教师知识库与长期记忆",
+        "最近对话上下文"
+      ],
+      "curriculum": "",
+      "topic": "",
+      "scope": "",
+      "count": "",
+      "duration": "",
+      "attachmentsSummary": "1 文件, 0 题",
+      "attachmentMode": "material_reference",
+      "attachmentUploadIds": [],
+      "poolQuestionCount": 0,
+      "savePreference": "save_after_confirm"
+    }
+  },
+  {
+    "message": "再基于同一份资料生成一份 45 分钟的 lesson plan。要求：围绕小说章节内容，包含教学目标、导入、close reading、讨论活动和 exit ticket。\n\n【前置补充说明】\n- 任务目标：lesson_plan\n- 主题：小说章节内容\n- 时长：45 分钟\n- 请生成可直接上课的教案，包含教学目标、流程、时间分配、提问点和板书/活动建议。",
+    "displayMessage": "再基于同一份资料生成一份 45 分钟的 lesson plan。要求：围绕小说章节内容，包含教学目标、导入、close reading、讨论活动和 exit ticket。",
+    "conversationId": "1db5ce94-e541-4a15-91ae-ca33e2f6792b",
+    "profileKey": "tm_00832049-f218-478f-9025-325e6abc3701",
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "taskContext": {
+      "kind": "lesson_plan",
+      "action": "lesson_plan",
+      "mode": "fresh",
+      "normalizedRequest": "任务类型：教案；任务目标：lesson_plan；主题：小说章节内容；时长：45 分钟；附件：1 文件, 0 题；教师原话：再基于同一份资料生成一份 45 分钟的 lesson plan。要求：围绕小说章节内容，包含教学目标、导入、close reading、讨论活动和 exit ticket。",
+      "retrievalQuery": "任务类型：教案；任务目标：lesson_plan；主题：小说章节内容；时长：45 分钟；附件：1 文件, 0 题；教师原话：再基于同一份资料生成一份 45 分钟的 lesson plan。要求：围绕小说章节内容，包含教学目标、导入、close reading、讨论活动和 exit ticket。",
+      "sourcePriority": [
+        "当前教师输入",
+        "当前上传材料",
+        "教师知识库与长期记忆",
+        "最近对话上下文"
+      ],
+      "curriculum": "",
+      "topic": "小说章节内容",
+      "scope": "",
+      "count": "",
+      "duration": "45",
+      "attachmentsSummary": "1 文件, 0 题",
+      "attachmentMode": "material_reference",
+      "attachmentUploadIds": [],
+      "poolQuestionCount": 0,
+      "savePreference": "save_after_confirm"
+    }
+  },
+  {
+    "message": "再基于同一份资料生成一份 exam。要求：5 道选择题 + 2 道简答题，聚焦章节理解与人物分析，附答案。\n\n【前置补充说明】\n- 任务目标：create_worksheet\n- 主题：章节理解与人物分析\n- 请直接整理成一套卷子。",
+    "displayMessage": "再基于同一份资料生成一份 exam。要求：5 道选择题 + 2 道简答题，聚焦章节理解与人物分析，附答案。",
+    "conversationId": "1db5ce94-e541-4a15-91ae-ca33e2f6792b",
+    "profileKey": "tm_00832049-f218-478f-9025-325e6abc3701",
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "taskContext": {
+      "kind": "exercise",
+      "action": "create_worksheet",
+      "mode": "fresh",
+      "normalizedRequest": "任务类型：习题；任务目标：create_worksheet；主题：章节理解与人物分析；附件：1 文件, 0 题；教师原话：再基于同一份资料生成一份 exam。要求：5 道选择题 + 2 道简答题，聚焦章节理解与人物分析，附答案。",
+      "retrievalQuery": "任务类型：习题；任务目标：create_worksheet；主题：章节理解与人物分析；附件：1 文件, 0 题；教师原话：再基于同一份资料生成一份 exam。要求：5 道选择题 + 2 道简答题，聚焦章节理解与人物分析，附答案。",
+      "sourcePriority": [
+        "当前教师输入",
+        "当前上传材料",
+        "教师知识库与长期记忆",
+        "最近对话上下文"
+      ],
+      "curriculum": "",
+      "topic": "章节理解与人物分析",
+      "scope": "",
+      "count": "",
+      "duration": "",
+      "attachmentsSummary": "1 文件, 0 题",
+      "attachmentMode": "scan_pool_worksheet",
+      "attachmentUploadIds": [],
+      "poolQuestionCount": 0,
+      "savePreference": "temp_only"
+    }
+  }
+]

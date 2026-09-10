@@ -1,0 +1,306 @@
+<!-- Library | All Documents -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#fe8b70",
+              "outline-variant": "#b8b29f",
+              "secondary-container": "#d4e3ff",
+              "primary": "#615e57",
+              "on-tertiary": "#faf9f6",
+              "primary-fixed": "#e7e2d9",
+              "on-primary-container": "#54514b",
+              "secondary-fixed": "#d4e3ff",
+              "on-error": "#fff7f6",
+              "tertiary": "#5e5f5d",
+              "secondary-dim": "#005499",
+              "secondary": "#0060ae",
+              "inverse-surface": "#0f0e09",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-tint": "#615e57",
+              "inverse-on-surface": "#a09c95",
+              "surface-container-highest": "#e9e2ce",
+              "on-secondary-fixed": "#004077",
+              "surface-container": "#f4eddf",
+              "on-secondary": "#f8f8ff",
+              "surface-variant": "#e9e2ce",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#fef9ef",
+              "tertiary-container": "#f4f3f0",
+              "on-primary": "#fdf7ee",
+              "tertiary-dim": "#525351",
+              "on-tertiary-container": "#5b5c5a",
+              "on-tertiary-fixed": "#494a48",
+              "on-error-container": "#742410",
+              "tertiary-fixed": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "primary-fixed-dim": "#d9d4cb",
+              "on-surface-variant": "#635f4f",
+              "error-dim": "#5c1202",
+              "surface-bright": "#fef9ef",
+              "error": "#9e422c",
+              "background": "#fef9ef",
+              "secondary-fixed-dim": "#bcd6ff",
+              "outline-solid": "#7f7b6a",
+              "on-primary-fixed-variant": "#5e5b54",
+              "on-primary-fixed": "#413f39",
+              "on-background": "#363225",
+              "inverse-primary": "#fef9ef",
+              "surface-dim": "#e1dac3",
+              "primary-dim": "#55524c",
+              "on-secondary-container": "#005397",
+              "on-tertiary-fixed-variant": "#666664",
+              "surface-container-low": "#f9f3e7",
+              "on-surface": "#363225",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "primary-container": "#e7e2d9"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="fixed left-0 top-0 h-full w-[56px] hover:w-[240px] transition-all duration-300 ease-in-out z-50 bg-[#F7F6F3] dark:bg-slate-900 flex flex-col py-4 px-2 overflow-hidden font-['Inter'] antialiased text-[0.875rem] leading-[1.6] tracking-normal group">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[#37352F] text-lg">edit_document</span>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-hidden whitespace-nowrap">
+<p class="text-lg font-semibold text-[#37352F] dark:text-white">Deskmate</p>
+<p class="text-[10px] text-[#37352F]/60 tracking-wider uppercase">Editorial Workspace</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0">smart_toy</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Agent Workspace</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 bg-white dark:bg-slate-800 text-[#2383E2] font-semibold rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0">local_library</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Library</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0">quiz</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Question Bank</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0">rule</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Grading</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0">edit_note</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Lesson Studio</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1">
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0">settings</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<div class="w-6 h-6 rounded-full bg-surface-container-high shrink-0 overflow-hidden">
+<img alt="User Profile Avatar" data-alt="Minimalist profile avatar icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9CKSPamqtf5koT4OtKuM7TTeHbt12CvwSS409iqcibvfZTNfwOBBq_8E6vB5keI4YSBUheQ2-iM_vLW43xjBiSWRy6SYe7L8tEyhWMAjHK_NQN3NCKv0ZctLR0AyXFOF6zQPReUb8rTvoyfDDbCe3KIseGrXs77GUMNjeKzc7KFeO7Wu-wJsDYFj9uWZIIF-IsrUe5nU6rLRqA6pKBLMJMxYNsp0WuWj8WmJICWiEE5VOLhk_LSU2K5cYTH3rZJ5WikdURh_7Uw"/>
+</div>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Profile</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar (Execution from JSON) -->
+<header class="fixed top-0 right-0 left-[56px] h-14 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-[#37352f0d] dark:border-slate-800 flex items-center justify-between px-6 w-full font-['Inter'] text-[1.0rem] font-semibold text-[#37352F] dark:text-slate-100">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-[#37352F] dark:text-white">Library</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-[#37352F]/40">search</span>
+<input class="bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-1.5 text-sm w-[280px] focus:ring-1 focus:ring-primary/20 transition-all placeholder-[#37352F]/40" placeholder="Search resources..." type="text"/>
+</div>
+<div class="flex items-center gap-4 border-l border-[#37352f0d] pl-6">
+<button class="flex items-center gap-2 bg-[#37352F] text-white px-4 py-1.5 rounded-lg text-sm hover:bg-primary-dim transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    New
+                </button>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#37352F]/60 hover:text-[#37352F] cursor-pointer transition-colors">notifications</span>
+<span class="material-symbols-outlined text-[#37352F]/60 hover:text-[#37352F] cursor-pointer transition-colors">help_outline</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[56px] mt-14 p-12 max-w-7xl mx-auto">
+<!-- Horizontal Tabs with Deep Underline -->
+<div class="flex items-center gap-8 mb-4">
+<button class="pb-3 px-1 text-sm font-semibold text-[#2383E2] border-b-2 border-[#2383E2] transition-all">All</button>
+<button class="pb-3 px-1 text-sm font-medium text-[#37352F]/60 hover:text-[#37352F] transition-all border-b-2 border-transparent">Rubric</button>
+<button class="pb-3 px-1 text-sm font-medium text-[#37352F]/60 hover:text-[#37352F] transition-all border-b-2 border-transparent">Worksheet</button>
+<button class="pb-3 px-1 text-sm font-medium text-[#37352F]/60 hover:text-[#37352F] transition-all border-b-2 border-transparent">Assessment</button>
+<button class="pb-3 px-1 text-sm font-medium text-[#37352F]/60 hover:text-[#37352F] transition-all border-b-2 border-transparent">Lesson Plan</button>
+</div>
+<!-- Secondary Filter Pills -->
+<div class="flex items-center gap-3 mb-12">
+<button class="px-3 py-1 rounded-full bg-[rgba(227,226,224,0.5)] text-[#37352F] text-xs font-medium hover:bg-[rgba(227,226,224,0.8)] transition-colors">Grade 9</button>
+<button class="px-3 py-1 rounded-full bg-[rgba(221,235,241,0.5)] text-[#2383E2] text-xs font-medium hover:bg-[rgba(221,235,241,0.8)] transition-colors">English Language Arts</button>
+<button class="px-3 py-1 rounded-full bg-[rgba(253,243,208,0.5)] text-[#AD7F24] text-xs font-medium hover:bg-[rgba(253,243,208,0.8)] transition-colors">In-Progress</button>
+<button class="px-3 py-1 rounded-full border border-[rgba(55,53,47,0.08)] text-[#37352F]/60 text-xs font-medium hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[14px] align-middle mr-1">add</span>Add Filter
+            </button>
+</div>
+<!-- Custom Row-Based Content Table -->
+<div class="w-full space-y-1">
+<!-- Table Header -->
+<div class="grid grid-cols-[1fr_120px_140px_140px_80px] px-4 py-2 text-[11px] font-bold text-[#37352F]/40 uppercase tracking-wider">
+<div>Title</div>
+<div>Type</div>
+<div>Subject</div>
+<div>Modified</div>
+<div class="text-right">Actions</div>
+</div>
+<!-- Data Rows -->
+<div class="group grid grid-cols-[1fr_120px_140px_140px_80px] items-center px-4 py-3.5 hover:bg-[#F7F6F3] rounded-lg transition-all duration-200 cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#37352F]/40 text-[20px]">description</span>
+<span class="text-[0.875rem] font-medium text-[#37352F]">Creative Writing Rubric: Short Stories</span>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[rgba(234,228,242,0.5)] text-[#9065B0] uppercase">Rubric</span>
+</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">English Arts</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">2 hours ago</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">edit</span>
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">more_horiz</span>
+</div>
+</div>
+<div class="group grid grid-cols-[1fr_120px_140px_140px_80px] items-center px-4 py-3.5 hover:bg-[#F7F6F3] rounded-lg transition-all duration-200 cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#37352F]/40 text-[20px]">assignment</span>
+<span class="text-[0.875rem] font-medium text-[#37352F]">Advanced Algebra - Worksheet 04</span>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[rgba(221,237,234,0.5)] text-[#4D7C0F] uppercase">Worksheet</span>
+</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Mathematics</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Yesterday</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">edit</span>
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">more_horiz</span>
+</div>
+</div>
+<div class="group grid grid-cols-[1fr_120px_140px_140px_80px] items-center px-4 py-3.5 hover:bg-[#F7F6F3] rounded-lg transition-all duration-200 cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#37352F]/40 text-[20px]">quiz</span>
+<span class="text-[0.875rem] font-medium text-[#37352F]">Mid-term History Examination</span>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[rgba(255,226,221,0.5)] text-[#DF5452] uppercase">Assessment</span>
+</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Social Studies</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Oct 12, 2023</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">edit</span>
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">more_horiz</span>
+</div>
+</div>
+<div class="group grid grid-cols-[1fr_120px_140px_140px_80px] items-center px-4 py-3.5 hover:bg-[#F7F6F3] rounded-lg transition-all duration-200 cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#37352F]/40 text-[20px]">import_contacts</span>
+<span class="text-[0.875rem] font-medium text-[#37352F]">Introduction to Photosynthesis</span>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[rgba(250, 235, 221, 0.5)] text-[#CC772F] uppercase">Lesson Plan</span>
+</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Biology</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Oct 09, 2023</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">edit</span>
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">more_horiz</span>
+</div>
+</div>
+<div class="group grid grid-cols-[1fr_120px_140px_140px_80px] items-center px-4 py-3.5 hover:bg-[#F7F6F3] rounded-lg transition-all duration-200 cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#37352F]/40 text-[20px]">description</span>
+<span class="text-[0.875rem] font-medium text-[#37352F]">Peer Feedback Protocol v2.1</span>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[rgba(238, 224, 218, 0.5)] text-[#976D57] uppercase">Rubric</span>
+</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Collaborative Learning</div>
+<div class="text-[0.8125rem] text-[#37352F]/60">Sep 28, 2023</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">edit</span>
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40 hover:text-[#2383E2]">more_horiz</span>
+</div>
+</div>
+</div>
+<!-- Featured / Recent Work (Bento Component) -->
+<section class="mt-20">
+<h2 class="text-[1.0rem] font-semibold text-[#37352F] mb-6">Recent Workflows</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bento Card 1 -->
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between h-[300px]">
+<div>
+<span class="text-[10px] font-bold text-[#2383E2] uppercase tracking-widest mb-2 block">Featured Template</span>
+<h3 class="text-2xl font-bold text-[#37352F] leading-tight max-w-sm">Curate high-performance assessments in seconds.</h3>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-[#37352F] text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-primary-dim transition-all">Launch Studio</button>
+<p class="text-xs text-[#37352F]/40 italic">Used by 42 teachers this week</p>
+</div>
+</div>
+<!-- Bento Card 2 -->
+<div class="bg-surface-container-high rounded-xl p-8 flex flex-col justify-between h-[300px]">
+<div class="w-12 h-12 rounded-lg bg-white/50 backdrop-blur-xs flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[#37352F]">auto_awesome</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-[#37352F]">AI Grade Assistant</h4>
+<p class="text-sm text-[#37352F]/60 mt-1">Automate grading for structured rubrics with 98% accuracy.</p>
+</div>
+<a class="text-[#2383E2] text-sm font-semibold flex items-center gap-1 group" href="#">
+                        Explore Tool 
+                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Editorial Spacing Footer -->
+<footer class="mt-32 pb-16 border-t border-[#37352f0d] pt-8 flex justify-between items-center opacity-40">
+<p class="text-[11px] font-medium tracking-widest uppercase">Deskmate Editorial Workspace © 2024</p>
+<div class="flex gap-6">
+<a class="text-[11px] font-medium tracking-widest uppercase hover:text-[#37352F]" href="#">Documentation</a>
+<a class="text-[11px] font-medium tracking-widest uppercase hover:text-[#37352F]" href="#">System Status</a>
+</div>
+</footer>
+</main>
+</body></html>
+
+<!-- AI Grading | Overview -->

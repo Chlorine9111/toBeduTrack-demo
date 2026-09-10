@@ -1,0 +1,2 @@
+- 中等层要求：必须包含 example block。
+- 中等层建议：包含 think callout，引导学生解释理由。

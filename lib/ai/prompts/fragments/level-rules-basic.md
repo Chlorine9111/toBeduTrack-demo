@@ -1,0 +1,3 @@
+- 基础层要求：必须包含 definition block。
+- 基础层要求：example steps 必须详细，不少于 5 步。
+- 基础层建议：在学生最容易犯错的核心概念处包含 1 个 misconception callout（不必每个 section 都有）。

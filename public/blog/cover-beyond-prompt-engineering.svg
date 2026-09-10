@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="630" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#37352F"/>
+      <stop offset="100%" stop-color="#434038"/>
+    </linearGradient>
+    <radialGradient id="center-glow" cx="600" cy="300" r="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#d4a574" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <ellipse cx="600" cy="300" rx="350" ry="280" fill="url(#center-glow)"/>
+
+  <!-- Subtle concentric rings -->
+  <g opacity="0.04" stroke="#e9e2ce" stroke-width="0.5" fill="none">
+    <circle cx="600" cy="300" r="100"/>
+    <circle cx="600" cy="300" r="160"/>
+    <circle cx="600" cy="300" r="220"/>
+    <circle cx="600" cy="300" r="280"/>
+  </g>
+
+  <!-- Pentagon connecting the 5 competencies -->
+  <!-- Pentagon vertices (72° apart): top, upper-right, lower-right, lower-left, upper-left -->
+  <!-- Using radius 160 centered at (600, 310) -->
+  <!-- top: 600, 150 | ur: 752, 259 | lr: 694, 439 | ll: 506, 439 | ul: 448, 259 -->
+
+  <!-- Pentagon outline -->
+  <polygon
+    points="600,150 752,259 694,439 506,439 448,259"
+    stroke="#e9e2ce" stroke-width="1" opacity="0.15" fill="none"
+  />
+
+  <!-- Inner star connections (each vertex to non-adjacent vertices) -->
+  <g stroke="#d4a574" stroke-width="0.8" opacity="0.1">
+    <line x1="600" y1="150" x2="694" y2="439"/>
+    <line x1="600" y1="150" x2="506" y2="439"/>
+    <line x1="752" y1="259" x2="506" y2="439"/>
+    <line x1="752" y1="259" x2="448" y2="259"/>
+    <line x1="694" y1="439" x2="448" y2="259"/>
+  </g>
+
+  <!-- Competency 1: Critical Evaluation (top) - Eye/lens symbol -->
+  <g transform="translate(600, 150)">
+    <circle r="28" fill="#37352F" stroke="#d4a574" stroke-width="1.5" opacity="0.5"/>
+    <circle r="24" fill="#37352F"/>
+    <ellipse rx="16" ry="10" fill="none" stroke="#d4a574" stroke-width="1.2" opacity="0.6"/>
+    <circle r="5" fill="#d4a574" opacity="0.5"/>
+    <circle r="2" fill="#e9e2ce" opacity="0.7"/>
+  </g>
+
+  <!-- Competency 2: Question Design (upper-right) - Question mark / spark -->
+  <g transform="translate(752, 259)">
+    <circle r="28" fill="#37352F" stroke="#2383E2" stroke-width="1.5" opacity="0.5"/>
+    <circle r="24" fill="#37352F"/>
+    <text x="-8" y="8" font-family="Georgia, serif" font-size="24" fill="#2383E2" opacity="0.6" font-weight="bold">?</text>
+  </g>
+
+  <!-- Competency 3: Process Pedagogy (lower-right) - Flow/cycle arrows -->
+  <g transform="translate(694, 439)">
+    <circle r="28" fill="#37352F" stroke="#9065B0" stroke-width="1.5" opacity="0.5"/>
+    <circle r="24" fill="#37352F"/>
+    <g opacity="0.5" stroke="#9065B0" stroke-width="1.2" fill="none">
+      <path d="M-8,-8 L8,-8 L8,0" stroke-linecap="round"/>
+      <path d="M8,8 L-8,8 L-8,0" stroke-linecap="round"/>
+      <polygon points="8,-2 12,0 8,2" fill="#9065B0"/>
+      <polygon points="-8,2 -12,0 -8,-2" fill="#9065B0"/>
+    </g>
+  </g>
+
+  <!-- Competency 4: Ethical Navigation (lower-left) - Balance/scale -->
+  <g transform="translate(506, 439)">
+    <circle r="28" fill="#37352F" stroke="#2e7d32" stroke-width="1.5" opacity="0.5"/>
+    <circle r="24" fill="#37352F"/>
+    <g opacity="0.5" stroke="#2e7d32" stroke-width="1.2" fill="none">
+      <line x1="0" y1="-10" x2="0" y2="8"/>
+      <line x1="-10" y1="-6" x2="10" y2="-6"/>
+      <path d="M-10,-6 L-14,2 L-6,2 Z"/>
+      <path d="M10,-6 L6,2 L14,2 Z"/>
+      <line x1="-4" y1="8" x2="4" y2="8"/>
+    </g>
+  </g>
+
+  <!-- Competency 5: Augmented Workflow (upper-left) - Gear + human -->
+  <g transform="translate(448, 259)">
+    <circle r="28" fill="#37352F" stroke="#e9e2ce" stroke-width="1.5" opacity="0.4"/>
+    <circle r="24" fill="#37352F"/>
+    <g opacity="0.45">
+      <!-- Simple gear -->
+      <circle cx="4" cy="-2" r="7" stroke="#e9e2ce" stroke-width="1" fill="none"/>
+      <circle cx="4" cy="-2" r="3" fill="#e9e2ce" opacity="0.4"/>
+      <!-- Gear teeth suggestions -->
+      <line x1="4" y1="-10" x2="4" y2="-12" stroke="#e9e2ce" stroke-width="2" stroke-linecap="round"/>
+      <line x1="4" y1="6" x2="4" y2="8" stroke="#e9e2ce" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-4" y1="-2" x2="-6" y2="-2" stroke="#e9e2ce" stroke-width="2" stroke-linecap="round"/>
+      <line x1="12" y1="-2" x2="14" y2="-2" stroke="#e9e2ce" stroke-width="2" stroke-linecap="round"/>
+      <!-- Person silhouette -->
+      <circle cx="-6" cy="4" r="3" fill="#e9e2ce" opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- Connecting energy lines from center to vertices -->
+  <g opacity="0.08" stroke="#e9e2ce" stroke-width="1">
+    <line x1="600" y1="300" x2="600" y2="150"/>
+    <line x1="600" y1="300" x2="752" y2="259"/>
+    <line x1="600" y1="300" x2="694" y2="439"/>
+    <line x1="600" y1="300" x2="506" y2="439"/>
+    <line x1="600" y1="300" x2="448" y2="259"/>
+  </g>
+
+  <!-- Center: teacher figure -->
+  <circle cx="600" cy="300" r="16" fill="#d4a574" opacity="0.25"/>
+  <circle cx="600" cy="300" r="8" fill="#d4a574" opacity="0.4"/>
+  <circle cx="600" cy="300" r="3" fill="#e9e2ce" opacity="0.6"/>
+
+  <!-- Floating ambient particles -->
+  <g opacity="0.08" fill="#e9e2ce">
+    <circle cx="200" cy="150" r="2"/>
+    <circle cx="1000" cy="180" r="1.5"/>
+    <circle cx="150" cy="480" r="1.5"/>
+    <circle cx="1050" cy="500" r="2"/>
+    <circle cx="300" cy="80" r="1"/>
+    <circle cx="900" cy="550" r="1"/>
+    <circle cx="100" cy="300" r="1.5"/>
+    <circle cx="1100" cy="350" r="1"/>
+  </g>
+
+  <!-- Number "5" watermark -->
+  <text x="570" y="330" font-family="Georgia, serif" font-size="40" fill="#e9e2ce" opacity="0.06" font-weight="bold">5</text>
+</svg>

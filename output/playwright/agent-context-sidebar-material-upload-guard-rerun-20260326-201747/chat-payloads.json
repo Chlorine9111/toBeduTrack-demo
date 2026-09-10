@@ -1,0 +1,65 @@
+[
+  {
+    "message": "请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。\n\n【前置补充说明】\n- 任务目标：research\n- 请优先给出可核验来源，并把结论和出处一一对应。",
+    "displayMessage": "请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。",
+    "profileKey": "tm_28c7903c-24b6-4056-818b-3785476d4e55",
+    "contentAssetIds": [
+      "9fa5d58b-ac8a-4d10-9bca-57e50a7ba4d1"
+    ],
+    "taskContext": {
+      "kind": "research",
+      "action": "research",
+      "mode": "fresh",
+      "normalizedRequest": "任务类型：检索研究；任务目标：research；附件：1 文件, 0 题；教师原话：请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。",
+      "retrievalQuery": "任务类型：检索研究；任务目标：research；附件：1 文件, 0 题；教师原话：请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。",
+      "sourcePriority": [
+        "当前教师输入",
+        "当前上传材料",
+        "联网结果",
+        "最近对话上下文"
+      ],
+      "curriculum": "",
+      "topic": "",
+      "scope": "",
+      "count": "",
+      "duration": "",
+      "attachmentsSummary": "1 文件, 0 题",
+      "attachmentMode": "material_reference",
+      "attachmentUploadIds": [],
+      "poolQuestionCount": 0,
+      "savePreference": "save_after_confirm"
+    }
+  },
+  {
+    "message": "再根据刚才这份资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。\n\n【前置补充说明】\n- 任务目标：lesson_plan\n- 主题：小说章节内容\n- 时长：45 分钟\n- 请生成可直接上课的教案，包含教学目标、流程、时间分配、提问点和板书/活动建议。",
+    "displayMessage": "再根据刚才这份资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。",
+    "conversationId": "fb103f59-3233-465f-a8b0-82df9307339e",
+    "profileKey": "tm_28c7903c-24b6-4056-818b-3785476d4e55",
+    "contentAssetIds": [
+      "9fa5d58b-ac8a-4d10-9bca-57e50a7ba4d1"
+    ],
+    "taskContext": {
+      "kind": "lesson_plan",
+      "action": "lesson_plan",
+      "mode": "fresh",
+      "normalizedRequest": "任务类型：教案；任务目标：lesson_plan；主题：小说章节内容；时长：45 分钟；附件：1 文件, 0 题；教师原话：再根据刚才这份资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。",
+      "retrievalQuery": "任务类型：教案；任务目标：lesson_plan；主题：小说章节内容；时长：45 分钟；附件：1 文件, 0 题；教师原话：再根据刚才这份资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。",
+      "sourcePriority": [
+        "当前教师输入",
+        "当前上传材料",
+        "教师知识库与长期记忆",
+        "最近对话上下文"
+      ],
+      "curriculum": "",
+      "topic": "小说章节内容",
+      "scope": "",
+      "count": "",
+      "duration": "45",
+      "attachmentsSummary": "1 文件, 0 题",
+      "attachmentMode": "material_reference",
+      "attachmentUploadIds": [],
+      "poolQuestionCount": 0,
+      "savePreference": "save_after_confirm"
+    }
+  }
+]

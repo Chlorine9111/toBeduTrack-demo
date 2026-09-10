@@ -1,0 +1,348 @@
+<!-- PBL | Project Detail -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Plastic Crisis | Project Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary": "#faf9f6",
+              "surface-container": "#f4eddf",
+              "surface-container-highest": "#e9e2ce",
+              "error-container": "#fe8b70",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-container": "#5b5c5a",
+              "on-primary-container": "#54514b",
+              "on-error-container": "#742410",
+              "error": "#9e422c",
+              "on-tertiary-fixed": "#494a48",
+              "surface": "#fef9ef",
+              "surface-container-low": "#f9f3e7",
+              "surface-dim": "#e1dac3",
+              "inverse-primary": "#fef9ef",
+              "tertiary-fixed": "#f4f3f0",
+              "primary": "#615e57",
+              "on-primary-fixed": "#413f39",
+              "on-error": "#fff7f6",
+              "primary-dim": "#55524c",
+              "on-tertiary-fixed-variant": "#666664",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#5e5b54",
+              "outline-variant": "#b8b29f",
+              "inverse-on-surface": "#a09c95",
+              "surface-tint": "#615e57",
+              "on-surface-variant": "#635f4f",
+              "secondary": "#0060ae",
+              "tertiary-container": "#f4f3f0",
+              "surface-variant": "#e9e2ce",
+              "tertiary-dim": "#525351",
+              "primary-container": "#e7e2d9",
+              "error-dim": "#5c1202",
+              "primary-fixed": "#e7e2d9",
+              "surface-container-high": "#eee8d6",
+              "on-primary": "#fdf7ee",
+              "inverse-surface": "#0f0e09",
+              "background": "#fef9ef",
+              "on-secondary-fixed-variant": "#005ca8",
+              "secondary-container": "#d4e3ff",
+              "on-secondary": "#f8f8ff",
+              "on-secondary-container": "#005397",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "secondary-dim": "#005499",
+              "tertiary": "#5e5f5d",
+              "secondary-fixed-dim": "#bcd6ff",
+              "outline-solid": "#7f7b6a",
+              "on-surface": "#363225",
+              "on-secondary-fixed": "#004077",
+              "on-background": "#363225",
+              "surface-bright": "#fef9ef"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fef9ef;
+            color: #363225;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 4px 20px rgba(55, 53, 47, 0.04);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- SideNavBar (Shared Component) -->
+<nav class="w-[56px] h-screen fixed left-0 top-0 flex flex-col items-center py-6 z-50 bg-[#F7F6F3] dark:bg-stone-900 transition-all duration-200 ease-in-out">
+<div class="mb-8">
+<span class="material-symbols-outlined text-[#37352F] dark:text-stone-100" style="font-size: 28px;">auto_awesome</span>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="p-2 rounded-lg transition-all duration-200 ease-in-out text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+</a>
+<a class="p-2 rounded-lg transition-all duration-200 ease-in-out text-[#2383E2] dark:text-blue-400 bg-white dark:bg-stone-800 shadow-xs" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+</a>
+<a class="p-2 rounded-lg transition-all duration-200 ease-in-out text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F]" href="#">
+<span class="material-symbols-outlined">tactic</span>
+</a>
+<a class="p-2 rounded-lg transition-all duration-200 ease-in-out text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F]" href="#">
+<span class="material-symbols-outlined">grade</span>
+</a>
+<div class="mt-auto pt-10">
+<a class="p-2 rounded-lg transition-all duration-200 ease-in-out text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F]" href="#">
+<span class="material-symbols-outlined">settings</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-[56px] h-14 w-auto flex justify-between items-center px-8 z-40 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md border-b border-[#37352F]/10 dark:border-stone-800">
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 text-[#37352F]/60 hover:text-[#37352F] transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-[#37352F] dark:text-stone-100">The Plastic Crisis</h1>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-[rgba(221,237,234,0.5)] text-[#4D7C0F]">ENVIRONMENT</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-[rgba(234,228,242,0.5)] text-[#9065B0]">GRADE 9</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-surface-container-low px-3 py-1.5 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-sm mr-2 text-on-surface-variant">search</span>
+<input class="bg-transparent border-none text-[10px] font-medium focus:ring-0 p-0 w-32 uppercase tracking-wider" placeholder="SEARCH WORKSPACE" type="text"/>
+</div>
+<div class="flex items-center gap-2 border-l border-outline-variant/30 pl-4">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[56px] mt-14 p-12 lg:p-24 flex justify-center bg-surface">
+<article class="w-full max-w-[840px] flex flex-col gap-16">
+<!-- Hero Card -->
+<section class="relative bg-[#37352F] rounded-xl overflow-hidden p-12 text-white">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-xs font-medium uppercase tracking-[0.2em] text-white/60">AI Generated Curriculum</span>
+</div>
+<h2 class="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1]">The Plastic <br/>Crisis</h2>
+<p class="text-lg text-white/80 max-w-xl leading-relaxed mb-12">
+                        An inquiry-based exploration of global waste management systems. Students will investigate the lifecycle of synthetic polymers and design local community interventions to reduce microplastic contamination.
+                    </p>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-10">
+<div>
+<p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Difficulty</p>
+<p class="text-lg font-medium">Advanced</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Duration</p>
+<p class="text-lg font-medium">6 Weeks</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Subject</p>
+<p class="text-lg font-medium">Science</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Standard</p>
+<p class="text-lg font-medium">NGSS HS-LS2</p>
+</div>
+</div>
+</div>
+<!-- Subtle Background Texture -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-white/5 to-transparent pointer-events-none"></div>
+</section>
+<!-- Driving Question -->
+<section class="bg-[rgba(221,235,241,0.5)] border-l-4 border-secondary p-10 rounded-r-xl">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-4">The Driving Question</p>
+<blockquote class="text-3xl font-semibold text-on-surface leading-tight italic">
+                    "How can we engineer a circular economy at a municipal level to eliminate plastic waste from our local watershed by 2030?"
+                </blockquote>
+</section>
+<!-- Phase Design -->
+<section>
+<div class="flex items-baseline justify-between mb-12">
+<h3 class="text-2xl font-semibold tracking-tight">Project Phases</h3>
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">04 Key Milestones</span>
+</div>
+<div class="space-y-12 relative before:absolute before:left-8 before:top-4 before:bottom-4 before:w-px before:bg-outline-variant/20">
+<!-- Phase 1 -->
+<div class="relative pl-24 group">
+<div class="absolute left-0 top-0 w-16 h-16 rounded-full bg-surface-container-lowest border-4 border-surface editorial-shadow flex items-center justify-center z-10 transition-transform group-hover:scale-105">
+<span class="text-xl font-bold text-primary">01</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8">
+<h4 class="text-lg font-semibold mb-6">Launch &amp; Discovery</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="text-[10px] font-bold text-on-surface/40 uppercase tracking-widest mb-3">Activities</p>
+<ul class="text-sm space-y-2 text-on-surface/80">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-0.5 text-secondary">fiber_manual_record</span>
+                                            Documentary screening and guest lecture.
+                                        </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-0.5 text-secondary">fiber_manual_record</span>
+                                            Initial waste-stream audit at home.
+                                        </li>
+</ul>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface/40 uppercase tracking-widest mb-3">Objectives</p>
+<p class="text-sm text-on-surface/80 leading-relaxed">
+                                        Identify the scale of global plastic pollution and establish personal relevance through local observation.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="relative pl-24 group">
+<div class="absolute left-0 top-0 w-16 h-16 rounded-full bg-surface-container-lowest border-4 border-surface editorial-shadow flex items-center justify-center z-10 transition-transform group-hover:scale-105">
+<span class="text-xl font-bold text-primary">02</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8">
+<h4 class="text-lg font-semibold mb-6">Chemical Analysis</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="text-[10px] font-bold text-on-surface/40 uppercase tracking-widest mb-3">Activities</p>
+<ul class="text-sm space-y-2 text-on-surface/80">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-0.5 text-secondary">fiber_manual_record</span>
+                                            Laboratory polymer identification.
+                                        </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-0.5 text-secondary">fiber_manual_record</span>
+                                            Degradation rate modeling.
+                                        </li>
+</ul>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface/40 uppercase tracking-widest mb-3">Objectives</p>
+<p class="text-sm text-on-surface/80 leading-relaxed">
+                                        Understand the molecular structure of plastics and why biological systems struggle to break them down.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="relative pl-24 group">
+<div class="absolute left-0 top-0 w-16 h-16 rounded-full bg-surface-container-lowest border-4 border-surface editorial-shadow flex items-center justify-center z-10 transition-transform group-hover:scale-105">
+<span class="text-xl font-bold text-primary">03</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8">
+<h4 class="text-lg font-semibold mb-6">Intervention Design</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="text-[10px] font-bold text-on-surface/40 uppercase tracking-widest mb-3">Activities</p>
+<ul class="text-sm space-y-2 text-on-surface/80">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-0.5 text-secondary">fiber_manual_record</span>
+                                            Rapid prototyping of filter systems.
+                                        </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-0.5 text-secondary">fiber_manual_record</span>
+                                            Community stakeholder interviews.
+                                        </li>
+</ul>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface/40 uppercase tracking-widest mb-3">Objectives</p>
+<p class="text-sm text-on-surface/80 leading-relaxed">
+                                        Apply engineering design principles to create a scalable solution for a specific local context.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Rubric -->
+<section class="mb-12">
+<div class="flex items-baseline justify-between mb-8">
+<h3 class="text-2xl font-semibold tracking-tight">Assessment Rubric</h3>
+<button class="text-[10px] font-bold text-secondary uppercase tracking-widest hover:underline">Download PDF</button>
+</div>
+<div class="overflow-hidden rounded-xl border border-outline-variant/20 editorial-shadow bg-surface-container-lowest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#37352F] text-white">
+<th class="p-5 text-[10px] font-bold uppercase tracking-widest">Criteria</th>
+<th class="p-5 text-[10px] font-bold uppercase tracking-widest">Exemplary (4)</th>
+<th class="p-5 text-[10px] font-bold uppercase tracking-widest">Proficient (3)</th>
+<th class="p-5 text-[10px] font-bold uppercase tracking-widest">Developing (2)</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b border-outline-variant/10">
+<td class="p-5 font-semibold bg-surface-container-low w-32">Research Depth</td>
+<td class="p-5 text-on-surface/70">Extensive data sets and peer-reviewed sources.</td>
+<td class="p-5 text-on-surface/70">Multiple reliable sources cited correctly.</td>
+<td class="p-5 text-on-surface/70">Limited sourcing or over-reliance on one medium.</td>
+</tr>
+<tr class="border-b border-outline-variant/10 bg-surface-container/20">
+<td class="p-5 font-semibold bg-surface-container-low">Prototype Design</td>
+<td class="p-5 text-on-surface/70">Fully functional, tested, and iterative design.</td>
+<td class="p-5 text-on-surface/70">Functional prototype with minor flaws.</td>
+<td class="p-5 text-on-surface/70">Conceptual model only, no testing data.</td>
+</tr>
+<tr>
+<td class="p-5 font-semibold bg-surface-container-low">Scientific Literacy</td>
+<td class="p-5 text-on-surface/70">Advanced mastery of polymer chemistry.</td>
+<td class="p-5 text-on-surface/70">Accurate use of chemical terminology.</td>
+<td class="p-5 text-on-surface/70">Frequent misuse of scientific terms.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Footer Actions -->
+<footer class="flex items-center justify-between pt-12 border-t border-outline-variant/20 mb-24">
+<div class="flex items-center gap-4">
+<button class="bg-[#37352F] text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary-dim transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+                        Deploy to LMS
+                    </button>
+<button class="px-6 py-3 rounded-lg text-sm font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors">
+                        Save as Draft
+                    </button>
+</div>
+<p class="text-[10px] font-medium text-on-surface/40 uppercase tracking-widest">Last edited Oct 24, 2023</p>
+</footer>
+</article>
+</main>
+</body></html>
+
+<!-- Privacy Policy (V1) -->

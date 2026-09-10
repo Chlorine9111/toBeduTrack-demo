@@ -1,0 +1,333 @@
+<!-- Templates Library -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dim": "#55524c",
+              "tertiary": "#5e5f5d",
+              "error-container": "#fe8b70",
+              "surface-container-low": "#f9f3e7",
+              "surface-dim": "#e1dac3",
+              "on-tertiary-fixed": "#494a48",
+              "on-secondary-fixed": "#004077",
+              "primary-fixed": "#e7e2d9",
+              "on-surface-variant": "#635f4f",
+              "error": "#9e422c",
+              "on-error": "#fff7f6",
+              "inverse-surface": "#0f0e09",
+              "tertiary-container": "#f4f3f0",
+              "surface": "#fef9ef",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "on-error-container": "#742410",
+              "tertiary-dim": "#525351",
+              "secondary": "#0060ae",
+              "on-tertiary-fixed-variant": "#666664",
+              "primary-fixed-dim": "#d9d4cb",
+              "inverse-on-surface": "#a09c95",
+              "primary-container": "#e7e2d9",
+              "on-primary": "#fdf7ee",
+              "background": "#fef9ef",
+              "surface-bright": "#fef9ef",
+              "outline-variant": "#b8b29f",
+              "secondary-dim": "#005499",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-container": "#5b5c5a",
+              "surface-variant": "#e9e2ce",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d4e3ff",
+              "inverse-primary": "#fef9ef",
+              "on-surface": "#363225",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-container": "#f4eddf",
+              "on-tertiary": "#faf9f6",
+              "on-primary-container": "#54514b",
+              "on-secondary-container": "#005397",
+              "on-secondary": "#f8f8ff",
+              "on-background": "#363225",
+              "surface-container-highest": "#e9e2ce",
+              "on-primary-fixed": "#413f39",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary-fixed": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "error-dim": "#5c1202",
+              "surface-tint": "#615e57",
+              "primary": "#615e57"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.8px", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .skeleton-line { height: 8px; background: rgba(55, 53, 47, 0.08); border-radius: 4px; }
+        .skeleton-block { height: 40px; background: rgba(55, 53, 47, 0.05); border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-white text-on-surface antialiased selection:bg-secondary/20">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col py-4 px-2 h-screen border-r border-transparent w-[56px] hover:w-[240px] transition-all duration-300 ease-in-out overflow-hidden bg-[#F7F6F3] dark:bg-stone-900 font-['Inter'] text-sm antialiased group">
+<div class="flex items-center gap-3 px-3 mb-8">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">edit_note</span>
+</div>
+<div class="flex flex-col whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="text-lg font-semibold text-[#37352F] dark:text-stone-100 tracking-tight">Deskmate</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">Editorial Workspace</span>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">search</span>
+<span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Search</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">inbox</span>
+<span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Inbox</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">edit_note</span>
+<span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Drafts</span>
+</a>
+<!-- Active State Logic: Templates is active for this page -->
+<a class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-stone-800 text-[#2383E2] font-medium rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">auto_awesome_motion</span>
+<span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Templates</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">archive</span>
+<span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Archive</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1 border-t border-on-surface/5 pt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 transition-colors rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">history</span>
+<span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">History</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 transition-colors rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">settings</span>
+<span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[56px] min-h-screen bg-white">
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-[56px] z-30 flex justify-between items-center px-8 h-14 bg-white/80 backdrop-blur-md font-['Inter'] text-[0.875rem] font-medium border-b border-on-surface/5">
+<div class="flex items-center gap-6">
+<h1 class="text-xl font-bold text-[#37352F] tracking-tight">Deskmate</h1>
+<div class="hidden md:flex items-center gap-4 ml-4">
+<a class="text-[#37352F]/70 hover:text-[#37352F] transition-opacity" href="#">Drafts</a>
+<a class="text-[#2383E2] border-b-2 border-[#2383E2] pb-1" href="#">Templates</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-3 py-1.5 text-[#37352F]/70 hover:bg-stone-100 rounded transition-colors">Share</button>
+<button class="px-4 py-1.5 bg-[#37352F] text-white rounded-lg font-medium text-sm hover:bg-primary-dim transition-colors">Export</button>
+<div class="flex items-center gap-2 pl-4 border-l border-on-surface/10">
+<span class="material-symbols-outlined text-[#37352F]/60 cursor-pointer">smart_toy</span>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Teacher profile avatar headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-JItZP3cNfzvUpwstppw89T9WJJUssiDk-dpVHzdOi5h9YSHwG3ISwDMj0pkg3RkzCLjsdRRf-6F9CkNG6LzqmicbI8Kf9rmQUYOGpHJgYttTSMS0Vhc4LNSegiuKZB2yV7nvZ9wZv42oyeGp8hfAq2zpeprXpJXl_E22osMMOY8Yz9702kS730penSvacQAPW6oSJT2OyfDWNBUhrZoFDLcWLTH9iP2dm1PRLg7JEEnVVeTjRCjb3hdWhLrvvPzVuLKqH6ag2Q"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="pt-24 pb-16 px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="mb-12">
+<h2 class="text-[2rem] font-bold text-[#37352F] tracking-tight mb-2">Templates</h2>
+<p class="text-[#37352F]/60 text-lg">Start with a pre-built template to accelerate your editorial workflow.</p>
+</div>
+<!-- Filter & Search Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 pb-6 border-b border-on-surface/5">
+<div class="flex items-center gap-1 overflow-x-auto no-scrollbar">
+<button class="px-4 py-2 bg-surface-container-high text-[#37352F] font-semibold rounded-full text-sm">All</button>
+<button class="px-4 py-2 text-[#37352F]/60 hover:text-[#37352F] hover:bg-stone-100 rounded-full text-sm transition-colors">Rubric</button>
+<button class="px-4 py-2 text-[#37352F]/60 hover:text-[#37352F] hover:bg-stone-100 rounded-full text-sm transition-colors">Worksheet</button>
+<button class="px-4 py-2 text-[#37352F]/60 hover:text-[#37352F] hover:bg-stone-100 rounded-full text-sm transition-colors">Lesson Plan</button>
+<button class="px-4 py-2 text-[#37352F]/60 hover:text-[#37352F] hover:bg-stone-100 rounded-full text-sm transition-colors">Assessment</button>
+</div>
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container border-none focus:ring-1 focus:ring-secondary/30 rounded-xl text-sm placeholder:text-[#37352F]/40 transition-all" placeholder="Search templates..." type="text"/>
+</div>
+</div>
+<!-- Template Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group cursor-pointer flex flex-col h-full rounded-2xl overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-4/3 bg-[#F7F6F3] p-8 relative overflow-hidden">
+<!-- Skeleton Document -->
+<div class="bg-white h-full w-full rounded shadow-xs p-6 flex flex-col gap-4">
+<div class="w-1/3 h-3 bg-on-surface/10 rounded"></div>
+<div class="skeleton-block w-full"></div>
+<div class="flex flex-col gap-2">
+<div class="skeleton-line w-full"></div>
+<div class="skeleton-line w-11/12"></div>
+<div class="skeleton-line w-4/5"></div>
+</div>
+<div class="mt-auto grid grid-cols-2 gap-4">
+<div class="h-8 border border-dashed border-on-surface/10 rounded"></div>
+<div class="h-8 border border-dashed border-on-surface/10 rounded"></div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 flex flex-col gap-3">
+<h3 class="font-semibold text-[#37352F] text-base group-hover:text-[#2383E2] transition-colors">Comprehensive Course Rubric</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-[rgba(221,235,241,0.5)] text-[#2383E2] text-[11px] font-medium rounded uppercase tracking-wider">Rubric</span>
+<span class="px-2 py-0.5 bg-[rgba(234,228,242,0.5)] text-[#9065B0] text-[11px] font-medium rounded uppercase tracking-wider">Higher Ed</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer flex flex-col h-full rounded-2xl overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-4/3 bg-[#F7F6F3] p-8 relative overflow-hidden">
+<div class="bg-white h-full w-full rounded shadow-xs p-6 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-on-surface/5"></div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="w-2/3 h-2 bg-on-surface/10 rounded"></div>
+<div class="w-1/2 h-2 bg-on-surface/5 rounded"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<div class="h-2 w-full bg-on-surface/5 rounded"></div>
+<div class="h-2 w-full bg-on-surface/5 rounded"></div>
+<div class="h-2 w-3/4 bg-on-surface/5 rounded"></div>
+</div>
+<div class="bg-surface-container-low h-24 rounded-lg border-2 border-dashed border-on-surface/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface/10">image</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 flex flex-col gap-3">
+<h3 class="font-semibold text-[#37352F] text-base group-hover:text-[#2383E2] transition-colors">Weekly Planning Worksheet</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-[rgba(221,237,234,0.5)] text-[#4D7C0F] text-[11px] font-medium rounded uppercase tracking-wider">Worksheet</span>
+<span class="px-2 py-0.5 bg-[rgba(253,243,208,0.5)] text-[#AD7F24] text-[11px] font-medium rounded uppercase tracking-wider">General</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer flex flex-col h-full rounded-2xl overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-4/3 bg-[#F7F6F3] p-8 relative overflow-hidden">
+<div class="bg-white h-full w-full rounded shadow-xs p-8 flex flex-col gap-4 text-center">
+<div class="w-16 h-1 bg-on-surface/10 mx-auto rounded"></div>
+<div class="w-2/3 h-4 bg-on-surface/10 mx-auto rounded"></div>
+<div class="mt-4 flex flex-col gap-2">
+<div class="h-1 bg-on-surface/5 rounded"></div>
+<div class="h-1 bg-on-surface/5 rounded"></div>
+<div class="h-1 bg-on-surface/5 rounded"></div>
+<div class="h-1 bg-on-surface/5 rounded"></div>
+</div>
+<div class="mt-auto flex justify-center gap-2">
+<div class="w-6 h-6 rounded bg-on-surface/5"></div>
+<div class="w-6 h-6 rounded bg-on-surface/5"></div>
+<div class="w-6 h-6 rounded bg-on-surface/5"></div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 flex flex-col gap-3">
+<h3 class="font-semibold text-[#37352F] text-base group-hover:text-[#2383E2] transition-colors">STEM Assessment Guide</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-[rgba(255,226,221,0.5)] text-[#DF5452] text-[11px] font-medium rounded uppercase tracking-wider">Assessment</span>
+<span class="px-2 py-0.5 bg-[rgba(221,235,241,0.5)] text-[#2383E2] text-[11px] font-medium rounded uppercase tracking-wider">Science</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group cursor-pointer flex flex-col h-full rounded-2xl overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-4/3 bg-[#F7F6F3] p-8 relative overflow-hidden">
+<div class="bg-white h-full w-full rounded shadow-xs p-6 overflow-hidden">
+<div class="flex gap-4 h-full">
+<div class="w-24 bg-on-surface/5 rounded-l flex flex-col gap-2 p-2">
+<div class="h-1 w-full bg-on-surface/10"></div>
+<div class="h-1 w-full bg-on-surface/10"></div>
+<div class="h-1 w-full bg-on-surface/10"></div>
+</div>
+<div class="flex-1 py-4 flex flex-col gap-3">
+<div class="h-3 w-1/2 bg-on-surface/10"></div>
+<div class="h-1 w-full bg-on-surface/5"></div>
+<div class="h-1 w-full bg-on-surface/5"></div>
+<div class="h-1 w-3/4 bg-on-surface/5"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 flex flex-col gap-3">
+<h3 class="font-semibold text-[#37352F] text-base group-hover:text-[#2383E2] transition-colors">Inquiry-Based Lesson Map</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-[rgba(250,235,221,0.5)] text-[#CC772F] text-[11px] font-medium rounded uppercase tracking-wider">Lesson Plan</span>
+<span class="px-2 py-0.5 bg-[rgba(245,224,233,0.5)] text-[#D44C47] text-[11px] font-medium rounded uppercase tracking-wider">English</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group cursor-pointer flex flex-col h-full rounded-2xl overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-4/3 bg-[#F7F6F3] p-8 relative overflow-hidden">
+<div class="bg-white h-full w-full rounded shadow-xs p-6 flex flex-col gap-4">
+<div class="grid grid-cols-4 gap-2">
+<div class="h-6 bg-secondary/10 rounded"></div>
+<div class="h-6 bg-on-surface/5 rounded"></div>
+<div class="h-6 bg-on-surface/5 rounded"></div>
+<div class="h-6 bg-on-surface/5 rounded"></div>
+</div>
+<div class="flex-1 flex flex-col gap-2">
+<div class="h-2 w-1/4 bg-on-surface/10 rounded mt-4"></div>
+<div class="h-1 w-full bg-on-surface/5"></div>
+<div class="h-1 w-full bg-on-surface/5"></div>
+<div class="h-1 w-11/12 bg-on-surface/5"></div>
+</div>
+<div class="h-12 bg-on-surface/5 rounded mt-auto"></div>
+</div>
+</div>
+<div class="bg-white p-6 flex flex-col gap-3">
+<h3 class="font-semibold text-[#37352F] text-base group-hover:text-[#2383E2] transition-colors">Universal Design for Learning</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-[rgba(227,226,224,0.5)] text-[#37352F] text-[11px] font-medium rounded uppercase tracking-wider">Framework</span>
+<span class="px-2 py-0.5 bg-[rgba(238,224,218,0.5)] text-[#976D57] text-[11px] font-medium rounded uppercase tracking-wider">Special Ed</span>
+</div>
+</div>
+</div>
+<!-- Card 6: Empty Placeholder CTA -->
+<div class="group cursor-pointer border-2 border-dashed border-on-surface/10 flex flex-col items-center justify-center h-full rounded-2xl p-12 bg-[#F7F6F3]/30 hover:bg-stone-50 transition-all duration-300">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary mb-4 shadow-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</div>
+<span class="font-semibold text-[#37352F]">Create from Scratch</span>
+<span class="text-[11px] text-[#37352F]/40 uppercase tracking-widest mt-1">Blank Canvas</span>
+</div>
+</div>
+<!-- Footer Pagination/Info -->
+<div class="mt-20 text-center">
+<p class="text-[12px] text-[#37352F]/40 uppercase tracking-[0.2em] font-medium">End of template library</p>
+<div class="w-12 h-px bg-on-surface/10 mx-auto mt-4"></div>
+</div>
+</div>
+</main>
+<!-- FAB Suppression: Contextual check means no FAB on template browsing as per instructions -->
+</body></html>
+
+<!-- Global Search Modal -->

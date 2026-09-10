@@ -1,0 +1,40 @@
+{
+  "name": "return_pbl_quality_check",
+  "description": "对 PBL 方案执行 12 项质量检查",
+  "input_schema": {
+    "type": "object",
+    "required": ["checks"],
+    "properties": {
+      "checks": {
+        "type": "array",
+        "minItems": 12,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "required": ["key", "status", "note"],
+          "properties": {
+            "key": {
+              "type": "string",
+              "enum": [
+                "driving_question_quality",
+                "core_alignment_exists",
+                "multi_perspective",
+                "originality",
+                "stages_complete",
+                "difficulty_scaffold_match",
+                "curriculum_code_standard",
+                "cross_discipline_depth",
+                "resource_feasibility",
+                "real_audience",
+                "process_assessment_reflection",
+                "rubric_dimensions"
+              ]
+            },
+            "status": { "type": "string", "enum": ["pass", "warning", "fail"] },
+            "note": { "type": "string", "description": "检查结果的具体说明" }
+          }
+        }
+      }
+    }
+  }
+}

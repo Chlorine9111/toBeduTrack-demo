@@ -1,0 +1,324 @@
+<!-- WeChat Editor | Edit -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#525351",
+              "on-secondary-container": "#005397",
+              "surface-container-high": "#eee8d6",
+              "surface": "#fef9ef",
+              "error-dim": "#5c1202",
+              "secondary-fixed-dim": "#bcd6ff",
+              "primary-dim": "#55524c",
+              "on-primary": "#fdf7ee",
+              "surface-container-low": "#f9f3e7",
+              "inverse-on-surface": "#a09c95",
+              "inverse-surface": "#0f0e09",
+              "on-tertiary-fixed-variant": "#666664",
+              "on-secondary-fixed": "#004077",
+              "primary-fixed-dim": "#d9d4cb",
+              "on-surface-variant": "#635f4f",
+              "error": "#9e422c",
+              "on-tertiary": "#faf9f6",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#2383E2",
+              "on-primary-container": "#54514b",
+              "outline-variant": "#b8b29f",
+              "inverse-primary": "#fef9ef",
+              "on-primary-fixed": "#413f39",
+              "secondary-dim": "#005499",
+              "surface-dim": "#e1dac3",
+              "surface-container-highest": "#e9e2ce",
+              "on-tertiary-fixed": "#494a48",
+              "surface-tint": "#615e57",
+              "error-container": "#fe8b70",
+              "primary-container": "#e7e2d9",
+              "outline-solid": "#7f7b6a",
+              "on-surface": "#363225",
+              "surface-variant": "#e9e2ce",
+              "on-secondary": "#f8f8ff",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "on-primary-fixed-variant": "#5e5b54",
+              "background": "#fef9ef",
+              "tertiary": "#5e5f5d",
+              "on-tertiary-container": "#5b5c5a",
+              "surface-bright": "#fef9ef",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-background": "#363225",
+              "tertiary-fixed": "#f4f3f0",
+              "secondary-container": "#d4e3ff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#f4f3f0",
+              "secondary-fixed": "#d4e3ff",
+              "primary": "#615e57",
+              "on-error-container": "#742410"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .editor-canvas { min-height: calc(100vh - 280px); }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary/20">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col py-6 px-3 bg-[#F7F6F3] dark:bg-zinc-900 transition-all duration-300 ease-in-out w-64">
+<div class="flex items-center gap-3 px-3 mb-8">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-on-primary font-bold">D</div>
+<div>
+<h1 class="text-lg font-semibold text-[#37352F] dark:text-zinc-100 leading-none">Deskmate</h1>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase tracking-wider mt-1">Product Workspace</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="text-[0.875rem]">Agent Workspace</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">local_library</span>
+<span class="text-[0.875rem]">Library</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">quiz</span>
+<span class="text-[0.875rem]">Question Bank</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">grading</span>
+<span class="text-[0.875rem]">Grading</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="text-[0.875rem]">Lesson Studio</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">dashboard_customize</span>
+<span class="text-[0.875rem]">Templates</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#2383E2] font-semibold bg-[#FFFFFF] dark:bg-zinc-800 rounded-lg active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[0.875rem]">WeChat Editor</span>
+</div>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 space-y-1">
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[0.875rem]">Settings</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[0.875rem]">User Profile</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen flex flex-col relative bg-white">
+<!-- Top Step Indicator -->
+<header class="h-16 flex items-center justify-center border-b border-transparent bg-surface px-8 z-30">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-on-surface/40 group cursor-default">
+<span class="text-xs font-bold w-5 h-5 rounded-full border border-on-surface/20 flex items-center justify-center">1</span>
+<span class="text-sm font-medium">Mode</span>
+</div>
+<div class="w-8 h-px bg-on-surface/10"></div>
+<div class="flex items-center gap-2 text-on-surface/40 group cursor-default">
+<span class="text-xs font-bold w-5 h-5 rounded-full border border-on-surface/20 flex items-center justify-center">2</span>
+<span class="text-sm font-medium">Outline</span>
+</div>
+<div class="w-8 h-px bg-on-surface/10"></div>
+<div class="flex items-center gap-2 text-on-surface/40 group cursor-default">
+<span class="text-xs font-bold w-5 h-5 rounded-full border border-on-surface/20 flex items-center justify-center">3</span>
+<span class="text-sm font-medium">Template</span>
+</div>
+<div class="w-8 h-px bg-on-surface/10"></div>
+<div class="flex items-center gap-2 text-secondary font-semibold">
+<span class="text-xs font-bold w-5 h-5 rounded-full bg-secondary text-white flex items-center justify-center">4</span>
+<span class="text-sm">Edit</span>
+</div>
+</div>
+</header>
+<!-- Workspace Three-Column Layout -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Left AI Panel (240px) -->
+<aside class="w-[240px] bg-surface-container border-r border-transparent flex flex-col overflow-y-auto hide-scrollbar p-4 space-y-6">
+<div>
+<h3 class="text-[0.6875rem] font-bold text-on-surface/50 uppercase tracking-widest mb-3">AI Commands</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg text-xs font-medium text-on-surface hover:shadow-xs transition-all border border-transparent hover:border-secondary/20">
+<span class="material-symbols-outlined text-secondary scale-75">auto_awesome</span>
+                            Summarize
+                        </button>
+<button class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg text-xs font-medium text-on-surface hover:shadow-xs transition-all border border-transparent hover:border-secondary/20">
+<span class="material-symbols-outlined text-secondary scale-75">unfold_more</span>
+                            Expand
+                        </button>
+<button class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg text-xs font-medium text-on-surface hover:shadow-xs transition-all border border-transparent hover:border-secondary/20">
+<span class="material-symbols-outlined text-secondary scale-75">history_edu</span>
+                            Rewrite
+                        </button>
+<button class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg text-xs font-medium text-on-surface hover:shadow-xs transition-all border border-transparent hover:border-secondary/20">
+<span class="material-symbols-outlined text-secondary scale-75">magic_button</span>
+                            Polish
+                        </button>
+</div>
+</div>
+<div class="flex-1 flex flex-col bg-white/50 rounded-xl p-3">
+<h3 class="text-[0.6875rem] font-bold text-on-surface/50 uppercase tracking-widest mb-3">AI Chat</h3>
+<div class="flex-1 space-y-4 overflow-y-auto hide-scrollbar mb-4">
+<div class="p-2 bg-secondary/5 rounded-lg border border-secondary/10">
+<p class="text-[0.8125rem] leading-relaxed text-on-surface/80">I've analyzed your content. Would you like to add more emotional resonance to the intro?</p>
+</div>
+</div>
+<div class="relative">
+<input class="w-full bg-white border-none rounded-lg text-xs py-2 px-3 focus:ring-1 focus:ring-secondary/30 placeholder:text-on-surface/30" placeholder="Ask AI..." type="text"/>
+<button class="absolute right-2 top-1.5 text-secondary">
+<span class="material-symbols-outlined scale-75">send</span>
+</button>
+</div>
+</div>
+<div class="p-4 bg-primary text-white rounded-xl">
+<h4 class="text-[0.6875rem] font-bold opacity-60 uppercase mb-2">Output Preview</h4>
+<p class="text-xs leading-relaxed italic opacity-90">"In the heart of digital curation lies the art of intentionality..."</p>
+</div>
+</aside>
+<!-- Middle Editor Column -->
+<section class="flex-1 bg-white flex flex-col items-center overflow-y-auto">
+<!-- TipTap Toolbar -->
+<div class="sticky top-0 w-full bg-white/80 backdrop-blur-md z-20 px-8 py-3 flex items-center justify-center gap-1 border-b border-surface-container">
+<div class="flex items-center gap-0.5 bg-surface-container/50 p-1 rounded-lg">
+<button class="p-1.5 hover:bg-white rounded text-on-surface-variant hover:text-secondary transition-colors"><span class="material-symbols-outlined">format_bold</span></button>
+<button class="p-1.5 hover:bg-white rounded text-on-surface-variant hover:text-secondary transition-colors"><span class="material-symbols-outlined">format_italic</span></button>
+<button class="p-1.5 hover:bg-white rounded text-on-surface-variant hover:text-secondary transition-colors"><span class="material-symbols-outlined">link</span></button>
+</div>
+<div class="h-4 w-px bg-outline-variant/30 mx-2"></div>
+<div class="flex items-center gap-0.5 bg-surface-container/50 p-1 rounded-lg">
+<button class="px-2 py-1 text-xs font-bold hover:bg-white rounded text-on-surface-variant">H1</button>
+<button class="px-2 py-1 text-xs font-bold hover:bg-white rounded text-on-surface-variant">H2</button>
+<button class="px-2 py-1 text-xs font-bold hover:bg-white rounded text-on-surface-variant">H3</button>
+</div>
+<div class="h-4 w-px bg-outline-variant/30 mx-2"></div>
+<div class="flex items-center gap-0.5 bg-surface-container/50 p-1 rounded-lg">
+<button class="p-1.5 hover:bg-white rounded text-on-surface-variant"><span class="material-symbols-outlined">format_list_bulleted</span></button>
+<button class="p-1.5 hover:bg-white rounded text-on-surface-variant"><span class="material-symbols-outlined">image</span></button>
+<button class="p-1.5 hover:bg-white rounded text-on-surface-variant"><span class="material-symbols-outlined">code</span></button>
+<button class="p-1.5 hover:bg-white rounded text-on-surface-variant"><span class="material-symbols-outlined">format_quote</span></button>
+</div>
+</div>
+<!-- WYSIWYG Editor Area -->
+<div class="w-full max-w-2xl px-12 py-16 editor-canvas">
+<h1 class="text-3xl font-bold text-[#37352F] mb-8 leading-tight">Mastering Digital Curation: A New Era of Professional Editing</h1>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">The modern workspace is no longer just a place for data entry; it is a canvas for intentional composition. As creators, we must move beyond the noise of traditional productivity tools.</p>
+<div class="my-8 rounded-xl overflow-hidden bg-surface-container-low aspect-video relative group">
+<img class="w-full h-full object-cover" data-alt="Minimalist workspace with laptop and coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8GmxTMq9pvnvV02PrwNoKLqM8q0-MxAZtCYKwux8ULqFmMqxi8E6lZmIyu_yXEJK2kP7-qgX5tmbI9QopNfH4gR58ePj6evxQQ0OTlORkfS6g7UtzxkTplYyG01ZqH-PGTEHfe7vZchyL6VLCF5_0KY-uiWiEhy4zgQVwo1ZHMU-0sPm5W988VAU40n9RA53KHQ6foGcelhAiu4Ig0fiP5ll5Z9waAJFHbrOg8-L-lwHsKvMtG3jN0ESQ8g-cn2VGi_d63NS6jQ"/>
+<div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg text-xs font-semibold text-on-surface shadow-lg">Replace Image</button>
+</div>
+</div>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">Consider the "No-Line" rule. Boundaries in our interfaces should be defined by tonal shifts, much like how natural light defines the corners of a physical room. This editorial approach allows the content to breathe.</p>
+<blockquote class="border-l-4 border-secondary pl-6 py-2 my-8 italic text-xl text-on-surface/70">
+                        "Design is not what it looks like and feels like. Design is how it works."
+                    </blockquote>
+<p class="text-lg text-on-surface-variant leading-relaxed">In this step, we refine the visual hierarchy, ensuring that every headline and paragraph serves the narrative of your WeChat publication.</p>
+</div>
+</section>
+<!-- Right Panel (200px Layout) -->
+<aside class="w-[200px] bg-surface-container border-l border-transparent p-5 space-y-8">
+<div>
+<h3 class="text-[0.6875rem] font-bold text-on-surface/50 uppercase tracking-widest mb-4">Page Splits</h3>
+<div class="grid grid-cols-2 gap-2">
+<div class="aspect-square bg-white rounded-lg border-2 border-secondary flex flex-col p-1 gap-1 cursor-pointer">
+<div class="h-full w-full bg-secondary/10 rounded-sm"></div>
+</div>
+<div class="aspect-square bg-white rounded-lg border border-outline-variant/20 flex flex-col p-1 gap-1 cursor-pointer hover:border-secondary/40 transition-colors">
+<div class="flex-1 bg-on-surface/5 rounded-sm"></div>
+<div class="flex-1 bg-on-surface/5 rounded-sm"></div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-[0.6875rem] font-bold text-on-surface/50 uppercase tracking-widest mb-4">Width Control</h3>
+<div class="px-1">
+<input class="w-full h-1.5 bg-outline-variant/30 rounded-lg appearance-none cursor-pointer accent-secondary" type="range"/>
+<div class="flex justify-between mt-2 text-[10px] text-on-surface/40 font-bold">
+<span>640PX</span>
+<span>800PX</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-[0.6875rem] font-bold text-on-surface/50 uppercase tracking-widest">Style Properties</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Font Size</span>
+<select class="bg-white border-none text-xs rounded-lg py-1 px-2 focus:ring-0">
+<option>16px</option>
+<option selected="">18px</option>
+<option>20px</option>
+</select>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Line Height</span>
+<div class="flex bg-white rounded-lg p-0.5">
+<button class="px-2 py-1 text-[10px] bg-surface-container rounded font-bold">1.6</button>
+<button class="px-2 py-1 text-[10px] font-bold text-on-surface/40">1.8</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Base Color</span>
+<div class="flex gap-1.5">
+<div class="w-4 h-4 rounded-full bg-[#37352F] border border-white shadow-xs cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-[#55524c] cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-[#2383E2] cursor-pointer"></div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Fixed Bottom Toolbar -->
+<footer class="h-20 bg-white/90 backdrop-blur-xl border-t border-transparent z-40 px-8 flex items-center justify-between shadow-[0_-4px_20px_rgba(55,53,47,0.04)] ml-0">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors px-4 py-2 rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined">download_for_offline</span>
+<span class="text-sm font-semibold">Markdown export</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors px-4 py-2 rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined">visibility</span>
+<span class="text-sm font-semibold">Preview</span>
+</button>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded-xl font-bold text-sm flex items-center gap-3 hover:bg-primary-dim active:scale-95 transition-all shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined">content_copy</span>
+                Copy to WeChat
+            </button>
+</footer>
+</main>
+</body></html>
+
+<!-- Document Detail | Rubric -->

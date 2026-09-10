@@ -1,0 +1,6 @@
+[
+  { "dimension": "A", "name": "化学" },
+  { "dimension": "B", "name": "实验探究" },
+  { "dimension": "C", "name": "能源与材料" },
+  { "dimension": "D", "name": "分析" }
+]

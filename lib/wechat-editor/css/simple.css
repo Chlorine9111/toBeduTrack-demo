@@ -1,0 +1,33 @@
+#wechat-output {
+  padding: 16px 14px;
+  color: #1f2937;
+}
+
+#wechat-output .h1,
+#wechat-output .h2,
+#wechat-output .h3,
+#wechat-output .h4,
+#wechat-output .h5,
+#wechat-output .h6 {
+  margin: 1em 0 0.55em;
+}
+
+#wechat-output .h2,
+#wechat-output .h3 {
+  padding-left: 0;
+}
+
+#wechat-output .h2::before,
+#wechat-output .h3::before {
+  display: none;
+}
+
+#wechat-output .blockquote {
+  background: #f8fafc;
+  border-left-width: 2px;
+}
+
+#wechat-output .table .th,
+#wechat-output .table .td {
+  padding: 6px 8px;
+}

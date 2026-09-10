@@ -1,0 +1,14 @@
+[
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/agent/preflight",
+    "status": 200,
+    "durationMs": 1597
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/agent/chat",
+    "status": 403,
+    "durationMs": 2995
+  }
+]

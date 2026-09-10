@@ -1,0 +1,262 @@
+<!-- PBL | Create Project -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create PBL Project | The Editorial Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary": "#faf9f6",
+              "surface-container": "#f4eddf",
+              "surface-container-highest": "#e9e2ce",
+              "error-container": "#fe8b70",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-container": "#5b5c5a",
+              "on-primary-container": "#54514b",
+              "on-error-container": "#742410",
+              "error": "#9e422c",
+              "on-tertiary-fixed": "#494a48",
+              "surface": "#fef9ef",
+              "surface-container-low": "#f9f3e7",
+              "surface-dim": "#e1dac3",
+              "inverse-primary": "#fef9ef",
+              "tertiary-fixed": "#f4f3f0",
+              "primary": "#615e57",
+              "on-primary-fixed": "#413f39",
+              "on-error": "#fff7f6",
+              "primary-dim": "#55524c",
+              "on-tertiary-fixed-variant": "#666664",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#5e5b54",
+              "outline-variant": "#b8b29f",
+              "inverse-on-surface": "#a09c95",
+              "surface-tint": "#615e57",
+              "on-surface-variant": "#635f4f",
+              "secondary": "#0060ae",
+              "tertiary-container": "#f4f3f0",
+              "surface-variant": "#e9e2ce",
+              "tertiary-dim": "#525351",
+              "primary-container": "#e7e2d9",
+              "error-dim": "#5c1202",
+              "primary-fixed": "#e7e2d9",
+              "surface-container-high": "#eee8d6",
+              "on-primary": "#fdf7ee",
+              "inverse-surface": "#0f0e09",
+              "background": "#fef9ef",
+              "on-secondary-fixed-variant": "#005ca8",
+              "secondary-container": "#d4e3ff",
+              "on-secondary": "#f8f8ff",
+              "on-secondary-container": "#005397",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "secondary-dim": "#005499",
+              "tertiary": "#5e5f5d",
+              "secondary-fixed-dim": "#bcd6ff",
+              "outline-solid": "#7f7b6a",
+              "on-surface": "#363225",
+              "on-secondary-fixed": "#004077",
+              "on-background": "#363225",
+              "surface-bright": "#fef9ef"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #fef9ef;
+        color: #363225;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #e9e2ce;
+        border-radius: 10px;
+      }
+    </style>
+</head>
+<body class="font-body antialiased">
+<!-- SideNavBar Anchor -->
+<nav class="w-[56px] h-screen fixed left-0 top-0 bg-[#F7F6F3] dark:bg-stone-900 flex flex-col items-center py-6 z-50 transition-all duration-200 ease-in-out font-Inter antialiased text-sm tracking-normal">
+<div class="mb-10 text-[#37352F] dark:text-stone-100">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="flex flex-col gap-4 items-center w-full">
+<!-- Projects is active for PBL creation -->
+<a class="p-2 rounded-lg text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F] transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</a>
+<a class="p-2 rounded-lg text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F] transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+</a>
+<a class="p-2 rounded-lg text-[#2383E2] dark:text-blue-400 bg-white dark:bg-stone-800 shadow-xs transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="tactic">tactic</span>
+</a>
+<a class="p-2 rounded-lg text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F] transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="grade">grade</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-4 items-center">
+<a class="p-2 rounded-lg text-[#37352F]/60 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 hover:text-[#37352F] transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</a>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Teacher Profile" class="w-full h-full object-cover" data-alt="Portrait of a female teacher in her office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA68yDSlPNrrADLN_cEZy8aDy_8GAPEPoIMuit1ZBIDI_TtDVi54G7hnvgR1eIhPMnZRBDqrj_zUV3dChRYmvgJZJ5Uqxl7rDs7sjdZiHUMGExvmRjZToxU5AKz6S2CKH7KsMH-S4GUonNFJn1diHWIo7c1LVI4h2PAKo68D_4PcJPhQqGXoYp3kwl9AUjuZm5oFgB6TDUf6usfyoR_JvN3Sw-soQ-Wm4ZeJNHHaauVfmTsjUXUN04-868Wqvg4oRQS0frSyVNITg"/>
+</div>
+</div>
+</nav>
+<!-- TopAppBar Anchor -->
+<header class="fixed top-0 right-0 left-[56px] h-14 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-8 w-full z-40 border-b border-[#37352F]/10 dark:border-stone-800 font-Inter font-medium text-xs uppercase tracking-widest">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-[#37352F] dark:text-stone-100 normal-case">The Editorial Workspace</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] dark:hover:text-stone-200 transition-colors" href="#">Curriculum</a>
+<a class="text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] dark:hover:text-stone-200 transition-colors" href="#">Resources</a>
+<a class="text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] dark:hover:text-stone-200 transition-colors" href="#">Analytics</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-1.5 text-[10px] w-48 focus:ring-1 focus:ring-primary" placeholder="SEARCH WORKSPACE..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Main Content Shell -->
+<main class="ml-[56px] pt-24 pb-20 px-6 min-h-screen flex flex-col items-center">
+<!-- Centered Container -->
+<div class="w-full max-w-[640px]">
+<!-- Header Section -->
+<header class="mb-12 text-center">
+<h1 class="text-[3.5rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#37352F] mb-4">Create PBL Project</h1>
+<p class="text-on-surface-variant text-[0.875rem] font-medium leading-[1.6]">Describe your project-based learning requirements and let our digital curator draft a framework for you.</p>
+</header>
+<!-- Editor Section -->
+<section class="mb-8 relative">
+<div class="bg-surface-container-lowest rounded-xl p-1 group transition-all duration-300">
+<textarea class="w-full min-h-[280px] p-6 text-[1rem] leading-[1.6] text-[#37352F] bg-transparent border-none focus:ring-0 placeholder:text-on-surface-variant/40 resize-none custom-scrollbar" placeholder="E.g., Design a project for grade 8 students to learn about renewable energy by building a functional miniature wind turbine. Include community impact goals and cross-curricular links to math and social studies..."></textarea>
+</div>
+<!-- Metadata Controls -->
+<div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-[0.6875rem] font-medium uppercase tracking-[0.03em] text-on-surface-variant px-1">Curriculum</label>
+<div class="relative group">
+<select class="w-full appearance-none bg-surface-container-low text-[0.875rem] border-none rounded-lg px-4 py-3 focus:ring-1 focus:ring-secondary text-[#37352F]">
+<option>Common Core</option>
+<option>IB MYP</option>
+<option>National Curriculum</option>
+<option>Cambridge IGCSE</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[0.6875rem] font-medium uppercase tracking-[0.03em] text-on-surface-variant px-1">Grade Level</label>
+<div class="relative group">
+<select class="w-full appearance-none bg-surface-container-low text-[0.875rem] border-none rounded-lg px-4 py-3 focus:ring-1 focus:ring-secondary text-[#37352F]">
+<option>Grade 6</option>
+<option>Grade 7</option>
+<option>Grade 8</option>
+<option>Grade 9</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[0.6875rem] font-medium uppercase tracking-[0.03em] text-on-surface-variant px-1">Subject</label>
+<div class="relative group">
+<select class="w-full appearance-none bg-surface-container-low text-[0.875rem] border-none rounded-lg px-4 py-3 focus:ring-1 focus:ring-secondary text-[#37352F]">
+<option>Science</option>
+<option>Humanities</option>
+<option>Mathematics</option>
+<option>Design Technology</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Primary Action -->
+<div class="flex flex-col items-center gap-12 mt-12">
+<button class="bg-[#37352F] text-[#FFFFFF] rounded-lg px-8 py-4 flex items-center gap-3 transition-colors duration-200 hover:bg-[#55524c] shadow-xs font-semibold text-[0.875rem]">
+<span class="material-symbols-outlined text-[1.25rem]" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    Generate with Agent
+                </button>
+<!-- Example Prompts -->
+<div class="w-full">
+<div class="flex items-center gap-4 mb-6">
+<h2 class="text-[0.6875rem] font-medium uppercase tracking-widest text-on-surface-variant">Example prompts</h2>
+<div class="grow h-px bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<!-- Prompt Card 1 -->
+<button class="text-left w-full p-5 bg-[#F7F6F3] rounded-xl hover:bg-surface-container-high transition-colors group flex items-start gap-4">
+<div class="p-2 bg-white rounded-lg text-[#2383E2]">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<div>
+<h3 class="text-[0.875rem] font-semibold text-[#37352F] mb-1">Sustainable Cities</h3>
+<p class="text-[0.8125rem] text-on-surface-variant leading-normal">Design a future city focused on urban farming and waste reduction for 7th grade social studies.</p>
+</div>
+</button>
+<!-- Prompt Card 2 -->
+<button class="text-left w-full p-5 bg-[#F7F6F3] rounded-xl hover:bg-surface-container-high transition-colors group flex items-start gap-4">
+<div class="p-2 bg-white rounded-lg text-[#AD7F24]">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+</div>
+<div>
+<h3 class="text-[0.875rem] font-semibold text-[#37352F] mb-1">Digital Archaeology</h3>
+<p class="text-[0.8125rem] text-on-surface-variant leading-normal">Investigate historical trade routes using interactive map-making and narrative storytelling for 9th grade.</p>
+</div>
+</button>
+<!-- Prompt Card 3 -->
+<button class="text-left w-full p-5 bg-[#F7F6F3] rounded-xl hover:bg-surface-container-high transition-colors group flex items-start gap-4">
+<div class="p-2 bg-white rounded-lg text-[#4D7C0F]">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+</div>
+<div>
+<h3 class="text-[0.875rem] font-semibold text-[#37352F] mb-1">Microplastic Analysis</h3>
+<p class="text-[0.8125rem] text-on-surface-variant leading-normal">Collaborate with local water authorities to test and visualize microplastic counts in nearby rivers.</p>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Background Decoration (Asymmetric Editorial Flair) -->
+<div class="fixed top-0 right-0 -z-10 w-1/3 h-full opacity-[0.03] pointer-events-none overflow-hidden">
+<div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#37352F] blur-[120px]"></div>
+</div>
+<div class="fixed bottom-0 left-0 -z-10 w-1/4 h-full opacity-[0.02] pointer-events-none overflow-hidden">
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#2383E2] blur-[100px]"></div>
+</div>
+</body></html>

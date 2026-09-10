@@ -1,0 +1,197 @@
+<!-- Global | Confirmation Modal -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Editorial Workspace - Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "primary-dim": "#55524c",
+              "on-background": "#363225",
+              "background": "#fef9ef",
+              "on-surface-variant": "#635f4f",
+              "surface-bright": "#fef9ef",
+              "tertiary-dim": "#525351",
+              "on-tertiary-container": "#5b5c5a",
+              "on-tertiary-fixed-variant": "#666664",
+              "on-secondary-fixed-variant": "#005ca8",
+              "error-container": "#fe8b70",
+              "inverse-surface": "#0f0e09",
+              "surface-container-highest": "#e9e2ce",
+              "on-secondary-fixed": "#004077",
+              "on-error-container": "#742410",
+              "on-primary": "#fdf7ee",
+              "on-surface": "#363225",
+              "on-error": "#fff7f6",
+              "outline-solid": "#7f7b6a",
+              "tertiary-fixed": "#f4f3f0",
+              "surface": "#fef9ef",
+              "surface-tint": "#615e57",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "inverse-primary": "#fef9ef",
+              "surface-variant": "#e9e2ce",
+              "inverse-on-surface": "#a09c95",
+              "outline-variant": "#b8b29f",
+              "on-primary-fixed-variant": "#5e5b54",
+              "secondary-fixed": "#d4e3ff",
+              "primary-container": "#e7e2d9",
+              "primary": "#615e57",
+              "on-secondary-container": "#005397",
+              "error": "#9e422c",
+              "secondary": "#0060ae",
+              "brand-yellow": "#DFAB01",
+              "brand-yellow-bg": "#FBF3DB",
+              "brand-red": "#E03E3E"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<!-- TopAppBar Shell -->
+<header class="w-full top-0 sticky bg-white dark:bg-[#1A1A1A] z-40">
+<div class="flex justify-between items-center px-16 py-4 max-w-[1440px] mx-auto">
+<div class="text-xl font-semibold tracking-tight text-[#37352F] dark:text-[#F7F6F3]">
+                The Editorial Workspace
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#37352F]/60 dark:text-[#E3E2E0]/60 hover:text-[#37352F] dark:hover:text-[#F7F6F3] transition-colors duration-200" href="#">Drafts</a>
+<a class="text-[#37352F]/60 dark:text-[#E3E2E0]/60 hover:text-[#37352F] dark:hover:text-[#F7F6F3] transition-colors duration-200" href="#">Library</a>
+<a class="text-[#37352F]/60 dark:text-[#E3E2E0]/60 hover:text-[#37352F] dark:hover:text-[#F7F6F3] transition-colors duration-200" href="#">Archives</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-[#F7F6F3] dark:hover:bg-[#2F2F2F] transition-colors duration-200 rounded-lg">
+<span class="material-symbols-outlined text-[#37352F]/60">notifications</span>
+</button>
+<button class="p-2 hover:bg-[#F7F6F3] dark:hover:bg-[#2F2F2F] transition-colors duration-200 rounded-lg">
+<span class="material-symbols-outlined text-[#37352F]/60">settings</span>
+</button>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover shadow-xs" data-alt="Male professional headshot portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcGpa-gHdoWb-1iBirh0jbmokLexjO6MEMKAhYHRg_V2XWyDNDFaHdlc3Ku7YfyCWwuqQ2Uyi13nyeSFFSD2L5-hP5Wy8ZKLhA6QudURG1sSk6spSkupXl7ex-I8nBXdK4aPCbgE_pzeese4rcOsoBzjDa8ApHnRBAor6ueDua8o2cmkeQ4q3yKwkRrWHEg0xEo6X9BTZOC3CJxP2nBzNf8agk-traJeJ24YczfzGcjE4TjjJ2klSLqDlMzVF_Y81pWUBtSPieCg"/>
+</div>
+</div>
+<div class="bg-[#F7F6F3] dark:bg-[#252525] h-px w-full"></div>
+</header>
+<div class="flex h-[calc(100vh-73px)]">
+<!-- SideNavBar Shell -->
+<aside class="h-full w-64 bg-[#F7F6F3] dark:bg-[#1F1F1F] flex flex-col p-6 space-y-2 shrink-0">
+<div class="flex items-center space-x-3 mb-8 px-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">edit_note</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-[#37352F] dark:text-[#F7F6F3] leading-none">Editorial Hub</h2>
+<p class="text-[10px] uppercase tracking-wider text-[#37352F]/50 mt-1">Curator Mode</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center space-x-3 px-3 py-2 bg-white dark:bg-[#2F2F2F] text-[#37352F] dark:text-[#F7F6F3] font-semibold rounded-lg shadow-xs group" href="#">
+<span class="material-symbols-outlined text-sm">grid_view</span>
+<span>Workspace</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-[#37352F]/70 dark:text-[#E3E2E0]/50 hover:bg-[#E3E2E4]/50 dark:hover:bg-[#2F2F2F]/50 rounded-lg transition-all duration-150 group" href="#">
+<span class="material-symbols-outlined text-sm">folder_open</span>
+<span>Collections</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-[#37352F]/70 dark:text-[#E3E2E0]/50 hover:bg-[#E3E2E4]/50 dark:hover:bg-[#2F2F2F]/50 rounded-lg transition-all duration-150 group" href="#">
+<span class="material-symbols-outlined text-sm">group</span>
+<span>Team</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-[#37352F]/70 dark:text-[#E3E2E0]/50 hover:bg-[#E3E2E4]/50 dark:hover:bg-[#2F2F2F]/50 rounded-lg transition-all duration-150 group" href="#">
+<span class="material-symbols-outlined text-sm">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="pt-8">
+<button class="w-full flex items-center justify-center space-x-2 py-2.5 bg-[#37352F] text-white rounded-lg font-medium text-sm hover:opacity-90 transition-all shadow-xs">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>New Entry</span>
+</button>
+</div>
+</aside>
+<!-- Main Content (Background Context) -->
+<main class="flex-1 overflow-y-auto p-16 bg-surface relative">
+<div class="max-w-4xl mx-auto space-y-12 opacity-40 select-none pointer-events-none">
+<div class="space-y-2">
+<span class="text-xs font-medium tracking-widest text-[#2383E2] uppercase">Work in Progress</span>
+<h1 class="text-6xl font-bold tracking-tight text-[#37352F] leading-tight">The Architecture of Silence</h1>
+</div>
+<div class="grid grid-cols-12 gap-8 items-start">
+<div class="col-span-8 space-y-6">
+<p class="text-xl leading-relaxed text-[#37352F]/80">In the landscape of modern digital design, the loudest voice is often the one that says the least. True editorial authority stems from the quiet confidence of whitespace and the rhythm of carefully tuned typography.</p>
+<div class="w-full aspect-video rounded-xl bg-surface-container-high overflow-hidden">
+<img alt="Minimalist desk interior" class="w-full h-full object-cover" data-alt="Minimalist modern office with wooden desk and lamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiRPfLt0fzsy2b_eaSaT0H77Set2pShvtTOC8hph4ebw7tzPm4-VICyoQBvfpH3r10w0JCPHeNjfT7nkCeiVvrtiYTACse7hmKbQRwVCyrEPtWilccjiBU2honuSfNG9vXd1AAp-PScS6I2sRxRSkFWP17VD8Yyo3GfyBUz_o7ZfqDyKTUAs07KxzdAI3XUEjZzTY2XHMz5WrS7P7Ouq5D0K8_MJtQb7NaA0QEXvia7aBLw6fcGPV00KId3zrYQuLy37NN1QhBow"/>
+</div>
+</div>
+<div class="col-span-4 bg-surface-container-low p-6 rounded-xl space-y-4">
+<h3 class="font-semibold text-sm">Metadata</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center border-b border-[#37352F]/10 pb-2">
+<span class="text-xs text-[#37352F]/60">Status</span>
+<span class="px-2 py-0.5 rounded-full bg-blue-100 text-[#2383E2] text-[10px] font-bold">DRAFT</span>
+</div>
+<div class="flex justify-between items-center border-b border-[#37352F]/10 pb-2">
+<span class="text-xs text-[#37352F]/60">Created</span>
+<span class="text-xs">Oct 24, 2023</span>
+</div>
+<div class="flex justify-between items-center border-b border-[#37352F]/10 pb-2">
+<span class="text-xs text-[#37352F]/60">Author</span>
+<span class="text-xs font-medium">Julian Vane</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 bg-[#37352F]/20 backdrop-blur-[2px] z-50 flex items-center justify-center p-4">
+<!-- Confirmation Modal -->
+<div class="w-full max-w-[400px] bg-white rounded-[12px] shadow-[0px_4px_24px_rgba(55,53,47,0.08)] p-6 flex flex-col items-center">
+<!-- Alert Icon Header -->
+<div class="w-12 h-12 bg-brand-yellow-bg rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[24px] text-brand-yellow">warning</span>
+</div>
+<!-- Modal Text Content -->
+<div class="text-center space-y-2 mb-8">
+<h3 class="text-[18px] font-semibold text-[#37352F]">Delete this document?</h3>
+<p class="text-[14px] leading-relaxed text-[#37352F]/60">This action cannot be undone. The document will be permanently removed.</p>
+</div>
+<!-- Modal Footer / Buttons -->
+<div class="flex items-center justify-end w-full space-x-3">
+<button class="px-4 py-2 text-[14px] font-medium text-[#37352F]/60 hover:text-[#37352F] hover:bg-surface-container transition-colors rounded-lg">
+                            Cancel
+                        </button>
+<button class="px-4 py-2 text-[14px] font-medium bg-brand-red text-white rounded-lg hover:opacity-90 transition-opacity shadow-xs">
+                            Delete
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
+
+<!-- Global | Toast Notifications -->

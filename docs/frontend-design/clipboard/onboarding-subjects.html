@@ -1,0 +1,201 @@
+<!-- Onboarding | Subjects -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deskmate | Onboarding Step 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#615e57",
+              "outline-variant": "#b8b29f",
+              "on-error": "#fff7f6",
+              "primary-dim": "#55524c",
+              "primary-fixed": "#e7e2d9",
+              "tertiary-container": "#f4f3f0",
+              "surface": "#fef9ef",
+              "on-secondary-container": "#005397",
+              "secondary": "#0060ae",
+              "on-primary-fixed": "#413f39",
+              "tertiary-dim": "#525351",
+              "surface-variant": "#e9e2ce",
+              "on-primary-fixed-variant": "#5e5b54",
+              "background": "#fef9ef",
+              "outline-solid": "#7f7b6a",
+              "surface-dim": "#e1dac3",
+              "primary-container": "#e7e2d9",
+              "on-background": "#363225",
+              "on-surface-variant": "#635f4f",
+              "tertiary": "#5e5f5d",
+              "secondary-container": "#d4e3ff",
+              "surface-container-highest": "#e9e2ce",
+              "on-tertiary": "#faf9f6",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-fixed": "#494a48",
+              "secondary-dim": "#005499",
+              "on-tertiary-container": "#5b5c5a",
+              "tertiary-fixed": "#f4f3f0",
+              "on-surface": "#363225",
+              "on-error-container": "#742410",
+              "surface-container-low": "#f9f3e7",
+              "primary": "#615e57",
+              "on-secondary": "#f8f8ff",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#004077",
+              "on-primary": "#fdf7ee",
+              "surface-container": "#f4eddf",
+              "on-secondary-fixed-variant": "#005ca8",
+              "primary-fixed-dim": "#d9d4cb",
+              "secondary-fixed": "#d4e3ff",
+              "inverse-on-surface": "#a09c95",
+              "error-dim": "#5c1202",
+              "secondary-fixed-dim": "#bcd6ff",
+              "surface-bright": "#fef9ef",
+              "on-tertiary-fixed-variant": "#666664",
+              "inverse-primary": "#fef9ef",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#eee8d6",
+              "on-primary-container": "#54514b",
+              "error": "#9e422c",
+              "inverse-surface": "#0f0e09"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fef9ef; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .selected-pill { background-color: #37352F !important; color: #ffffff !important; }
+        .quiet-shadow { box-shadow: 0px 4px 20px rgba(55, 53, 47, 0.04); }
+    </style>
+</head>
+<body class="text-on-surface">
+<div class="flex min-h-screen">
+<!-- Left Panel: Onboarding Status -->
+<aside class="w-1/3 min-w-[320px] bg-surface-container flex flex-col p-16 sticky top-0 h-screen">
+<div class="mb-24">
+<div class="text-sm font-semibold uppercase tracking-[0.03em] text-on-surface mb-2">Deskmate</div>
+<div class="h-px w-12 bg-primary-dim/20"></div>
+</div>
+<div class="grow space-y-12">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full flex items-center justify-center border border-primary-dim/20 text-on-surface-variant font-medium text-xs">01</div>
+<span class="text-on-surface-variant font-medium">Profile Basics</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-on-primary font-bold text-xs ring-4 ring-primary/10">02</div>
+<span class="text-on-surface font-semibold">Subject Selection</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<div class="w-8 h-8 rounded-full flex items-center justify-center border border-primary-dim/20 text-on-surface-variant font-medium text-xs">03</div>
+<span class="text-on-surface-variant font-medium">Curriculum Sync</span>
+</div>
+</div>
+<div class="mt-auto pt-12">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Step 2 of 3
+                        <br/>
+<span class="text-primary font-medium">Fine-tuning your workspace</span>
+</p>
+</div>
+</div>
+<div class="mt-auto">
+<div class="aspect-square w-full rounded-xl bg-surface-container-high overflow-hidden relative">
+<img alt="Stack of minimalist books" class="w-full h-full object-cover mix-blend-multiply opacity-60" data-alt="Minimalist stack of educational books on desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBojN1vQ4iFC-Z7QKQkSKN51hk3RaeSLI5CkRZr5tJ9h7KN747qJ2P_qVH0mFnYCIraYCivst8Tbw-hZqbd-A8Q8gYvIJJxs-MFUIoSxWWFB49sMYDnYEkqzgspX9UjYfo5Q9X8nD9jCZp-d2r1Mv84RifgA4MS2Ry5SojVNR_u6Ti-os-_WIsoS1fKWkFjw5PmwjwEDI5YSt8ePHYXzc3FlXP3tXGR-b5Vs84atwQpaAQ6CNjDSPfi65ixtESwG_OYtGb1jlWj3Q"/>
+</div>
+</div>
+</aside>
+<!-- Right Panel: Selection Content -->
+<main class="grow flex flex-col p-16 max-w-5xl mx-auto">
+<header class="mb-16">
+<h1 class="text-[3.5rem] font-bold leading-[1.1] tracking-[-0.02em] text-on-surface mb-4">What do you teach?</h1>
+<p class="text-lg text-on-surface-variant">Select your subjects and courses to personalize your editorial workspace.</p>
+</header>
+<section class="space-y-12 mb-20">
+<!-- Category: Mathematics -->
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">calculate</span>
+<h2 class="text-sm font-semibold uppercase tracking-[0.03em] text-on-surface-variant">Mathematics</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Algebra I</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Algebra II</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Geometry</button>
+<button class="selected-pill px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2">
+                            AP Calculus AB
+                            <span class="material-symbols-outlined text-[1rem]">check</span>
+</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">AP Statistics</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Pre-Calculus</button>
+</div>
+</div>
+<!-- Category: Sciences -->
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">biotech</span>
+<h2 class="text-sm font-semibold uppercase tracking-[0.03em] text-on-surface-variant">Sciences</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Biology</button>
+<button class="selected-pill px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2">
+                            AP Biology
+                            <span class="material-symbols-outlined text-[1rem]">check</span>
+</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Chemistry</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">AP Chemistry</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Physics 1</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Environmental Science</button>
+</div>
+</div>
+<!-- Category: Humanities -->
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">history_edu</span>
+<h2 class="text-sm font-semibold uppercase tracking-[0.03em] text-on-surface-variant">Humanities &amp; Social Sciences</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">World History</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">US History</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">AP Psych</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Macroeconomics</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">English Literature</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium border border-outline-variant hover:border-primary transition-all">Creative Writing</button>
+</div>
+</div>
+</section>
+<!-- Sticky Actions Area -->
+<footer class="mt-auto flex items-center justify-between pt-8 border-t border-outline-variant/10">
+<button class="px-6 py-3 text-on-surface-variant font-medium hover:text-on-surface transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Back
+                </button>
+<div class="flex items-center gap-8">
+<span class="text-sm text-on-surface-variant">2 subjects selected</span>
+<button class="bg-on-surface text-surface px-10 py-4 rounded-lg font-semibold hover:bg-primary-dim transition-all quiet-shadow flex items-center gap-3">
+                        Continue
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+</main>
+</div>
+</body></html>
+
+<!-- Templates Library -->

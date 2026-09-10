@@ -1,0 +1,269 @@
+<!-- Blog | Detail (V2) -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary-fixed-variant": "#666664",
+              "tertiary-container": "#f4f3f0",
+              "error-dim": "#5c1202",
+              "surface-bright": "#fef9ef",
+              "on-secondary-fixed": "#004077",
+              "secondary-container": "#d4e3ff",
+              "on-tertiary-fixed": "#494a48",
+              "inverse-surface": "#0f0e09",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary": "#5e5f5d",
+              "on-surface-variant": "#635f4f",
+              "on-secondary": "#f8f8ff",
+              "surface-container-low": "#f9f3e7",
+              "on-primary-container": "#54514b",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-container": "#5b5c5a",
+              "inverse-on-surface": "#a09c95",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#0060ae",
+              "on-background": "#363225",
+              "secondary-dim": "#005499",
+              "outline-variant": "#b8b29f",
+              "surface-variant": "#e9e2ce",
+              "tertiary-fixed": "#f4f3f0",
+              "on-primary": "#fdf7ee",
+              "on-primary-fixed": "#413f39",
+              "surface-tint": "#615e57",
+              "surface-dim": "#e1dac3",
+              "on-tertiary": "#faf9f6",
+              "primary-container": "#e7e2d9",
+              "surface-container-high": "#eee8d6",
+              "tertiary-dim": "#525351",
+              "surface": "#fef9ef",
+              "secondary-fixed": "#d4e3ff",
+              "background": "#fef9ef",
+              "primary": "#615e57",
+              "on-surface": "#363225",
+              "on-secondary-container": "#005397",
+              "surface-container-lowest": "#ffffff",
+              "primary-dim": "#55524c",
+              "error-container": "#fe8b70",
+              "on-error-container": "#742410",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "surface-container-highest": "#e9e2ce",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "error": "#9e422c",
+              "inverse-primary": "#fef9ef",
+              "on-secondary-fixed-variant": "#005ca8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .reading-measure {
+            max-width: 720px;
+        }
+        .tonal-transition-bg {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(247,246,243,0.8));
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-xs dark:shadow-none font-inter antialiased text-sm font-medium tracking-tight">
+<div class="flex justify-between items-center px-6 py-3 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-lg font-semibold text-stone-800 dark:text-stone-100">The Editorial Workspace</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Product</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Pricing</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">About</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold transition-colors duration-200" href="#">Blog</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200">Sign In</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-semibold active:scale-95 transition-transform">Get Started</button>
+</div>
+</div>
+</nav>
+<!-- Visual Hero Header -->
+<header class="relative w-full h-[716px] min-h-[500px] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist wooden desk with stationery and laptop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCtZwWqeNxn2nHkHrv5Cq_y8SGyNY-9tlC3iSSwBBJ8iataMNfu_BAlFWW6XmkSeavEAX_wGHMV4i6mQP4tQg0rx8huf4QGs-a-jXbfajopl6Xp8gs7eVD-mpYccHP5jKbnUOHhWUE66LxiNoJTBIPbwfRtroRUf31X6anup-7H3hnuJAaq-zITAsa-r_umV1xwISnSt42t-mFDdgd3DYm_GATTs38VSol2EFHK01SKyWoiQBLMW24A_RBnECqbQnF_7Abye-img"/>
+<div class="absolute inset-0 bg-linear-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-6 pb-20">
+<div class="reading-measure">
+<div class="flex items-center gap-3 mb-6">
+<span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide uppercase bg-blue-500/20 text-blue-100 backdrop-blur-xs">Productivity</span>
+<span class="text-stone-300 text-xs font-medium tracking-wide uppercase">8 Min Read</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-8">
+                    The Architecture of Focused Writing
+                </h1>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
+<img class="w-full h-full object-cover" data-alt="Profile portrait of a professional editor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQXgbc1US-8tcqBb8vPDHsdqbkGpmh9BijBCF2SSqvl3rjSKkLYHnZ_oqMbF6nWNHFZhuyEk1iOsTa8eSgUserGyjWGFxXffXYftU4rEYAVcUqyc_nfdzYR-Nau0Kc4sKyV3S3MkqjCGd_zq5aE88okma2KEMWM-m2dl0N2SvO_-MdFbMKR_hHgOaqd9FLfdCOKhu1-oX3ie5aXBvxfjyVlE1LZTZKYNlPEuI23NHMBp45yP1WDP-ZSLPrFpGMLh2frS88kYvyQ"/>
+</div>
+<div>
+<p class="text-white font-semibold">Julian Vane</p>
+<p class="text-stone-300 text-sm">Lead Curator • Oct 24, 2024</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row gap-16">
+<!-- Sidebar Navigation (Quiet Hierarchy) -->
+<aside class="hidden lg:block w-48 shrink-0">
+<div class="sticky top-32 space-y-8">
+<div>
+<h4 class="text-[0.6875rem] font-bold tracking-widest uppercase text-outline mb-4">Share</h4>
+<div class="flex flex-col gap-4 text-primary">
+<button class="flex items-center gap-2 text-sm hover:text-secondary transition-colors"><span class="material-symbols-outlined text-lg">share</span> Twitter</button>
+<button class="flex items-center gap-2 text-sm hover:text-secondary transition-colors"><span class="material-symbols-outlined text-lg">link</span> Copy Link</button>
+</div>
+</div>
+<div>
+<h4 class="text-[0.6875rem] font-bold tracking-widest uppercase text-outline mb-4">Jump To</h4>
+<ul class="space-y-3 text-sm text-on-surface-variant">
+<li class="hover:text-on-surface cursor-pointer">The Paper Mindset</li>
+<li class="hover:text-on-surface cursor-pointer">Digital Decluttering</li>
+<li class="hover:text-on-surface cursor-pointer">Curating Focus</li>
+</ul>
+</div>
+</div>
+</aside>
+<!-- Article Body (Reading Measure Anchor) -->
+<article class="reading-measure mx-auto lg:mx-0">
+<div class="prose prose-stone lg:prose-lg max-w-none text-on-surface leading-relaxed">
+<p class="text-xl font-medium text-on-surface-variant mb-12 italic">
+                    In an age of infinite scroll, the greatest luxury is a finite space. To write with clarity, one must first build a sanctuary that rejects the noise of the global stream.
+                </p>
+<h2 class="text-3xl font-bold tracking-tight mb-6 mt-12">The Paper Mindset</h2>
+<p class="mb-6">
+                    The tactile sensation of a physical desk provides structural boundaries that digital interfaces often lack. When we sit at a desk, our environment signals the brain to enter a specific mode of operation. In the digital realm, we must recreate these signals through intentional UI architecture.
+                </p>
+<p class="mb-10">
+                    We've found that high-stakes whitespace isn't just a design preference; it's a cognitive requirement for deep work. By removing secondary navigation and persistent notifications, we allow the curator's mind to settle into the rhythm of the sentence.
+                </p>
+<div class="my-16 p-12 bg-surface-container-low rounded-xl relative overflow-hidden">
+<span class="material-symbols-outlined absolute -right-4 -top-4 text-9xl opacity-5 text-on-surface" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-2xl font-bold text-on-surface tracking-tight relative z-10">
+                        "Design is not what it looks like and feels like. Design is how it works when the world is shouting for your attention."
+                    </p>
+</div>
+<h2 class="text-3xl font-bold tracking-tight mb-6 mt-12">Digital Decluttering</h2>
+<p class="mb-6">
+                    Traditional productivity tools suffer from feature creep—the belief that more buttons equal more utility. Our philosophy at The Editorial Workspace is the inverse: utility is found in the subtraction of the non-essential.
+                </p>
+<figure class="my-12">
+<img class="w-full rounded-xl shadow-xs" data-alt="A clean laptop screen showing a minimalist editor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt_WmawgvaKMBDqEUo5nV8qZ8YPUadgTkh41DPbpK36zhIrQYzY46raDfB7ArIVhBxXbVz6oLkQvETZIEdjs5GXTr8oZBMmkdVb020zuyB6vanXeN1Oc9dGR_FDaUwbg5k8qLBHpXD1TY83LMZHEjEQrsHNCimBlXZN2cGxDW0IZ1vNkrMAnIM4L6pUu_NWJ-Yn6K4iOqc-vZFYVLdpz6E-bHyQny8oHdWB7GrFZTMKULA7YNgtwNCmihcyE_UanfSpWWoEzeEXg"/>
+<figcaption class="text-center text-sm text-outline mt-4">The Digital Curator's interface: quiet, focused, and intentionally sparse.</figcaption>
+</figure>
+<p>
+                    When you look at our interface, you'll notice the absence of heavy borders. We use tonal shifts—what we call "Quiet Borders"—to define space. This mirrors how light falls across a room, creating soft zones of activity rather than hard cages of data.
+                </p>
+</div>
+<!-- Tags Section -->
+<div class="mt-20 pt-10 border-t border-outline-variant/20 flex flex-wrap gap-3">
+<span class="px-4 py-1.5 rounded-lg bg-[rgba(221,235,241,0.5)] text-[#2383E2] text-xs font-semibold">Curation</span>
+<span class="px-4 py-1.5 rounded-lg bg-[rgba(234,228,242,0.5)] text-[#9065B0] text-xs font-semibold">Focus</span>
+<span class="px-4 py-1.5 rounded-lg bg-[rgba(227,226,224,0.5)] text-[#37352F] text-xs font-semibold">Minimalism</span>
+</div>
+</article>
+<!-- Related Sidebar (Desktop) -->
+<aside class="hidden xl:block w-80 shrink-0">
+<div class="sticky top-32">
+<h3 class="text-sm font-bold tracking-widest uppercase text-outline mb-8">Related Curations</h3>
+<div class="space-y-10">
+<a class="group block" href="#">
+<img class="w-full h-32 object-cover rounded-lg mb-4 grayscale group-hover:grayscale-0 transition-all" data-alt="Abstract workspace background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClDI6ftvQye5_dhVXru0O1UY4Lnmdb886AT57zJdu6GNwKrpcgDVPjuAywSEIi2TvDui6OQGK0m1S09kLctR52skssKyNvwJ06Kfr3wCNy_Lz7SgYJOzzH12DImTnxeeoKtwLIVNlaBOGkw_ceO3m7uzlJwDDAOO3a7qIZcKkiFXIu3e4ourc-MkZYyC2CB1mmm9jQOc4i1JZSsI6Jis0WNVrZDWWrt-pe8BPSLn8QcJo6mL8JMtiXH3R1UoRBOOX7lryOPY-N4w"/>
+<h4 class="font-bold text-on-surface group-hover:text-secondary transition-colors">Designing for the Deep Work Cycle</h4>
+<p class="text-xs text-on-surface-variant mt-2">6 Min Read • Julian Vane</p>
+</a>
+<a class="group block" href="#">
+<img class="w-full h-32 object-cover rounded-lg mb-4 grayscale group-hover:grayscale-0 transition-all" data-alt="Notebook and pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGFYLSms2E9S1bHUH3ywNgz1NeCi3fRLKSF9xGJIxxS-D54IMtr_7zFAFGCXkyMq8lPUzWcPWaZrO8Rn8RJcIBInqx4V48M1Dcusv64aAXUW44cYVYykTe-UCBP-NCa6gotB6lboEwnWAh2PaZJ4OM-Hlqh_TJJZMvv84xUA8EoHtOdJV_bylG9JiMdZTr14wMGXusUfT_S51qiO0yqBM6VeLnkczxvP7XvaW7XiHVZU37ARuhAPy1CP6WIiW6WuGUlOren4_MXg"/>
+<h4 class="font-bold text-on-surface group-hover:text-secondary transition-colors">The Physics of Paper in a Digital World</h4>
+<p class="text-xs text-on-surface-variant mt-2">12 Min Read • Sarah Chen</p>
+</a>
+</div>
+</div>
+</aside>
+</main>
+<!-- Bottom Related Grid (Mobile/Tablet & Fallback) -->
+<section class="bg-surface-container py-24 px-6 xl:hidden">
+<div class="max-w-7xl mx-auto">
+<h3 class="text-2xl font-bold tracking-tight mb-12">Continue Reading</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-xs hover:shadow-md transition-shadow cursor-pointer">
+<img class="w-full h-48 object-cover rounded-lg mb-6" data-alt="Abstract workspace background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCceF6ANqdZ3aHz6s8CL4iUtGOoM-oZ64H6psSk5kybWRV7TE8fL0liRf3pmjZI5pZKdyMj1hpwqPIn_La4e6oS8G3AeRRz7Kkfi7tJ-_07PVO1jCJ8_O9A3JZMMChRFkNFhBhiTtzAhIOylswRIEltJnPV8o4QEpXF8sWK82PeVJlLKqDl5yjJS3zi5Nd_sCs3lWiBehVw9AgF7y-c3Zip8MKhf0nHbM2b2B-nGow5vz74otOwsGm9oKEN5WOuBM3Sfxsm0Akvhg"/>
+<h4 class="text-xl font-bold mb-3">Designing for the Deep Work Cycle</h4>
+<p class="text-on-surface-variant text-sm mb-6">Explore the neurological benefits of spatial design in productivity apps.</p>
+<span class="text-secondary font-semibold text-sm">Read Article →</span>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-xs hover:shadow-md transition-shadow cursor-pointer">
+<img class="w-full h-48 object-cover rounded-lg mb-6" data-alt="Notebook and pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD58YXKfIY_BblPP5zwLyvH0Z10kGZaYfhBgUqiiE90-CxVIoKu3ZIR9FGQoNrOTdb_0FK9rkpJO5KAJArDzzCc9qcsmSK22-ucwvyXe8XzHDB2S9i-WTVXSLF6N77ysYXHiRT7nICx8nNUrSfcIRj4X1BrJA5Br_EEKErlOd7tIuvjTLXx7B-yKVqvkIr8SJrD7d4MfBudgYpdq-WxRqXLob6wDmhQt7z6sE-yIkPAAwuCXuv3V3mK-hyxb62OxZ0JLa_woUhypQ"/>
+<h4 class="text-xl font-bold mb-3">The Physics of Paper in a Digital World</h4>
+<p class="text-on-surface-variant text-sm mb-6">How analog constraints can be translated into powerful digital experiences.</p>
+<span class="text-secondary font-semibold text-sm">Read Article →</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-stone-50 dark:bg-stone-950 font-inter text-xs tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-bold text-stone-900 dark:text-stone-100 text-lg">The Editorial Workspace</span>
+<p class="text-stone-500 dark:text-stone-400">© 2024 The Editorial Workspace. Built for Educators.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-stone-800 dark:text-stone-200">Resources</h5>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Documentation</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Help Center</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-stone-800 dark:text-stone-200">Community</h5>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Discord</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Twitter</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-stone-800 dark:text-stone-200">Legal</h5>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Privacy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Public Lesson Plan (V2) -->

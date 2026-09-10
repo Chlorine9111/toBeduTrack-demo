@@ -1,0 +1,30 @@
+#wechat-output {
+  color: #2d3748;
+}
+
+#wechat-output .h1 {
+  text-align: center;
+  font-size: 1.84em;
+  margin-top: 0.6em;
+  margin-bottom: 0.9em;
+}
+
+#wechat-output .h2 {
+  border-bottom: 1px dashed rgba(24, 144, 255, 0.32);
+  padding-bottom: 0.35em;
+}
+
+#wechat-output .p {
+  line-height: 1.85;
+}
+
+#wechat-output .blockquote {
+  background: rgba(24, 144, 255, 0.08);
+  border-left-width: 3px;
+  border-radius: 6px;
+}
+
+#wechat-output .figcaption {
+  color: #718096;
+  font-style: italic;
+}

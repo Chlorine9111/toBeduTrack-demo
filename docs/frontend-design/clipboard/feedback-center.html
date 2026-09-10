@@ -1,0 +1,236 @@
+<!-- Feedback Center -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Feedback Center - Deskmate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#525351",
+              "on-secondary-container": "#005397",
+              "surface-container-high": "#eee8d6",
+              "surface": "#fef9ef",
+              "error-dim": "#5c1202",
+              "secondary-fixed-dim": "#bcd6ff",
+              "primary-dim": "#55524c",
+              "on-primary": "#fdf7ee",
+              "surface-container-low": "#f9f3e7",
+              "inverse-on-surface": "#a09c95",
+              "inverse-surface": "#0f0e09",
+              "on-tertiary-fixed-variant": "#666664",
+              "on-secondary-fixed": "#004077",
+              "primary-fixed-dim": "#d9d4cb",
+              "on-surface-variant": "#635f4f",
+              "error": "#9e422c",
+              "on-tertiary": "#faf9f6",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#2383E2",
+              "on-primary-container": "#54514b",
+              "outline-variant": "#b8b29f",
+              "inverse-primary": "#fef9ef",
+              "on-primary-fixed": "#413f39",
+              "secondary-dim": "#005499",
+              "surface-dim": "#e1dac3",
+              "surface-container-highest": "#e9e2ce",
+              "on-tertiary-fixed": "#494a48",
+              "surface-tint": "#615e57",
+              "error-container": "#fe8b70",
+              "primary-container": "#e7e2d9",
+              "outline-solid": "#7f7b6a",
+              "on-surface": "#363225",
+              "surface-variant": "#e9e2ce",
+              "on-secondary": "#f8f8ff",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "on-primary-fixed-variant": "#5e5b54",
+              "background": "#fef9ef",
+              "tertiary": "#5e5f5d",
+              "on-tertiary-container": "#5b5c5a",
+              "surface-bright": "#fef9ef",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-background": "#363225",
+              "tertiary-fixed": "#f4f3f0",
+              "secondary-container": "#d4e3ff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#f4f3f0",
+              "secondary-fixed": "#d4e3ff",
+              "primary": "#37352F",
+              "on-error-container": "#742410"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #fef9ef;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Side Navigation Shell -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col py-6 px-3 bg-[#F7F6F3] dark:bg-zinc-900 transition-all duration-300 ease-in-out w-64 border-r border-transparent">
+<div class="px-3 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-on-primary font-bold">D</div>
+<div>
+<h1 class="text-lg font-semibold text-[#37352F] dark:text-zinc-100 leading-tight">Deskmate</h1>
+<p class="text-[0.6875rem] font-medium uppercase tracking-wider text-on-surface-variant opacity-60">Product Workspace</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="smart_toy">smart_toy</span>
+<span class="font-Inter text-[0.875rem]">Agent Workspace</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="local_library">local_library</span>
+<span class="font-Inter text-[0.875rem]">Library</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="quiz">quiz</span>
+<span class="font-Inter text-[0.875rem]">Question Bank</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="grading">grading</span>
+<span class="font-Inter text-[0.875rem]">Grading</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="edit_note">edit_note</span>
+<span class="font-Inter text-[0.875rem]">Lesson Studio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard_customize">dashboard_customize</span>
+<span class="font-Inter text-[0.875rem]">Templates</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+<span class="font-Inter text-[0.875rem]">WeChat Editor</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#2383E2] font-semibold bg-[#FFFFFF] rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span class="font-Inter text-[0.875rem]">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 hover:bg-[#FFFFFF]/50 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="account_circle">account_circle</span>
+<span class="font-Inter text-[0.875rem]">User Profile</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen flex flex-col items-center pt-24 pb-32 px-6">
+<div class="w-full max-w-[640px]">
+<!-- Header Section -->
+<header class="mb-12 text-center md:text-left">
+<h1 class="text-[3.5rem] font-bold tracking-tight text-on-surface leading-[1.1] mb-4">Feedback</h1>
+<p class="text-on-surface-variant text-lg opacity-80">Help us improve Deskmate</p>
+</header>
+<!-- Feedback Form Card -->
+<section class="bg-surface-container-lowest rounded-xl p-10 mb-16 shadow-[0px_4px_20px_rgba(55,53,47,0.04)]">
+<form class="space-y-8">
+<!-- Type Selector -->
+<div>
+<label class="block text-[0.6875rem] font-medium uppercase tracking-[0.03em] text-on-surface-variant mb-4">Select Category</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-5 py-2 rounded-full text-[0.875rem] font-medium bg-secondary text-on-secondary transition-all hover:opacity-90 active:scale-95" type="button">Bug</button>
+<button class="px-5 py-2 rounded-full text-[0.875rem] font-medium bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors active:scale-95" type="button">Feature Request</button>
+<button class="px-5 py-2 rounded-full text-[0.875rem] font-medium bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors active:scale-95" type="button">General</button>
+</div>
+</div>
+<!-- Text Area -->
+<div>
+<label class="block text-[0.6875rem] font-medium uppercase tracking-[0.03em] text-on-surface-variant mb-4">Your message</label>
+<textarea class="w-full bg-surface-container border-none focus:ring-1 focus:ring-secondary rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/40 resize-none font-body text-[0.875rem] leading-[1.6]" placeholder="Describe your experience or suggestion..." rows="5"></textarea>
+</div>
+<!-- Attachments -->
+<div>
+<div class="border-2 border-dashed border-outline-variant/30 rounded-lg p-6 flex flex-col items-center justify-center text-center hover:bg-surface-container-low transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant/40 mb-2 group-hover:text-secondary transition-colors" data-icon="upload_file">upload_file</span>
+<span class="text-[0.8125rem] font-medium text-on-surface-variant">Attach screenshots</span>
+<span class="text-[0.6875rem] text-on-surface-variant/60 mt-1">Drag and drop or click to upload</span>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-semibold text-[0.875rem] tracking-wide shadow-xs hover:bg-primary-dim active:scale-[0.98] transition-all duration-200" type="submit">
+                            Submit Feedback
+                        </button>
+</div>
+</form>
+</section>
+<!-- Feedback History Section -->
+<section>
+<div class="flex items-center justify-between mb-8 px-2">
+<h2 class="text-xl font-semibold text-on-surface">Feedback History</h2>
+<span class="text-[0.6875rem] font-medium text-on-surface-variant/60 uppercase tracking-widest">Last 30 Days</span>
+</div>
+<div class="space-y-3">
+<!-- History Item 1 -->
+<div class="bg-surface-container-low rounded-xl p-5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded text-[0.6875rem] font-semibold bg-[rgba(255,226,221,0.5)] text-[#DF5452]">Bug</span>
+<span class="text-[0.6875rem] text-on-surface-variant/60 font-medium">Oct 24, 2023</span>
+</div>
+<span class="px-2.5 py-1 rounded text-[0.6875rem] font-semibold bg-[rgba(221,237,234,0.5)] text-[#4D7C0F]">Resolved</span>
+</div>
+<h3 class="text-[0.875rem] font-semibold text-on-surface mb-1">Sidebar collapses randomly on mobile view</h3>
+<p class="text-[0.8125rem] text-on-surface-variant leading-relaxed line-clamp-1 opacity-80">The navigation drawer seems to trigger a close event when interacting with the main workspace area...</p>
+</div>
+<!-- History Item 2 -->
+<div class="bg-surface-container-low rounded-xl p-5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded text-[0.6875rem] font-semibold bg-[rgba(221,235,241,0.5)] text-[#2383E2]">Feature Request</span>
+<span class="text-[0.6875rem] text-on-surface-variant/60 font-medium">Oct 20, 2023</span>
+</div>
+<span class="px-2.5 py-1 rounded text-[0.6875rem] font-semibold bg-[rgba(253,243,208,0.5)] text-[#AD7F24]">In Review</span>
+</div>
+<h3 class="text-[0.875rem] font-semibold text-on-surface mb-1">Dark mode scheduler</h3>
+<p class="text-[0.8125rem] text-on-surface-variant leading-relaxed line-clamp-1 opacity-80">It would be great to have the theme automatically switch based on system preferences or time of day...</p>
+</div>
+<!-- History Item 3 -->
+<div class="bg-surface-container-low rounded-xl p-5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded text-[0.6875rem] font-semibold bg-[rgba(227,226,224,0.5)] text-[#37352F]">General</span>
+<span class="text-[0.6875rem] text-on-surface-variant/60 font-medium">Oct 18, 2023</span>
+</div>
+<span class="px-2.5 py-1 rounded text-[0.6875rem] font-semibold bg-[rgba(227,226,224,0.5)] text-[#37352F]">Submitted</span>
+</div>
+<h3 class="text-[0.875rem] font-semibold text-on-surface mb-1">Loving the new editorial layout</h3>
+<p class="text-[0.8125rem] text-on-surface-variant leading-relaxed line-clamp-1 opacity-80">Just wanted to say the recent update feels much more premium and professional. Great work on the spacing!</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>
+
+<!-- Upgrade to Pro -->

@@ -1,0 +1,158 @@
+[
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/upload",
+    "status": 200,
+    "durationMs": 5905
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 481
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 1107
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 389
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 408
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 390
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 403
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 499
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 531
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 412
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 406
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 394
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 371
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 448
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 395
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 412
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 1022
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 1022
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 378
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 422
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 397
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 405
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/content-assets/status",
+    "status": 200,
+    "durationMs": 379
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:3001/api/content-assets/bc8b71bd-29cb-4324-bdf4-50ab13faf90e",
+    "status": 200,
+    "durationMs": 511
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/agent/preflight",
+    "status": 200,
+    "durationMs": 2177
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:3001/api/agent/chat",
+    "status": 200,
+    "durationMs": 15622
+  }
+]

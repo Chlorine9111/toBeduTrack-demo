@@ -1,0 +1,270 @@
+<!-- Blog | List (V3) -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog Archive | The Editorial Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary-fixed-variant": "#666664",
+              "tertiary-container": "#f4f3f0",
+              "error-dim": "#5c1202",
+              "surface-bright": "#fef9ef",
+              "on-secondary-fixed": "#004077",
+              "secondary-container": "#d4e3ff",
+              "on-tertiary-fixed": "#494a48",
+              "inverse-surface": "#0f0e09",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary": "#5e5f5d",
+              "on-surface-variant": "#635f4f",
+              "on-secondary": "#f8f8ff",
+              "surface-container-low": "#f9f3e7",
+              "on-primary-container": "#54514b",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-container": "#5b5c5a",
+              "inverse-on-surface": "#a09c95",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#0060ae",
+              "on-background": "#363225",
+              "secondary-dim": "#005499",
+              "outline-variant": "#b8b29f",
+              "surface-variant": "#e9e2ce",
+              "tertiary-fixed": "#f4f3f0",
+              "on-primary": "#fdf7ee",
+              "on-primary-fixed": "#413f39",
+              "surface-tint": "#615e57",
+              "surface-dim": "#e1dac3",
+              "on-tertiary": "#faf9f6",
+              "primary-container": "#e7e2d9",
+              "surface-container-high": "#eee8d6",
+              "tertiary-dim": "#525351",
+              "surface": "#fef9ef",
+              "secondary-fixed": "#d4e3ff",
+              "background": "#fef9ef",
+              "primary": "#615e57",
+              "on-surface": "#363225",
+              "on-secondary-container": "#005397",
+              "surface-container-lowest": "#ffffff",
+              "primary-dim": "#55524c",
+              "error-container": "#fe8b70",
+              "on-error-container": "#742410",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "surface-container-highest": "#e9e2ce",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "error": "#9e422c",
+              "inverse-primary": "#fef9ef",
+              "on-secondary-fixed-variant": "#005ca8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-transition-bg {
+            background-image: linear-gradient(to bottom, rgba(254, 249, 239, 0.8), rgba(254, 249, 239, 0.9));
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #fef9ef;
+            color: #363225;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-xs dark:shadow-none font-inter antialiased text-sm font-medium tracking-tight">
+<div class="flex justify-between items-center px-6 py-3 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-lg font-semibold text-stone-800 dark:text-stone-100">The Editorial Workspace</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Product</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Pricing</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">About</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Blog</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-600 dark:text-stone-400 hover:text-stone-900 transition-colors active:scale-95">Sign In</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-semibold hover:bg-primary-dim transition-all active:scale-95 shadow-xs">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-20 max-w-3xl">
+<h1 class="text-5xl md:text-6xl font-bold tracking-tight text-on-surface mb-6 leading-[1.1]">The Curator's Journal</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed opacity-80">Reflections on design, digital architecture, and the art of professional curation in a cluttered world.</p>
+</header>
+<!-- Archive Filter Bar -->
+<div class="flex flex-wrap items-center gap-4 mb-16 border-b border-outline-variant/20 pb-6">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant/60 mr-4">Categories</span>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-medium text-sm transition-colors hover:bg-surface-container-highest">All Entries</button>
+<button class="px-4 py-1.5 rounded-full text-on-surface-variant font-medium text-sm transition-colors hover:bg-surface-container-low">Philosophy</button>
+<button class="px-4 py-1.5 rounded-full text-on-surface-variant font-medium text-sm transition-colors hover:bg-surface-container-low">Productivity</button>
+<button class="px-4 py-1.5 rounded-full text-on-surface-variant font-medium text-sm transition-colors hover:bg-surface-container-low">Case Studies</button>
+<div class="ml-auto flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">sort</span>
+<span class="text-sm font-medium">Newest First</span>
+</div>
+</div>
+<!-- List Content -->
+<div class="flex flex-col gap-0">
+<!-- Entry 01 -->
+<article class="group relative py-12 flex flex-col md:flex-row items-start gap-8 transition-all hover:bg-surface-container-low/40 px-4 -mx-4 rounded-xl">
+<div class="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Minimalist desk setup with warm lighting" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Minimalist desk setup with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9hNJulRbZaT4F0yL87cvI6_6mXy2h94ApiedvQvEbAEnSTCpDpmpWqaqdmG2pK_8u8jzGBsOaoUwoF2wee58Z8qyAtHA6LQw90JAcGwsVu6iU2W2Wh5H0PRDO8lEmRWQatBWHu3TCV7umYf199VCtP0FiyenFkO2BLVaVpPGlXvUSt_MdW063VB9hllAeUa65FTBOHSsPunu_qjSVO4qKChpO-syBJ77bfQyHPo4lArvSwd0fCd7Bez5_UBL1WTeQ50-eY9XQ0g"/>
+</div>
+<div class="grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary">Philosophy</span>
+<time class="text-xs font-medium text-on-surface-variant/60">October 24, 2024</time>
+</div>
+<h2 class="text-2xl font-semibold text-on-surface mb-3 group-hover:text-secondary transition-colors leading-tight">The Quiet Architecture: Why Boundaries Matter in Modern UI</h2>
+<p class="text-on-surface-variant text-sm max-w-2xl leading-relaxed opacity-80">Exploring the psychological impact of borderless design and how background-driven hierarchy reduces cognitive load for power users.</p>
+</div>
+<div class="md:text-right flex flex-col items-end">
+<span class="text-xs font-medium text-on-surface-variant/40 mb-2">Read Time</span>
+<span class="text-sm font-bold text-on-surface">6 min</span>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary">arrow_forward</span>
+</div>
+</div>
+</article>
+<div class="h-px w-full bg-outline-variant/10"></div>
+<!-- Entry 02 -->
+<article class="group relative py-12 flex flex-col md:flex-row items-start gap-8 transition-all hover:bg-surface-container-low/40 px-4 -mx-4 rounded-xl">
+<div class="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Person writing in a high-quality leather journal" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Person writing in a high-quality leather journal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8KNKxDWriVfTo7lXxvaukAga3NWThUqa3RZrAtG6ncRauFG7m5h4J6QNBN1M-7wS2dHSNnrUNOXuiCLH8GjY-bAQdZ4bsRJWpfs2HhQLYosmvIQ1m8xl1tlEU3IfGWSmJDWLGbq7LMyewqfm9a_LX5f1kO5sgA404inLvYD3-jo7JbEyAe6TR6sLsTCyBBBS-FiLS0iknf_qNBGK6dwaIYjQXKITiNaMaYwixHh2XA5S2jaSoDZK6x8mDJDxm0u1JTQthNojCEQ"/>
+</div>
+<div class="grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-tertiary-container text-tertiary-dim">Productivity</span>
+<time class="text-xs font-medium text-on-surface-variant/60">October 18, 2024</time>
+</div>
+<h2 class="text-2xl font-semibold text-on-surface mb-3 group-hover:text-secondary transition-colors leading-tight">Digital Friction and the Art of Deliberate Speed</h2>
+<p class="text-on-surface-variant text-sm max-w-2xl leading-relaxed opacity-80">Why making some tasks harder to perform can actually lead to better creative outcomes and less digital burnout.</p>
+</div>
+<div class="md:text-right flex flex-col items-end">
+<span class="text-xs font-medium text-on-surface-variant/40 mb-2">Read Time</span>
+<span class="text-sm font-bold text-on-surface">12 min</span>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary">arrow_forward</span>
+</div>
+</div>
+</article>
+<div class="h-px w-full bg-outline-variant/10"></div>
+<!-- Entry 03 -->
+<article class="group relative py-12 flex flex-col md:flex-row items-start gap-8 transition-all hover:bg-surface-container-low/40 px-4 -mx-4 rounded-xl">
+<div class="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Clean desk with specialized office supplies" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Clean desk with specialized office supplies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_-DDl8G-b-qZ0urXqKgPVUElDn--j2vYHo58d8I1mZGPfiB6a3WeyKpKSHMa0VX3M1uK5Fr-afW9mB5vNiCkheBzeRDNOIliZpIXrHM9_kFwxy25bRcgOA9WEY4LYlbebA-SSi_TS6_xlaioTri2TexU9W0Yj7t5UcGxY2SjHsOOcBun1NRpcNS-D-rbcZDz3uFYnzJQNtC4MSGOaP7es2Jw9gJxfzRCFB1Yv9COV1j0DKKGlTgZswCmhLtB9nTt8CfC4v0tXyw"/>
+</div>
+<div class="grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-secondary-container text-secondary">Case Studies</span>
+<time class="text-xs font-medium text-on-surface-variant/60">October 02, 2024</time>
+</div>
+<h2 class="text-2xl font-semibold text-on-surface mb-3 group-hover:text-secondary transition-colors leading-tight">The Workspace Reimagined: Educators' Workflow</h2>
+<p class="text-on-surface-variant text-sm max-w-2xl leading-relaxed opacity-80">A deep dive into how research-heavy professionals are utilizing curation tools to manage vast knowledge ecosystems.</p>
+</div>
+<div class="md:text-right flex flex-col items-end">
+<span class="text-xs font-medium text-on-surface-variant/40 mb-2">Read Time</span>
+<span class="text-sm font-bold text-on-surface">8 min</span>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary">arrow_forward</span>
+</div>
+</div>
+</article>
+<div class="h-px w-full bg-outline-variant/10"></div>
+<!-- Entry 04 -->
+<article class="group relative py-12 flex flex-col md:flex-row items-start gap-8 transition-all hover:bg-surface-container-low/40 px-4 -mx-4 rounded-xl">
+<div class="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Abstract representation of digital data flow" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Abstract representation of digital data flow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo54qzQMmNvstsTde0Nje2ARWNKXXA-0tuNpb5BkdL-60nMdrI-rNr0JtaYf7I5iyK8OUxWS8TgErFo4Og5YLEVzraXvQTxCtXt5LQCvthUyedpOk6uEToDaIhgKun--_QPSoOd5oUA-QnwUfgExQxsx4UzUOLUeIpge0DpCIWtSHqhqqxYOznE7qiT-leHhTMetmUCbdcdfzX7ZfnwUQ0byDxq6B89Sbp7V5Ki2K5Iuc6zpb826Hr9GV-5zBvRpQ_KMIwTtEvCw"/>
+</div>
+<div class="grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary">Philosophy</span>
+<time class="text-xs font-medium text-on-surface-variant/60">September 25, 2024</time>
+</div>
+<h2 class="text-2xl font-semibold text-on-surface mb-3 group-hover:text-secondary transition-colors leading-tight">Minimalism is Not Absence: The Power of Presence</h2>
+<p class="text-on-surface-variant text-sm max-w-2xl leading-relaxed opacity-80">Reframing minimalism as the intentional addition of value rather than the simple removal of elements.</p>
+</div>
+<div class="md:text-right flex flex-col items-end">
+<span class="text-xs font-medium text-on-surface-variant/40 mb-2">Read Time</span>
+<span class="text-sm font-bold text-on-surface">5 min</span>
+<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-8">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors disabled:opacity-20" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+<span class="text-sm font-bold">Older</span>
+</button>
+<div class="flex gap-4">
+<span class="text-sm font-bold text-secondary">1</span>
+<span class="text-sm font-medium text-on-surface-variant">2</span>
+<span class="text-sm font-medium text-on-surface-variant">3</span>
+</div>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="text-sm font-bold">Newer</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 w-full py-12 px-8 font-inter text-xs tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<p class="font-bold text-stone-900 dark:text-stone-100 text-lg mb-4">The Editorial Workspace</p>
+<p class="text-stone-500 dark:text-stone-400 mb-6 max-w-xs">Building tools for the digital curator. Designed for educators, writers, and deep thinkers.</p>
+<p class="text-stone-500 dark:text-stone-400">© 2024 The Editorial Workspace. Built for Educators.</p>
+</div>
+<div>
+<p class="font-bold text-stone-900 dark:text-stone-100 uppercase tracking-widest mb-4">Company</p>
+<ul class="space-y-3">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#">Resources</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#">Community</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<p class="font-bold text-stone-900 dark:text-stone-100 uppercase tracking-widest mb-4">Legal</p>
+<ul class="space-y-3">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#">Privacy</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-80" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Agent | Active Chat -->

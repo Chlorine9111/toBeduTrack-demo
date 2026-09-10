@@ -1,0 +1,249 @@
+---
+last_verified: 2026-03-13
+owner: platform-harness
+---
+
+# Deskmate 运行与联调基线
+
+## 适用范围
+- 本地真实认证联调
+- `/main/*` 主工作台与内容库验收
+- Agent 生成链路、内容库沉淀、PDF 拆题、公众号编辑器与知识库上传
+- 本地 UX 验证脚本与开发态排障
+
+## 2026-03-12 架构验收快照
+- 工程基线：
+  - `npm run check:all` 通过
+  - `npm run build` 通过
+- L1 UX 验收通过：
+  - `document/ux-verification/20260312_222613_agent-greeting-memory-arch/`
+  - `document/ux-verification/20260312_222700_agent-exercise-streaming-arch/`
+  - `document/ux-verification/20260312_222940_agent-question-bank-worksheet-arch-rerun/`
+  - `document/ux-verification/20260312_224907_grading-smart-ocr-arch-rerun4/`
+- 关键结论：
+  - `/main/agent` 问候语、习题流式、题库组卷导出已跑通
+  - `/main/grading` 的“题目卷 -> provisional answer key -> auto-grade”已真实跑通，`analysis.totalQuestions = 2`，结果可见耗时均 `< 30s`
+
+## 2026-03-13 前端性能 + 判卷第二阶段快照
+- 工程基线：
+  - `npm run typecheck` 通过
+  - `npm run check:docs` 通过
+  - `node --import tsx tests/followup/grading-answer-key-inference.spec.ts` 通过
+  - `node --import tsx tests/followup/grading-quality-gates.spec.ts` 通过
+- L1 UX 验收通过：
+  - `document/ux-verification/20260313_100033_agent-workspace-performance-rerun2/`
+  - `document/ux-verification/20260313_100118_agent-exercise-streaming-rerun/`
+  - `document/ux-verification/20260313_100154_agent-artifact-canvas-on-demand-rerun/`
+  - `document/ux-verification/20260313_100633_grading-smart-ocr-rerun3/`
+- 关键结论：
+  - `/main/agent` 现在已按需动态加载进度面板与 Canvas，正式主链不再经过独立 `/api/agent/preflight`。
+  - `/main/grading` 现在已真实校验题量、复核数与质量闸门状态，并覆盖异步 job 轮询下的可见结果更新。
+
+## Auth / Onboarding 基线
+- 本地验证真实认证链路前，先关闭 `.env.local` 中的 `AUTH_BYPASS`、`NEXT_PUBLIC_AUTH_BYPASS`、`NEXT_PUBLIC_E2E_BYPASS_AUTH`、`E2E_TEST`，然后重启 `npm run dev`。
+- 2026-03-20 起，`/main/settings` 与 `/api/quota` 在本地 `AUTH_BYPASS=true` 时也支持通过 `AUTH_BYPASS_USER_ID` 回落到测试教师账号；验证额度展示与扣费结果时，不必再为了设置页单独关闭 bypass。
+- 本地要放大测试教师额度时，优先使用 `npm run quota:dev:unlimit`；恢复默认值时使用 `npm run quota:dev:reset`。这两个脚本只改 `public.quota_accounts` 数据，不改接口逻辑，也不要把 `plan` 单独改成 `unlimited` 或在代码里全局跳过额度检查。
+- 关闭 bypass 之前，先确认 Docker daemon 已启动且 `supabase status` 正常；如果 `127.0.0.1:54321/auth/v1/*` 连接失败，优先排查本地 Supabase 是否启动，不要先怀疑登录页表单。
+- 本地 Supabase Auth 当前约定使用 `http://127.0.0.1:3001` 作为 `site_url`，认证邮件与重置邮件通过 Mailpit 暴露在 `http://127.0.0.1:54324`。
+- 认证回调路径统一走 `/auth/callback`，密码重置页统一走 `/auth/update-password`，不要在业务代码里自行拼接其他散落入口。
+- 登录页、注册页当前用 `form[data-auth-ready="true"]` 作为 hydration 就绪标记；浏览器验收脚本在填写和点击前必须先等这个标记出现，避免 React 接管前触发原生表单提交，制造 `/auth/login` 或 `/auth/register` 的假性 404 console error。
+- 首次登录引导统一走 `/onboarding/basic-info`、`/onboarding/subjects`、`/onboarding/get-started`。middleware 只拦页面路由，不能把 `/api/**` 一起重定向到 onboarding。
+- 客户端退出登录统一先广播 `deskmate-auth-signing-out`，再执行 `supabase.auth.signOut()`，最后用 `window.location.assign(buildLoginUrl(...))` 做硬跳转；不要用 `router.replace()` 后立刻 `router.refresh()`。
+
+## 主工作台前端基线
+- 当前 `/main/*` 正式路由统一走 `app/main/(with-sidebar)/layout.tsx -> components/main/LovableSharedLayout.tsx -> components/main/AppSidebar.tsx`。
+- `components/main/Sidebar.tsx`、`HomeContent.tsx`、`CommunitySection.tsx`、`chatflow/DashboardView.tsx` 目前不是正式主链路。修主工作台的真实用户问题时，优先检查 `AppSidebar.tsx` 和实际 page route，不要误改旧壳。
+- `/main/agent` 的正式发送链只保留 `/api/agent/chat`。如果浏览器网络面板里仍然出现 `/api/agent/preflight`，默认视为回归。
+- `/api/agent/chat` 与旧 `/api/chat` 的长期记忆、旧对话、上传材料、知识库与联网结果上下文，统一通过 `lib/context-engineering/*` 选择与压缩；不要在 Route 里继续手工拼接多段长字符串。
+- `/api/agent/chat` 当前已接入 workflow telemetry。排主工作台“为什么慢”时，先看 `workflow_runs.workflow='agent_chat'` 与 `workflow_run_steps.step in ('stream_first_visible','stream_complete')`，不要再只靠浏览器里“感觉卡住了”判断。
+- 2026-03-26 起，前端新增 `WebVitals -> /api/telemetry/web-vitals -> frontend_web_vitals` 闭环。排 `/main/agent`、`/main/grading`、`/main/content-assets` 的卡顿时，先看 `frontend_web_vitals.metric_name in ('INP','LCP','CLS')` 的最新记录，再决定要追前端 bundle、接口耗时还是数据库查询。
+- 2026-03-26 起，`/api/agent/chat`、`/api/content-assets/bootstrap`、`/api/content-assets/:id`、`/api/documents/:id/autosave` 会带 `Server-Timing`。本地浏览器 Network 面板排障时，优先看 `materials / context_setup / llm_setup / autosave / detail / delete` 等阶段，不要只盯总耗时。
+- 2026-03-28 起，老师显式选中的 `contentAssetIds` 在“资料问答 / 摘要整理”场景会优先命中轻量快路径：`/api/agent/chat` 只保留当前会话上下文 + 材料摘要，不再拉 teacher memory，也跳过 direct dispatch。验收时要同时确认两件事：
+  - `Server-Timing` 中不应再出现单独的 preflight 主链耗时，`direct_dispatch=0`。
+  - 答案里仍然保留对当前资料的锚点，不允许为了省时把材料摘要一起跳掉，否则会出现“耗时下降但总结跑偏”的假优化。
+- 2026-03-26 起，`/api/content-assets/upload` 在成功入库后会通过 `scheduleReliableAfterTask(...)` 立即 kick 同 `jobKey` 的 `asset_process`，本地上传链不应再长时间停在 `pending`。最新一次真实 PDF 验证里，`asset_process` 从 `created_at` 到 `started_at` 仅约 `0.58s`，整体 `started_at -> completed_at` 约 `26.3s`。
+- 2026-03-26 起，Sidebar / `assets` 上传的 PDF 默认按“资料素材”处理：普通教学资料优先走 PDF 文本层提取，再做 `chunk + embedding`；只有文本层明显不可用时才回退 OCR。验收时不要再把这条链误判成“上传后自动入内容库/只读文档”或“默认走 Mistral 拆题”。
+- 2026-03-13 起，项目内新增 AI 流式接口统一走 Vercel AI SDK UI stream：`/api/agent/chat`、`/api/lesson-plans/generate`、`/api/lesson-plans/[planId]/resume` 统一输出 `text/event-stream`；前端与 UX 脚本优先通过 `lib/api/ui-message-stream.ts` 或同等 SSE parser 读取 `text/tool/data-*` chunk，不再新增 NDJSON 双轨。
+- `/main/agent` 当前正式性能基线已经改成“首屏只为当前可见内容付费”：
+  - `AgentProgressPanel`、`ArtifactCanvas` 只在需要时动态加载。
+  - 长对话默认只挂最近 18 条消息；需要全量历史时再由老师主动展开。
+  - 流式中的最后一条 assistant 消息先走轻量纯文本，结束后再切回 `RichMarkdown`。
+  - `preflight` 一开始就必须切进可见进度态，不能让老师空等到正式流式开始。
+- 主工作台性能回归统一走 `scripts/ux/verify-agent-workspace-performance.mjs`：
+  - 当前要记录 `welcomeVisibleMs / progressVisibleMs / artifactReferenceVisibleMs / canvasVisibleMs`。
+  - 2026-03-13 最近一次通过结果：`welcomeVisibleMs=1127`、`progressVisibleMs=812`、`artifactReferenceVisibleMs=27479`、`canvasVisibleMs=28334`；产物目录 `document/ux-verification/20260313_104110_agent-workspace-ui-stream-phase12-rerun3/`。
+- Agent 主聊天链当前只保留当前会话最近消息和本轮资料上下文；Teacher Memory / 长期记忆不再参与 `/api/agent/chat` 的正式路由与首响链。
+- 如果老师输入包含“重新开始 / 从头开始 / 忽略前文 / 不要参考上次”等 reset 指令，服务端只需压制最近会话里的延续上下文与旧产物，不再额外考虑长期记忆层。
+- `/api/agent/chat` 在真正组装 prompt 前，必须先通过 `lib/agent/task-state.ts` 生成统一任务状态。任务状态至少要明确：当前任务类型、是否延续上一轮、是否应优先材料/知识库/联网，以及允许暴露给模型的工具集合；不要再把所有重工具长期常驻给模型自己瞎选。
+- `/api/agent/chat` 当前对同一老师默认只允许 2 条并发主任务。浏览器短时间重复点击或多标签同时发起任务时，如果收到 `429 RATE_LIMITED`，先检查是否已有未结束的 Agent 流任务，而不是先怀疑登录态或网关故障。
+- 当老师在 chatbox 里明确说“从题库/现成题里找题”时，`/api/agent/chat` 必须直接把它识别成题库调题，而不是重新生成习题。这类请求当前应优先只开放 `search_question_bank`，返回现成题清单与来源文件名/页码；只有老师改口要求新生成，才切回 `generate_ap_exercises_pipeline`。
+- 前端不再依赖 `/api/agent/preflight` 先产出 `taskContext`。正式任务裁决、toolChoice 和 continuation 判定全部由 `/api/agent/chat` 服务端当前 prompt + 最近会话上下文完成。
+- 任务状态驱动的工具边界当前约定为：研究型请求优先只开放 `web_search/read_webpage`；教案请求开放 `generate_lesson_plan_workflow`；习题/拆题请求开放 `generate_ap_exercises_pipeline`；若不依赖外部资料，则默认不要把重工具整包暴露给模型。
+- 上传材料进入 `/api/agent/chat`、教案链、习题链之前，必须先走 `lib/agent/material-context.ts` 的任务感知压缩。教案看活动、目标、误区；习题看公式、条件、例题；Rubric 看标准和证据。禁止再把原始 OCR/讲义全文直接塞进模型上下文。
+- 教师知识库上传（`/api/knowledge/upload`）当前必须在 `knowledge_documents` 之外同步生成 `knowledge_document_chunks`。embedding 主路径已经切到 Google 官方 `gemini-embedding-2-preview`（默认 1536 维）；只有 Google embedding 不可用时，才允许回退 OpenRouter embedding 或关键词 chunk 检索，但上传本身仍必须成功。
+- 教师知识库上传的 PDF 若被判定为题目型资料（文件名像题册/试卷，或正文存在稳定题号结构），当前会在上传成功后通过 `after()` 自动进入拆题：资料层继续保留原始文档，题目层写入同一导入批次，并把状态、批次、待审核信息回写到 `knowledge_documents.metadata.questionBank`。
+- 教师知识库检索（`/api/knowledge/search`、旧 `/api/chat`、Agent `search_teacher_knowledge`、教案工作流）当前基线是“chunk 级 RAG 优先，Supermemory 文档搜索兜底”。命中 PDF/讲义时，应优先返回文件名、块标题与页码，而不是整份文档匿名长文本。
+- 自动化或浏览器复现侧边栏问题时，选择器必须先收口到 `aside`，不要直接用全局 `getByRole("button", { name: ... })`，否则容易点到页面正文里的同名按钮，造成误判。
+- Chat 底部快捷标签当前定义为“只填充 composer prompt + 高亮选中态”，不能点击后直接触发 `/api/agent/preflight` 或 `/api/agent/chat`。
+- 长期记忆后台任务当前依赖 `teacher_memory_jobs / teacher_memory_mutations`；本地联调前先确认 `supabase migration list --local` 已包含 `20260312123000_teacher_memory_jobs_and_mutations.sql`，否则真实对话会在记忆排队阶段报 schema cache 缺表。
+- 稳定性与后台任务的统一基线见 [docs/runbooks/stability-performance.md](stability-performance.md)。涉及 typed error、deadline、retry、kill switch、可靠 `after()` 与判卷异步 job 时，不要只看单条业务链实现。
+- Chat 与内容库中的 assistant 正文统一走 `components/shared/RichMarkdown.tsx`，默认支持 Markdown 与 LaTeX 渲染；不要再回退成纯 `whitespace-pre-wrap` 文本展示。
+- `/main/agent` 聊天页顶部不再保留 `Teacher Agent / 老师自主 Agent` 的整块白色头部；空态首屏应直接进入欢迎语与输入框，活跃态的 `停止 / 导出 / 新对话` 只保留在消息区上方的极简 icon-only 小按钮里。
+- `/main/agent` 当前只保留“资料上传到上下文”这条正式入口。拆题 / 扫描 PDF 已迁出当前 Agent 页面，不应再在浏览器、脚本或文档里出现 `agent-scan-upload-trigger`、`/main/agent?action=scan_pdf`、`/api/pdf/upload-scan` 之类主链迹象。
+- 资料上传正式走 `content_assets -> processingStatus=ready -> 自动挂入当前会话`。在 `ready` 之前主聊天区必须禁止发送；验收时要同时确认两件事：
+  - 上传过程中不会出现 `/api/agent/preflight`
+  - 上传过程中不会误命中 `/api/pdf/upload-scan` 或 `/api/pdf/process-scan`
+- `素材上传` 不能再“只要有文件就自动默认生成教案”。当前约定是：先显示素材 chip，再由老师继续输入明确 prompt（例如“基于这份 PDF 生成教案/习题”）后才允许发送。
+- `/main/*` 侧边栏 recent 对话列表不是自动轮询；成功完成一轮 Agent 对话后，前端要广播 `deskmate-agent-conversations-updated`，让 `AppSidebar` 重新拉取最近对话与最新概要标题。
+
+## 真实数据与生成链路基线
+- `lib/lesson-plan/store.ts`、`lib/grading/store.ts`、`lib/pbl/store.ts` 在真实环境必须走 Supabase；只允许 `E2E_TEST=1` 的显式 mock 模式使用内存 store，禁止因为 `supabase` 缺失或查询失败而静默回退到内存/样例数据。
+- 如果真实环境读取数据库失败，优先返回明确错误，不要用默认样例列表、默认答案键、默认 OCR 结果去“伪造成功”。
+- `/main/grading` 当前主路径不再假定老师先手填答案键 JSON；正式流程优先是“上传题目卷 -> 智能生成 provisional answer key -> 上传学生答卷 -> 一键智能判卷”，手工编辑 JSON 仅作为复核兜底。
+- 判卷链当前允许返回 `202 + job` 进入后台异步模式；这不是失败，而是正式基线。前端要继续轮询 `/api/grading/jobs/:jobId`，本地排障先查 `grading_jobs.status`，再看 `workflow_runs / workflow_run_steps`。
+- 智能判卷排障时，先看质量，再看预算：如果 `answer-key/infer.analysis.totalQuestions` 比题目卷实际题量更大，优先检查 `lib/pdf-scan/question-parser.ts` 是否把 OCR 的 Markdown 标题（如 `## 1. Multiple Choice`）或分区标题误拆成多题；不要先机械上调 `ocrMs / gradingMs`。
+- 判卷侧 Gemini 主模型当前基线优先走 Google 官方 API 上可用的 `gemini-3.1-pro-preview`；Google 官方在 2026-03-09 已把 `gemini-3-pro-preview` 停用并指向 `gemini-3.1-pro-preview`，所以本项目运行时会自动把旧 `3-pro` 升到 `3.1-pro`，不再回落到 2.5。
+- 判卷任务当前按职责拆模型：`grading_extract_answer` 默认优先 `gemini-3-flash-preview` 负责题目卷到 provisional answer key 的结构化推断，以保证 `POST /answer-key/infer <= 30s`；`GRADING_OCR_GEMINI_MODEL / GEMINI_SCORING_MODEL` 继续用于学生答卷 OCR 与最终 AI 判分，并由 `provider-registry` 优先路由到 Google 官方 Gemini API。
+- `lib/grading/answer-key-inference.ts` 复用 `runScanPipeline(..., useVision: true)` 做题目卷理解，再调用 Gemini 推断答案键；Gemini 的结构化返回允许出现“顶层直接数组、`questionText` 缺省、rubric 只回 `dimension/weight`”这类松散结构，必须先 normalize 再进入判卷。
+- `lib/grading/grader.ts` 的最终判分同样必须走统一 `model-router + ai/gateway`，不要再为了“快一点”回退到业务层直连 provider；预算优化只能建立在题量正确、题型语义正确的前提上。
+- 题目元数据必须在判卷链路内透传：`responseMode / subjectHint / languageHint / sourceQuestionType / knowledgePoints` 从答案键推断进入 OCR，再进入 grader prompt。OCR 不能再固定 `zh-CN` 盲识别，判分 prompt 也不能只看“题干 + 标准答案”而忽略题型上下文。
+- 若判卷 job 已被创建但一直不推进，本地先执行：
+  - `npm run grading:jobs:process`
+  再看 `/api/grading/jobs/:jobId` 是否进入 `completed/failed`。
+- `app/api/agent/chat/route.ts` 中的习题生成不能只把 `tools` 丢给 `streamText` 自由发挥。凡是识别到 `generate_exercises / create_worksheet`，必须显式走 `runApExercisePipeline -> saveExercises -> syncExerciseContentLibraryItem`。
+- 自动从题库相似题组卷时，当前正式入口是 `POST /api/worksheets/assemble`：先用 `semantic_index_items` 召回题目候选，再由 `worksheet_curate`（默认 `claude-sonnet-4-6` 直连原生 Anthropic）做分组与挑题，最后写入 `worksheets / worksheet_exercises`；不要在 Route 里重写一套标签硬编码组卷逻辑。
+- `lib/agent/chat-shared.ts` 的 multipart 解析必须兼容前端发送的 `payload` JSON + `materials` 文件数组，不能只读散落的 `message/displayMessage` 字段。
+- `lib/chat/intent.ts` 的习题关键词必须覆盖中英文表达，至少包括 `practice questions`、`question set`、`MCQ`、`FRQ`、`worksheet` 等。
+- `lib/agent/exercise-pipeline.ts` 当前基线是“质量优先 + 任务模型并行分片生成”：默认不再让 `quickMode/rescue` 成为 3 题及以上的主生成路径；`generateRescueExercises(...)` 只能作为上游失败后的兜底，且 rescue 结果仍需继续经过验证/修补后才能输出。当前项目约定所有主要能力统一以 `claude-sonnet-4.6` 作为主模型，`assistant_exercises` 也不再单独切到 Kimi；如需调整，只能通过 `model-router` 的显式 task 配置收口，不能在业务层各自改默认模型。
+- 习题验证当前按风险分级，不再所有请求都走最重验证：`基础巩固` 走本地规则校验，`中等应用` 走批量教师评分，只有 `高阶分析` 且题量较小的请求才走逐题可解性验证；修补轮次默认最多 1 轮，避免把老师主等待链路拖长。
+- 习题逐题验证/修补当前必须使用限流并发，而不是按题串行跑到底；目标是先降低老师等待时间，再通过质量标签和后续审核补强高风险题目。
+- `中等应用` 题目若首次教师评分未过、但自动修补后通过快速复检，当前基线应直接作为“建议复核”返回并保存为 `manual_review`，不要再为同一道题同步追加第二轮整批 AI 审查，把主等待链路重新拖长。
+- 2026-03-09 起，业务层旧兼容壳 `lib/ai/tool-adapter.ts`、`lib/ai/vercel-sdk-adapter.ts`、`lib/ai/kimi-client.ts` 已退役；任何新功能或返工都必须直接使用 `lib/ai/gateway.ts` / `lib/ai/structured-output.ts`，不要再恢复 “Claude/Kimi 分流 + callTool/callChat” 的双轨调用。
+- Agent 出题链路无论是 direct route 还是 tool path，只要存在 `uploaded.materials`，都必须把材料摘要真正带入习题 pipeline，用于蓝图解析、课程推断和出题 grounding，不能再静默忽略“根据这份 PDF/讲义出题”的材料上下文。
+- `/api/agent/chat` 的习题直出响应必须先完成 `runApExercisePipeline -> saveExercises -> addConversationMessage`，再把结果流回前端；内容库同步与 teacher memory 写入属于后置副作用，统一通过 `after()` 放到响应之后执行，避免把 `/api/agent/chat` 主等待链路拖到 30s 以上。
+- `lib/agent/lesson-plan-workflow.ts` 的质量审查不能作为整条教案链路的硬阻断。结构化审查模型失败或超时时，必须回退到文本 JSON 解析或本地 deterministic audit，确保 `assistant_messages` 和 `content_library_items` 仍能真实落库。
+- Agent 教案直出链路当前基线是“先给可上课草稿，再按风险决定是否深审”：默认先跑 deterministic audit，仅当草稿结构明显不稳或属于 refine 请求时才追加完整 AI 审查/重写；`createAgentLessonPlanContentLibraryItem` 与 teacher memory 写入必须通过 `after()` 后置，不能继续阻塞老师等待首稿。
+- Agent 教案默认不要为了“普通备课请求”自动联网；只有老师明确要求“最新/案例/来源/时事”等外部信息时，才开启 lesson plan 的 `web_search`。普通教案优先依赖当前输入、上传材料、教师知识库与长期记忆，避免把教案首稿时间浪费在默认联网检索上。
+- Agent 新任务上下文隔离当前基线是：只有显式 continuation / refine 信号才允许沿用旧对话、旧 artifact 和旧 retrievalHint；`全新/换个/新的主题/不要沿用` 一类 reset 词必须直接压制 carryover。短 prompt 本身不再视为 continuation。
+- Agent 教案正文生成当前采用“双档草稿”：先尝试标准紧凑版长文生成，若 Sonnet 4.6 在时间预算内未稳定返回，则自动降级为本地快速版七段式草稿，并显式附带“建议复核案例与练习”的提醒；目标是保证 `/api/agent/chat` 在 30s 内优先返回可编辑结果，而不是卡死或直接 500。
+- Agent 教案直出链路的 assistant 消息落库也必须后置到 `after()`，让老师先看到本地流式结果与引用块；不要把“写 assistant_messages”继续放在主响应里顺序阻塞。
+- `lib/pbl/generator.ts` 中 PBL 的 `generate_overviews` 与 `expandPlan` 都必须有明确时间预算；超时后应降级到真实模板骨架继续写库，不能无限等待大模型。当前本地基线控制为：概览约 18s AI 预算 + 5s legacy 预算，展开约 22s AI 预算 + 6s legacy 预算，目标是让单次关键生成接口保持在 30s 内。
+- `app/api/pbl/generate/route.ts` 的 overview/expand 链路里，日志写入一律后置到 `after()`；`expand` 阶段的素材搜索与课标检查必须并行执行，`markRequestSelectedOption` 与 `saveProjectPlan` 也应并行收口，避免顺序等待把 PBL 主响应拖长。
+- 关键后台副作用不再直接裸用 `after()`：memory、知识库自动抽题、教案/习题后处理、临时题池组卷、PBL 同步当前统一走 `scheduleReliableAfterTask(...)`。若页面显示成功但刷新后数据缺失，优先查 `background_task_failures`，不要先怀疑前端缓存。
+- `app/api/scheduler/generate/route.ts` 和 `components/main/SchedulerPage.tsx` 当前仍保留样例排课输入，只能视为未完成真实后端化的演示页，不属于“已真实打通”范围。
+- PDF 拆题链路当前只允许 `Mathpix / Mistral OCR` 作为主 OCR 通道；未配置可用凭据时直接报错，不再回退到本地 `pdfjs` 文本提取。若开启 Vision 补强，PDF 页渲染统一走系统 `pdftoppm`，并把图片裁切结果落成可渲染的 `/api/pdf/scan-image?...` URL。
+- `POST /api/pdf/generate` 的 worksheet 分支当前已切到 Typst 主渲染链；导出带图题时不要依赖无登录态 HTTP fetch `/api/pdf/scan-image`，而应直接解析 `path=` 后通过 admin storage 下载图片，再映射为 Typst shadow assets。exam / rubric / lesson_plan 仍保留 Puppeteer。
+- 知识库上传链路当前基线不再把整篇文档截断后作为单条 memory 写入 Supermemory；PDF 会先经 `lib/pdf-scan/ocr-router.ts` 选择 Mathpix / Mistral，本地支持文档则走 `parseDocument(..., { truncate: false })` 获取全文，再按 `lib/assistant/chunker.ts` 分块后逐块写入 Supermemory 与 `knowledge_document_chunks`。
+- 若要验证知识库上传检索质量，优先关注 `knowledge_documents.chunk_count/full_text_length/ocr_provider/supermemory_ids` 与 `knowledge_document_chunks` 是否真实写入，不要再只看 `summary` 或单条 `supermemory_id`。
+- `lib/pdf-scan/question-parser.ts` 与 `lib/pdf-scan/vision-pdf.ts` 输出的题干必须先剥离已提取出的 A/B/C/D 选项，不能出现“题干区域重复一遍选项”的 UI 回归。
+- PDF 拆题结果要自动进入内容库时，当前真实实现是“按扫描题目写入 `public.exercises`，并同步 `public.content_library_items`”；导入题默认标记为 `manual_review`，答案与解析使用占位文案，等待老师后续补充或继续生成。
+- PDF 拆题自动归档前当前已加质量闸门：题干过短、置信度偏低或选择题选项不完整时，`save-to-library` 应返回 `requires_review`，前端只展示结构化结果与复核提示，不继续重复自动归档。
+- 微信编辑器图片分析（`lib/wechat-editor/*`）与知识库图片 OCR（`app/api/knowledge/upload/route.ts`）不能只认原生 `ANTHROPIC_API_KEY`。只要 `OPENROUTER_API_KEY` 可用，就必须通过 `lib/wechat/ai-vision.ts` 的统一 adapter 走 OpenRouter Vision；业务层禁止再直接绑定 `getAnthropicProvider()` 或写死 `ANTHROPIC_API_KEY` 可用性判断。
+- `lib/wechat-editor/outline-parser.ts` 的 `smart` 模式如果输入本身已经带明显标题结构或段落很短，应优先直接走启发式 outline，不必再额外触发 AI 结构分析；`app/api/wechat-editor/layout/route.ts` 中多图上传必须并行处理，避免 5-10 张图片逐张串行上传拖慢排版。
+
+## UX 验证脚本基线
+- 认证与引导主链路的本地 UX 验证脚本：`scripts/ux/verify-auth-onboarding-shell.mjs`
+- 已登录主工作台 UX 验证脚本：`scripts/ux/verify-main-shell-real.mjs`
+- 题库与题目资料整理页：`scripts/ux/verify-question-bank-flow.mjs`
+  - 验证基线固定为：登录 -> `/main/question-bank` -> 读取题库列表 -> 按知识簇筛选 -> 选择带细分知识点的题 -> 打开题目详情 -> 核对自动整理分类与来源信息。
+  - 数据流交叉验证至少要覆盖 6 条：题库总数、知识簇筛选结果、列表里的细分知识点、题目详情里的知识簇/细分知识点/主考察方式、来源文件名。
+  - 旧题库在新增分类字段后，先运行 `npm run question-bank:taxonomy` 做一次回填，再跑这条前端验收；否则“未分类”旧题会让筛选与页面标签不一致。
+- 知识库 PDF 自动抽题入题库：`scripts/ux/verify-question-bank-knowledge-auto-import.mjs`
+  - 验证基线固定为：登录 -> `/main/question-bank` -> 浏览器内调用 `/api/knowledge/upload` 上传题目型 PDF -> 等待后台自动抽题完成 -> 资料页显示抽题状态与归档批次 -> 题目页按来源文件名能搜到结果。
+  - 这条链的通过标准必须同时覆盖：上传接口成功、资料页出现“已自动入题库/部分待审核”等状态文案、题目详情来源文件名与上传文件名一致。
+- Agent 产物引用块按需展开 Canvas 的 UX 回归脚本：`scripts/ux/verify-agent-artifact-canvas-on-demand.mjs`
+- Agent chatbox 直接从题库调题：`scripts/ux/verify-agent-question-bank-retrieval.mjs`
+  - 验证基线固定为：登录 -> 确保题库里存在题目型资料 -> `/main/agent` 输入“从题库调题”自然语言请求 -> `preflight` 识别为 `retrieve_question_bank` -> `/api/agent/chat` 流事件出现 `search_question_bank` tool-call -> 聊天气泡显示真实题干开头与来源文件名。
+  - 数据流交叉验证至少要覆盖 3 条：题库接口里的 `sourceFileName`、题库接口里的题干前缀、`preflight.taskContext.action=retrieve_question_bank` 与流式 tool-call `search_question_bank`。
+- Agent 对话态页面滚动锁定回归：`scripts/ux/verify-agent-chat-scroll-lock.mjs`
+  - `/main/agent` 进入对话态后，页面根节点不能继续向下滚出大片空白；只有消息区内部在内容超高时才允许滚动。聊天消息容器禁止再使用会制造假滚动空白的整块 `justify-end` 贴底写法。
+- Agent 教案速度与正文可见性回归：`scripts/ux/verify-agent-lesson-plan-speed.mjs`
+  - 该脚本的真实验收标准不是“聊天气泡出现完整教案正文”，而是“左侧出现教案引用块，点击后右侧 Canvas 展示完整教案正文”。不要再把 lesson plan 的聊天预览长度误当成最终 DOM 可见结果。
+  - 2026-03-13 起，这条脚本同时兼容 UI stream `text-delta/tool-output-available` 与旧 NDJSON 回放；新增同类脚本时，优先复用同样的 SSE 解析逻辑，不要再手写只支持 NDJSON 的读取器。
+  - 2026-03-13 最近一次通过结果：`POST /api/agent/preflight=2176ms`、`POST /api/agent/chat=750ms`、`POST /api/content-library/save-artifact=2317ms`；产物目录 `document/ux-verification/20260313_104147_agent-lesson-plan-ui-stream-phase12/`。
+- Agent 习题流式回归：`scripts/ux/verify-agent-exercise-streaming.mjs`
+  - 基线固定为：2 秒内出现阶段反馈，流里至少有 1 个 `question-ready`，页面上能看到逐题题块，且题库详情回读不再停在“正在读取详情...”。
+  - 2026-03-13 起，主习题链不再允许 `interactive_low_latency` 这类牺牲质量的快速分支。`assistant_exercises` 默认必须走 Sonnet 4.6 正常生成/校验链，且题块里要同时看到题干、答案、解析。
+- Agent 习题“先生成后保存到题库”回归：`scripts/ux/verify-agent-exercise-save-followup.mjs`
+  - 基线固定为：首轮 prompt 必须明确写“先不要入库”，并使用当前本地 seed 已存在的课程 `AP Biology Unit 3`；页面先出现题块与“本轮先不入库”提示，`GET /api/question-bank?sourceKind=agent_generated` 对应关键词命中数必须还是 `0`。
+  - 第二轮 follow-up 再回复“把这些题保存到题库，归到 AP Biology Unit 3。”；要求 `preflight.taskContext.action=save_exercises`，随后页面出现“已将上一轮生成的 N 道题真实保存到题库”，并且题库读回命中数与页面题块一致。
+  - 如果这条脚本 FAIL，先区分两类问题：一类是首轮被误存入库，另一类是 follow-up 没有走 `save_exercises` 直连保存链；不要再把两种根因混在一起排查。
+- Agent 习题“直接保存到题库并完成最终分类”回归：`scripts/ux/verify-agent-exercise-generation.mjs`
+  - 2026-03-13 起，这条脚本不再只检查“题写进题库”，而是必须继续轮询到 `GET /api/question-bank` 读回的题目同时具备 `knowledgeCluster` 与 `knowledgeSubskillLabel`，并在题库详情面板里看到最终分类文本。
+  - 习题生成链当前是“先保存 exercises，再由后台补跑 taxonomy / semantic / 内容库同步”；因此验收标准必须看最终分类状态，而不是把 `POST /api/agent/chat` 返回瞬间的占位字段误判成失败。
+  - 脚本支持通过 `UX_EXPECTED_SAVE_COUNT` 覆盖题目数，MC/FRQ 都要按真实题量断言，不要再把“默认 3 道”硬写死到所有用例里。
+  - 当前最近一次矩阵通过产物：`document/ux-verification/20260313_122907_exercise-ingest-classification-matrix/`
+    - `mc-direct-final`
+    - `fr-direct`
+    - `mc-followup`
+    - `fr-followup`
+    - `chem-mc-direct`
+    - `chem-fr-direct`
+- Agent 题库组卷导出回归：`scripts/ux/verify-agent-question-bank-worksheet.mjs`
+  - 验证基线固定为：从题库现成题组 worksheet -> 左侧出现 artifact 引用块 -> 点击后右侧 Canvas 可见 -> PDF 下载返回 `%PDF-`。
+  - 当前正式交互已统一为“引用块 -> Canvas”，不要再把“下载链接必须直接出现在聊天正文”当成硬条件。
+  - 2026-03-13 起，worksheet PDF 持久化成功后统一回写 `worksheets.status="published"`；如果再次出现“更新试卷 PDF 信息失败”，先检查是否有旧代码把状态写回 `ready`。
+  - 最近一次通过产物：`document/ux-verification/20260313_175921_agent-question-bank-worksheet-existing-source/`，关键耗时 `POST /api/agent/preflight=2.59s`、`POST /api/agent/chat=0.99s`、`GET /api/pdf/download/:id=0.12s`。
+- Agent 上传 PDF 直接临时题池组卷回归：`scripts/ux/verify-agent-temp-pool-worksheet.mjs`
+  - 验证基线固定为：上传 PDF -> `/api/pdf/process-scan` 返回 `saveResult: null` -> `preflight.taskContext.attachmentMode=scan_pool_worksheet` -> 页面显示题块与 artifact 引用块 -> Canvas 中可见临时题池说明与 PDF 下载链接。
+  - 这条链默认只做临时组卷，不自动入题库；若后续要验证正式归档，必须单独走 `/api/pdf/save-scan-questions` 或知识库自动抽题链。
+  - 2026-03-13 起，这两条 worksheet UX 脚本都必须按 UI stream SSE 解析 `tool-output-available` 与 `data-agent-phase`，不要再用只支持旧 NDJSON 的读取器。
+  - 最近一次通过产物：`document/ux-verification/20260313_180219_agent-temp-pool-worksheet-rerun/`，关键耗时 `POST /api/pdf/process-scan=27.89s`、`POST /api/agent/preflight=1.77s`、`POST /api/agent/chat=0.78s`。
+- Agent 文档型 worksheet 回归：`scripts/ux/verify-agent-worksheet-document.mjs`
+  - 验证基线固定为：登录 -> `/main/agent` 输入“guided notes / 活动单 / 课堂讲义型 worksheet”请求 -> `/api/agent/chat` 命中 `generate_document_worksheet` -> 左侧出现 artifact 引用块 -> 点击后右侧 Canvas 可见文档型 worksheet 正文。
+  - 这条链的硬约束是：不能命中 `generate_lesson_plan_workflow`、`assemble_question_bank_worksheet` 或 `generate_ap_exercises_pipeline`；`toolResult.mode` 必须与 Canvas 中可见的讲义结构对应。
+  - 最近一次通过产物：`document/ux-verification/20260325_181957_agent_worksheet_document/`，关键耗时 `POST /api/agent/preflight=1.31s`、`POST /api/agent/chat=4.83s`。
+- Agent 同一资料连续生成多种产物回归：`scripts/ux/verify-agent-material-multi-artifacts.mjs`
+  - 验证基线固定为：复用一份已 `ready` 的 PDF 资料 -> `/main/agent` 贴入上下文 -> 在同一会话里连续生成 `worksheet / rubric / lesson plan / exam`。
+  - 通过标准必须同时覆盖：每轮 `chat-payload` 都继续携带同一 `contentAssetIds`；`worksheet` 命中 `generate_document_worksheet`；`rubric` 命中 `generate_rubric`；`lesson plan` 命中 `generate_lesson_plan_workflow`；`exam` 命中 `generate_ap_exercises_pipeline + export_exam_pdf`，且左侧引用块与右侧 Canvas 都可见。
+  - 本地联调前先确认当前测试教师额度足够，否则 `/api/agent/chat` 会直接返回 `403 QUOTA_EXHAUSTED`，脚本会在 `errors.json.apiFailures` 中记录响应体，而不是继续误报成“等待 artifact 超时”。
+  - 2026-03-26 最近一次通过产物：`output/playwright/agent-material-multi-artifacts-reuse-streamfix-20260326-172434/`，关键耗时 `POST /api/agent/chat=5.94s~12.22s`。
+- Agent 顶部极简头部回归脚本：`scripts/ux/verify-agent-header-minimal.mjs`
+- 已登录移动端主壳、公众号编辑器入口、内容库详情与抽屉导航 UX 验证脚本：`scripts/ux/verify-mobile-shell-navigation.mjs`
+- 内容库旧入口最短关键路径验收：`scripts/ux/verify-content-library.mjs`
+  - 2026-03-21 最近一次通过产物：`document/ux-verification/20260321_135326_content-library-optimization/`
+  - 关键耗时：`GET /api/content-library?type=all=1202ms`、`GET /api/content-library?q=Agent=2028ms`、详情回读 `870ms~957ms`
+  - 同日上一版基线产物：`document/ux-verification/20260321_123147_content-library/`；当前列表首屏从 `1916ms` 降到 `1202ms`，热点详情从 `2380ms~2498ms` 降到 `870ms~957ms`
+- 教师内容资产统一入口最短关键路径验收：`scripts/ux/verify-content-assets-unified.mjs`
+- Agent / Assets 单入口统一验收：`scripts/ux/verify-content-assets-agent-unified.mjs`
+- Assets 文档型 reference 编辑器验收：`scripts/ux/verify-content-assets-reference-editor.mjs`
+  - 验证基线固定为：进入 `/main/content-assets` -> 本地搜索并打开一个旧 library reference 资产 -> 校验右侧 renderer 详情 -> 再打开一个上传 DOCX/PDF 资产 -> 校验原件预览。
+  - 2026-03-26 起，旧 reference 首次打开允许触发 `/api/content-library/:id/document` lazy materialization；后续正文保存统一断言 `PUT /api/documents/:id/autosave`，不要再把 `metadata.documentHtml` 当成唯一真源。
+  - 2026-03-25 最近一次通过产物：`document/ux-verification/20260325_143637_content-assets-unified-rerun/`
+  - 关键耗时：`GET /api/content-assets/bootstrap=149ms`、`GET /api/content-assets/:id=1553ms`、`GET /api/content-assets/:id/docx-preview=152ms`
+  - 这条脚本默认直接从 `/main/content-assets` 起步；只有真实被打回 `/auth/login` 时才执行登录表单，不要先固定进入登录页再等 `networkidle`，否则会被已登录态重定向卡住。
+- Assets 顶部“新建内容 -> 新建文档”验收：`scripts/ux/verify-content-assets-create-document.mjs`
+  - 验证基线固定为：进入 `/main/content-assets` -> 打开顶部“新建内容”菜单 -> 新建空白文档 -> 右侧进入 Tiptap 编辑器 -> 输入并保存。
+  - 2026-03-26 起，这条链路的正式保存真源改为 `documents`：`POST /api/content-assets/documents` 需要直接返回 `contentLibraryItem.documentId`，正文保存应命中 `PUT /api/documents/:id/autosave`；`PATCH /api/content-library/:id` 只保留元数据/兼容兜底，不再作为常规正文保存断言。
+  - 2026-03-25 最近一次通过产物：`document/ux-verification/20260325_165651_content-assets-create-document/`
+  - 关键耗时：`POST /api/content-assets/documents=1772ms`、`GET /api/content-assets/:id=1719ms`、`PATCH /api/content-library/:id=4337ms`
+- `/main/agent` intent / follow-up 真实链路：`scripts/ux/verify-agent-intent-planner.mjs`
+  - 该脚本必须先从 `/auth/login` 进入并等待 `form[data-auth-ready="true"]`，不要直接访问 `/main/agent`，否则只会卡在鉴权重定向后的空等待上，误判成 composer 丢失。
+  - 当前本地 AP 种子只保证 `AP Biology -> Unit 3` 与 `AP Chemistry -> Unit 2`；验收脚本不要再写死 `AP Calculus` 或 `chain rule -> Unit 3` 这种超出本地 seed 的断言。
+- 智能判卷真实链路：`scripts/ux/verify-grading-smart-ocr.mjs`
+  - 该脚本会在本地实时生成一份题目卷 PNG 和一份学生答卷 PNG，真实走“创建判卷任务 -> 上传题目卷推断答案键 -> 上传答卷 -> 一键智能判卷”。
+  - L1 通过阈值固定检查：`POST /answer-key/infer <= 30s`、`POST /auto-grade <= 30s`、`404/console error/pageerror = 0`，并要求至少 1 条 API -> DOM 交叉验证。
+  - 2026-03-13 起，这条脚本还必须交叉验证 `analysis.totalQuestions`、`analysis.reviewRecommendedCount`、`analysis.qualityGate.status`，并通过 `data-testid="grading-metric-total-questions"`、`data-testid="grading-metric-review-count"`、`data-testid="grading-quality-status"` 读取页面值，避免在 React 状态刷新前误读旧值。
+  - 若接口已完成但指标卡仍是旧值，脚本要先 `waitForFunction(...)` 等待 DOM 与 API 字段一致，再继续截图和断言，不要立刻读取页面文本。
+- Agent preflight 长上下文截断回归：`scripts/ux/verify-agent-preflight-context-truncation.mjs`
+- Agent taskContext 从 preflight 透传到 chat 的回归：`scripts/ux/verify-agent-task-context-carryover.mjs`
+- Agent 问候语与长期记忆写库回归：`scripts/ux/verify-agent-greeting-memory.mjs`
+- 上下文工程选择/压缩/重置回归：`scripts/context/context-engineering-regression.ts`
+- 教师知识库 RAG 分块/embedding 回归：`scripts/assistant/knowledge-rag-regression.ts`
+- 上下文工程三层记忆回归：仍统一走 `scripts/context/context-engineering-regression.ts`，其中必须覆盖“稳定偏好在 reset 后仍保留、最近任务记忆在 reset 后被压制”。
+- 习题速度/验证策略回归：`scripts/agent/exercise-pipeline-regression.ts`
+- Chat 双语与主链路：`scripts/ux/verify-chat-i18n-real.mjs`
+- PDF 拆题链路：`scripts/ux/verify-agent-upload.ts`
+- Agent 主工作台真实 PDF 上传与 Canvas 结果链路：`scripts/ux/verify-agent-pdf-upload-real.ts`
+- 当 `chrome-devtools` MCP 持续 `Transport closed`，且 `/main/agent` 的隐藏 file input 无法被自动化稳定驱动时，当前开发态基线允许使用 `deskmate-agent-inject-scan-file` 浏览器事件把测试 PDF 放入待上传状态；但后续链路仍必须继续验证真实 `/api/pdf/upload-scan -> /api/pdf/scan-status -> /api/pdf/process-scan -> /api/pdf/save-scan-questions`，并最终在右侧 Canvas 中核对 `ScanStructuredResult`，不能只停在接口成功。
+- PDF 拆题自动归档到内容库：`scripts/ux/verify-scan-library-sync.ts`
+- 微信编辑器 OpenRouter Vision 链路：`scripts/ux/verify-wechat-vision-openrouter.mjs`
+
+## 开发态排障速记
+- 如果浏览器里多个 API 同时突然 500，且服务端报 `__webpack_modules__[moduleId] is not a function`，优先完整重启 `npm run dev`，先排除 Next.js HMR 污染。
+- 2026-03-15 起，本地 `npm run dev` 默认写入 `.next-dev`，而 `npm run build` / `npm run start` 继续使用 `.next`。如果要并行起开发服和生产启动链路，不需要再手工改 `distDir`；若你看到仍有进程占用旧 `.next`，通常是历史 dev 进程还没重启到新配置，先停掉旧进程再继续验收。
+- `npm run dev` 与 `npm run start` 都已支持 `PORT=xxxx` 覆盖端口。本地验证多条链路时，优先通过环境变量换端口，不要再临时改脚本或手动覆盖 `next.config.ts`。
+- `eslint` 当前已默认忽略 `.next/**`、`.next_*/**`、`.next_devbroken*/**`、`.next.bak*/**`。如果 lint 又开始扫到历史构建目录，先检查忽略规则与目录命名，不要把构建残留误当源码错误。
+- 如果 DevTools MCP 持续 `Transport closed`，真实联调改用 Playwright 浏览器操作 + 数据库核对，不要把 CDP 连接失败误判成业务故障。
+- 如果当前环境的 PostgREST schema cache 缺少 `assistant_conversations` / `assistant_messages`，`/api/chat/conversations` 与 `/api/agent/chat` 会自动降级到 `tmp/assistant-store.json` 本地会话存储；这只用于不中断 `/main/agent` 真实生成链路，不代表远端 assistant store 已真实落库。
+- 若要判断某条链路是否“真打通”，至少同时核对 UI、关键 API 和数据库三层；不能只看页面上是否“像是成功了”。

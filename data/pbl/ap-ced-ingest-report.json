@@ -1,0 +1,997 @@
+{
+  "generatedAt": "2026-03-05T14:18:22.532Z",
+  "summary": {
+    "ok": true,
+    "bucket": "ap-ced-materials",
+    "prefix": "AP-CED-Sucai",
+    "totalFiles": 37,
+    "processed": 37,
+    "failed": 0,
+    "uniqueTags": 27,
+    "byOcrMode": {
+      "pdf_text": 37
+    },
+    "bySubject": {
+      "数学": 3,
+      "计算机": 2,
+      "生物": 1,
+      "化学": 1,
+      "环境科学": 1,
+      "物理": 4,
+      "英语": 9,
+      "历史": 5,
+      "政治": 2,
+      "地理": 1,
+      "经济": 2,
+      "心理学": 1,
+      "语文": 1,
+      "艺术": 4
+    },
+    "failures": [],
+    "dryRun": false
+  },
+  "materials": [
+    {
+      "path": "AP-CED-Sucai/01-Math-CS/ap-calculus-ab-and-bc-course-and-exam-description.pdf",
+      "displayCode": "APCED-20C65037346B",
+      "title": "AP Calculus Ab and Bc Course and Exam Description",
+      "year": 2020,
+      "tags": [
+        {
+          "name": "数学",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/01-Math-CS/ap-computer-science-a-course-and-exam-description.pdf",
+      "displayCode": "APCED-58FBFEDA27AF",
+      "title": "AP Computer Science A Course and Exam Description",
+      "year": 2025,
+      "tags": [
+        {
+          "name": "计算机",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/01-Math-CS/ap-computer-science-principles-course-and-exam-description.pdf",
+      "displayCode": "APCED-2482CC081E4B",
+      "title": "AP Computer Science Principles Course and Exam Description",
+      "year": 2023,
+      "tags": [
+        {
+          "name": "计算机",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/01-Math-CS/ap-precalculus-course-and-exam-description.pdf",
+      "displayCode": "APCED-340FE44EC203",
+      "title": "AP Precalculus Course and Exam Description",
+      "year": 2023,
+      "tags": [
+        {
+          "name": "数学",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/01-Math-CS/ap-statistics-course-and-exam-description.pdf",
+      "displayCode": "APCED-3F560687CABC",
+      "title": "AP Statistics Course and Exam Description",
+      "year": 2020,
+      "tags": [
+        {
+          "name": "数学",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/02-Sciences/ap-biology-course-and-exam-description.pdf",
+      "displayCode": "APCED-38E39F8AB66E",
+      "title": "AP Biology Course and Exam Description",
+      "year": 2025,
+      "tags": [
+        {
+          "name": "生物",
+          "dimension": "A"
+        },
+        {
+          "name": "实验探究",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/02-Sciences/ap-chemistry-course-and-exam-description.pdf",
+      "displayCode": "APCED-FDF146CEB8D3",
+      "title": "AP Chemistry Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "化学",
+          "dimension": "A"
+        },
+        {
+          "name": "实验探究",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/02-Sciences/ap-environmental-science-course-and-exam-description.pdf",
+      "displayCode": "APCED-CBDAA762E20A",
+      "title": "AP Environmental Science Course and Exam Description",
+      "year": 2025,
+      "tags": [
+        {
+          "name": "环境科学",
+          "dimension": "A"
+        },
+        {
+          "name": "实验探究",
+          "dimension": "B"
+        },
+        {
+          "name": "环境与生态",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/02-Sciences/ap-physics-1-course-and-exam-description.pdf",
+      "displayCode": "APCED-5E52B32AECA0",
+      "title": "AP Physics 1 Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "物理",
+          "dimension": "A"
+        },
+        {
+          "name": "实验探究",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/02-Sciences/ap-physics-2-course-and-exam-description.pdf",
+      "displayCode": "APCED-6A7CD5E56530",
+      "title": "AP Physics 2 Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "物理",
+          "dimension": "A"
+        },
+        {
+          "name": "实验探究",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/02-Sciences/ap-physics-c-electricity-and-magnetism-course-and-exam-description.pdf",
+      "displayCode": "APCED-10DCC4125271",
+      "title": "AP Physics C Electricity and Magnetism Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "物理",
+          "dimension": "A"
+        },
+        {
+          "name": "实验探究",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/02-Sciences/ap-physics-c-mechanics-course-and-exam-description.pdf",
+      "displayCode": "APCED-DD46A93DC1C5",
+      "title": "AP Physics C Mechanics Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "物理",
+          "dimension": "A"
+        },
+        {
+          "name": "实验探究",
+          "dimension": "B"
+        },
+        {
+          "name": "科技与创新",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/03-English/ap-english-language-and-composition-course-and-exam-description.pdf",
+      "displayCode": "APCED-E1314AE4EE3C",
+      "title": "AP English Language and Composition Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/03-English/ap-english-literature-and-composition-course-and-exam-description.pdf",
+      "displayCode": "APCED-1701B65F9C1A",
+      "title": "AP English Literature and Composition Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-african-american-studies-course-and-exam-description-part1.pdf",
+      "displayCode": "APCED-6FD8DF99FD52",
+      "title": "AP African American Studies Part 1 Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "历史",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-african-american-studies-course-and-exam-description-part2.pdf",
+      "displayCode": "APCED-B5176A1FE9CA",
+      "title": "AP African American Studies Part 2 Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "历史",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-comparative-government-and-politics-course-and-exam-description.pdf",
+      "displayCode": "APCED-446F5B4AA7B7",
+      "title": "AP Comparative Government and Politics Course and Exam Description",
+      "year": 2020,
+      "tags": [
+        {
+          "name": "政治",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "伦理与治理",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-european-history-course-and-exam-description.pdf",
+      "displayCode": "APCED-65CC3B5170FA",
+      "title": "AP European History Course and Exam Description",
+      "year": 2023,
+      "tags": [
+        {
+          "name": "历史",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-human-geography-course-and-exam-description.pdf",
+      "displayCode": "APCED-24840FC98355",
+      "title": "AP Human Geography Course and Exam Description",
+      "year": 2020,
+      "tags": [
+        {
+          "name": "地理",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "城市与社区",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-macroeconomics-course-and-exam-description.pdf",
+      "displayCode": "APCED-0D26AEB153A5",
+      "title": "AP Macroeconomics Course and Exam Description",
+      "year": 2022,
+      "tags": [
+        {
+          "name": "经济",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "经济与商业",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-microeconomics-course-and-exam-description.pdf",
+      "displayCode": "APCED-247136663F81",
+      "title": "AP Microeconomics Course and Exam Description",
+      "year": 2022,
+      "tags": [
+        {
+          "name": "经济",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "经济与商业",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-psychology-course-and-exam-description.pdf",
+      "displayCode": "APCED-2D0CAA42CFB9",
+      "title": "AP Psychology Course and Exam Description",
+      "year": 2025,
+      "tags": [
+        {
+          "name": "心理学",
+          "dimension": "A"
+        },
+        {
+          "name": "数据分析",
+          "dimension": "B"
+        },
+        {
+          "name": "健康与医学",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-us-government-and-politics-course-and-exam-description.pdf",
+      "displayCode": "APCED-E2679229265B",
+      "title": "AP U.S. Government and Politics Course and Exam Description",
+      "year": 2023,
+      "tags": [
+        {
+          "name": "政治",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "伦理与治理",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-us-history-course-and-exam-description.pdf",
+      "displayCode": "APCED-69FA25DC3D02",
+      "title": "AP U.S. History Course and Exam Description",
+      "year": 2023,
+      "tags": [
+        {
+          "name": "历史",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/04-History-SocialScience/ap-world-history-modern-course-and-exam-description.pdf",
+      "displayCode": "APCED-5A086EEDCED0",
+      "title": "AP World History Modern Course and Exam Description",
+      "year": 2023,
+      "tags": [
+        {
+          "name": "历史",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-chinese-language-and-culture-course-and-exam-description.pdf",
+      "displayCode": "APCED-88D55A160D86",
+      "title": "AP Chinese Language and Culture Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "语文",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-french-language-and-culture-course-and-exam-description.pdf",
+      "displayCode": "APCED-C0AB40CA43DB",
+      "title": "AP French Language and Culture Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-german-language-and-culture-course-and-exam-description.pdf",
+      "displayCode": "APCED-BD7B9A31EFD0",
+      "title": "AP German Language and Culture Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-italian-language-and-culture-course-and-exam-description.pdf",
+      "displayCode": "APCED-19E8478DC823",
+      "title": "AP Italian Language and Culture Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-japanese-language-and-culture-course-and-exam-description.pdf",
+      "displayCode": "APCED-46470064E296",
+      "title": "AP Japanese Language and Culture Course and Exam Description",
+      "year": 2020,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-latin-course-and-exam-description.pdf",
+      "displayCode": "APCED-0E25EF20A156",
+      "title": "AP Latin Course and Exam Description",
+      "year": 2025,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-spanish-language-and-culture-course-and-exam-description.pdf",
+      "displayCode": "APCED-F81DA1514C97",
+      "title": "AP Spanish Language and Culture Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/05-Languages/ap-spanish-literature-and-culture-course-and-exam-description.pdf",
+      "displayCode": "APCED-E4FEDB4B0336",
+      "title": "AP Spanish Literature and Culture Course and Exam Description",
+      "year": 2023,
+      "tags": [
+        {
+          "name": "英语",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "教育与发展",
+          "dimension": "C"
+        },
+        {
+          "name": "分析",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/06-Arts-Capstone/ap-art-and-design-course-and-exam-description.pdf",
+      "displayCode": "APCED-BCCF3D4CD727",
+      "title": "AP Art and Design Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "艺术",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "创造",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/06-Arts-Capstone/ap-music-theory-course-and-exam-description.pdf",
+      "displayCode": "APCED-9F2757F8085A",
+      "title": "AP Music Theory Course and Exam Description",
+      "year": 2020,
+      "tags": [
+        {
+          "name": "艺术",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "创造",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    },
+    {
+      "path": "AP-CED-Sucai/06-Arts-Capstone/ap-research-course-and-exam-description.pdf",
+      "displayCode": "APCED-53806DA99BB8",
+      "title": "AP Research Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "艺术",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "创造",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 13999
+    },
+    {
+      "path": "AP-CED-Sucai/06-Arts-Capstone/ap-seminar-course-and-exam-description.pdf",
+      "displayCode": "APCED-79B3972A3438",
+      "title": "AP Seminar Course and Exam Description",
+      "year": 2024,
+      "tags": [
+        {
+          "name": "艺术",
+          "dimension": "A"
+        },
+        {
+          "name": "文献研究",
+          "dimension": "B"
+        },
+        {
+          "name": "文化与传承",
+          "dimension": "C"
+        },
+        {
+          "name": "创造",
+          "dimension": "D"
+        }
+      ],
+      "ocrMode": "pdf_text",
+      "extractedChars": 14000
+    }
+  ]
+}

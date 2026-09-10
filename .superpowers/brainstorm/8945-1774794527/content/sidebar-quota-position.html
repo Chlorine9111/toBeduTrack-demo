@@ -1,0 +1,105 @@
+<h2>配额条放在侧边栏底部的哪个位置？</h2>
+<p class="subtitle">配额进度条需要在账户信息附近，教师随时可见</p>
+
+<div class="cards">
+  <!-- 方案 A：账户区域上方 -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:0;background:#fff">
+      <div style="width:220px;margin:0 auto;font-family:Inter,-apple-system,sans-serif;font-size:13px;border:1px solid rgba(0,0,0,0.08);border-radius:8px;overflow:hidden">
+        <!-- 语言切换 -->
+        <div style="padding:8px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:center;color:#9B9DA4;font-size:11px">
+          中文 / EN
+        </div>
+        <!-- 配额条 -->
+        <div style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <span style="font-size:11px;color:#6B6F76">使用量</span>
+            <span style="font-size:11px;color:#6B6F76">180 / 300</span>
+          </div>
+          <div style="height:4px;background:#EFEFEF;border-radius:999px;overflow:hidden">
+            <div style="width:60%;height:100%;background:#5E6AD2;border-radius:999px"></div>
+          </div>
+        </div>
+        <!-- 账户 -->
+        <div style="padding:12px 16px;display:flex;align-items:center;gap:10px">
+          <div style="width:32px;height:32px;border-radius:50%;background:#1D1D1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">T</div>
+          <div>
+            <div style="font-size:13px;font-weight:500;color:#1D1D1F">王老师</div>
+            <div style="font-size:11px;color:#9B9DA4">清华附中</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. 账户上方，独立区块</h3>
+      <p>配额条作为独立区块，在语言切换和账户之间。清晰分隔，不挤压账户信息。</p>
+    </div>
+  </div>
+
+  <!-- 方案 B：账户区域内嵌 -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:0;background:#fff">
+      <div style="width:220px;margin:0 auto;font-family:Inter,-apple-system,sans-serif;font-size:13px;border:1px solid rgba(0,0,0,0.08);border-radius:8px;overflow:hidden">
+        <!-- 语言切换 -->
+        <div style="padding:8px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:center;color:#9B9DA4;font-size:11px">
+          中文 / EN
+        </div>
+        <!-- 账户 + 内嵌配额 -->
+        <div style="padding:12px 16px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+            <div style="width:32px;height:32px;border-radius:50%;background:#1D1D1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">T</div>
+            <div>
+              <div style="font-size:13px;font-weight:500;color:#1D1D1F">王老师</div>
+              <div style="font-size:11px;color:#9B9DA4">清华附中</div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+            <span style="font-size:11px;color:#9B9DA4">剩余 180</span>
+            <span style="font-size:11px;color:#9B9DA4">60%</span>
+          </div>
+          <div style="height:3px;background:#EFEFEF;border-radius:999px;overflow:hidden">
+            <div style="width:60%;height:100%;background:#5E6AD2;border-radius:999px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. 内嵌在账户区域里</h3>
+      <p>配额进度条直接放在账户名下方，紧凑一体。节省纵向空间，和账户信息视觉关联更强。</p>
+    </div>
+  </div>
+
+  <!-- 方案 C：账户下方 -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:0;background:#fff">
+      <div style="width:220px;margin:0 auto;font-family:Inter,-apple-system,sans-serif;font-size:13px;border:1px solid rgba(0,0,0,0.08);border-radius:8px;overflow:hidden">
+        <!-- 语言切换 -->
+        <div style="padding:8px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:center;color:#9B9DA4;font-size:11px">
+          中文 / EN
+        </div>
+        <!-- 账户 -->
+        <div style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:10px">
+          <div style="width:32px;height:32px;border-radius:50%;background:#1D1D1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">T</div>
+          <div>
+            <div style="font-size:13px;font-weight:500;color:#1D1D1F">王老师</div>
+            <div style="font-size:11px;color:#9B9DA4">清华附中</div>
+          </div>
+        </div>
+        <!-- 配额条在最底下 -->
+        <div style="padding:10px 16px;background:#FAFAFA">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+            <span style="font-size:11px;color:#6B6F76">测试期额度</span>
+            <span style="font-size:11px;color:#5E6AD2;font-weight:500">180 剩余</span>
+          </div>
+          <div style="height:4px;background:#E5E5E5;border-radius:999px;overflow:hidden">
+            <div style="width:60%;height:100%;background:#5E6AD2;border-radius:999px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. 账户下方，底部最后一行</h3>
+      <p>配额条在整个侧边栏的最底部，用浅灰背景区分。侧边栏的"地板"位置，始终可见。</p>
+    </div>
+  </div>
+</div>

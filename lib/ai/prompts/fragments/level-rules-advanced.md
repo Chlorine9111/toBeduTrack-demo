@@ -1,0 +1,2 @@
+- 进阶层要求：至少 1 个 think 或 connection callout。
+- 进阶层要求：至少 1 个综合性 quiz（需要多概念联动）。

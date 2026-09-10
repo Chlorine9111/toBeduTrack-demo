@@ -1,0 +1,33 @@
+[
+  {
+    "message": "请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。\n\n【前置补充说明】\n- 任务目标：research\n- 请优先给出可核验来源，并把结论和出处一一对应。",
+    "displayMessage": "请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。",
+    "profileKey": "tm_099c3376-76b8-42bf-960f-343349e08c93",
+    "contentAssetIds": [
+      "63ca41cd-55f8-459a-8d10-78f48c721ee7"
+    ],
+    "taskContext": {
+      "kind": "research",
+      "action": "research",
+      "mode": "fresh",
+      "normalizedRequest": "任务类型：检索研究；任务目标：research；附件：1 文件, 0 题；教师原话：请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。",
+      "retrievalQuery": "任务类型：检索研究；任务目标：research；附件：1 文件, 0 题；教师原话：请根据我刚上传并引用的资料回答：Bill Greenslade 做了哪两件关键调查动作？并说明 Tientsin Grammar 与调查的关系。请用中文两句话回答。",
+      "sourcePriority": [
+        "当前教师输入",
+        "当前上传材料",
+        "联网结果",
+        "最近对话上下文"
+      ],
+      "curriculum": "",
+      "topic": "",
+      "scope": "",
+      "count": "",
+      "duration": "",
+      "attachmentsSummary": "1 文件, 0 题",
+      "attachmentMode": "material_reference",
+      "attachmentUploadIds": [],
+      "poolQuestionCount": 0,
+      "savePreference": "save_after_confirm"
+    }
+  }
+]

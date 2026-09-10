@@ -1,0 +1,314 @@
+<!-- Agent History Panel -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deskmate | Agent Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dim": "#55524c",
+              "tertiary": "#5e5f5d",
+              "error-container": "#fe8b70",
+              "surface-container-low": "#f9f3e7",
+              "surface-dim": "#e1dac3",
+              "on-tertiary-fixed": "#494a48",
+              "on-secondary-fixed": "#004077",
+              "primary-fixed": "#e7e2d9",
+              "on-surface-variant": "#635f4f",
+              "error": "#9e422c",
+              "on-error": "#fff7f6",
+              "inverse-surface": "#0f0e09",
+              "tertiary-container": "#f4f3f0",
+              "surface": "#fef9ef",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "on-error-container": "#742410",
+              "tertiary-dim": "#525351",
+              "secondary": "#0060ae",
+              "on-tertiary-fixed-variant": "#666664",
+              "primary-fixed-dim": "#d9d4cb",
+              "inverse-on-surface": "#a09c95",
+              "primary-container": "#e7e2d9",
+              "on-primary": "#fdf7ee",
+              "background": "#fef9ef",
+              "surface-bright": "#fef9ef",
+              "outline-variant": "#b8b29f",
+              "secondary-dim": "#005499",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-container": "#5b5c5a",
+              "surface-variant": "#e9e2ce",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d4e3ff",
+              "inverse-primary": "#fef9ef",
+              "on-surface": "#363225",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-container": "#f4eddf",
+              "on-tertiary": "#faf9f6",
+              "on-primary-container": "#54514b",
+              "on-secondary-container": "#005397",
+              "on-secondary": "#f8f8ff",
+              "on-background": "#363225",
+              "surface-container-highest": "#e9e2ce",
+              "on-primary-fixed": "#413f39",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary-fixed": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "error-dim": "#5c1202",
+              "surface-tint": "#615e57",
+              "primary": "#615e57"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(55, 53, 47, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col py-4 px-2 bg-[#F7F6F3] dark:bg-stone-900 font-['Inter'] text-sm antialiased h-screen border-r border-transparent w-[56px] hover:w-[240px] transition-all duration-300 ease-in-out overflow-hidden">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-lg">edit_note</span>
+</div>
+<div class="whitespace-nowrap overflow-hidden">
+<div class="text-lg font-semibold text-[#37352F] dark:text-stone-100 tracking-tight">Deskmate</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-widest">Editorial Workspace</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">search</span>
+<span class="whitespace-nowrap">Search</span>
+</div>
+<div class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">inbox</span>
+<span class="whitespace-nowrap">Inbox</span>
+</div>
+<!-- ACTIVE: Drafts (Assuming this matches Workspace best) -->
+<div class="flex items-center gap-3 px-2 py-2 bg-white dark:bg-stone-800 text-[#2383E2] font-medium rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="whitespace-nowrap">Drafts</span>
+</div>
+<div class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">auto_awesome_motion</span>
+<span class="whitespace-nowrap">Templates</span>
+</div>
+<div class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">archive</span>
+<span class="whitespace-nowrap">Archive</span>
+</div>
+</nav>
+<div class="mt-auto space-y-1">
+<div class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">history</span>
+<span class="whitespace-nowrap">History</span>
+</div>
+<div class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span class="whitespace-nowrap">Settings</span>
+</div>
+</div>
+</aside>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-[56px] z-30 flex justify-between items-center px-6 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md docked full-width top-0 h-14">
+<div class="flex items-center gap-6">
+<span class="text-xl font-bold text-[#37352F] dark:text-stone-100">Deskmate</span>
+<div class="hidden md:flex items-center gap-4">
+<a class="text-[#37352F]/70 dark:text-stone-400 hover:text-[#37352F] transition-opacity font-['Inter'] text-[0.875rem] font-medium" href="#">Drafts</a>
+<a class="text-[#37352F]/70 dark:text-stone-400 hover:text-[#37352F] transition-opacity font-['Inter'] text-[0.875rem] font-medium" href="#">Templates</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-3 py-1 text-sm font-medium text-[#37352F]/70 hover:text-[#37352F]">Share</button>
+<button class="bg-primary text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-primary-dim transition-colors">Export</button>
+<div class="flex items-center gap-2 ml-2 border-l border-outline-variant pl-4">
+<span class="material-symbols-outlined text-[#37352F]/60 cursor-pointer">smart_toy</span>
+<span class="material-symbols-outlined text-[#37352F]/60 cursor-pointer">more_vert</span>
+<img alt="User Avatar" class="w-8 h-8 rounded-full ml-2 object-cover" data-alt="Profile picture of a teacher" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3H5E9QxJB7KGLSHDMn3a3w5nAcsRfcjNYm-dOQm8pPevcmXYfKTEP-A6tShz0r6B2eTLgG2NxIWABRF9RbAF9HOhhLBTq_C0t0oy4PFGGX75pZCDjuM-DOy-RUsmvh5X6gUrPdr3e9V5pXDo9ujsYA1b08N9a9u_r7JpotY4W8G4LBhsGUF-j7VosiCY_kxvzurjsKO35kPSrVWnz1En1TJXiv4V7o10yEKlaCdBPBwIL82ZiCh-BKPQggXsF1aZzKGrY15hPiA"/>
+</div>
+</div>
+</header>
+<!-- Main Workspace Container -->
+<main class="ml-[56px] pt-14 h-screen flex relative overflow-hidden">
+<!-- Background Dimming Overlay (Active when side panel is open) -->
+<div class="absolute inset-0 bg-on-surface/5 backdrop-blur-[1px] z-10 transition-opacity duration-300"></div>
+<!-- Agent History Side Panel -->
+<aside class="absolute left-0 top-0 bottom-0 w-[300px] bg-white z-20 shadow-[0_4px_20px_rgba(55,53,47,0.08)] flex flex-col transition-transform duration-300 ease-out transform translate-x-0">
+<div class="p-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-semibold tracking-tight text-[#37352F]">Chat History</h2>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-on-surface transition-colors">close</span>
+</div>
+<!-- Search Bar -->
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full bg-surface-container-low border-none text-sm rounded-lg pl-10 pr-4 py-2 focus:ring-1 focus:ring-secondary/20 placeholder:text-on-surface-variant/50" placeholder="Search sessions..." type="text"/>
+</div>
+</div>
+<!-- Session Cards List -->
+<div class="flex-1 overflow-y-auto custom-scrollbar px-6 space-y-3 pb-6">
+<!-- Session Card 1 -->
+<div class="group p-4 bg-surface-container-low rounded-xl border border-transparent hover:border-secondary/20 transition-all cursor-pointer">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-[10px] font-semibold tracking-wider text-secondary uppercase bg-secondary/10 px-2 py-0.5 rounded-full">Editorial</span>
+<span class="text-[10px] text-on-surface-variant">2h ago</span>
+</div>
+<p class="text-sm font-medium text-[#37352F] line-clamp-2 leading-tight">Drafting the quarterly educational update for the faculty portal...</p>
+</div>
+<!-- Session Card 2 -->
+<div class="group p-4 hover:bg-surface-container-low rounded-xl transition-all cursor-pointer">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-[10px] font-semibold tracking-wider text-error uppercase bg-error/10 px-2 py-0.5 rounded-full">Proofing</span>
+<span class="text-[10px] text-on-surface-variant">Yesterday</span>
+</div>
+<p class="text-sm font-medium text-[#37352F]/70 line-clamp-2 leading-tight">Reviewing the curriculum alignment for standard 8 science...</p>
+</div>
+<!-- Session Card 3 -->
+<div class="group p-4 hover:bg-surface-container-low rounded-xl transition-all cursor-pointer">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-[10px] font-semibold tracking-wider text-primary uppercase bg-primary/10 px-2 py-0.5 rounded-full">Brainstorm</span>
+<span class="text-[10px] text-on-surface-variant">Oct 24</span>
+</div>
+<p class="text-sm font-medium text-[#37352F]/70 line-clamp-2 leading-tight">Interactive activities for virtual classrooms on history topics...</p>
+</div>
+<!-- Session Card 4 -->
+<div class="group p-4 hover:bg-surface-container-low rounded-xl transition-all cursor-pointer">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-[10px] font-semibold tracking-wider text-secondary uppercase bg-secondary/10 px-2 py-0.5 rounded-full">Editorial</span>
+<span class="text-[10px] text-on-surface-variant">Oct 22</span>
+</div>
+<p class="text-sm font-medium text-[#37352F]/70 line-clamp-2 leading-tight">Newsletter automation script for parent-teacher associations...</p>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="p-6 mt-auto border-t border-surface-container">
+<button class="flex items-center gap-2 text-error text-xs font-semibold uppercase tracking-wider hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-sm">delete_sweep</span>
+                    Clear all history
+                </button>
+</div>
+</aside>
+<!-- Chat Area (Dimmed Content) -->
+<section class="flex-1 flex flex-col max-w-4xl mx-auto px-12 py-8 relative">
+<div class="flex-1 space-y-12">
+<!-- User Message -->
+<div class="flex justify-end">
+<div class="max-w-[80%] p-5 bg-surface-container text-[#37352F] rounded-2xl rounded-tr-sm">
+<p class="text-[1rem] leading-relaxed">Could you help me outline a syllabus for a 12-week course on Creative Writing for high schoolers?</p>
+</div>
+</div>
+<!-- Agent Response -->
+<div class="flex gap-6">
+<div class="w-8 h-8 rounded-lg bg-primary shrink-0 flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-white text-sm">smart_toy</span>
+</div>
+<div class="flex-1 space-y-6">
+<h1 class="text-2xl font-bold tracking-tight">Creative Writing: High School Curriculum</h1>
+<p class="text-on-surface-variant leading-relaxed">I've structured this into three phases: Foundations, Craft, and The Portfolio. Here's the breakdown for the first month...</p>
+<!-- Bento-ish Grid for Modules -->
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container-low rounded-2xl">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Phase 1</span>
+<h3 class="font-semibold mb-1">Foundations</h3>
+<p class="text-sm text-on-surface-variant">Breaking writer's block and understanding voice.</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-2xl">
+<span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">Phase 2</span>
+<h3 class="font-semibold mb-1">Narrative Craft</h3>
+<p class="text-sm text-on-surface-variant">Mastering the mechanics of storytelling.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Input (Fixed at bottom of chat area) -->
+<div class="mt-8 relative">
+<div class="p-4 bg-white rounded-2xl shadow-[0_4px_24px_rgba(55,53,47,0.06)] border border-outline-variant/20">
+<textarea class="w-full border-none focus:ring-0 text-[1rem] resize-none h-12 bg-transparent" placeholder="Continue writing or ask a question..."></textarea>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-surface-container">
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">attach_file</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">format_ink_highlighter</span>
+</button>
+</div>
+<button class="p-2 bg-[#37352F] text-white rounded-lg hover:bg-primary-dim transition-colors">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Context Preview Panel (Far Right) -->
+<aside class="w-80 border-l border-surface-container bg-surface p-6 flex flex-col gap-6">
+<h3 class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">Document Context</h3>
+<div class="space-y-4">
+<div class="relative aspect-3/4 rounded-xl overflow-hidden group">
+<img alt="Draft Preview" class="w-full h-full object-cover" data-alt="Close up of fountain pen on paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwQHS2Z93pPtIL6p-qLhDHbd7TmfwNE0akxXAUDs_iAsBbHO3PXITEPiJzRFpk0jIpxPvUUQRDNk8MknbbrZtwk037xI65MdaAnvphnhqUjH4p-w7WzdjG5u3xzIFSTxNZ8iMA0h2eYt0_FgjEg_KLvXyXgF85LzPVm28ajRKcOO4OFGdbb4tvYruExyXAJJxeUt-wk_S5jdSfmAzgOL9YaKE-d-5Ff9J_4wXTCSKFmWf_r-5sfoSmCK_BTg-XZazvxXW9PI_n4g"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl">open_in_new</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-high rounded-xl">
+<h4 class="text-sm font-bold mb-1">Writer's Toolkit</h4>
+<p class="text-xs text-on-surface-variant">Currently referencing: 'The Elements of Style' preset.</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Word Count</span>
+<span class="font-medium">1,242</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Reading Time</span>
+<span class="font-medium">5 min</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-secondary h-1.5 rounded-full w-[65%]"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant text-center mt-1">Goal: 2,000 words</p>
+</div>
+</div>
+</aside>
+</main>
+</body></html>
+
+<!-- Global | Confirmation Modal -->

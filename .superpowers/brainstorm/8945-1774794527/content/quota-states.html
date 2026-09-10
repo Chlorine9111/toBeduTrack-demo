@@ -1,0 +1,72 @@
+<h2>配额条在不同使用阶段的状态</h2>
+<p class="subtitle">进度条颜色和文案随使用量变化，提醒教师关注额度</p>
+
+<div style="max-width:320px;margin:24px auto;font-family:Inter,-apple-system,sans-serif;display:flex;flex-direction:column;gap:20px">
+
+  <!-- 状态 1: 正常 (0-79%) -->
+  <div style="border:1px solid rgba(0,0,0,0.08);border-radius:8px;overflow:hidden">
+    <div style="padding:4px 12px;background:#F7F7F7;font-size:10px;color:#9B9DA4;font-weight:500;letter-spacing:0.5px">0 ~ 79% 使用量</div>
+    <div style="padding:12px 16px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1D1D1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">T</div>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:#1D1D1F">王老师</div>
+          <div style="font-size:11px;color:#9B9DA4">清华附中</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:11px;color:#9B9DA4">剩余 240</span>
+        <span style="font-size:11px;color:#9B9DA4">20%</span>
+      </div>
+      <div style="height:3px;background:#EFEFEF;border-radius:999px;overflow:hidden">
+        <div style="width:20%;height:100%;background:#5E6AD2;border-radius:999px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 状态 2: 较高 (80-99%) -->
+  <div style="border:1px solid rgba(0,0,0,0.08);border-radius:8px;overflow:hidden">
+    <div style="padding:4px 12px;background:#FFF7ED;font-size:10px;color:#B45309;font-weight:500;letter-spacing:0.5px">80 ~ 99% 使用量</div>
+    <div style="padding:12px 16px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1D1D1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">T</div>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:#1D1D1F">王老师</div>
+          <div style="font-size:11px;color:#9B9DA4">清华附中</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:11px;color:#B45309">剩余 42</span>
+        <span style="font-size:11px;color:#B45309">86%</span>
+      </div>
+      <div style="height:3px;background:#EFEFEF;border-radius:999px;overflow:hidden">
+        <div style="width:86%;height:100%;background:#F59E0B;border-radius:999px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 状态 3: 已耗尽 (100%) -->
+  <div style="border:1px solid rgba(0,0,0,0.08);border-radius:8px;overflow:hidden">
+    <div style="padding:4px 12px;background:#FEF2F2;font-size:10px;color:#B42318;font-weight:500;letter-spacing:0.5px">100% 已耗尽</div>
+    <div style="padding:12px 16px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1D1D1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">T</div>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:#1D1D1F">王老师</div>
+          <div style="font-size:11px;color:#9B9DA4">清华附中</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:11px;color:#B42318">额度已用完</span>
+        <span style="font-size:11px;color:#B42318">4/1 重置</span>
+      </div>
+      <div style="height:3px;background:#EFEFEF;border-radius:999px;overflow:hidden">
+        <div style="width:100%;height:100%;background:#D9485F;border-radius:999px"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:16px">三种状态的颜色方案：<br><strong>蓝色</strong>（正常）→ <strong>橙色</strong>（即将用完）→ <strong>红色</strong>（已耗尽，显示重置日期）</p>
+<p class="subtitle">这个三阶段颜色变化是否合适？还是你有其他偏好？</p>

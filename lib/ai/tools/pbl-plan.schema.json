@@ -1,0 +1,70 @@
+{
+  "name": "return_pbl_plan_content",
+  "description": "返回 PBL 方案的概述、成果规格、量规与教师指导，不包含阶段明细",
+  "input_schema": {
+    "type": "object",
+    "required": ["drivingQuestion", "overviewText", "finalOutcomeRequirements", "rubric", "teacherGuidance"],
+    "properties": {
+      "drivingQuestion": {
+        "type": "string",
+        "description": "AI 基于素材和阶段骨架优化后的驱动问题"
+      },
+      "overviewText": {
+        "type": "string",
+        "description": "详细的项目概述段落"
+      },
+      "finalOutcomeRequirements": {
+        "type": "string",
+        "description": "学科定制的最终成果要求"
+      },
+      "rubric": {
+        "type": "array",
+        "minItems": 6,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "required": ["dimension", "score5", "score4", "score3", "score2", "score1", "studentVersion"],
+          "properties": {
+            "dimension": {
+              "type": "string",
+              "enum": ["contextualize", "method", "evidence", "analysis", "argument", "reflection"]
+            },
+            "score5": { "type": "string" },
+            "score4": { "type": "string" },
+            "score3": { "type": "string" },
+            "score2": { "type": "string" },
+            "score1": { "type": "string" },
+            "studentVersion": { "type": "string" }
+          }
+        }
+      },
+      "teacherGuidance": {
+        "type": "object",
+        "required": ["commonDifficulties", "differentiation", "timeManagement", "crossDisciplineCollab"],
+        "properties": {
+          "commonDifficulties": {
+            "type": "array",
+            "minItems": 3,
+            "items": { "type": "string" },
+            "description": "必须结合阶段名称、课时范围与真实卡点，给出可执行处理步骤"
+          },
+          "differentiation": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "string" }
+          },
+          "timeManagement": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "string" }
+          },
+          "crossDisciplineCollab": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

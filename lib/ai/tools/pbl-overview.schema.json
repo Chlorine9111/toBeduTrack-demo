@@ -1,0 +1,27 @@
+{
+  "name": "return_pbl_overviews",
+  "description": "返回 3 个差异化 PBL 概览选项，每个选项需有不同的项目切入角度和驱动问题",
+  "input_schema": {
+    "type": "object",
+    "required": ["options"],
+    "properties": {
+      "options": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "required": ["optionLabel", "title", "drivingQuestion", "overview", "projectForm", "highlight"],
+          "properties": {
+            "optionLabel": { "type": "string", "enum": ["A", "B", "C"] },
+            "title": { "type": "string", "maxLength": 15, "description": "项目标题，简洁有力" },
+            "drivingQuestion": { "type": "string", "maxLength": 120, "description": "驱动性问题，必须真实、开放、有探究价值" },
+            "overview": { "type": "string", "maxLength": 600, "description": "项目概述，描述学生将做什么、如何做、产出什么" },
+            "projectForm": { "type": "string", "description": "项目形式，如实验探究、数学建模、社会调研等" },
+            "highlight": { "type": "string", "maxLength": 200, "description": "此选项的亮点特色，说明与其他选项的差异" }
+          }
+        }
+      }
+    }
+  }
+}

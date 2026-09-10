@@ -1,0 +1,219 @@
+#wechat-output {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  background: #fff;
+  font-size: var(--wechat-font-size, 16px);
+  line-height: 1.75;
+  color: #333;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-family: var(--wechat-font-family, 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif);
+}
+
+#wechat-output * {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+#wechat-output .h1,
+#wechat-output .h2,
+#wechat-output .h3,
+#wechat-output .h4,
+#wechat-output .h5,
+#wechat-output .h6 {
+  margin: 1.25em 0 0.75em;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+#wechat-output .h1 {
+  font-size: 1.7em;
+  margin-top: 0.4em;
+}
+
+#wechat-output .h2 {
+  font-size: 1.35em;
+}
+
+#wechat-output .h3 {
+  font-size: 1.16em;
+}
+
+#wechat-output .p,
+#wechat-output .list-item {
+  margin: 0.8em 0;
+  text-align: var(--wechat-paragraph-align, left);
+  text-indent: var(--wechat-paragraph-indent, 0);
+}
+
+#wechat-output .blockquote {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  border-left: 4px solid var(--wechat-primary-color, #FF5B5B);
+  background: rgba(24, 144, 255, 0.07);
+  color: #4a5568;
+}
+
+#wechat-output .code-inline {
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  background: #f4f4f4;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+#wechat-output .pre {
+  margin: 1em 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1f2937;
+}
+
+#wechat-output .code {
+  display: block;
+  padding: 14px;
+  overflow-x: auto;
+  color: #f8fafc;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+#wechat-output .code-line {
+  display: block;
+}
+
+#wechat-output .line-number {
+  display: inline-block;
+  width: 2.2em;
+  margin-right: 0.6em;
+  user-select: none;
+  color: rgba(248, 250, 252, 0.55);
+}
+
+#wechat-output .mac-code {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#wechat-output .mac-code-header {
+  height: 30px;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+}
+
+#wechat-output .mac-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+#wechat-output .mac-dot.red {
+  background: #ff5f56;
+}
+
+#wechat-output .mac-dot.yellow {
+  background: #ffbd2e;
+}
+
+#wechat-output .mac-dot.green {
+  background: #27c93f;
+}
+
+#wechat-output .image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#wechat-output .figure {
+  margin: 1em 0;
+}
+
+#wechat-output .figcaption {
+  margin-top: 0.5em;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.88em;
+}
+
+#wechat-output .link {
+  color: var(--wechat-primary-color, #FF5B5B);
+  text-decoration: underline;
+}
+
+#wechat-output .ul,
+#wechat-output .ol {
+  margin: 0.8em 0;
+  padding-left: 1.4em;
+}
+
+#wechat-output .table-wrap {
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+#wechat-output .table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.94em;
+}
+
+#wechat-output .th,
+#wechat-output .td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+#wechat-output .th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+#wechat-output .hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1.4em 0;
+}
+
+#wechat-output .markup-highlight {
+  background: linear-gradient(transparent 60%, rgba(250, 204, 21, 0.45) 0);
+}
+
+#wechat-output .markup-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--wechat-primary-color, #FF5B5B);
+  text-decoration-thickness: 2px;
+}
+
+#wechat-output .citation-sup,
+#wechat-output .footnote-ref {
+  margin-left: 2px;
+  color: var(--wechat-primary-color, #FF5B5B);
+  font-size: 0.78em;
+  vertical-align: super;
+}
+
+#wechat-output .reference-title,
+#wechat-output .footnotes-title {
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  font-weight: 700;
+  font-size: 1.04em;
+}
+
+#wechat-output .reference-list,
+#wechat-output .footnotes-list {
+  margin: 0;
+  padding-left: 1.2em;
+  color: #4b5563;
+  font-size: 0.92em;
+}

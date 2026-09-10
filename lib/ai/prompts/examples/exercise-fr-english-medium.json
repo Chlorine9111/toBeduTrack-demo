@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "subject": "english",
+  "exerciseType": "FR",
+  "difficultyLabel": "medium",
+  "description": "英语学科 FR 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "英语 FR medium：隐喻与语气分析",
+      "block": {
+        "questionText": "Read the line below and answer all parts.\\n\\n\"If a library is a city, then every shelf is a street where strangers learn to trust one another.\"\\n\\n(a) Identify one rhetorical choice in the sentence.\\n(b) Explain how that choice develops the writer's message about public libraries.\\n(c) Explain how the sentence's tone strengthens the argument.",
+        "type": "FR",
+        "questionType": "FRQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "english-rhetorical-analysis-metaphor",
+        "loIds": ["ENG-RHET-4"],
+        "ekIds": ["ENG-RHET-4.1"],
+        "parts": {
+          "a": { "prompt": "Identify one rhetorical choice.", "points": 2 },
+          "b": { "prompt": "Explain how it develops the message.", "points": 2 },
+          "c": { "prompt": "Explain how tone strengthens the argument.", "points": 2 }
+        },
+        "totalPoints": 6,
+        "correctAnswer": "(a) The sentence uses an extended metaphor comparing a library to a city. (b) The metaphor presents the library as a shared civic space where people connect through ideas. (c) The hopeful, communal tone makes the argument feel generous and inclusive.",
+        "solutionSteps": "Part (a): A strong response identifies the central rhetorical choice as metaphor, specifically the comparison of a library to a city and shelves to streets.\\nPart (b): The metaphor turns reading into a public, civic act. By describing shelves as streets, the writer suggests that libraries bring strangers into a shared space where trust and community can form.\\nPart (c): The tone is hopeful and welcoming. That tone supports the argument because it frames public libraries as places of belonging rather than silence or isolation, making the claim emotionally persuasive.",
+        "commonMistakes": [
+          "Naming a device without explaining what the comparison reveals about the argument.",
+          "Summarizing the sentence instead of analyzing its effect on the audience.",
+          "Describing tone with a vague word such as 'good' or 'nice' without support."
+        ]
+      }
+    }
+  ]
+}

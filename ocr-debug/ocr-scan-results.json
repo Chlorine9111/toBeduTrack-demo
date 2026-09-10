@@ -1,0 +1,54 @@
+[
+  {
+    "id": "9740b2ad-06a2-4752-94aa-d752a3bf55f2",
+    "page": 1,
+    "file": "ux-question-material-1773226372310-questions.pdf",
+    "text": "A scientist is investigating the properties of a mixture of $\\mathrm{CH}_3\\mathrm{OH}$ and $\\mathrm{H}_2\\mathrm{CO}$. The scientist generates the foll",
+    "image_count": 2,
+    "image_urls": [
+      "/api/pdf/scan-image?path=question-images%2Fad1d7150-03b4-4dcd-a0dd-3f07bddd09ea%2F4506c2b0-29d5-4275-9ad0-28b4453ba86f%2Fc8af3854606f13229df5df76dafc14f4.png",
+      "/api/pdf/scan-image?path=question-images%2Fad1d7150-03b4-4dcd-a0dd-3f07bddd09ea%2F4506c2b0-29d5-4275-9ad0-28b4453ba86f%2Fd9e7fce1f4d95ff2b7e3036e279a535c.png"
+    ]
+  },
+  {
+    "id": "9cb86ba0-2693-4d11-83cc-2579539d584e",
+    "page": 2,
+    "file": "ux-cb-1773226621402-ap25-frq-chemistry-short.pdf",
+    "text": "Complete Lewis diagrams and some physical properties for compounds X and Y are given.",
+    "image_count": 1,
+    "image_urls": [
+      "/api/pdf/scan-image?path=question-images%2Fad1d7150-03b4-4dcd-a0dd-3f07bddd09ea%2Fe7b461cc-8ffa-470a-9b83-daf83e7f0e37%2Fa7368ef873f967c90177b742c09e1a5d.png"
+    ]
+  },
+  {
+    "id": "74d68455-d8be-4479-8c27-2db700feac2a",
+    "page": 2,
+    "file": "ux-question-material-1773231885906-questions.pdf",
+    "text": "Complete Lewis diagrams and some physical properties for compounds X and Y are given.",
+    "image_count": 1,
+    "image_urls": [
+      "/api/pdf/scan-image?path=question-images%2Fad1d7150-03b4-4dcd-a0dd-3f07bddd09ea%2F3c7ba9ff-da92-4d23-bf54-f52c54f99ad3%2Fa7368ef873f967c90177b742c09e1a5d.png"
+    ]
+  },
+  {
+    "id": "b926f3ce-90be-4285-85ab-a22eef82a40d",
+    "page": 2,
+    "file": "ux-question-material-1773226372310-questions.pdf",
+    "text": "Complete Lewis diagrams and some physical properties for compounds X and Y are given.",
+    "image_count": 1,
+    "image_urls": [
+      "/api/pdf/scan-image?path=question-images%2Fad1d7150-03b4-4dcd-a0dd-3f07bddd09ea%2F4506c2b0-29d5-4275-9ad0-28b4453ba86f%2Fba18c9e82712c0289aff272568e394db.png"
+    ]
+  },
+  {
+    "id": "5ae2a534-30b8-4fb4-9f2b-e5a31c90fb8d",
+    "page": 3,
+    "file": "ux-question-material-1773231885906-questions.pdf",
+    "text": "A scientist constructs a galvanic cell as shown in the diagram. As the cell operates, the Zn(s) electrode increases in mass and the Al(s) electrode de",
+    "image_count": 2,
+    "image_urls": [
+      "/api/pdf/scan-image?path=question-images%2Fad1d7150-03b4-4dcd-a0dd-3f07bddd09ea%2F3c7ba9ff-da92-4d23-bf54-f52c54f99ad3%2F620c0174bc219de778149eab048c8676.png",
+      "/api/pdf/scan-image?path=question-images%2Fad1d7150-03b4-4dcd-a0dd-3f07bddd09ea%2F3c7ba9ff-da92-4d23-bf54-f52c54f99ad3%2F5f25babc42144a89817d807426bcced4.png"
+    ]
+  }
+]

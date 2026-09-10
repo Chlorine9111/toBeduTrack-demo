@@ -1,0 +1,265 @@
+<!-- Blog | Detail (V1) -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How to Design a Rubric That Actually Works | The Editorial Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary-fixed-variant": "#666664",
+              "tertiary-container": "#f4f3f0",
+              "error-dim": "#5c1202",
+              "surface-bright": "#fef9ef",
+              "on-secondary-fixed": "#004077",
+              "secondary-container": "#d4e3ff",
+              "on-tertiary-fixed": "#494a48",
+              "inverse-surface": "#0f0e09",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary": "#5e5f5d",
+              "on-surface-variant": "#635f4f",
+              "on-secondary": "#f8f8ff",
+              "surface-container-low": "#f9f3e7",
+              "on-primary-container": "#54514b",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-container": "#5b5c5a",
+              "inverse-on-surface": "#a09c95",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#0060ae",
+              "on-background": "#363225",
+              "secondary-dim": "#005499",
+              "outline-variant": "#b8b29f",
+              "surface-variant": "#e9e2ce",
+              "tertiary-fixed": "#f4f3f0",
+              "on-primary": "#fdf7ee",
+              "on-primary-fixed": "#413f39",
+              "surface-tint": "#615e57",
+              "surface-dim": "#e1dac3",
+              "on-tertiary": "#faf9f6",
+              "primary-container": "#e7e2d9",
+              "surface-container-high": "#eee8d6",
+              "tertiary-dim": "#525351",
+              "surface": "#fef9ef",
+              "secondary-fixed": "#d4e3ff",
+              "background": "#fef9ef",
+              "primary": "#615e57",
+              "on-surface": "#363225",
+              "on-secondary-container": "#005397",
+              "surface-container-lowest": "#ffffff",
+              "primary-dim": "#55524c",
+              "error-container": "#fe8b70",
+              "on-error-container": "#742410",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "surface-container-highest": "#e9e2ce",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "error": "#9e422c",
+              "inverse-primary": "#fef9ef",
+              "on-secondary-fixed-variant": "#005ca8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .prose blockquote {
+            border-left: 3px solid #37352F;
+            padding-left: 1.5rem;
+            font-style: italic;
+            margin: 2rem 0;
+        }
+        .tonal-transition-bg {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0));
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-xs dark:shadow-none font-inter antialiased text-sm font-medium tracking-tight">
+<div class="flex justify-between items-center px-6 py-3 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-lg font-semibold text-stone-800 dark:text-stone-100">The Editorial Workspace</span>
+<div class="hidden md:flex gap-6">
+<a class="text-blue-600 dark:text-blue-400 font-semibold transition-colors duration-200" href="#">Product</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Pricing</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Blog</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-600 dark:text-stone-400 hover:text-stone-900 font-medium active:scale-95 transition-transform">Sign In</button>
+<button class="bg-[#37352F] text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-dim active:scale-95 transition-all">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6">
+<!-- Editorial Header -->
+<header class="max-w-[720px] mx-auto mb-16">
+<div class="flex items-center gap-3 mb-6">
+<span class="px-2.5 py-1 text-[11px] font-semibold tracking-wider uppercase rounded bg-[rgba(221,235,241,0.5)] text-[#2383E2]">Productivity</span>
+<span class="text-on-surface-variant text-xs font-medium">October 24, 2024</span>
+</div>
+<h1 class="text-[3.5rem] font-bold leading-[1.1] tracking-tight text-[#37352F] mb-8">
+                How to Design a Rubric That Actually Works
+            </h1>
+<div class="flex items-center gap-4 py-6">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="Author" data-alt="Portrait of a smiling professional educator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb3wpizVCLJXVB-37Rhv-rGGkQXu_Cma1QS4kGrsSAVM4PZrv0o_KMyk0YJBHObymq5sF7Df8BTHvxEuiFJhZ8bXYeiJYfHkZm1K0UsT_yEAvY-zM7DMBOqbhG428xB3HyY4k4-i3RCWKmu48hFzqb03TRfmTILaebQ8FutcD4ThCuNUI8IQD-CuuMCKxAetOrN094Pec9cWheo2qi9um731rVvPk692yZKx2njZrdvxZbnt-YFk0fKYB15yOzPlYgEl-qRZs5IA"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-[#37352F]">Marcus Thorne</span>
+<span class="text-xs text-on-surface-variant">Lead Instructional Designer</span>
+</div>
+</div>
+</header>
+<!-- Feature Image -->
+<figure class="max-w-5xl mx-auto mb-16 rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Article Header" class="w-full aspect-21/9 object-cover" data-alt="Clean desk with notebook and wooden pencils" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZZoPRfSIQgnL3K6FYhLq4I8M7_xwzXmHK9Ggo8iEQX2BKSgKoFcEn5qpFFibQjDEtoHXNx0NM8o_TL1aMS0xMMBBn3gUbH1fNKiD2BuiyPe0ANYVTUrWSSXDOCYfiaP2TDY9K7mwDl8uSYD-tkThyPB_vZxWu4qLmtOjT6Vr9kZmWhlxEmhN8dyf-kRZsll_vJNizCRRBXPf6UdUPD-mrQ9jK5v5pImIAIhrs5OcZ-OWr9YGY1ToBw74N5qrg9Cq4tlYCNtn13Q"/>
+</figure>
+<!-- Article Body -->
+<article class="max-w-[720px] mx-auto prose prose-stone lg:prose-lg">
+<p class="text-xl leading-relaxed text-on-surface-variant mb-8">
+                For years, rubrics have been the quiet workhorses of the classroom. But most are built on quicksand—vague language, overlapping categories, and criteria that confuse rather than clarify. 
+            </p>
+<h2 class="text-2xl font-semibold text-[#37352F] mt-12 mb-4">The Fallacy of Vague Adjectives</h2>
+<p class="text-on-surface leading-[1.6] mb-6">
+                We’ve all seen them. The "Proficient" column that lists "Good effort" while the "Exemplary" column lists "Great effort." This creates a subjective fog where grading becomes a matter of the teacher's mood rather than the student's mastery. To design a rubric that works, you must move from *adjectives* to *actions*.
+            </p>
+<blockquote class="border-l-4 border-primary pl-6 py-2 my-10 italic text-xl text-primary">
+                "A rubric isn't a checklist for what's wrong; it's a map for how to get it right."
+            </blockquote>
+<h3 class="text-xl font-semibold text-[#37352F] mt-10 mb-4">1. Define the North Star</h3>
+<p class="text-on-surface leading-[1.6] mb-6">
+                Before you create your grid, define what excellence looks like in a single sentence. If you can’t describe the goal clearly, your students certainly won’t be able to hit it. This sentence becomes the bedrock of your "Exemplary" column.
+            </p>
+<div class="my-10 p-8 rounded-xl bg-surface-container-low border border-[rgba(55,53,47,0.08)]">
+<h4 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-4">The Framework</h4>
+<ul class="space-y-4 list-none p-0 m-0">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-sm">Measurable indicators over subjective feelings</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-sm">Mutually exclusive levels of achievement</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-sm">Language that students can actually understand</span>
+</li>
+</ul>
+</div>
+<h3 class="text-xl font-semibold text-[#37352F] mt-10 mb-4">2. The Middle Path</h3>
+<p class="text-on-surface leading-[1.6] mb-6">
+                The hardest part of any rubric is the "Developing" stage. Avoid describing it as "less than perfect." Instead, describe it as the specific hurdles a learner faces before reaching fluency. This turns a grade into actionable feedback.
+            </p>
+</article>
+<!-- Footer Newsletter Section -->
+<section class="max-w-[720px] mx-auto mt-24 pt-16 border-t border-[rgba(55,53,47,0.08)]">
+<div class="bg-surface-container-highest p-10 rounded-2xl flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1">
+<h3 class="text-2xl font-bold text-[#37352F] mb-2">The Curator's Weekly</h3>
+<p class="text-on-surface-variant text-sm">Get our best editorial tips and curriculum guides delivered every Tuesday.</p>
+</div>
+<div class="w-full md:w-auto flex gap-2">
+<input class="bg-white border-none rounded-lg text-sm px-4 py-2 focus:ring-2 focus:ring-secondary min-w-[240px]" placeholder="email@example.com" type="email"/>
+<button class="bg-[#37352F] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-primary-dim transition-all">Join</button>
+</div>
+</div>
+</section>
+<!-- Related Content -->
+<section class="max-w-7xl mx-auto mt-32">
+<div class="flex justify-between items-end mb-12">
+<h2 class="text-3xl font-bold tracking-tight text-[#37352F]">More from the Lab</h2>
+<a class="text-secondary font-semibold text-sm flex items-center gap-1 hover:underline" href="#">
+                    View all articles <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Related Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-16/10 rounded-xl overflow-hidden bg-surface-container mb-6">
+<img alt="Post 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Stack of vintage library books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_uIQVv1ZySw4DPLyyPf17W3dcSZ4JSqppxOQeIHaXyXEyOa15SC9XNi0w42ag9vb_hOSSbXWQulSL8z0chbMl_FgGDuLGGR2VQbkLcBUfN24x6HgsHPH5SdYVnPBUVUiL6JQLk8emIAuQEGjdyEfJvZonnXxMFQrzbIhrb8igkPee1z5jmX74KHEGd2xn2Uub8UXba3efc7awzrfLgL0mNU__qz_IHaxe0rQWGfgb946ymSxd6PaTj23MJcPGgfh8omvlXee7bQ"/>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Pedagogy</span>
+<h3 class="text-xl font-bold text-[#37352F] group-hover:text-secondary transition-colors mb-2">Designing for Dyslexia: A Visual Guide</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">How typography and spatial layout can transform reading comprehension for every student.</p>
+</div>
+<!-- Related Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-16/10 rounded-xl overflow-hidden bg-surface-container mb-6">
+<img alt="Post 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up of a tablet displaying digital data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnXY-jWMer16sl7H4WR_g5DM7N3tMxIyQQvh1zBv2PULTV5PAzTf9Ymhy9gqmSEXKINoIgSRMXPW788Xys_EzSNsDzZ20-gnN9V0XLSUPtPaVBjOHtdJQjnvH6KITt5G7gTf_8hgc0QPRa4gB4HLHtWe1r1yW8MHtE_sbAKZ3WtPovXMLQGxYyC-Pr3qI3s8jo7-SDgvN8sdmw5FTJo5RE-KRxvmO0XQ4S7eVGUYCzVHESHSWdR9dLPSvP9gfBFfzEX_aQm9daIQ"/>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Tools</span>
+<h3 class="text-xl font-bold text-[#37352F] group-hover:text-secondary transition-colors mb-2">Automation Without the Alienation</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Using AI to handle administrative tasks while keeping the human touch in feedback loop.</p>
+</div>
+<!-- Related Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-16/10 rounded-xl overflow-hidden bg-surface-container mb-6">
+<img alt="Post 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Team of educators collaborating around a large table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpkZbIPDZEuf4SxqOfjc9-fuHZ_FQAU4rJ9pBph-E1NaJyZ21H2mpVeVwSKP9GlzpGTRfYMIkAToDg4836hiWbSMiaT6stOUIK_rfHLeVqfF2SvQm3auWqOAkrSriJhedXe2m-Ou8ikyL5MrKaWlin9iL3EljblDBo9syW-dndV_NzPMTdKehfdvpynQV_AuuznSwq75290yL3qKkL4XOaCEZMa-KGI2MvILxoUI-jwuoDpTlYtoMNz1Hy7cayoqdpjAkY7s6c9A"/>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Community</span>
+<h3 class="text-xl font-bold text-[#37352F] group-hover:text-secondary transition-colors mb-2">The Power of Peer Observations</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Why watching your colleagues teach is the single most effective form of PD.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 w-full py-12 px-8 font-inter text-xs tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-bold text-stone-900 dark:text-stone-100 text-base">The Editorial Workspace</span>
+<p class="text-stone-500 leading-relaxed">Curating the future of instructional design and workspace productivity for educators globally.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-semibold text-stone-800 dark:text-stone-200">Resources</span>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Documentation</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Templates</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Help Center</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-semibold text-stone-800 dark:text-stone-200">Company</span>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">About</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Community</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-semibold text-stone-800 dark:text-stone-200">Legal</span>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors underline decoration-blue-500" href="#">Privacy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Terms</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 transition-colors" href="#">Support</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-stone-200 dark:border-stone-800 text-center md:text-left text-stone-500">
+            © 2024 The Editorial Workspace. Built for Educators.
+        </div>
+</footer>
+</body></html>
+
+<!-- Deskmate | Home -->

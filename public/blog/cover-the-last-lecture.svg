@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#37352F"/>
+      <stop offset="100%" stop-color="#4a4740"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="400" y1="200" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2383E2" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#fff" stroke-width="0.5">
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+    <line x1="0" y1="126" x2="1200" y2="126"/>
+    <line x1="0" y1="252" x2="1200" y2="252"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/>
+    <line x1="0" y1="504" x2="1200" y2="504"/>
+  </g>
+
+  <!-- Warm glow -->
+  <ellipse cx="600" cy="340" rx="400" ry="250" fill="url(#glow1)"/>
+
+  <!-- Lectern shape (old model) - left side, fading -->
+  <g opacity="0.25">
+    <rect x="260" y="200" width="120" height="8" rx="4" fill="#e9e2ce"/>
+    <rect x="290" y="220" width="60" height="180" rx="4" fill="#e9e2ce"/>
+    <rect x="270" y="400" width="100" height="8" rx="4" fill="#e9e2ce"/>
+  </g>
+
+  <!-- Dissolving dots from lectern to network (transformation) -->
+  <g opacity="0.15">
+    <circle cx="380" cy="260" r="3" fill="#e9e2ce"/>
+    <circle cx="410" cy="240" r="2" fill="#e9e2ce"/>
+    <circle cx="430" cy="280" r="2.5" fill="#e9e2ce"/>
+    <circle cx="450" cy="250" r="1.5" fill="#e9e2ce"/>
+  </g>
+
+  <!-- Central network: interconnected nodes (new model) -->
+  <!-- Connection lines -->
+  <g stroke="#d4a574" stroke-width="1" opacity="0.3">
+    <line x1="600" y1="260" x2="720" y2="320"/>
+    <line x1="600" y1="260" x2="540" y2="370"/>
+    <line x1="720" y1="320" x2="680" y2="430"/>
+    <line x1="540" y1="370" x2="680" y2="430"/>
+    <line x1="720" y1="320" x2="840" y2="280"/>
+    <line x1="840" y1="280" x2="880" y2="380"/>
+    <line x1="680" y1="430" x2="880" y2="380"/>
+    <line x1="600" y1="260" x2="680" y2="430"/>
+    <line x1="540" y1="370" x2="720" y2="320"/>
+  </g>
+
+  <!-- Primary node (teacher) - larger, warm -->
+  <circle cx="600" cy="260" r="24" fill="#d4a574" opacity="0.8"/>
+  <circle cx="600" cy="260" r="12" fill="#37352F"/>
+
+  <!-- Student/learner nodes -->
+  <circle cx="720" cy="320" r="16" fill="#e9e2ce" opacity="0.6"/>
+  <circle cx="720" cy="320" r="7" fill="#37352F" opacity="0.5"/>
+
+  <circle cx="540" cy="370" r="16" fill="#e9e2ce" opacity="0.6"/>
+  <circle cx="540" cy="370" r="7" fill="#37352F" opacity="0.5"/>
+
+  <circle cx="680" cy="430" r="16" fill="#e9e2ce" opacity="0.6"/>
+  <circle cx="680" cy="430" r="7" fill="#37352F" opacity="0.5"/>
+
+  <circle cx="840" cy="280" r="14" fill="#e9e2ce" opacity="0.5"/>
+  <circle cx="840" cy="280" r="6" fill="#37352F" opacity="0.4"/>
+
+  <circle cx="880" cy="380" r="14" fill="#e9e2ce" opacity="0.5"/>
+  <circle cx="880" cy="380" r="6" fill="#37352F" opacity="0.4"/>
+
+  <!-- Outer ambient nodes -->
+  <circle cx="480" cy="200" r="4" fill="#2383E2" opacity="0.3"/>
+  <circle cx="920" cy="220" r="3" fill="#2383E2" opacity="0.2"/>
+  <circle cx="760" cy="480" r="5" fill="#d4a574" opacity="0.2"/>
+  <circle cx="440" cy="450" r="3" fill="#d4a574" opacity="0.15"/>
+  <circle cx="950" cy="450" r="4" fill="#2383E2" opacity="0.15"/>
+
+  <!-- Arrow suggesting transformation direction -->
+  <g opacity="0.12">
+    <line x1="420" y1="315" x2="500" y2="315" stroke="#e9e2ce" stroke-width="2"/>
+    <polygon points="500,310 510,315 500,320" fill="#e9e2ce"/>
+  </g>
+</svg>

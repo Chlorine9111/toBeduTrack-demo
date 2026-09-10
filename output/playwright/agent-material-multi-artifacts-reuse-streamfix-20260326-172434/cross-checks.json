@@ -1,0 +1,55 @@
+[
+  {
+    "stage": "upload",
+    "uploadedAssetId": null,
+    "uploadedAssetTitle": "Chapter_11_Of_Rats_and_Men.pdf",
+    "route": "content-assets/existing-selection",
+    "uploadToReadyMs": 3590
+  },
+  {
+    "stage": "worksheet",
+    "toolCalls": [
+      "generate_document_worksheet",
+      "generate_document_worksheet"
+    ],
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "canvasPreview": "练习卷可下载练习卷Export自动同步内容库Of Rats and Men — Chapter 11 课堂学习单姓名：\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ 日期：\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ 班级：\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ 学习目标 读完本章并完成本学习单后，你能够： 梳理第十一章的关键事件与时间线 分析主要人物的行动...正"
+  },
+  {
+    "stage": "rubric",
+    "toolCalls": [
+      "generate_rubric",
+      "generate_rubric"
+    ],
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "canvasPreview": "Rubric评分量表Export自动同步内容库Chapter Discussion and Reading Response RubricContent Understanding · Evidence Citation · Analytical Depth · Expression Quality正在连接统一文档...Academic RubricChapter Discussion and R"
+  },
+  {
+    "stage": "lesson_plan",
+    "toolCalls": [
+      "generate_lesson_plan_workflow",
+      "generate_lesson_plan_workflow"
+    ],
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "canvasPreview": "教案完整教案Export自动同步内容库Of Rats and Men · Chapter 11 Close Reading & Discussion Lesson Plan (45 min)Of Rats and Men · Chapter 11 Close Reading & Discussion Lesson Plan (45 min)正在连接统一文档...Lesson PlanOf Rats"
+  },
+  {
+    "stage": "exam",
+    "toolCalls": [
+      "generate_ap_exercises_pipeline",
+      "export_exam_pdf",
+      "export_exam_pdf",
+      "export_exam_pdf"
+    ],
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "canvasPreview": "试卷正式试卷Export自动同步内容库题库 Exam当前题库没有命中这门课的结构化课程映射，已自动切到生成式组卷。右侧 Canvas 会继续以排版后的试卷形式流式补全。正在连接统一文档...Exam题库 ExamSection 1 章节理解与人物分析当前题库没有命中这门课的结构化课程映射，已自动切到生成式组卷。1. 在第十一章中，Bill Greenslade 前往天津文法学校（Tientsin "
+  }
+]

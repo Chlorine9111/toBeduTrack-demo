@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "subject": "economics",
+  "exerciseType": "FR",
+  "difficultyLabel": "medium",
+  "description": "经济学学科 FR 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "经济学 FR medium：利率政策传导链",
+      "block": {
+        "questionText": "An economy is in recession and inflation is below the central bank's target. The central bank lowers the policy interest rate.\\n(a) Explain how this policy affects investment spending.\\n(b) Explain how the change in investment affects aggregate demand and real output in the short run.\\n(c) Identify one condition under which this policy would be less effective.",
+        "type": "FR",
+        "questionType": "FRQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "economics-interest-rate-transmission",
+        "loIds": ["ECO-5.B"],
+        "ekIds": ["ECO-5.B.1"],
+        "parts": {
+          "a": { "prompt": "Explain the effect on investment.", "points": 2 },
+          "b": { "prompt": "Explain the effect on AD and output.", "points": 2 },
+          "c": { "prompt": "Identify one condition that weakens the policy.", "points": 2 }
+        },
+        "totalPoints": 6,
+        "correctAnswer": "(a) Lower rates reduce borrowing costs, so investment rises. (b) Higher investment shifts aggregate demand right and raises short-run real output. (c) The policy is less effective if banks or households are unwilling to borrow and lend, such as during a liquidity trap or a credit crunch.",
+        "solutionSteps": "Part (a): A lower policy rate reduces the cost of borrowing for firms. Cheaper loans make more capital projects profitable, so planned investment spending increases.\\nPart (b): Investment is a component of aggregate demand. When investment rises, AD shifts to the right. In the short run, that raises real output and generally reduces the size of the recessionary gap.\\nPart (c): One valid limiting condition is a liquidity trap or severe credit crunch. If banks hold reserves and firms remain pessimistic, borrowing and spending may not increase much even after rates fall.",
+        "commonMistakes": [
+          "Skipping directly from a lower policy rate to higher GDP without mentioning investment or aggregate demand.",
+          "Mixing up short-run aggregate demand effects with shifts in long-run aggregate supply.",
+          "Naming a limiting condition without explaining why it weakens the transmission mechanism."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+/* ===== 学术文档基础排版 ===== */
+
+[data-doc-type] {
+  font-family: "Times New Roman", "Noto Serif SC", serif;
+  color: #000;
+  line-height: 1.65;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 标题 */
+[data-doc-type] h1 {
+  font-family: "Helvetica Neue", "PingFang SC", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 0.25rem;
+  line-height: 1.3;
+}
+
+[data-doc-type] h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-bottom: 1.5px solid #000;
+  padding-bottom: 0.2rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+[data-doc-type] h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+}
+
+[data-doc-type] h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.35rem;
+}
+
+/* 段落 */
+[data-doc-type] p {
+  margin: 0.4rem 0;
+}
+
+/* Section 间距 */
+[data-doc-type] section + section {
+  margin-top: 1.25rem;
+}
+
+/* ===== Rubric 专用阅读态 ===== */
+
+[data-doc-type="rubric"] {
+  max-width: none;
+  padding: 0;
+}
+
+[data-doc-type="rubric"] [data-section="header"] {
+  border-bottom: 1.5px solid #111;
+  margin-bottom: 1rem;
+  padding-bottom: 0.9rem;
+}
+
+[data-doc-type="rubric"] [data-section="header"] > p:first-child {
+  font-family: "Helvetica Neue", "PingFang SC", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+}
+
+[data-doc-type="rubric"] [data-section="header"] p:last-child {
+  color: #333;
+  margin-top: 0.35rem;
+}
+
+[data-doc-type="rubric"] [data-section="rubric-matrix"] {
+  overflow-x: auto;
+}
+
+[data-doc-type="rubric"] table[data-rubric] {
+  font-size: 0.9rem;
+  margin: 0;
+  table-layout: fixed;
+}
+
+[data-doc-type="rubric"] table[data-rubric] th,
+[data-doc-type="rubric"] table[data-rubric] td {
+  overflow-wrap: anywhere;
+  padding: 0.65rem 0.7rem;
+  word-break: break-word;
+}
+
+[data-doc-type="rubric"] table[data-rubric] th:nth-child(1),
+[data-doc-type="rubric"] table[data-rubric] td:nth-child(1) {
+  width: 22%;
+}
+
+[data-doc-type="rubric"] table[data-rubric] th:nth-child(2),
+[data-doc-type="rubric"] table[data-rubric] td:nth-child(2) {
+  text-align: center;
+  width: 8%;
+}
+
+[data-doc-type="rubric"] table[data-rubric] th:nth-child(n + 3),
+[data-doc-type="rubric"] table[data-rubric] td:nth-child(n + 3) {
+  width: 17.5%;
+}
+
+[data-doc-type="rubric"] table[data-rubric] thead th {
+  background: #efefef;
+  font-family: "Helvetica Neue", "PingFang SC", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+[data-doc-type="rubric"] table[data-rubric] tbody td:first-child strong {
+  display: block;
+  font-family: "Helvetica Neue", "PingFang SC", sans-serif;
+  font-size: 0.92rem;
+  margin-bottom: 0.35rem;
+}
+
+[data-doc-type="rubric"] table[data-rubric] p {
+  margin: 0.18rem 0;
+}
+
+[data-doc-type="rubric"] table[data-rubric] ul,
+[data-doc-type="rubric"] table[data-rubric] ol {
+  margin: 0.25rem 0;
+}
+
+[data-doc-type="rubric"] table[data-rubric] .katex-display {
+  margin: 0.45rem 0;
+}
+
+/* ===== 答题框 ===== */
+
+[data-answer-space] {
+  border: 1.5px dashed #999;
+  margin: 0.5rem 0;
+  border-radius: 2px;
+}
+
+[data-answer-space="small"] { min-height: 60px; }
+[data-answer-space="medium"] { min-height: 120px; }
+[data-answer-space="large"] { min-height: 200px; }
+
+/* ===== 题目 ===== */
+
+[data-question] {
+  margin: 0.75rem 0;
+  padding-left: 0;
+  position: relative;
+}
+
+/* 选项列表 */
+[data-options],
+ol[type="A"],
+ol[data-options] {
+  list-style-type: upper-alpha;
+  padding-left: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+[data-options] li,
+ol[type="A"] li {
+  margin: 0.3rem 0;
+  padding-left: 0.4rem;
+}
+
+/* TipTap 默认 orderedList 会用数字，强制覆盖 */
+.tiptap ol[type="A"],
+.tiptap ol[data-options],
+.ProseMirror ol[type="A"],
+.ProseMirror ol[data-options] {
+  list-style-type: upper-alpha !important;
+}
+
+/* ===== 表格 ===== */
+
+[data-doc-type] table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+[data-doc-type] th,
+[data-doc-type] td {
+  border: 1px solid #333;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+[data-doc-type] th {
+  font-weight: 600;
+  background: #f0f0f0;
+}
+
+[data-rubric] th {
+  background: #e5e5e5;
+  text-align: center;
+}
+
+[data-rubric] td {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+/* ===== 分隔线 ===== */
+
+[data-doc-type] hr {
+  border: none;
+  border-top: 1px solid #666;
+  margin: 1rem 0;
+}
+
+/* ===== 引用 ===== */
+
+[data-doc-type] blockquote {
+  border-left: 3px solid #666;
+  padding-left: 1rem;
+  margin: 0.75rem 0;
+  color: #333;
+  font-style: italic;
+}
+
+/* ===== 图片 ===== */
+
+[data-doc-type] img {
+  max-width: 100%;
+  max-height: 240px;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+/* ===== 列表 ===== */
+
+[data-doc-type] ol,
+[data-doc-type] ul {
+  padding-left: 1.5rem;
+  margin: 0.35rem 0;
+}
+
+[data-doc-type] li {
+  margin: 0.15rem 0;
+}
+
+/* ===== 选区预览高亮 ===== */
+/* ::highlight() 是 CSS Highlight API，Turbopack CSS parser 暂不支持 */
+/* 运行时通过 JS 注册，此处仅做渐进增强 */
+
+/* ===== 打印优化 ===== */
+
+@media print {
+  [data-doc-type] {
+    font-size: 11pt;
+    padding: 0;
+    max-width: none;
+  }
+
+  [data-doc-type] h1 {
+    font-size: 14pt;
+  }
+
+  [data-doc-type] h2 {
+    font-size: 12pt;
+  }
+
+  [data-section] {
+    break-inside: avoid;
+  }
+
+  [data-answer-space] {
+    break-inside: avoid;
+  }
+
+  [data-question] {
+    break-inside: avoid;
+  }
+
+  [data-doc-type] table {
+    break-inside: auto;
+  }
+
+  [data-doc-type] tr {
+    break-inside: avoid;
+  }
+}

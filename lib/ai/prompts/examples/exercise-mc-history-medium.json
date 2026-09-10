@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "subject": "history",
+  "exerciseType": "MC",
+  "difficultyLabel": "medium",
+  "description": "历史学科 MC 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "历史 MC medium：工业化与帝国扩张",
+      "block": {
+        "questionText": "In the late nineteenth century, European states were able to impose direct political control over much of Africa most immediately because they",
+        "type": "MC",
+        "questionType": "MCQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "history-imperialism-africa",
+        "loIds": ["HIS-4.B"],
+        "ekIds": ["HIS-4.B.1"],
+        "options": [
+          {
+            "label": "A",
+            "text": "had already converted most African societies to Christianity",
+            "isCorrect": false
+          },
+          {
+            "label": "B",
+            "text": "possessed industrial-era weapons, steam transport, and quinine that lowered the costs of conquest",
+            "isCorrect": true
+          },
+          {
+            "label": "C",
+            "text": "were invited by most African rulers to settle dynastic disputes peacefully",
+            "isCorrect": false
+          },
+          {
+            "label": "D",
+            "text": "faced no meaningful resistance from African states such as Ethiopia or the Zulu kingdom",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "B",
+        "solutionSteps": "Industrialization gave European empires machine guns, steamships, rail transport, and medical advances such as quinine. Those tools made military conquest and occupation far more practical after 1880. Therefore the best answer is B.",
+        "commonMistakes": [
+          "Explaining imperialism only through religion or ideology and ignoring material power.",
+          "Assuming colonized societies offered little or no resistance.",
+          "Confusing diplomatic contact with political invitation."
+        ],
+        "distractor_rationale": {
+          "A": "Over-generalization: it mistakes cultural influence for the most immediate cause of conquest.",
+          "C": "Causal confusion: it treats imperial occupation as a consensual process rather than coercive expansion.",
+          "D": "Evidence blind spot: it ignores well-known resistance movements and states that fought European rule."
+        }
+      }
+    }
+  ]
+}

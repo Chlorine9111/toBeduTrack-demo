@@ -1,0 +1,415 @@
+import { mkdirSync, writeFileSync } from "fs";
+import { resolve } from "path";
+
+type SeedPoint = {
+  code: string;
+  curriculumSystem: "AP" | "IB" | "CN";
+  subject: string;
+  hierarchyLabel: string;
+  name: string;
+  description: string;
+  projectPotential: "high" | "medium" | "low";
+};
+
+const AP_POINTS: SeedPoint[] = [
+  {
+    code: "AP-CHEM-1.1",
+    curriculumSystem: "AP",
+    subject: "AP Chemistry",
+    hierarchyLabel: "Topic",
+    name: "Moles and Molar Mass",
+    description: "Use particle representations and mole relationships to quantify chemical systems.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-CHEM-3.2",
+    curriculumSystem: "AP",
+    subject: "AP Chemistry",
+    hierarchyLabel: "Topic",
+    name: "Intermolecular Forces",
+    description: "Explain how intermolecular forces affect properties and behavior of matter.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-CHEM-4.2",
+    curriculumSystem: "AP",
+    subject: "AP Chemistry",
+    hierarchyLabel: "Topic",
+    name: "Net Ionic Equations",
+    description: "Represent chemical change through symbolic equations and particle models.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-CHEM-7.1",
+    curriculumSystem: "AP",
+    subject: "AP Chemistry",
+    hierarchyLabel: "Topic",
+    name: "Equilibrium Intro",
+    description: "Interpret dynamic equilibrium and quantify shifts under changing conditions.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-CHEM-9.1",
+    curriculumSystem: "AP",
+    subject: "AP Chemistry",
+    hierarchyLabel: "Topic",
+    name: "Electrochemical Cells",
+    description: "Analyze galvanic and electrolytic cells using redox and potential data.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-PHY1-1.2",
+    curriculumSystem: "AP",
+    subject: "AP Physics 1",
+    hierarchyLabel: "Topic",
+    name: "Representations of Motion",
+    description: "Use graphs, diagrams, and equations to represent one-dimensional motion.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-PHY1-2.1",
+    curriculumSystem: "AP",
+    subject: "AP Physics 1",
+    hierarchyLabel: "Topic",
+    name: "Newton's Laws",
+    description: "Apply Newton's Laws to model interactions and predict motion.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-PHY1-3.1",
+    curriculumSystem: "AP",
+    subject: "AP Physics 1",
+    hierarchyLabel: "Topic",
+    name: "Circular Motion",
+    description: "Model uniform circular motion and centripetal acceleration in real contexts.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-PHY1-4.1",
+    curriculumSystem: "AP",
+    subject: "AP Physics 1",
+    hierarchyLabel: "Topic",
+    name: "Energy Conservation",
+    description: "Use conservation laws to analyze systems and energy transfers.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-PHY1-7.2",
+    curriculumSystem: "AP",
+    subject: "AP Physics 1",
+    hierarchyLabel: "Topic",
+    name: "Torque and Rotational Equilibrium",
+    description: "Analyze torque and rotational dynamics in engineered structures.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-BIO-2.1",
+    curriculumSystem: "AP",
+    subject: "AP Biology",
+    hierarchyLabel: "Topic",
+    name: "Cell Structure and Function",
+    description: "Connect cellular structures with transport and energy processes.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-BIO-3.2",
+    curriculumSystem: "AP",
+    subject: "AP Biology",
+    hierarchyLabel: "Topic",
+    name: "Enzyme Catalysis",
+    description: "Investigate how environmental factors affect enzyme activity.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-BIO-5.3",
+    curriculumSystem: "AP",
+    subject: "AP Biology",
+    hierarchyLabel: "Topic",
+    name: "Cell Communication",
+    description: "Analyze signaling pathways and responses in multicellular systems.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-BIO-6.1",
+    curriculumSystem: "AP",
+    subject: "AP Biology",
+    hierarchyLabel: "Topic",
+    name: "Gene Expression",
+    description: "Connect gene regulation mechanisms to phenotype and adaptation.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-BIO-8.2",
+    curriculumSystem: "AP",
+    subject: "AP Biology",
+    hierarchyLabel: "Topic",
+    name: "Population Ecology",
+    description: "Model population dynamics and ecological interactions.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-STAT-1.1",
+    curriculumSystem: "AP",
+    subject: "AP Statistics",
+    hierarchyLabel: "Topic",
+    name: "Exploring One-Variable Data",
+    description: "Describe distributions and choose appropriate statistical summaries.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-STAT-2.2",
+    curriculumSystem: "AP",
+    subject: "AP Statistics",
+    hierarchyLabel: "Topic",
+    name: "Collecting Data",
+    description: "Design studies and experiments with valid sampling methods.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-STAT-3.3",
+    curriculumSystem: "AP",
+    subject: "AP Statistics",
+    hierarchyLabel: "Topic",
+    name: "Probability Models",
+    description: "Use probability models to reason under uncertainty.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-STAT-4.1",
+    curriculumSystem: "AP",
+    subject: "AP Statistics",
+    hierarchyLabel: "Topic",
+    name: "Inference for Means",
+    description: "Construct confidence intervals and tests for population means.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-STAT-5.1",
+    curriculumSystem: "AP",
+    subject: "AP Statistics",
+    hierarchyLabel: "Topic",
+    name: "Inference for Proportions",
+    description: "Evaluate claims with one- and two-sample proportion procedures.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-CALCAB-2.1",
+    curriculumSystem: "AP",
+    subject: "AP Calculus AB",
+    hierarchyLabel: "Topic",
+    name: "Limits and Continuity",
+    description: "Interpret limits graphically, numerically, and analytically.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-CALCAB-3.2",
+    curriculumSystem: "AP",
+    subject: "AP Calculus AB",
+    hierarchyLabel: "Topic",
+    name: "Derivative Rules",
+    description: "Apply derivative rules to model rates of change.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-CALCAB-4.4",
+    curriculumSystem: "AP",
+    subject: "AP Calculus AB",
+    hierarchyLabel: "Topic",
+    name: "Contextual Applications of Differentiation",
+    description: "Solve optimization and related-rate problems from real contexts.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-CALCAB-6.2",
+    curriculumSystem: "AP",
+    subject: "AP Calculus AB",
+    hierarchyLabel: "Topic",
+    name: "Accumulation and Riemann Sums",
+    description: "Connect accumulation to area using numerical and symbolic methods.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-CALCAB-8.3",
+    curriculumSystem: "AP",
+    subject: "AP Calculus AB",
+    hierarchyLabel: "Topic",
+    name: "Differential Equations",
+    description: "Model change with differential equations and slope fields.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-CSA-1.1",
+    curriculumSystem: "AP",
+    subject: "AP Computer Science A",
+    hierarchyLabel: "Topic",
+    name: "Primitive Types and Variables",
+    description: "Use Java data types and expressions to build deterministic logic.",
+    projectPotential: "medium",
+  },
+  {
+    code: "AP-CSA-2.2",
+    curriculumSystem: "AP",
+    subject: "AP Computer Science A",
+    hierarchyLabel: "Topic",
+    name: "Control Structures",
+    description: "Construct conditional and iterative algorithms.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-CSA-3.1",
+    curriculumSystem: "AP",
+    subject: "AP Computer Science A",
+    hierarchyLabel: "Topic",
+    name: "Class Design",
+    description: "Design classes with fields, constructors, and methods.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-CSA-4.2",
+    curriculumSystem: "AP",
+    subject: "AP Computer Science A",
+    hierarchyLabel: "Topic",
+    name: "Data Collections",
+    description: "Process lists and arrays to solve applied data problems.",
+    projectPotential: "high",
+  },
+  {
+    code: "AP-CSP-5.1",
+    curriculumSystem: "AP",
+    subject: "AP Computer Science Principles",
+    hierarchyLabel: "Topic",
+    name: "Data and Analysis",
+    description: "Analyze data representations and computational impacts.",
+    projectPotential: "high",
+  },
+];
+
+const IB_POINTS: SeedPoint[] = [
+  {
+    code: "IB-PHY-HL-2.1",
+    curriculumSystem: "IB",
+    subject: "IB Physics HL",
+    hierarchyLabel: "Sub-topic",
+    name: "Kinematics",
+    description: "Model linear motion and uncertainty in measured quantities.",
+    projectPotential: "high",
+  },
+  {
+    code: "IB-CHE-SL-7.1",
+    curriculumSystem: "IB",
+    subject: "IB Chemistry SL",
+    hierarchyLabel: "Sub-topic",
+    name: "Equilibrium",
+    description: "Predict and explain equilibrium shifts in chemical systems.",
+    projectPotential: "high",
+  },
+  {
+    code: "IB-BIO-HL-6.2",
+    curriculumSystem: "IB",
+    subject: "IB Biology HL",
+    hierarchyLabel: "Sub-topic",
+    name: "Genetics",
+    description: "Analyze inheritance and gene expression from data.",
+    projectPotential: "high",
+  },
+  {
+    code: "IB-MAA-HL-5.3",
+    curriculumSystem: "IB",
+    subject: "IB Mathematics: Analysis and Approaches HL",
+    hierarchyLabel: "Sub-topic",
+    name: "Calculus Applications",
+    description: "Apply calculus tools to model and optimize real systems.",
+    projectPotential: "high",
+  },
+  {
+    code: "IB-ECO-SL-3.1",
+    curriculumSystem: "IB",
+    subject: "IB Economics SL",
+    hierarchyLabel: "Sub-topic",
+    name: "Market Failure",
+    description: "Evaluate policy interventions using microeconomic evidence.",
+    projectPotential: "high",
+  },
+];
+
+const CN_POINTS: SeedPoint[] = [
+  {
+    code: "CN-PHY-必修1-3",
+    curriculumSystem: "CN",
+    subject: "高中物理",
+    hierarchyLabel: "主题",
+    name: "牛顿运动定律",
+    description: "在真实情境中解释受力与运动关系。",
+    projectPotential: "high",
+  },
+  {
+    code: "CN-CHE-必修2-3",
+    curriculumSystem: "CN",
+    subject: "高中化学",
+    hierarchyLabel: "主题",
+    name: "化学平衡",
+    description: "理解平衡思想并用于解释工业和环境问题。",
+    projectPotential: "high",
+  },
+  {
+    code: "CN-BIO-必修2-2",
+    curriculumSystem: "CN",
+    subject: "高中生物",
+    hierarchyLabel: "主题",
+    name: "生态系统稳定性",
+    description: "分析生态系统结构、功能与稳定机制。",
+    projectPotential: "high",
+  },
+  {
+    code: "CN-CHI-必修上-1",
+    curriculumSystem: "CN",
+    subject: "高中语文",
+    hierarchyLabel: "学习任务群",
+    name: "文学阅读与写作",
+    description: "在阅读与写作中形成问题意识与表达能力。",
+    projectPotential: "medium",
+  },
+  {
+    code: "CN-ENG-必修上-2",
+    curriculumSystem: "CN",
+    subject: "高中英语",
+    hierarchyLabel: "主题语境",
+    name: "人与社会",
+    description: "围绕社会议题进行跨文化交流与论证表达。",
+    projectPotential: "high",
+  },
+];
+
+function toMarkdown(points: SeedPoint[]) {
+  const rows = points
+    .map(
+      (point) =>
+        `| ${point.code} | ${point.curriculumSystem} | ${point.subject} | ${point.hierarchyLabel} | ${point.name} | ${point.projectPotential} |`,
+    )
+    .join("\n");
+
+  return `# 课标知识点采集（初始化）
+
+> 本文件由 scripts/pbl/collect-knowledgepoints.ts 生成。
+
+| 编号 | 体系 | 学科 | 层级 | 名称 | 项目化潜力 |
+|------|------|------|------|------|------------|
+${rows}
+`;
+}
+
+function main() {
+  const points = [...AP_POINTS, ...IB_POINTS, ...CN_POINTS];
+  const dataDir = resolve(process.cwd(), "data/pbl");
+  const docsDir = resolve(process.cwd(), "docs/pbl");
+
+  mkdirSync(dataDir, { recursive: true });
+  mkdirSync(docsDir, { recursive: true });
+
+  writeFileSync(resolve(dataDir, "knowledgepoints.seed.json"), JSON.stringify(points, null, 2));
+  writeFileSync(resolve(docsDir, "knowledgepoints-catalog.md"), toMarkdown(points));
+
+  console.log(`Collected ${points.length} knowledge points.`);
+}
+
+main();

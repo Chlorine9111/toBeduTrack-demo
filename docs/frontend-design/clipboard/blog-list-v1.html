@@ -1,0 +1,265 @@
+<!-- Blog | List (V1) -->
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary-fixed-variant": "#666664",
+              "tertiary-container": "#f4f3f0",
+              "error-dim": "#5c1202",
+              "surface-bright": "#fef9ef",
+              "on-secondary-fixed": "#004077",
+              "secondary-container": "#d4e3ff",
+              "on-tertiary-fixed": "#494a48",
+              "inverse-surface": "#0f0e09",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary": "#5e5f5d",
+              "on-surface-variant": "#635f4f",
+              "on-secondary": "#f8f8ff",
+              "surface-container-low": "#f9f3e7",
+              "on-primary-container": "#54514b",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-container": "#5b5c5a",
+              "inverse-on-surface": "#a09c95",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#0060ae",
+              "on-background": "#363225",
+              "secondary-dim": "#005499",
+              "outline-variant": "#b8b29f",
+              "surface-variant": "#e9e2ce",
+              "tertiary-fixed": "#f4f3f0",
+              "on-primary": "#fdf7ee",
+              "on-primary-fixed": "#413f39",
+              "surface-tint": "#615e57",
+              "surface-dim": "#e1dac3",
+              "on-tertiary": "#faf9f6",
+              "primary-container": "#e7e2d9",
+              "surface-container-high": "#eee8d6",
+              "tertiary-dim": "#525351",
+              "surface": "#fef9ef",
+              "secondary-fixed": "#d4e3ff",
+              "background": "#fef9ef",
+              "primary": "#615e57",
+              "on-surface": "#363225",
+              "on-secondary-container": "#005397",
+              "surface-container-lowest": "#ffffff",
+              "primary-dim": "#55524c",
+              "error-container": "#fe8b70",
+              "on-error-container": "#742410",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "surface-container-highest": "#e9e2ce",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "error": "#9e422c",
+              "inverse-primary": "#fef9ef",
+              "on-secondary-fixed-variant": "#005ca8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .tonal-transition-bg {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(254,249,239,0.8));
+        }
+        .tonal-shift-bg {
+            background-color: #f4f3f0;
+        }
+        .blog-card-hover:hover {
+            background-color: #F7F6F3;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-xs dark:shadow-none font-inter antialiased text-sm font-medium tracking-tight">
+<div class="flex justify-between items-center px-6 py-3 max-w-full mx-auto">
+<!-- Brand Logo -->
+<div class="text-lg font-semibold text-stone-800 dark:text-stone-100">
+                The Editorial Workspace
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Product</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">Pricing</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200" href="#">About</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200 underline decoration-blue-500" href="#">Blog</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center space-x-4">
+<button class="text-stone-600 dark:text-stone-400 hover:text-stone-900 transition-colors duration-200 active:scale-95">Sign In</button>
+<button class="bg-[#37352F] text-white px-4 py-2 rounded-lg font-medium active:scale-95 transition-transform">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-24 text-center">
+<h1 class="text-[3.5rem] font-bold tracking-tighter leading-none text-on-surface mb-4">Blog</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+                Insights, stories, and editorial techniques for the modern digital curator.
+            </p>
+</header>
+<!-- Blog Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-12">
+<!-- Article Card 1 -->
+<article class="group cursor-pointer transition-all duration-300 blog-card-hover p-4 rounded-xl -m-4">
+<div class="aspect-16/10 mb-6 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Hand writing in a clean notebook" class="w-full h-full object-cover grayscale-20 group-hover:scale-105 transition-transform duration-500" data-alt="Hand writing in a notebook on a clean wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbhCK0rVU3sXI4aksfJPkIvRU-9X8YOMXJc3qikGz5AlWPqFQCDulAOT22eTBrKKr6GkgM4TMlLIGZDpkrEWpZQEXIwKkLX02jVHf3VPi1vLpGEypCph8WNZRssABK5lj9kWlffhrs_VsXrMJKUfu7VGRPwjfH0qxy0FHhoADeYGcKcxgmsIEbe1aVPaXLd6k-0TsBULJchy7dCM3v03IevGphsU7TTqvO1R6rOb5ZbHts6X-UATbv-mnL48rDgYFc_L3IFb6fAg"/>
+</div>
+<div class="space-y-3">
+<span class="inline-flex px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-wide bg-[rgba(221,235,241,0.5)] text-[#2383E2]">TEACHING TIPS</span>
+<h2 class="text-xl font-semibold leading-tight text-on-surface group-hover:text-secondary transition-colors">Mastering the Art of Digital Curation</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">How to organize your workspace to foster creativity and minimize cognitive load in a high-density information age.</p>
+<time class="block text-[0.6875rem] font-medium text-on-surface-variant/60 uppercase tracking-widest">March 14, 2024</time>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="group cursor-pointer transition-all duration-300 blog-card-hover p-4 rounded-xl -m-4">
+<div class="aspect-16/10 mb-6 overflow-hidden rounded-lg bg-surface-container">
+<img alt="A modern laptop and coffee on a desk" class="w-full h-full object-cover grayscale-20 group-hover:scale-105 transition-transform duration-500" data-alt="Modern minimal workspace with laptop and coffee cup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrsnl-WfgDn84FmBbqVi9kwzvSx1CDdaxfw9sWlRqCSVkKo5dl5wnWE5zhe3r0aVfv0bUjfiop_opawJ9wXn3MN2sivDPYp1ubD1Gh7CfMVUki7F9JeXs2fhxRm0YAOrEc5wgWKLLIq8uMt3tNvpFVXuTwBVjsBvE0WcDvMyYu1hHARik1DpF7dYSJQeBf23XjJeSe-RRrG-1IOhPFbqs2-Qv0FR2DI5WJ3rPMAxYt8c4zuwN57NENGt8BDmhZP3GAp21pl8Lqhg"/>
+</div>
+<div class="space-y-3">
+<span class="inline-flex px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-wide bg-[rgba(234,228,242,0.5)] text-[#9065B0]">PRODUCTIVITY</span>
+<h2 class="text-xl font-semibold leading-tight text-on-surface group-hover:text-secondary transition-colors">The 5-Minute Morning Review</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">A simple ritual to align your editorial focus before the noise of the day sets in. Essential for busy educators.</p>
+<time class="block text-[0.6875rem] font-medium text-on-surface-variant/60 uppercase tracking-widest">March 12, 2024</time>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="group cursor-pointer transition-all duration-300 blog-card-hover p-4 rounded-xl -m-4">
+<div class="aspect-16/10 mb-6 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Collection of old books and modern tablet" class="w-full h-full object-cover grayscale-20 group-hover:scale-105 transition-transform duration-500" data-alt="Juxtaposition of classic books and modern digital tablet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa5VsfQb5ShtaPAAXD68tnM9lnWMzztko1cZHqcZBz0YJnI1n0vXHNC24cKXbvyrnCne-BDWjyA8LN07jTtpwyfJqhM01rv1Mdzp1TxGKp8xRLDlMnIMVPVYkOYKlPKEGHQeakmzne3PAOmE8yLc8fTgGyqVHVlhGa1dj2ULI2eW78ALlNV6927aAw6kPEw8xeNybwp8Wg_ad_-voCTc4zll3UYUwkeDdAXOvssvtFiGGlRZF_SfFrDIuzfzRAaGK68Spj351JWA"/>
+</div>
+<div class="space-y-3">
+<span class="inline-flex px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-wide bg-[rgba(238,224,218,0.5)] text-[#976D57]">RESOURCES</span>
+<h2 class="text-xl font-semibold leading-tight text-on-surface group-hover:text-secondary transition-colors">The Future of Digital Archiving</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Bridging the gap between tactile research and the efficiency of cloud-based workspace management tools.</p>
+<time class="block text-[0.6875rem] font-medium text-on-surface-variant/60 uppercase tracking-widest">March 09, 2024</time>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="group cursor-pointer transition-all duration-300 blog-card-hover p-4 rounded-xl -m-4">
+<div class="aspect-16/10 mb-6 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Abstract art with soft lighting" class="w-full h-full object-cover grayscale-20 group-hover:scale-105 transition-transform duration-500" data-alt="Soft abstract art piece with warm lighting tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvVQr5eVXp19B2uap6hnaplRQKGYeAnC0nY-bhu3LG57QXoz9hbKNaegfcu7euN6hkj-HpKzdd2zIhYmvIv07X7mwhI6PgWRRQ574V1JEpBVL_RDFmFXJ8MYK3H3wLMu69TBtNF2PhyUUDpdMPARamdaWwvHMbFk-ag6abXluZISNFkSbrnl6QDZ8xepjCJ_Q6cUCDELT0qQstIHz8mzH9D2NVHfN_jiyJHoQrRrE64PcN8M5BX3FP-umBMfSKb2bAcLApEmwJ9w"/>
+</div>
+<div class="space-y-3">
+<span class="inline-flex px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-wide bg-[rgba(221,237,234,0.5)] text-[#4D7C0F]">CREATIVITY</span>
+<h2 class="text-xl font-semibold leading-tight text-on-surface group-hover:text-secondary transition-colors">Embracing Quiet Space</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Why the best editorial decisions are made in the gaps between the work. Learning to love whitespace.</p>
+<time class="block text-[0.6875rem] font-medium text-on-surface-variant/60 uppercase tracking-widest">March 05, 2024</time>
+</div>
+</article>
+<!-- Article Card 5 -->
+<article class="group cursor-pointer transition-all duration-300 blog-card-hover p-4 rounded-xl -m-4">
+<div class="aspect-16/10 mb-6 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Close up of high quality stationery" class="w-full h-full object-cover grayscale-20 group-hover:scale-105 transition-transform duration-500" data-alt="High quality fountain pen and thick cream paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoDGq0LgV7DrD4XPt4dzMBjxu5hMn_98K2Ij2IyQqggr-zzC5rUWvV5m8YpGiUi87dunD1geruMdX2PekWMHd5d9H04NYJW2jChZCXdSBAEj9q10h5l9gOb6XVpxMGYqwP5fAbmYbZIYArYwi5CCXhil_iVBUx5o7jVwoq9GXxIlDMZYK1wU-HzOlEc9RyejGXl-Lp8SFJorTXWlNoMZWNeFGluXLjEYR6jHoYlhT2BO2tFbjURIC82TJGxe7Eho6zrmRNRzPhlg"/>
+</div>
+<div class="space-y-3">
+<span class="inline-flex px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-wide bg-[rgba(250,235,221,0.5)] text-[#CC772F]">EDITORIAL</span>
+<h2 class="text-xl font-semibold leading-tight text-on-surface group-hover:text-secondary transition-colors">Consistency in Digital Voice</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Maintaining a coherent narrative across multiple platforms without losing the human touch in your writing.</p>
+<time class="block text-[0.6875rem] font-medium text-on-surface-variant/60 uppercase tracking-widest">March 01, 2024</time>
+</div>
+</article>
+<!-- Article Card 6 -->
+<article class="group cursor-pointer transition-all duration-300 blog-card-hover p-4 rounded-xl -m-4">
+<div class="aspect-16/10 mb-6 overflow-hidden rounded-lg bg-surface-container">
+<img alt="Woman studying in a bright room" class="w-full h-full object-cover grayscale-20 group-hover:scale-105 transition-transform duration-500" data-alt="Person focused on studying in a sunlit workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCROfUwpJEARDMsJP-9EFKFRScztR2zdWNlBg4O7qIPSCZW4xWNTPAWhLkFRG8HxA0iDA2u0XYqu2J__dXma9KIJ1Hs00JIPF3DPdZVi_J0xsx1noxfLaO-IxrbHpRiDLWWCEVsFBI5T1GjEsGNN4Fh_A78PkhEx7dfo87RSe6mcZB3BzMPvuus67jS4I8DS1tga_zVL0bOvwNHT6xK4BUlfW3mC8ajLynsnVMxuZ45v51nyOa_icx1zgmzMj5prE-pgsVn6dURKA"/>
+</div>
+<div class="space-y-3">
+<span class="inline-flex px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-wide bg-[rgba(227,226,224,0.5)] text-[#37352F]">COMMUNITY</span>
+<h2 class="text-xl font-semibold leading-tight text-on-surface group-hover:text-secondary transition-colors">Collaboration in the Workspace</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Finding the balance between solitary focused work and the vital spark of collaborative peer review.</p>
+<time class="block text-[0.6875rem] font-medium text-on-surface-variant/60 uppercase tracking-widest">February 26, 2024</time>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex justify-center items-center space-x-6">
+<button class="flex items-center text-sm font-medium text-on-surface-variant/60 hover:text-on-surface transition-colors active:scale-95">
+<span class="material-symbols-outlined mr-2">arrow_back</span>
+                Older
+            </button>
+<div class="flex items-center space-x-4">
+<span class="text-sm font-semibold underline decoration-blue-500 underline-offset-4">1</span>
+<span class="text-sm font-medium text-on-surface-variant hover:text-on-surface cursor-pointer">2</span>
+<span class="text-sm font-medium text-on-surface-variant hover:text-on-surface cursor-pointer">3</span>
+</div>
+<button class="flex items-center text-sm font-medium text-secondary hover:text-blue-700 transition-colors active:scale-95">
+                Newer
+                <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-stone-50 dark:bg-stone-950 font-inter text-xs tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="font-bold text-stone-900 dark:text-stone-100 text-base">The Editorial Workspace</div>
+<p class="text-stone-500 dark:text-stone-400 leading-relaxed max-w-[200px]">Empowering digital curators to build their legacy with intentionality.</p>
+</div>
+<div>
+<h4 class="font-semibold text-stone-800 dark:text-stone-200 mb-4">Resources</h4>
+<ul class="space-y-2 text-stone-500 dark:text-stone-400">
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Documentation</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Templates</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Webinars</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-stone-800 dark:text-stone-200 mb-4">Community</h4>
+<ul class="space-y-2 text-stone-500 dark:text-stone-400">
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Forum</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Events</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Showcase</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-stone-800 dark:text-stone-200 mb-4">Support</h4>
+<ul class="space-y-2 text-stone-500 dark:text-stone-400">
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Status</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 max-w-7xl mx-auto border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center text-stone-400">
+<p>© 2024 The Editorial Workspace. Built for Educators.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="hover:text-blue-600 transition-colors" href="#">Privacy</a>
+<a class="hover:text-blue-600 transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Blog | Detail (V1) -->

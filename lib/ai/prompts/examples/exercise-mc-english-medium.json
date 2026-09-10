@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "subject": "english",
+  "exerciseType": "MC",
+  "difficultyLabel": "medium",
+  "description": "英语学科 MC 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "英语 MC medium：修辞功能判断",
+      "block": {
+        "questionText": "Read the sentence below and answer the question.\\n\\n\"We paved the river, straightened it, and fenced it. Then we wondered why the water no longer sang to us.\"\\n\\nThe writer's shift in the second sentence primarily serves to",
+        "type": "MC",
+        "questionType": "MCQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "english-rhetorical-analysis-tone-shift",
+        "loIds": ["ENG-RHET-2"],
+        "ekIds": ["ENG-RHET-2.1"],
+        "options": [
+          {
+            "label": "A",
+            "text": "personify the river in order to highlight the loss created by human control",
+            "isCorrect": true
+          },
+          {
+            "label": "B",
+            "text": "provide statistical evidence that the river's flow rate has declined",
+            "isCorrect": false
+          },
+          {
+            "label": "C",
+            "text": "concede that development improved public safety before criticizing it",
+            "isCorrect": false
+          },
+          {
+            "label": "D",
+            "text": "establish the speaker's credibility through personal travel experience",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "A",
+        "solutionSteps": "The phrase \"the water no longer sang to us\" gives the river a human quality, so it is personification. That move sharpens the contrast between mechanical control in the first sentence and emotional loss in the second. Therefore A is correct.",
+        "commonMistakes": [
+          "Treating figurative language as literal evidence.",
+          "Reading a tonal shift as a concession when no concession is actually made.",
+          "Assuming any first-person plural voice automatically establishes ethos."
+        ],
+        "distractor_rationale": {
+          "B": "Evidence-range error: the passage offers imagery, not data or measurement.",
+          "C": "Argument-structure confusion: there is criticism, but no explicit concession about safety benefits.",
+          "D": "Appeal misidentification: the sentence uses figurative contrast rather than autobiographical credibility."
+        }
+      }
+    }
+  ]
+}

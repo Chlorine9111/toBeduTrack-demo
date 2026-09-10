@@ -1,0 +1,191 @@
+<!-- Auth | Login -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Deskmate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#615e57",
+                        "outline-variant": "#b8b29f",
+                        "on-error": "#fff7f6",
+                        "primary-dim": "#55524c",
+                        "primary-fixed": "#e7e2d9",
+                        "tertiary-container": "#f4f3f0",
+                        "surface": "#fef9ef",
+                        "on-secondary-container": "#005397",
+                        "secondary": "#0060ae",
+                        "on-primary-fixed": "#413f39",
+                        "tertiary-dim": "#525351",
+                        "surface-variant": "#e9e2ce",
+                        "on-primary-fixed-variant": "#5e5b54",
+                        "background": "#fef9ef",
+                        "outline-solid": "#7f7b6a",
+                        "surface-dim": "#e1dac3",
+                        "primary-container": "#e7e2d9",
+                        "on-background": "#363225",
+                        "on-surface-variant": "#635f4f",
+                        "tertiary": "#5e5f5d",
+                        "secondary-container": "#d4e3ff",
+                        "surface-container-highest": "#e9e2ce",
+                        "on-tertiary": "#faf9f6",
+                        "tertiary-fixed-dim": "#e6e5e2",
+                        "on-tertiary-fixed": "#494a48",
+                        "secondary-dim": "#005499",
+                        "on-tertiary-container": "#5b5c5a",
+                        "tertiary-fixed": "#f4f3f0",
+                        "on-surface": "#363225",
+                        "on-error-container": "#742410",
+                        "surface-container-low": "#f9f3e7",
+                        "primary": "#615e57",
+                        "on-secondary": "#f8f8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#004077",
+                        "on-primary": "#fdf7ee",
+                        "surface-container": "#f4eddf",
+                        "on-secondary-fixed-variant": "#005ca8",
+                        "primary-fixed-dim": "#d9d4cb",
+                        "secondary-fixed": "#d4e3ff",
+                        "inverse-on-surface": "#a09c95",
+                        "error-dim": "#5c1202",
+                        "secondary-fixed-dim": "#bcd6ff",
+                        "surface-bright": "#fef9ef",
+                        "on-tertiary-fixed-variant": "#666664",
+                        "inverse-primary": "#fef9ef",
+                        "error-container": "#fe8b70",
+                        "surface-container-high": "#eee8d6",
+                        "on-primary-container": "#54514b",
+                        "error": "#9e422c",
+                        "inverse-surface": "#0f0e09"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<main class="flex min-h-screen">
+<!-- Left Panel (45%): Brand & Value Prop -->
+<section class="hidden lg:flex lg:w-[45%] bg-[#37352F] flex-col justify-between p-16 text-[#F7F6F3]">
+<div>
+<!-- Brand Logo (Exact casing from JSON) -->
+<div class="flex items-center gap-3 mb-24">
+<span class="material-symbols-outlined text-3xl" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-xl font-bold tracking-tighter">Deskmate</span>
+</div>
+<div class="max-w-md">
+<h1 class="text-5xl font-bold leading-[1.1] tracking-tight mb-8">Sign in to unlock your productivity</h1>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-semibold text-lg leading-none mb-1">Centralized Workspace</p>
+<p class="opacity-60 text-sm">Organize documents, tasks, and team collaborations in one place.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-semibold text-lg leading-none mb-1">Seamless Archiving</p>
+<p class="opacity-60 text-sm">Keep your focus clear with our distraction-free organization system.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-semibold text-lg leading-none mb-1">Editorial Precision</p>
+<p class="opacity-60 text-sm">Designed for curators who value high-stakes whitespace and quiet hierarchy.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-sm opacity-40">© 2024 Deskmate Editorial Workspace. All rights reserved.</p>
+</div>
+</section>
+<!-- Right Panel (55%): Auth Content -->
+<section class="w-full lg:w-[55%] bg-surface-container-lowest flex items-center justify-center p-8 md:p-16">
+<div class="w-full max-w-[420px]">
+<!-- Header -->
+<header class="mb-10">
+<h2 class="text-3xl font-semibold tracking-tight text-on-surface mb-2">Welcome back</h2>
+<p class="text-on-surface-variant font-body">Sign in to your account</p>
+</header>
+<!-- Social Login -->
+<div class="mb-8">
+<button class="w-full flex items-center justify-center gap-3 bg-white border border-outline-variant/30 py-3 rounded-lg font-medium text-on-surface hover:bg-surface-container-low transition-colors duration-200 shadow-xs">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Google colorful logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq1ME_2ucBRZ_xBdSuMNDyhAxi-yLcpExo182-RzuDNP_-0P_A6OU1_t1zVh2NKWoWJuU1jkVY1v8PnsbuWkVYhc-l8goia6Kaklo4J_5TVYuL2U3ZccnoeYyG0esbmV2V96QQMPkHmiMccLowGoMmNWQYIsGr1Lfe75Pq4BrbezBfJskfxSovph7-JUUELq2e9ysKE0nJTZpp1gHbFCkkxwwBwngE2EMs0bCj6xLG2WlzXa7MxiZRBLTyOzLthQ650mxqWWhPLg"/>
+                        Continue with Google
+                    </button>
+</div>
+<div class="relative mb-8 flex items-center">
+<div class="grow border-t border-outline-variant/20"></div>
+<span class="shrink mx-4 text-xs font-label uppercase tracking-widest text-on-surface-variant/50">Or continue with email</span>
+<div class="grow border-t border-outline-variant/20"></div>
+</div>
+<!-- Form -->
+<form class="space-y-5">
+<div class="space-y-1.5">
+<label class="text-[11px] font-semibold uppercase tracking-wider text-on-surface-variant/70 ml-1" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 text-xl" data-icon="mail">mail</span>
+<input class="w-full bg-surface-container border-none focus:ring-2 focus:ring-secondary/20 rounded-lg py-3.5 pl-12 pr-4 text-on-surface placeholder:text-on-surface-variant/40 transition-all" id="email" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="text-[11px] font-semibold uppercase tracking-wider text-on-surface-variant/70 ml-1" for="password">Password</label>
+<a class="text-[11px] font-semibold text-secondary hover:underline tracking-tight" href="#">Forgot password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 text-xl" data-icon="lock">lock</span>
+<input class="w-full bg-surface-container border-none focus:ring-2 focus:ring-secondary/20 rounded-lg py-3.5 pl-12 pr-4 text-on-surface placeholder:text-on-surface-variant/40 transition-all" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full bg-[#37352F] text-white font-semibold py-4 rounded-lg hover:bg-primary-dim transition-all duration-200 active:scale-[0.98] shadow-lg shadow-[#37352F]/10" type="submit">
+                            Sign in
+                        </button>
+</div>
+</form>
+<!-- Footer -->
+<footer class="mt-12 text-center">
+<p class="text-sm text-on-surface-variant">
+                        Don't have an account? 
+                        <a class="text-secondary font-semibold hover:underline ml-1" href="#">Sign up</a>
+</p>
+</footer>
+<!-- Security Note -->
+<div class="mt-24 flex items-center justify-center gap-2 opacity-30">
+<span class="material-symbols-outlined text-sm" data-icon="encrypted">encrypted</span>
+<span class="text-[10px] font-label uppercase tracking-widest">Secure Authentication Environment</span>
+</div>
+</div>
+</section>
+</main>
+</body></html>
+
+<!-- Auth | Register -->

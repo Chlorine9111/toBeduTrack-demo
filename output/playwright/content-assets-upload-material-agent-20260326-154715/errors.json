@@ -1,0 +1,15 @@
+{
+  "static404s": [],
+  "consoleErrors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "location": {
+        "url": "http://127.0.0.1:3001/api/content-assets/status",
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "pageErrors": []
+}

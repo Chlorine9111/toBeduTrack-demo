@@ -1,0 +1,67 @@
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e7]:
+            - img [ref=e9]
+            - generic [ref=e12]: EduTrack
+          - button "切换到英文" [ref=e13] [cursor=pointer]:
+            - img [ref=e14]
+            - generic [ref=e18]: EN
+        - generic [ref=e19]:
+          - heading "让 AI 成为教师的第二工作台" [level=1] [ref=e20]
+          - paragraph [ref=e21]: 更快生成教案、Rubric 与测评材料，把重复劳动交给智能工具，把判断力留给老师。
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - img [ref=e25]
+            - generic [ref=e27]: AI 驱动的教案生成
+          - generic [ref=e28]:
+            - img [ref=e30]
+            - generic [ref=e34]: 智能 Rubric 构建
+          - generic [ref=e35]:
+            - img [ref=e37]
+            - generic [ref=e40]: 评估结果洞察
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - img [ref=e51]
+            - generic [ref=e54]: EduTrack
+          - button "切换到英文" [ref=e55] [cursor=pointer]:
+            - img [ref=e56]
+            - generic [ref=e60]: EN
+        - generic [ref=e61]:
+          - heading "欢迎回来" [level=1] [ref=e62]
+          - paragraph [ref=e63]: 登录后继续使用 EduTrack 智能教学工作台。
+        - generic [ref=e65]:
+          - button "G Google 登录（即将开放）" [disabled] [ref=e66]:
+            - generic [ref=e67]: G
+            - text: Google 登录（即将开放）
+          - paragraph [ref=e68]: 为了避免你点进去却走不通，当前请先使用邮箱登录。Google 登录开放后，这里会直接变成可用入口。
+          - generic [ref=e71]: 或
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - text: 邮箱
+              - generic [ref=e75]:
+                - img [ref=e76]
+                - textbox "邮箱" [ref=e79]:
+                  - /placeholder: teacher@school.edu
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - generic [ref=e82]: 密码
+                - link "忘记密码？" [ref=e83] [cursor=pointer]:
+                  - /url: /auth/forgot-password
+              - generic [ref=e84]:
+                - img [ref=e85]
+                - textbox "密码" [ref=e89]:
+                  - /placeholder: 请输入密码
+                - button "显示密码" [ref=e90] [cursor=pointer]:
+                  - img [ref=e91]
+          - button "登录" [ref=e94] [cursor=pointer]
+          - generic [ref=e95]:
+            - text: 还没有账户？
+            - link "立即注册" [ref=e96] [cursor=pointer]:
+              - /url: /auth/register
+  - button "Open Next.js Dev Tools" [ref=e102] [cursor=pointer]:
+    - img [ref=e103]
+  - alert [ref=e106]

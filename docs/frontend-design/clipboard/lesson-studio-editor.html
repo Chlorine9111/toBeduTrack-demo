@@ -1,0 +1,313 @@
+<!-- Lesson Studio | Editor -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Editorial Workspace - Lesson Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#d9d4cb",
+                        "on-tertiary": "#faf9f6",
+                        "surface-container": "#f4eddf",
+                        "surface-container-highest": "#e9e2ce",
+                        "error-container": "#fe8b70",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-tertiary-container": "#5b5c5a",
+                        "on-primary-container": "#54514b",
+                        "on-error-container": "#742410",
+                        "error": "#9e422c",
+                        "on-tertiary-fixed": "#494a48",
+                        "surface": "#fef9ef",
+                        "surface-container-low": "#f9f3e7",
+                        "surface-dim": "#e1dac3",
+                        "inverse-primary": "#fef9ef",
+                        "tertiary-fixed": "#f4f3f0",
+                        "primary": "#615e57",
+                        "on-primary-fixed": "#413f39",
+                        "on-error": "#fff7f6",
+                        "primary-dim": "#55524c",
+                        "on-tertiary-fixed-variant": "#666664",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#5e5b54",
+                        "outline-variant": "#b8b29f",
+                        "inverse-on-surface": "#a09c95",
+                        "surface-tint": "#615e57",
+                        "on-surface-variant": "#635f4f",
+                        "secondary": "#0060ae",
+                        "tertiary-container": "#f4f3f0",
+                        "surface-variant": "#e9e2ce",
+                        "tertiary-dim": "#525351",
+                        "primary-container": "#e7e2d9",
+                        "error-dim": "#5c1202",
+                        "primary-fixed": "#e7e2d9",
+                        "surface-container-high": "#eee8d6",
+                        "on-primary": "#fdf7ee",
+                        "inverse-surface": "#0f0e09",
+                        "background": "#fef9ef",
+                        "on-secondary-fixed-variant": "#005ca8",
+                        "secondary-container": "#d4e3ff",
+                        "on-secondary": "#f8f8ff",
+                        "on-secondary-container": "#005397",
+                        "tertiary-fixed-dim": "#e6e5e2",
+                        "secondary-dim": "#005499",
+                        "tertiary": "#5e5f5d",
+                        "secondary-fixed-dim": "#bcd6ff",
+                        "outline-solid": "#7f7b6a",
+                        "on-surface": "#363225",
+                        "on-secondary-fixed": "#004077",
+                        "on-background": "#363225",
+                        "surface-bright": "#fef9ef"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fef9ef;
+            color: #363225;
+            font-family: 'Inter', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 4px 20px rgba(55, 53, 47, 0.04);
+        }
+        .ghost-border {
+            border: 1px solid rgba(55, 53, 47, 0.08);
+        }
+    </style>
+</head>
+<body class="overflow-hidden">
+<!-- Top Toolbar (52px) -->
+<header class="fixed top-0 left-0 right-0 h-[52px] bg-white/80 backdrop-blur-md z-50 flex items-center justify-between px-6 border-b border-[#37352F]/10">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-8 h-8 hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<div class="h-4 w-px bg-outline-variant/30 mx-1"></div>
+<div class="flex items-center gap-3">
+<input class="bg-transparent border-none focus:ring-0 font-semibold text-sm text-on-surface p-0 w-auto min-w-[200px]" type="text" value="The Rise of Ancient Rome"/>
+<span class="px-2 py-0.5 rounded text-[10px] font-medium tracking-wider uppercase bg-blue-50 text-blue-600">History</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-medium tracking-wider uppercase bg-surface-container-high text-on-surface-variant">Draft</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-[11px] font-semibold uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors px-3">Preview</button>
+<button class="text-[11px] font-semibold uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors px-3">Export</button>
+<button class="bg-[#37352F] text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-2 rounded-lg hover:bg-primary-dim transition-colors shadow-xs">Publish</button>
+</div>
+</header>
+<!-- SideNavBar (Shared Component Identity) -->
+<nav class="w-[56px] h-screen fixed left-0 top-0 bg-[#F7F6F3] flex flex-col items-center py-6 z-50 transition-all duration-200 ease-in-out">
+<div class="mb-8">
+<span class="material-symbols-outlined text-on-surface font-bold text-xl">menu_book</span>
+</div>
+<div class="flex flex-col gap-6 items-center">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-[#2383E2] bg-white shadow-xs transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">dashboard</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-[#37352F]/60 hover:bg-white hover:text-[#37352F] transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">menu_book</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-[#37352F]/60 hover:bg-white hover:text-[#37352F] transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">tactic</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-[#37352F]/60 hover:bg-white hover:text-[#37352F] transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">grade</span>
+</button>
+<div class="mt-auto pt-40">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-[#37352F]/60 hover:bg-white hover:text-[#37352F] transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-[56px] pt-[52px] h-screen flex">
+<!-- Left Column: Section Navigation (220px) -->
+<aside class="w-[220px] bg-surface-container-low h-full flex flex-col border-r border-[#37352F]/5">
+<div class="p-4 border-b border-[#37352F]/5">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant">search</span>
+<input class="w-full bg-surface border-none text-xs rounded-lg pl-9 pr-3 py-2 focus:ring-1 focus:ring-outline-variant placeholder:text-on-surface-variant/50" placeholder="Search sections..." type="text"/>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto py-4">
+<div class="px-4 mb-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60">Lesson Structure</span>
+</div>
+<div class="space-y-1">
+<button class="w-full flex items-center gap-3 px-4 py-2 bg-surface text-on-surface border-l-2 border-secondary group transition-all">
+<span class="w-5 h-5 flex items-center justify-center rounded-full bg-secondary/10 text-secondary text-[10px] font-bold">1</span>
+<span class="text-xs font-medium truncate">Introduction to the Republic</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all group">
+<span class="w-5 h-5 flex items-center justify-center rounded-full bg-on-surface-variant/10 text-on-surface-variant text-[10px] font-bold">2</span>
+<span class="text-xs font-medium truncate">The Punic Wars</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all group">
+<span class="w-5 h-5 flex items-center justify-center rounded-full bg-on-surface-variant/10 text-on-surface-variant text-[10px] font-bold">3</span>
+<span class="text-xs font-medium truncate">Rise of the Emperors</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all group">
+<span class="w-5 h-5 flex items-center justify-center rounded-full bg-on-surface-variant/10 text-on-surface-variant text-[10px] font-bold">4</span>
+<span class="text-xs font-medium truncate">Cultural Contributions</span>
+</button>
+</div>
+</div>
+<div class="p-4">
+<button class="w-full flex items-center justify-center gap-2 py-2 border border-dashed border-outline-variant rounded-lg text-[11px] font-bold uppercase tracking-wider text-on-surface-variant hover:bg-surface-container-high hover:border-outline transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                    Add Section
+                </button>
+</div>
+</aside>
+<!-- Center Column: Block-based Editor (680px max) -->
+<section class="flex-1 bg-surface h-full overflow-y-auto px-12 py-16">
+<div class="max-w-[680px] mx-auto">
+<!-- Display Header Block -->
+<div class="mb-12 group relative">
+<div class="absolute -left-10 top-2 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col gap-1 cursor-grab">
+<span class="material-symbols-outlined text-on-surface-variant/40">drag_indicator</span>
+</div>
+<h1 class="text-[3.5rem] font-bold leading-[1.1] tracking-tight text-on-surface">The Rise of Ancient Rome</h1>
+<p class="mt-4 text-on-surface-variant/60 text-lg">A journey from a small city-state to a global hegemon.</p>
+</div>
+<!-- Content Blocks -->
+<div class="space-y-12">
+<!-- Heading Block -->
+<div class="group relative">
+<div class="absolute -left-10 top-1 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col gap-1 cursor-grab">
+<span class="material-symbols-outlined text-on-surface-variant/40">drag_indicator</span>
+</div>
+<h2 class="text-[1.75rem] font-semibold leading-[1.2] text-on-surface">1. The Foundations of Liberty</h2>
+<div class="mt-4 text-sm leading-[1.6] text-on-surface/80 space-y-4">
+<p>Rome was not built in a day, nor was its Republic. Following the expulsion of the last Etruscan king, Tarquinius Superbus, in 509 BCE, the Roman people established a system designed to prevent the concentration of absolute power in any single individual.</p>
+<p>Central to this system were the two consuls, elected annually, who shared executive power and could veto one another's decisions. This "checks and balances" approach would later influence modern democratic structures across the globe.</p>
+</div>
+</div>
+<!-- Callout Block ('Think' Style) -->
+<div class="group relative">
+<div class="absolute -left-10 top-1 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col gap-1 cursor-grab">
+<span class="material-symbols-outlined text-on-surface-variant/40">drag_indicator</span>
+</div>
+<div class="p-8 bg-blue-50/50 rounded-xl border-l-4 border-blue-500/30 flex gap-4">
+<div class="shrink-0 w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-blue-600/70 mb-1 block">Critical Reflection</span>
+<h4 class="text-sm font-semibold text-blue-900 mb-2">Think: The Cost of Expansion</h4>
+<p class="text-sm leading-[1.6] text-blue-800/80 italic">"How did the Roman obsession with 'Libertas' eventually conflict with the logistical demands of managing an ever-growing empire?"</p>
+</div>
+</div>
+</div>
+<!-- Quiz Block -->
+<div class="group relative p-8 bg-surface-container-low rounded-xl">
+<div class="absolute -left-10 top-8 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col gap-1 cursor-grab">
+<span class="material-symbols-outlined text-on-surface-variant/40">drag_indicator</span>
+</div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60">Knowledge Check</span>
+<span class="material-symbols-outlined text-on-surface-variant/40">quiz</span>
+</div>
+<h3 class="text-base font-semibold text-on-surface mb-6">Which Roman official held the power to veto the actions of the consuls to protect the plebeians?</h3>
+<div class="grid grid-cols-1 gap-3">
+<button class="flex items-center gap-4 p-4 rounded-lg bg-surface hover:bg-surface-container-high transition-colors text-left group/opt">
+<span class="w-6 h-6 rounded border border-outline-variant flex items-center justify-center text-[10px] font-bold text-on-surface-variant group-hover/opt:border-secondary transition-all">A</span>
+<span class="text-sm text-on-surface">The Praetor</span>
+</button>
+<button class="flex items-center gap-4 p-4 rounded-lg bg-surface border border-secondary/30 ring-1 ring-secondary/30 transition-colors text-left group/opt">
+<span class="w-6 h-6 rounded bg-secondary text-white flex items-center justify-center text-[10px] font-bold transition-all">B</span>
+<span class="text-sm text-on-surface font-medium">The Tribune of the Plebs</span>
+<span class="material-symbols-outlined ml-auto text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<button class="flex items-center gap-4 p-4 rounded-lg bg-surface hover:bg-surface-container-high transition-colors text-left group/opt">
+<span class="w-6 h-6 rounded border border-outline-variant flex items-center justify-center text-[10px] font-bold text-on-surface-variant group-hover/opt:border-secondary transition-all">C</span>
+<span class="text-sm text-on-surface">The Pontifex Maximus</span>
+</button>
+<button class="flex items-center gap-4 p-4 rounded-lg bg-surface hover:bg-surface-container-high transition-colors text-left group/opt">
+<span class="w-6 h-6 rounded border border-outline-variant flex items-center justify-center text-[10px] font-bold text-on-surface-variant group-hover/opt:border-secondary transition-all">D</span>
+<span class="text-sm text-on-surface">The Censor</span>
+</button>
+</div>
+</div>
+<!-- Add Block Popover -->
+<div class="flex justify-center py-8">
+<button class="group flex items-center gap-2 bg-surface hover:bg-surface-container-high px-4 py-2 rounded-full ghost-border editorial-shadow transition-all">
+<span class="material-symbols-outlined text-secondary group-hover:rotate-90 transition-transform">add_circle</span>
+<span class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">Add Block</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: AI Assistant Panel (280px) -->
+<aside class="w-[280px] bg-white h-full flex flex-col border-l border-[#37352F]/5 editorial-shadow">
+<div class="p-4 flex items-center justify-between border-b border-[#37352F]/5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface">Editorial AI</span>
+</div>
+<button class="text-on-surface-variant/40 hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="flex gap-2">
+<div class="shrink-0 w-6 h-6 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">smart_toy</span>
+</div>
+<div class="bg-surface-container p-3 rounded-xl rounded-tl-none">
+<p class="text-xs text-on-surface leading-relaxed">I've analyzed your section on the Roman Republic. Would you like me to suggest a more engaging opening hook or generate a quiz for the next part?</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/50 ml-1">Quick Commands</span>
+<button class="text-left px-3 py-2 bg-surface hover:bg-surface-container-high border border-[#37352F]/10 rounded-lg text-xs font-medium text-on-surface transition-colors flex items-center justify-between group">
+                        Rewrite section
+                        <span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">auto_fix_high</span>
+</button>
+<button class="text-left px-3 py-2 bg-surface hover:bg-surface-container-high border border-[#37352F]/10 rounded-lg text-xs font-medium text-on-surface transition-colors flex items-center justify-between group">
+                        Simplify language
+                        <span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">short_text</span>
+</button>
+<button class="text-left px-3 py-2 bg-surface hover:bg-surface-container-high border border-[#37352F]/10 rounded-lg text-xs font-medium text-on-surface transition-colors flex items-center justify-between group">
+                        Add citation
+                        <span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">format_quote</span>
+</button>
+</div>
+</div>
+<div class="p-4 border-t border-[#37352F]/5">
+<div class="relative">
+<textarea class="w-full bg-surface-container border-none text-xs rounded-xl p-3 focus:ring-1 focus:ring-secondary/30 placeholder:text-on-surface-variant/40 resize-none" placeholder="Ask AI to help..." rows="2"></textarea>
+<button class="absolute bottom-3 right-3 w-7 h-7 bg-[#37352F] text-white rounded-lg flex items-center justify-center hover:bg-primary-dim transition-colors">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</aside>
+</main>
+<!-- FAB: Help/Resource (Suppressed according to rule, but keeping for utility if needed in canvas) -->
+<!-- Not rendered based on "Task-Focused" exclusion rule -->
+</body></html>
+
+<!-- PBL | Create Project -->

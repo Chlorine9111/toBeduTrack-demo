@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "subject": "history",
+  "exerciseType": "FR",
+  "difficultyLabel": "medium",
+  "description": "历史学科 FR 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "历史 FR medium：大萧条与新政短答",
+      "block": {
+        "questionText": "Answer all parts.\\n(a) Identify one economic cause of the Great Depression in the United States.\\n(b) Explain one way the New Deal expanded the role of the federal government in the economy.\\n(c) Explain one criticism of the New Deal from either the political left or the political right.",
+        "type": "FR",
+        "questionType": "FRQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "history-us-great-depression-new-deal",
+        "loIds": ["HIS-7.A"],
+        "ekIds": ["HIS-7.A.1"],
+        "parts": {
+          "a": { "prompt": "Identify one economic cause.", "points": 1 },
+          "b": { "prompt": "Explain one expansion of federal power.", "points": 1 },
+          "c": { "prompt": "Explain one criticism of the New Deal.", "points": 1 }
+        },
+        "totalPoints": 3,
+        "correctAnswer": "(a) One cause was speculative investing and weak banking structures. (b) The New Deal expanded federal regulation and direct relief programs. (c) Critics argued either that it gave Washington too much power or that it did not redistribute enough wealth.",
+        "solutionSteps": "Part (a): One valid cause is stock-market speculation financed by easy credit, which helped destabilize the economy before the 1929 crash. Another valid answer would be bank weakness or overproduction.\\nPart (b): A valid explanation is that the federal government created agencies such as the FDIC, SEC, and WPA, taking a larger role in regulation, employment, and relief than before.\\nPart (c): From the right, critics argued that Roosevelt expanded federal power too far and interfered with private enterprise. From the left, critics such as Huey Long argued that the New Deal did not go far enough in redistributing wealth. Either side earns credit if the criticism is explained.",
+        "commonMistakes": [
+          "Listing an event without explaining how it contributed to the Depression or New Deal debate.",
+          "Describing a New Deal program without linking it to expanded federal authority.",
+          "Treating all criticism as identical instead of distinguishing left and right critiques."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+<!-- Public Lesson Plan (V2) -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary-fixed-variant": "#666664",
+              "tertiary-container": "#f4f3f0",
+              "error-dim": "#5c1202",
+              "surface-bright": "#fef9ef",
+              "on-secondary-fixed": "#004077",
+              "secondary-container": "#d4e3ff",
+              "on-tertiary-fixed": "#494a48",
+              "inverse-surface": "#0f0e09",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary": "#5e5f5d",
+              "on-surface-variant": "#635f4f",
+              "on-secondary": "#f8f8ff",
+              "surface-container-low": "#f9f3e7",
+              "on-primary-container": "#54514b",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-container": "#5b5c5a",
+              "inverse-on-surface": "#a09c95",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#0060ae",
+              "on-background": "#363225",
+              "secondary-dim": "#005499",
+              "outline-variant": "#b8b29f",
+              "surface-variant": "#e9e2ce",
+              "tertiary-fixed": "#f4f3f0",
+              "on-primary": "#fdf7ee",
+              "on-primary-fixed": "#413f39",
+              "surface-tint": "#615e57",
+              "surface-dim": "#e1dac3",
+              "on-tertiary": "#faf9f6",
+              "primary-container": "#e7e2d9",
+              "surface-container-high": "#eee8d6",
+              "tertiary-dim": "#525351",
+              "surface": "#fef9ef",
+              "secondary-fixed": "#d4e3ff",
+              "background": "#fef9ef",
+              "primary": "#615e57",
+              "on-surface": "#363225",
+              "on-secondary-container": "#005397",
+              "surface-container-lowest": "#ffffff",
+              "primary-dim": "#55524c",
+              "error-container": "#fe8b70",
+              "on-error-container": "#742410",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "surface-container-highest": "#e9e2ce",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "error": "#9e422c",
+              "inverse-primary": "#fef9ef",
+              "on-secondary-fixed-variant": "#005ca8"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-transition-bg {
+            background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-xs dark:shadow-none font-inter antialiased text-sm font-medium tracking-tight">
+<nav class="flex justify-between items-center px-6 py-3 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-lg font-semibold text-stone-800 dark:text-stone-100">The Editorial Workspace</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-blue-600 dark:text-blue-400 font-semibold transition-transform active:scale-95" href="#">Product</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200 active:scale-95" href="#">Pricing</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200 active:scale-95" href="#">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-200 active:scale-95" href="#">Blog</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-600 dark:text-stone-400 hover:text-stone-900 font-medium px-4 py-2 transition-colors">Sign In</button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-lg font-semibold hover:bg-primary-dim transition-all active:scale-95">Get Started</button>
+</div>
+</nav>
+</header>
+<!-- Main Presentation Canvas -->
+<main class="grow pt-24 pb-32 px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col justify-center">
+<!-- Presentation Slide Container -->
+<div class="relative w-full aspect-video md:aspect-21/9 lg:aspect-16/7 bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden flex flex-col md:flex-row border border-outline-variant/10">
+<!-- Slide Left: Visual/Abstract Component -->
+<div class="w-full md:w-1/2 relative bg-surface-container overflow-hidden p-12 flex items-center justify-center">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_50%_50%,#37352F_1px,transparent_1px)] bg-size-[24px_24px]"></div>
+<div class="relative z-10 space-y-8 max-w-md">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-sm">psychology</span>
+</span>
+<span class="text-label sm uppercase tracking-widest text-on-surface-variant font-semibold">Slide 04 of 12</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-on-surface leading-tight tracking-tighter">
+                        The Action Potential
+                    </h1>
+<p class="text-body md text-on-surface-variant leading-relaxed">
+                        A neural impulse; a brief electrical charge that travels down an axon. Understanding the "All-or-None" response in biological psychology.
+                    </p>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 rounded-full bg-blue-100/50 text-[#2383E2] text-xs font-medium">AP Psychology</span>
+<span class="px-3 py-1 rounded-full bg-purple-100/50 text-[#9065B0] text-xs font-medium">Neural Communication</span>
+<span class="px-3 py-1 rounded-full bg-green-100/50 text-[#4D7C0F] text-xs font-medium">Unit 2</span>
+</div>
+</div>
+</div>
+<!-- Slide Right: Interactive/Content Component -->
+<div class="w-full md:w-1/2 p-12 bg-surface-container-lowest flex flex-col justify-center">
+<div class="space-y-6">
+<h2 class="text-headline md font-semibold text-on-surface">Key Mechanisms</h2>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-surface-container-low transition-colors hover:bg-surface-container">
+<h3 class="font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+                                Resting Potential
+                            </h3>
+<p class="text-sm text-on-surface-variant mt-1">The fluid outside an axon’s membrane has mostly positively charged sodium ions; a resting axon’s fluid interior has a mostly negative charge.</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low transition-colors hover:bg-surface-container">
+<h3 class="font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">waves</span>
+                                Depolarization
+                            </h3>
+<p class="text-sm text-on-surface-variant mt-1">The first section of the axon opens its gates, and positively charged sodium ions flood through the membrane channel.</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low transition-colors hover:bg-surface-container">
+<h3 class="font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">refresh</span>
+                                Refractory Period
+                            </h3>
+<p class="text-sm text-on-surface-variant mt-1">A period of inactivity after a neuron has fired. Subsequent action potentials cannot occur until the axon returns to resting state.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide Navigation Controls -->
+<div class="mt-8 flex items-center justify-between">
+<div class="flex gap-4">
+<button class="w-14 h-14 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-95">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg hover:bg-primary-dim transition-all active:scale-95">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="hidden md:flex items-center gap-8 text-on-surface-variant">
+<button class="flex items-center gap-2 text-label sm uppercase font-bold hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">grid_view</span>
+                    Outline
+                </button>
+<button class="flex items-center gap-2 text-label sm uppercase font-bold hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">notes</span>
+                    Teacher Notes
+                </button>
+<button class="flex items-center gap-2 text-label sm uppercase font-bold hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">share</span>
+                    Share Lesson
+                </button>
+</div>
+</div>
+</main>
+<!-- Made with Deskmate Hook -->
+<section class="max-w-7xl mx-auto w-full px-6 mb-12">
+<div class="bg-surface-container rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-lg bg-white shadow-xs flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary">edit_note</span>
+</div>
+<div>
+<h3 class="text-on-surface font-semibold text-lg">Made with Deskmate</h3>
+<p class="text-on-surface-variant text-sm">Professional lesson plans and presentation slides for educators in seconds.</p>
+</div>
+</div>
+<button class="px-6 py-3 bg-on-surface text-surface rounded-lg font-medium hover:bg-primary-dim transition-colors">Create Your Own Lesson</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 w-full py-12 px-8 font-inter text-xs tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="font-bold text-stone-900 dark:text-stone-100 text-sm">The Editorial Workspace</div>
+<p class="text-stone-500 dark:text-stone-400 max-w-xs">A digital curator for educators and students to build meaningful learning experiences.</p>
+<p class="text-stone-500 dark:text-stone-400">© 2024 The Editorial Workspace. Built for Educators.</p>
+</div>
+<div class="space-y-4">
+<div class="font-semibold text-stone-800 dark:text-stone-200 uppercase tracking-widest text-[10px]">Resources</div>
+<ul class="space-y-2">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Lesson Library</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Tutorials</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Case Studies</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<div class="font-semibold text-stone-800 dark:text-stone-200 uppercase tracking-widest text-[10px]">Community</div>
+<ul class="space-y-2">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Educator Forum</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Public Workspaces</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Support</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<div class="font-semibold text-stone-800 dark:text-stone-200 uppercase tracking-widest text-[10px]">Legal</div>
+<ul class="space-y-2">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline decoration-blue-500" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Terms of Use</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Blog | List (V3) -->

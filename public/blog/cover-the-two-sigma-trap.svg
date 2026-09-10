@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3d3b35"/>
+      <stop offset="100%" stop-color="#37352F"/>
+    </linearGradient>
+    <radialGradient id="human-glow" cx="480" cy="315" r="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d4a574" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ai-glow" cx="720" cy="315" r="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2383E2" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#2383E2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="intersect-glow" cx="600" cy="315" r="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e9e2ce" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e9e2ce" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+
+  <!-- Subtle horizontal lines -->
+  <g opacity="0.03" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+  </g>
+
+  <!-- Glows -->
+  <ellipse cx="480" cy="315" rx="220" ry="220" fill="url(#human-glow)"/>
+  <ellipse cx="720" cy="315" rx="220" ry="220" fill="url(#ai-glow)"/>
+  <ellipse cx="600" cy="315" rx="100" ry="140" fill="url(#intersect-glow)"/>
+
+  <!-- Human circle (left) - organic, hand-drawn feel -->
+  <circle cx="480" cy="315" r="180" stroke="#d4a574" stroke-width="1.5" opacity="0.35" fill="none"/>
+  <circle cx="480" cy="315" r="178" stroke="#d4a574" stroke-width="0.5" opacity="0.15" fill="none" stroke-dasharray="8 12"/>
+
+  <!-- AI circle (right) - geometric, precise -->
+  <circle cx="720" cy="315" r="180" stroke="#2383E2" stroke-width="1.5" opacity="0.35" fill="none"/>
+  <circle cx="720" cy="315" r="175" stroke="#2383E2" stroke-width="0.5" opacity="0.1" fill="none"/>
+
+  <!-- Human side elements (organic, warm) -->
+  <!-- Heart/connection symbol -->
+  <g opacity="0.25" transform="translate(380, 260)">
+    <circle cx="0" cy="0" r="8" fill="#d4a574"/>
+    <circle cx="24" cy="-10" r="6" fill="#d4a574" opacity="0.7"/>
+    <circle cx="-20" cy="15" r="5" fill="#d4a574" opacity="0.6"/>
+    <line x1="0" y1="0" x2="24" y2="-10" stroke="#d4a574" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="0" x2="-20" y2="15" stroke="#d4a574" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Handshake/connection lines (organic curves) -->
+  <g opacity="0.15" stroke="#d4a574" stroke-width="1" fill="none">
+    <path d="M360 350 Q400 330 420 360 Q440 390 400 400"/>
+    <path d="M340 280 Q380 270 390 300"/>
+  </g>
+
+  <!-- Human figure suggestion -->
+  <g opacity="0.2">
+    <circle cx="430" cy="370" r="10" fill="#d4a574"/>
+    <line x1="430" y1="380" x2="430" y2="410" stroke="#d4a574" stroke-width="1.5"/>
+  </g>
+
+  <!-- AI side elements (geometric, precise) -->
+  <!-- Circuit/data nodes -->
+  <g opacity="0.2">
+    <rect x="760" y="250" width="12" height="12" rx="2" fill="#2383E2"/>
+    <rect x="800" y="280" width="8" height="8" rx="1" fill="#2383E2" opacity="0.7"/>
+    <rect x="780" y="340" width="10" height="10" rx="2" fill="#2383E2" opacity="0.6"/>
+    <rect x="820" y="320" width="6" height="6" rx="1" fill="#2383E2" opacity="0.5"/>
+    <line x1="766" y1="262" x2="804" y2="284" stroke="#2383E2" stroke-width="0.8" opacity="0.4"/>
+    <line x1="808" y1="288" x2="790" y2="340" stroke="#2383E2" stroke-width="0.8" opacity="0.4"/>
+    <line x1="790" y1="350" x2="823" y2="326" stroke="#2383E2" stroke-width="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- Binary/data stream suggestion -->
+  <g opacity="0.06" fill="#2383E2" font-family="monospace" font-size="10">
+    <text x="750" y="400">0 1 1 0</text>
+    <text x="770" y="415">1 0 0 1</text>
+    <text x="760" y="430">0 1 0 1</text>
+  </g>
+
+  <!-- INTERSECTION: The magic zone -->
+  <!-- Warm + Cool blend elements -->
+  <g opacity="0.35">
+    <circle cx="580" cy="290" r="6" fill="#e9e2ce"/>
+    <circle cx="620" cy="340" r="5" fill="#e9e2ce" opacity="0.8"/>
+    <circle cx="590" cy="360" r="4" fill="#e9e2ce" opacity="0.6"/>
+    <circle cx="610" cy="300" r="4" fill="#e9e2ce" opacity="0.7"/>
+  </g>
+
+  <!-- Connection lines in intersection -->
+  <g stroke="#e9e2ce" stroke-width="0.8" opacity="0.2">
+    <line x1="580" y1="290" x2="610" y2="300"/>
+    <line x1="610" y1="300" x2="620" y2="340"/>
+    <line x1="620" y1="340" x2="590" y2="360"/>
+    <line x1="590" y1="360" x2="580" y2="290"/>
+  </g>
+
+  <!-- 2σ symbol in the intersection -->
+  <text x="584" y="330" font-family="Georgia, serif" font-size="28" fill="#e9e2ce" opacity="0.2" font-style="italic">2σ</text>
+
+  <!-- Labels -->
+  <text x="400" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#d4a574" opacity="0.25" letter-spacing="3" font-weight="500">HUMAN</text>
+  <text x="740" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#2383E2" opacity="0.25" letter-spacing="3" font-weight="500">AI</text>
+
+  <!-- Decorative corner elements -->
+  <g opacity="0.08" stroke="#e9e2ce" stroke-width="1">
+    <line x1="60" y1="60" x2="60" y2="100"/>
+    <line x1="60" y1="60" x2="100" y2="60"/>
+    <line x1="1140" y1="570" x2="1140" y2="530"/>
+    <line x1="1140" y1="570" x2="1100" y2="570"/>
+  </g>
+</svg>

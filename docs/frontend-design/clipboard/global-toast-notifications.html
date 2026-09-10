@@ -1,0 +1,216 @@
+<!-- Global | Toast Notifications -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#d9d4cb",
+              "primary-dim": "#55524c",
+              "on-background": "#363225",
+              "background": "#fef9ef",
+              "on-surface-variant": "#635f4f",
+              "surface-bright": "#fef9ef",
+              "tertiary-dim": "#525351",
+              "on-tertiary-container": "#5b5c5a",
+              "on-tertiary-fixed-variant": "#666664",
+              "on-secondary-fixed-variant": "#005ca8",
+              "error-container": "#fe8b70",
+              "inverse-surface": "#0f0e09",
+              "surface-container-highest": "#e9e2ce",
+              "on-secondary-fixed": "#004077",
+              "on-error-container": "#742410",
+              "on-primary": "#fdf7ee",
+              "on-surface": "#363225",
+              "on-error": "#fff7f6",
+              "outline-solid": "#7f7b6a",
+              "tertiary-fixed": "#f4f3f0",
+              "surface": "#fef9ef",
+              "surface-tint": "#615e57",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "inverse-primary": "#fef9ef",
+              "surface-variant": "#e9e2ce",
+              "inverse-on-surface": "#a09c95",
+              "outline-variant": "#b8b29f",
+              "on-primary-fixed-variant": "#5e5b54",
+              "secondary-fixed": "#d4e3ff",
+              "primary-container": "#e7e2d9",
+              "primary": "#615e57",
+              "on-secondary-container": "#005397",
+              "error": "#9e422c",
+              "secondary-container": "#d4e3ff",
+              "secondary-dim": "#005499",
+              "on-tertiary-fixed": "#494a48",
+              "on-primary-container": "#54514b",
+              "tertiary": "#5e5f5d",
+              "surface-container-low": "#f9f3e7",
+              "secondary-fixed-dim": "#bcd6ff",
+              "surface-container": "#f4eddf",
+              "surface-dim": "#e1dac3",
+              "on-tertiary": "#faf9f6",
+              "error-dim": "#5c1202",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-secondary": "#f8f8ff",
+              "on-primary-fixed": "#413f39",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#0060ae"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cloud-shadow {
+            box-shadow: 0px 4px 20px rgba(55, 53, 47, 0.04);
+        }
+        .ghost-border {
+            border: 1px solid rgba(55, 53, 47, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#F7F6F3] dark:bg-[#1F1F1F] flex flex-col p-6 space-y-2 font-['Inter'] text-sm tracking-normal">
+<div class="flex items-center gap-3 mb-8 px-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">grid_view</span>
+</div>
+<div>
+<h1 class="text-lg font-bold text-[#37352F] dark:text-[#F7F6F3] leading-none">Editorial Hub</h1>
+<p class="text-[10px] text-[#37352F]/60 mt-1 uppercase tracking-wider font-semibold">Curator Mode</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-[#2F2F2F] text-[#37352F] dark:text-[#F7F6F3] font-semibold rounded-lg shadow-xs Active: translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Workspace</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/70 dark:text-[#E3E2E0]/50 hover:bg-[#E3E2E4]/50 dark:hover:bg-[#2F2F2F] rounded-lg transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span>Collections</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/70 dark:text-[#E3E2E0]/50 hover:bg-[#E3E2E4]/50 dark:hover:bg-[#2F2F2F] rounded-lg transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Team</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#37352F]/70 dark:text-[#E3E2E0]/50 hover:bg-[#E3E2E4]/50 dark:hover:bg-[#2F2F2F] rounded-lg transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="pt-4 mt-4 border-t border-black/5">
+<button class="w-full flex items-center justify-center gap-2 py-2.5 bg-[#37352F] text-white rounded-lg font-medium hover:bg-[#55524c] transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>New Entry</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen flex flex-col relative">
+<!-- TopAppBar Anchor -->
+<header class="w-full top-0 sticky z-10 bg-white dark:bg-[#1A1A1A] font-['Inter'] antialiased">
+<div class="flex justify-between items-center px-16 py-4 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-10">
+<span class="text-xl font-semibold tracking-tight text-[#37352F] dark:text-[#F7F6F3]">The Editorial Workspace</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#37352F]/60 dark:text-[#E3E2E0]/60 hover:text-[#37352F] dark:hover:text-[#F7F6F3] transition-colors duration-200" href="#">Drafts</a>
+<a class="text-[#37352F]/60 dark:text-[#E3E2E0]/60 hover:text-[#37352F] dark:hover:text-[#F7F6F3] transition-colors duration-200" href="#">Library</a>
+<a class="text-[#37352F]/60 dark:text-[#E3E2E0]/60 hover:text-[#37352F] dark:hover:text-[#F7F6F3] transition-colors duration-200" href="#">Archives</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<input class="bg-[#F7F6F3] border-none rounded-full px-4 py-1.5 text-sm w-48 focus:ring-1 focus:ring-primary focus:w-64 transition-all duration-300 outline-hidden" placeholder="Search..." type="text"/>
+</div>
+<button class="p-2 text-[#37352F]/60 hover:bg-[#F7F6F3] rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-[#37352F]/60 hover:bg-[#F7F6F3] rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-black/5">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Professional headshot of a creative curator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJofFBhM05Sj_YJAn2fyn-P4qAgb6ClHEF9gselh8sFwUunSPJsYP4UoMqOkYMo393vgMdBse53eSEZuF9cmMD0Ww4_8EPF0kN64OxRu5_U5QhtwHwhfRklvcsHjvgqfOmt-2sL2o4jpKMjlKieZx056Z4mPl1PzpLRW5uycQx1Iqf7APUUPYqtZhKGgaGNC657v8pS3y4JD8XvL6ckl-RBeFQkSof1qrJNT-c85m8jSsheFJXTIoEw-j9kLeg-ePcJAsJtmx2wQ"/>
+</div>
+</div>
+</div>
+<div class="bg-[#F7F6F3] dark:bg-[#252525] h-px w-full"></div>
+</header>
+<!-- Blank Workspace Page -->
+<section class="flex-1 p-24 max-w-5xl mx-auto w-full">
+<div class="space-y-6">
+<h2 class="text-[3.5rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#37352F]">Morning, Curator.</h2>
+<p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">The library is synced and ready. Start a new draft or browse through your curated collections below.</p>
+<!-- Editorial Placeholder Bento -->
+<div class="grid grid-cols-12 gap-6 pt-12">
+<div class="col-span-8 h-64 bg-surface-container-low rounded-xl flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-linear-to-br from-transparent to-[#37352F]/5"></div>
+<span class="text-[#37352F]/20 font-bold text-4xl">Featured Draft</span>
+</div>
+<div class="col-span-4 h-64 bg-[#EEDAD2]/50 rounded-xl p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-[#976D57] mb-auto text-3xl">auto_stories</span>
+<h4 class="text-[#976D57] font-semibold text-lg">Daily Reading</h4>
+<p class="text-[#976D57]/80 text-sm mt-1">4 entries saved today</p>
+</div>
+</div>
+</div>
+</section>
+<!-- TOAST NOTIFICATION SYSTEM -->
+<!-- Fixed positioning in the bottom-right corner -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+<!-- Success Toast -->
+<div class="w-[320px] bg-white rounded-lg cloud-shadow ghost-border p-[12px_16px] border-l-[3px] border-l-[#0F7B6C] flex items-start gap-3 relative transform transition-all">
+<span class="material-symbols-outlined text-[#0F7B6C] mt-0.5" data-icon="check_circle">check_circle</span>
+<div class="flex-1 pr-4">
+<h5 class="text-sm font-semibold text-[#37352F] leading-tight">Document saved</h5>
+<p class="text-xs text-[#37352F]/60 mt-1">Changes are synced with your library.</p>
+</div>
+<button class="text-[#37352F]/30 hover:text-[#37352F] transition-colors">
+<span class="material-symbols-outlined text-lg leading-none">close</span>
+</button>
+</div>
+<!-- Error Toast -->
+<div class="w-[320px] bg-white rounded-lg cloud-shadow ghost-border p-[12px_16px] border-l-[3px] border-l-[#E03E3E] flex items-start gap-3 relative transform transition-all">
+<span class="material-symbols-outlined text-[#E03E3E] mt-0.5" data-icon="cancel">cancel</span>
+<div class="flex-1 pr-4">
+<h5 class="text-sm font-semibold text-[#37352F] leading-tight">Upload failed</h5>
+<p class="text-xs text-[#37352F]/60 mt-1">Please check your internet connection.</p>
+</div>
+<button class="text-[#37352F]/30 hover:text-[#37352F] transition-colors">
+<span class="material-symbols-outlined text-lg leading-none">close</span>
+</button>
+</div>
+<!-- Info Toast -->
+<div class="w-[320px] bg-white rounded-lg cloud-shadow ghost-border p-[12px_16px] border-l-[3px] border-l-[#0B6E99] flex items-start gap-3 relative transform transition-all">
+<span class="material-symbols-outlined text-[#0B6E99] mt-0.5" data-icon="info">info</span>
+<div class="flex-1 pr-4">
+<h5 class="text-sm font-semibold text-[#37352F] leading-tight">Exporting...</h5>
+<p class="text-xs text-[#37352F]/60 mt-1">Your PDF is being prepared.</p>
+</div>
+<button class="text-[#37352F]/30 hover:text-[#37352F] transition-colors">
+<span class="material-symbols-outlined text-lg leading-none">close</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>
+<!-- Deskmate | Pricing -->

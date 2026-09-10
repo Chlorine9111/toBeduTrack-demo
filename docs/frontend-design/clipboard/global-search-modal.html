@@ -1,0 +1,219 @@
+<!-- Global Search Modal -->
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dim": "#55524c",
+              "tertiary": "#5e5f5d",
+              "error-container": "#fe8b70",
+              "surface-container-low": "#f9f3e7",
+              "surface-dim": "#e1dac3",
+              "on-tertiary-fixed": "#494a48",
+              "on-secondary-fixed": "#004077",
+              "primary-fixed": "#e7e2d9",
+              "on-surface-variant": "#635f4f",
+              "error": "#9e422c",
+              "on-error": "#fff7f6",
+              "inverse-surface": "#0f0e09",
+              "tertiary-container": "#f4f3f0",
+              "surface": "#fef9ef",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "on-error-container": "#742410",
+              "tertiary-dim": "#525351",
+              "secondary": "#0060ae",
+              "on-tertiary-fixed-variant": "#666664",
+              "primary-fixed-dim": "#d9d4cb",
+              "inverse-on-surface": "#a09c95",
+              "primary-container": "#e7e2d9",
+              "on-primary": "#fdf7ee",
+              "background": "#fef9ef",
+              "surface-bright": "#fef9ef",
+              "outline-variant": "#b8b29f",
+              "secondary-dim": "#005499",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-container": "#5b5c5a",
+              "surface-variant": "#e9e2ce",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d4e3ff",
+              "inverse-primary": "#fef9ef",
+              "on-surface": "#363225",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-container": "#f4eddf",
+              "on-tertiary": "#faf9f6",
+              "on-primary-container": "#54514b",
+              "on-secondary-container": "#005397",
+              "on-secondary": "#f8f8ff",
+              "on-background": "#363225",
+              "surface-container-highest": "#e9e2ce",
+              "on-primary-fixed": "#413f39",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary-fixed": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "error-dim": "#5c1202",
+              "surface-tint": "#615e57",
+              "primary": "#615e57"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .cloud-shadow {
+            box-shadow: 0px 16px 48px rgba(55, 53, 47, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden">
+<!-- Background Workspace Shell (Blurred Context) -->
+<div class="fixed inset-0 flex">
+<!-- SideNavBar Implementation -->
+<aside class="h-screen border-r border-transparent w-[56px] bg-[#F7F6F3] dark:bg-stone-900 font-['Inter'] text-sm antialiased fixed left-0 top-0 z-40 flex flex-col py-4 px-2 opacity-40">
+<div class="mb-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#37352F] text-2xl">edit_note</span>
+</div>
+<nav class="flex-1 space-y-2">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg text-[#37352F]/60"><span class="material-symbols-outlined">search</span></div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg text-[#37352F]/60"><span class="material-symbols-outlined">inbox</span></div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg text-[#37352F]/60"><span class="material-symbols-outlined">auto_awesome_motion</span></div>
+</nav>
+</aside>
+<!-- Main Content Preview -->
+<main class="ml-[56px] flex-1 p-16 space-y-12 opacity-30">
+<header class="space-y-4">
+<div class="h-4 w-32 bg-surface-container rounded-full"></div>
+<h1 class="text-6xl font-bold tracking-tighter text-on-surface">Curating the Future of Learning.</h1>
+<p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">Your editorial workspace for high-stakes pedagogy and curriculum design.</p>
+</header>
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-8 aspect-video bg-surface-container rounded-xl"></div>
+<div class="col-span-4 space-y-8">
+<div class="h-64 bg-surface-container-high rounded-xl"></div>
+<div class="h-32 bg-surface-container-low rounded-xl"></div>
+</div>
+</div>
+</main>
+</div>
+<!-- Overlay Wrapper -->
+<div class="fixed inset-0 z-50 flex items-start justify-center pt-[153px] px-4">
+<!-- Semi-transparent Backdrop -->
+<div class="absolute inset-0 bg-[#37352F]/40 backdrop-blur-[2px]"></div>
+<!-- Global Search Modal (The Focal Point) -->
+<div class="relative w-full max-w-[560px] bg-white rounded-xl cloud-shadow overflow-hidden flex flex-col">
+<!-- Search Input Header -->
+<div class="relative flex items-center h-[64px] px-5 border-b border-on-surface/5">
+<span class="material-symbols-outlined text-on-surface/40 mr-4" style="font-size: 20px;">search</span>
+<input autofocus="" class="flex-1 bg-transparent border-none outline-hidden ring-0 focus:ring-0 text-[1rem] text-on-surface placeholder:text-on-surface/30 font-medium" placeholder="Search documents, questions, templates..." type="text"/>
+<div class="flex items-center space-x-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface/40 text-[10px] font-bold tracking-wider">ESC</span>
+</div>
+</div>
+<!-- Modal Body -->
+<div class="p-4 space-y-6">
+<!-- Section: Recent -->
+<section>
+<header class="px-2 mb-3">
+<h3 class="text-[0.6875rem] font-semibold text-on-surface/40 uppercase tracking-[0.05em]">Recent Entries</h3>
+</header>
+<div class="space-y-1">
+<!-- Recent Item 1 -->
+<button class="w-full flex items-center p-2.5 rounded-lg hover:bg-surface-container transition-colors group text-left">
+<div class="w-9 h-9 flex items-center justify-center rounded-lg bg-blue-50/50 text-secondary mr-4">
+<span class="material-symbols-outlined" style="font-size: 20px;">task</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[0.875rem] font-medium text-on-surface truncate">Q4 Literacy Assessment Rubric</p>
+<p class="text-[0.75rem] text-on-surface/40">Modified 2h ago</p>
+</div>
+<span class="ml-4 px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-blue-50 text-secondary uppercase tracking-tight opacity-0 group-hover:opacity-100 transition-opacity">Rubric</span>
+</button>
+<!-- Recent Item 2 -->
+<button class="w-full flex items-center p-2.5 rounded-lg hover:bg-surface-container transition-colors group text-left">
+<div class="w-9 h-9 flex items-center justify-center rounded-lg bg-orange-50/50 text-[#CC772F] mr-4">
+<span class="material-symbols-outlined" style="font-size: 20px;">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[0.875rem] font-medium text-on-surface truncate">Socratic Method Worksheet: Republic</p>
+<p class="text-[0.75rem] text-on-surface/40">Modified yesterday</p>
+</div>
+<span class="ml-4 px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-orange-50 text-[#CC772F] uppercase tracking-tight opacity-0 group-hover:opacity-100 transition-opacity">Worksheet</span>
+</button>
+<!-- Recent Item 3 -->
+<button class="w-full flex items-center p-2.5 rounded-lg hover:bg-surface-container transition-colors group text-left">
+<div class="w-9 h-9 flex items-center justify-center rounded-lg bg-purple-50/50 text-[#9065B0] mr-4">
+<span class="material-symbols-outlined" style="font-size: 20px;">auto_awesome</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[0.875rem] font-medium text-on-surface truncate">Curriculum Alignment Map (Science)</p>
+<p class="text-[0.75rem] text-on-surface/40">Modified 3 days ago</p>
+</div>
+<span class="ml-4 px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-purple-50 text-[#9065B0] uppercase tracking-tight opacity-0 group-hover:opacity-100 transition-opacity">Template</span>
+</button>
+<!-- Recent Item 4 -->
+<button class="w-full flex items-center p-2.5 rounded-lg hover:bg-surface-container transition-colors group text-left">
+<div class="w-9 h-9 flex items-center justify-center rounded-lg bg-green-50/50 text-[#4D7C0F] mr-4">
+<span class="material-symbols-outlined" style="font-size: 20px;">article</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[0.875rem] font-medium text-on-surface truncate">Differentiated Instruction Guide</p>
+<p class="text-[0.75rem] text-on-surface/40">Modified last week</p>
+</div>
+<span class="ml-4 px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-green-50 text-[#4D7C0F] uppercase tracking-tight opacity-0 group-hover:opacity-100 transition-opacity">Guide</span>
+</button>
+<!-- Recent Item 5 -->
+<button class="w-full flex items-center p-2.5 rounded-lg hover:bg-surface-container transition-colors group text-left">
+<div class="w-9 h-9 flex items-center justify-center rounded-lg bg-stone-100 text-[#37352F]/60 mr-4">
+<span class="material-symbols-outlined" style="font-size: 20px;">folder</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[0.875rem] font-medium text-on-surface truncate">Historical Perspectives: Primary Sources</p>
+<p class="text-[0.75rem] text-on-surface/40">Modified last week</p>
+</div>
+<span class="ml-4 px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-stone-100 text-[#37352F]/60 uppercase tracking-tight opacity-0 group-hover:opacity-100 transition-opacity">Archive</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Footer Key Hints -->
+<div class="px-5 py-3 bg-surface-container-low/50 border-t border-on-surface/5 flex items-center justify-between">
+<div class="flex items-center space-x-4 text-[0.6875rem] text-on-surface/40 font-medium">
+<span class="flex items-center"><span class="mr-1 material-symbols-outlined text-[14px]">keyboard_arrow_up</span><span class="mr-1 material-symbols-outlined text-[14px]">keyboard_arrow_down</span> Navigate</span>
+<span class="flex items-center"><span class="mr-1 material-symbols-outlined text-[14px]">keyboard_return</span> Select</span>
+</div>
+<div class="text-[0.6875rem] text-on-surface/40 font-medium">
+                    Search powered by <span class="font-bold text-primary">Deskmate AI</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>
+
+<!-- Export Dropdown Menu -->

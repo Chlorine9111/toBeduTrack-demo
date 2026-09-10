@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "subject": "math",
+  "exerciseType": "MC",
+  "difficultyLabel": "easy",
+  "description": "数学学科 MC 静态 fallback 示例（easy）",
+  "examples": [
+    {
+      "label": "数学 MC easy：基础导数求值",
+      "block": {
+        "questionText": "Let $f(x) = 3x^2 - 4x + 1$. What is the value of $f'(2)$?",
+        "type": "MC",
+        "questionType": "MCQ",
+        "difficulty": 1,
+        "difficultyLabel": "easy",
+        "topicId": "calculus-derivatives-basic",
+        "loIds": ["FUN-2.A"],
+        "ekIds": ["FUN-2.A.1"],
+        "options": [
+          { "label": "A", "text": "$8$", "isCorrect": true },
+          { "label": "B", "text": "$5$", "isCorrect": false },
+          { "label": "C", "text": "$12$", "isCorrect": false },
+          { "label": "D", "text": "$6$", "isCorrect": false }
+        ],
+        "correctAnswer": "A",
+        "solutionSteps": "Differentiate first: $f'(x) = 6x - 4$. Then substitute $x=2$: $f'(2) = 6(2) - 4 = 12 - 4 = 8$. Therefore the correct answer is A.",
+        "commonMistakes": [
+          "Evaluating $f(2)$ instead of $f'(2)$.",
+          "Forgetting that the derivative of $-4x$ is $-4$.",
+          "Making an arithmetic slip after finding the correct derivative."
+        ],
+        "distractor_rationale": {
+          "B": "Conceptual confusion: the student computes $f(2)$ instead of the derivative at $x=2$.",
+          "C": "Incomplete procedure: the student differentiates $3x^2$ but forgets the derivative of $-4x$.",
+          "D": "Sign or arithmetic error: the student starts from $6x-4$ but simplifies $12-4$ incorrectly."
+        }
+      }
+    }
+  ]
+}

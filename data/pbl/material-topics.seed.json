@@ -1,0 +1,2692 @@
+[
+  {
+    "materialId": "M001",
+    "topics": [
+      {
+        "name": "数学建模",
+        "aliases": [
+          "mathematical modeling",
+          "modeling challenge"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M002",
+    "topics": [
+      {
+        "name": "数学建模",
+        "aliases": [
+          "mathematical modeling",
+          "modeling challenge"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M003",
+    "topics": [
+      {
+        "name": "学生科学研究",
+        "aliases": [
+          "student science research"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M004",
+    "topics": [
+      {
+        "name": "学术论证与研究",
+        "aliases": [
+          "academic argument and research"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M005",
+    "topics": [
+      {
+        "name": "历史探究",
+        "aliases": [
+          "historical inquiry"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "进化",
+        "aliases": [
+          "evolution"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M006",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M007",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M008",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M009",
+    "topics": [
+      {
+        "name": "可持续发展目标",
+        "aliases": [
+          "sustainable development goals",
+          "sdgs",
+          "global goals"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M010",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data",
+          "world development indicators"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M011",
+    "topics": [
+      {
+        "name": "前沿科学新闻",
+        "aliases": [
+          "frontier science news",
+          "nature latest news"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M012",
+    "topics": [
+      {
+        "name": "化学课程框架",
+        "aliases": [
+          "AP Chemistry",
+          "Chemistry curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M013",
+    "topics": [
+      {
+        "name": "物理1课程框架",
+        "aliases": [
+          "AP Physics 1",
+          "Physics 1 curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M014",
+    "topics": [
+      {
+        "name": "生物课程框架",
+        "aliases": [
+          "AP Biology",
+          "Biology curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M015",
+    "topics": [
+      {
+        "name": "统计学课程框架",
+        "aliases": [
+          "AP Statistics",
+          "Statistics curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M016",
+    "topics": [
+      {
+        "name": "计算思维与编程",
+        "aliases": [
+          "computational thinking and programming"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "算法与程序",
+        "aliases": [
+          "algorithms and programs"
+        ],
+        "relevance": "supporting"
+      },
+      {
+        "name": "抽象建模",
+        "aliases": [
+          "abstraction"
+        ],
+        "relevance": "supporting"
+      },
+      {
+        "name": "计算创新",
+        "aliases": [
+          "computing innovations"
+        ],
+        "relevance": "supporting"
+      },
+      {
+        "name": "互联网系统",
+        "aliases": [
+          "internet"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M017",
+    "topics": [
+      {
+        "name": "学术论证与研究",
+        "aliases": [
+          "academic argument and research"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M018",
+    "topics": [
+      {
+        "name": "学术研究评价",
+        "aliases": [
+          "research scoring guidelines",
+          "academic paper rubric"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M019",
+    "topics": [
+      {
+        "name": "中国社会经济统计",
+        "aliases": [
+          "national bureau of statistics of china",
+          "中国国家统计局公开数据"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M020",
+    "topics": [
+      {
+        "name": "中国生态环境监测",
+        "aliases": [
+          "ministry of ecology and environment of china",
+          "中国生态环境部公开数据"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M021",
+    "topics": [
+      {
+        "name": "数学建模",
+        "aliases": [
+          "mathematical modeling",
+          "modeling challenge"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M022",
+    "topics": [
+      {
+        "name": "数学建模",
+        "aliases": [
+          "mathematical modeling",
+          "modeling challenge"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M023",
+    "topics": [
+      {
+        "name": "数学建模",
+        "aliases": [
+          "mathematical modeling",
+          "modeling challenge"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M024",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M025",
+    "topics": [
+      {
+        "name": "机器人工程",
+        "aliases": [
+          "robotics engineering",
+          "robotics competition"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M026",
+    "topics": [
+      {
+        "name": "机器人工程",
+        "aliases": [
+          "robotics engineering",
+          "robotics competition"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M027",
+    "topics": [
+      {
+        "name": "机器人工程",
+        "aliases": [
+          "robotics engineering",
+          "robotics competition"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M028",
+    "topics": [
+      {
+        "name": "机器人工程",
+        "aliases": [
+          "robotics engineering",
+          "robotics competition"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M029",
+    "topics": [
+      {
+        "name": "城市设计挑战",
+        "aliases": [
+          "urban design challenge",
+          "future city"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M030",
+    "topics": [
+      {
+        "name": "创新创业",
+        "aliases": [
+          "innovation and entrepreneurship"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M031",
+    "topics": [
+      {
+        "name": "创新创业",
+        "aliases": [
+          "innovation and entrepreneurship"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M032",
+    "topics": [
+      {
+        "name": "地球与空间系统",
+        "aliases": [
+          "earth and space systems"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M033",
+    "topics": [
+      {
+        "name": "学生科学研究",
+        "aliases": [
+          "student science research"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M034",
+    "topics": [
+      {
+        "name": "学生科学研究",
+        "aliases": [
+          "student science research"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M035",
+    "topics": [
+      {
+        "name": "学生科学研究",
+        "aliases": [
+          "student science research"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M036",
+    "topics": [
+      {
+        "name": "学生科学研究",
+        "aliases": [
+          "student science research"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M037",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "守恒",
+        "aliases": [
+          "conservation"
+        ],
+        "relevance": "supporting"
+      },
+      {
+        "name": "生态学",
+        "aliases": [
+          "ecology"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M038",
+    "topics": [
+      {
+        "name": "创新创业",
+        "aliases": [
+          "innovation and entrepreneurship"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "differentiation to set business ventures apart",
+        "aliases": [],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M039",
+    "topics": [
+      {
+        "name": "创新创业",
+        "aliases": [
+          "innovation and entrepreneurship"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M040",
+    "topics": [
+      {
+        "name": "投资与商业决策",
+        "aliases": [
+          "investment competition",
+          "business decision making"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M041",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M042",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M043",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M044",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M045",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M046",
+    "topics": [
+      {
+        "name": "项目式学习设计",
+        "aliases": [
+          "project-based learning",
+          "pbl design"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M047",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "KQED Youth Media Challenge"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M048",
+    "topics": [
+      {
+        "name": "计算思维与编程",
+        "aliases": [
+          "computational thinking and programming"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M049",
+    "topics": [
+      {
+        "name": "现象驱动科学探究",
+        "aliases": [
+          "phenomenon-based science inquiry",
+          "openscied"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M050",
+    "topics": [
+      {
+        "name": "工程设计挑战",
+        "aliases": [
+          "engineering design challenge"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M051",
+    "topics": [
+      {
+        "name": "计算思维与编程",
+        "aliases": [
+          "computational thinking and programming"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M052",
+    "topics": [
+      {
+        "name": "地球与空间系统",
+        "aliases": [
+          "earth and space systems"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate data"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M053",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M054",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "National Geographic Resource Library"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M055",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "Smithsonian Learning Lab"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M056",
+    "topics": [
+      {
+        "name": "历史探究",
+        "aliases": [
+          "historical inquiry"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M057",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M058",
+    "topics": [
+      {
+        "name": "社会学项目素材",
+        "aliases": [
+          "OER Project Investigations"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M059",
+    "topics": [
+      {
+        "name": "社会学项目素材",
+        "aliases": [
+          "WWF Teaching Resources"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M060",
+    "topics": [
+      {
+        "name": "社会学项目素材",
+        "aliases": [
+          "C3 Framework Inquiry Hub"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M061",
+    "topics": [
+      {
+        "name": "历史探究",
+        "aliases": [
+          "historical inquiry"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M062",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M063",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M064",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M065",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M066",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M067",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data",
+          "world development indicators"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M068",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M069",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M070",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M071",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M072",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M073",
+    "topics": [
+      {
+        "name": "生物项目素材",
+        "aliases": [
+          "UNHCR Refugee Data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M074",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M075",
+    "topics": [
+      {
+        "name": "农业与粮食系统",
+        "aliases": [
+          "agriculture and food systems",
+          "faostat"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M076",
+    "topics": [
+      {
+        "name": "统计推断",
+        "aliases": [
+          "statistical inference"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M077",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M078",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M079",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data",
+          "climate data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M080",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data",
+          "climate data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M081",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M082",
+    "topics": [
+      {
+        "name": "自然灾害分析",
+        "aliases": [
+          "natural hazards",
+          "earthquake analysis"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M083",
+    "topics": [
+      {
+        "name": "开放数据集",
+        "aliases": [
+          "open datasets",
+          "kaggle datasets"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "Government",
+        "aliases": [],
+        "relevance": "supporting"
+      },
+      {
+        "name": "Sports",
+        "aliases": [],
+        "relevance": "supporting"
+      },
+      {
+        "name": "Medicine",
+        "aliases": [],
+        "relevance": "supporting"
+      },
+      {
+        "name": "Fintech",
+        "aliases": [],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M084",
+    "topics": [
+      {
+        "name": "搜索行为趋势",
+        "aliases": [
+          "search behavior trends",
+          "google trends"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M085",
+    "topics": [
+      {
+        "name": "全球媒体事件",
+        "aliases": [
+          "global media events",
+          "gdelt"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M086",
+    "topics": [
+      {
+        "name": "软件协作趋势",
+        "aliases": [
+          "software collaboration trends",
+          "octoverse"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M087",
+    "topics": [
+      {
+        "name": "计算机项目素材",
+        "aliases": [
+          "中国气象数据网"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M088",
+    "topics": [
+      {
+        "name": "计算机项目素材",
+        "aliases": [
+          "国家自然资源数据"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M089",
+    "topics": [
+      {
+        "name": "计算机项目素材",
+        "aliases": [
+          "中国国家能源数据"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M090",
+    "topics": [
+      {
+        "name": "环境科学课程框架",
+        "aliases": [
+          "AP Environmental Science",
+          "Environmental Science curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M091",
+    "topics": [
+      {
+        "name": "人文地理课程框架",
+        "aliases": [
+          "AP Human Geography",
+          "Human Geography curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M092",
+    "topics": [
+      {
+        "name": "宏观经济学课程框架",
+        "aliases": [
+          "AP Macroeconomics",
+          "Macroeconomics curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M093",
+    "topics": [
+      {
+        "name": "微观经济学课程框架",
+        "aliases": [
+          "AP Microeconomics",
+          "Microeconomics curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M094",
+    "topics": [
+      {
+        "name": "心理学课程框架",
+        "aliases": [
+          "AP Psychology",
+          "Psychology curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M095",
+    "topics": [
+      {
+        "name": "世界历史课程框架",
+        "aliases": [
+          "AP World History: Modern",
+          "World History: Modern curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M096",
+    "topics": [
+      {
+        "name": "美国历史课程框架",
+        "aliases": [
+          "AP United States History",
+          "United States History curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M097",
+    "topics": [
+      {
+        "name": "比较政府与政治课程框架",
+        "aliases": [
+          "AP Comparative Government and Politics",
+          "Comparative Government and Politics curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M098",
+    "topics": [
+      {
+        "name": "英语语言与写作课程框架",
+        "aliases": [
+          "AP English Language and Composition",
+          "English Language and Composition curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M099",
+    "topics": [
+      {
+        "name": "英语文学与写作课程框架",
+        "aliases": [
+          "AP English Literature and Composition",
+          "English Literature and Composition curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M100",
+    "topics": [
+      {
+        "name": "学术研讨课程框架",
+        "aliases": [
+          "AP Seminar",
+          "Seminar curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M101",
+    "topics": [
+      {
+        "name": "学术研究课程框架",
+        "aliases": [
+          "AP Research",
+          "Research curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M102",
+    "topics": [
+      {
+        "name": "微积分AB课程框架",
+        "aliases": [
+          "AP Calculus AB",
+          "Calculus AB curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M103",
+    "topics": [
+      {
+        "name": "微积分BC课程框架",
+        "aliases": [
+          "AP Calculus BC",
+          "Calculus BC curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M104",
+    "topics": [
+      {
+        "name": "预备微积分课程框架",
+        "aliases": [
+          "AP Precalculus",
+          "Precalculus curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M105",
+    "topics": [
+      {
+        "name": "计算机科学A课程框架",
+        "aliases": [
+          "AP Computer Science A",
+          "Computer Science A curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M106",
+    "topics": [
+      {
+        "name": "艺术设计课程框架",
+        "aliases": [
+          "AP Art and Design",
+          "Art and Design curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M107",
+    "topics": [
+      {
+        "name": "物理课程指南",
+        "aliases": [
+          "IB DP Physics",
+          "Physics guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M108",
+    "topics": [
+      {
+        "name": "化学课程指南",
+        "aliases": [
+          "IB DP Chemistry",
+          "Chemistry guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M109",
+    "topics": [
+      {
+        "name": "生物课程指南",
+        "aliases": [
+          "IB DP Biology",
+          "Biology guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M110",
+    "topics": [
+      {
+        "name": "经济学课程指南",
+        "aliases": [
+          "IB DP Economics",
+          "Economics guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M111",
+    "topics": [
+      {
+        "name": "地理课程指南",
+        "aliases": [
+          "IB DP Geography",
+          "Geography guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M112",
+    "topics": [
+      {
+        "name": "全球政治课程指南",
+        "aliases": [
+          "IB DP Global Politics",
+          "Global Politics guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M113",
+    "topics": [
+      {
+        "name": "数学课程指南",
+        "aliases": [
+          "IB DP Mathematics",
+          "Mathematics guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M114",
+    "topics": [
+      {
+        "name": "Computer Science课程指南",
+        "aliases": [
+          "IB DP Computer Science",
+          "Computer Science guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M115",
+    "topics": [
+      {
+        "name": "语文项目素材",
+        "aliases": [
+          "普通高中课程方案（2017年版）"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M116",
+    "topics": [
+      {
+        "name": "英语项目素材",
+        "aliases": [
+          "普通高中课程标准修订通知（2020）"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M117",
+    "topics": [
+      {
+        "name": "物理项目素材",
+        "aliases": [
+          "普通高中课程标准资源索引"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M118",
+    "topics": [
+      {
+        "name": "政治项目素材",
+        "aliases": [
+          "普通高中思想政治课程资源"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M119",
+    "topics": [
+      {
+        "name": "科学模拟探究",
+        "aliases": [
+          "science simulation inquiry",
+          "phet"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M120",
+    "topics": [
+      {
+        "name": "物理探究实验",
+        "aliases": [
+          "physics inquiry labs"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M121",
+    "topics": [
+      {
+        "name": "粒子物理探究",
+        "aliases": [
+          "particle physics inquiry"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M122",
+    "topics": [
+      {
+        "name": "地理空间分析",
+        "aliases": [
+          "geospatial analysis",
+          "arcgis"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M123",
+    "topics": [
+      {
+        "name": "地球与空间系统",
+        "aliases": [
+          "earth and space systems"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate data"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M124",
+    "topics": [
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate and environmental data",
+          "climate data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M125",
+    "topics": [
+      {
+        "name": "政治项目素材",
+        "aliases": [
+          "iCivics Teacher Resources"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M126",
+    "topics": [
+      {
+        "name": "政治项目素材",
+        "aliases": [
+          "SHEG Reading Like a Historian"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M127",
+    "topics": [
+      {
+        "name": "政治项目素材",
+        "aliases": [
+          "UNESCO Global Citizenship Education"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M128",
+    "topics": [
+      {
+        "name": "语文项目素材",
+        "aliases": [
+          "National Writing Project Resources"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M129",
+    "topics": [
+      {
+        "name": "语文项目素材",
+        "aliases": [
+          "中国语言资源保护工程"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M130",
+    "topics": [
+      {
+        "name": "艺术项目素材",
+        "aliases": [
+          "Met Museum Open Access"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "场与相互作用",
+        "aliases": [
+          "fields"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M131",
+    "topics": [
+      {
+        "name": "艺术项目素材",
+        "aliases": [
+          "Google Arts & Culture"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M132",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M133",
+    "topics": [
+      {
+        "name": "全球发展指标",
+        "aliases": [
+          "global development indicators",
+          "development data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M134",
+    "topics": [
+      {
+        "name": "心理学项目素材",
+        "aliases": [
+          "Pew Research Social Trends"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M135",
+    "topics": [
+      {
+        "name": "地理项目素材",
+        "aliases": [
+          "OpenStreetMap Data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M136",
+    "topics": [
+      {
+        "name": "地理项目素材",
+        "aliases": [
+          "Global Forest Watch"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "守恒",
+        "aliases": [
+          "conservation"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M137",
+    "topics": [
+      {
+        "name": "地理项目素材",
+        "aliases": [
+          "UNEP Data Explorer"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M138",
+    "topics": [
+      {
+        "name": "政治项目素材",
+        "aliases": [
+          "中国政府网政策文件库"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M139",
+    "topics": [
+      {
+        "name": "统计推断",
+        "aliases": [
+          "statistical inference"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M140",
+    "topics": [
+      {
+        "name": "政治项目素材",
+        "aliases": [
+          "World Justice Project Rule of Law Index"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M141",
+    "topics": [
+      {
+        "name": "Physics C: Mechanics课程框架",
+        "aliases": [
+          "AP Physics C: Mechanics",
+          "Physics C: Mechanics curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M142",
+    "topics": [
+      {
+        "name": "Physics C: Electricity and Magnetism课程框架",
+        "aliases": [
+          "AP Physics C: Electricity and Magnetism",
+          "Physics C: Electricity and Magnetism curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M143",
+    "topics": [
+      {
+        "name": "美国政府与政治课程框架",
+        "aliases": [
+          "AP U.S. Government and Politics",
+          "U.S. Government and Politics curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M144",
+    "topics": [
+      {
+        "name": "欧洲历史课程框架",
+        "aliases": [
+          "AP European History",
+          "European History curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M145",
+    "topics": [
+      {
+        "name": "心理学课程指南",
+        "aliases": [
+          "IB DP Psychology",
+          "Psychology guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M146",
+    "topics": [
+      {
+        "name": "Art History课程框架",
+        "aliases": [
+          "AP Art History",
+          "Art History curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M147",
+    "topics": [
+      {
+        "name": "视觉艺术课程指南",
+        "aliases": [
+          "IB DP Visual Arts",
+          "Visual Arts guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M148",
+    "topics": [
+      {
+        "name": "中文语言与文化课程框架",
+        "aliases": [
+          "AP Chinese Language and Culture",
+          "Chinese Language and Culture curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M149",
+    "topics": [
+      {
+        "name": "机器人工程",
+        "aliases": [
+          "robotics engineering",
+          "robotics competition"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M150",
+    "topics": [
+      {
+        "name": "工程项目素材",
+        "aliases": [
+          "Odyssey of the Mind Program"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M151",
+    "topics": [
+      {
+        "name": "工程项目素材",
+        "aliases": [
+          "Destination Imagination Challenges"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M152",
+    "topics": [
+      {
+        "name": "工程项目素材",
+        "aliases": [
+          "Samsung Solve for Tomorrow"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M153",
+    "topics": [
+      {
+        "name": "工程项目素材",
+        "aliases": [
+          "ExploraVision Competition"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M154",
+    "topics": [
+      {
+        "name": "工程项目素材",
+        "aliases": [
+          "The Earth Prize"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M155",
+    "topics": [
+      {
+        "name": "工程项目素材",
+        "aliases": [
+          "CyberPatriot Competition"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M156",
+    "topics": [
+      {
+        "name": "工程项目素材",
+        "aliases": [
+          "CanSat Competition"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "场与相互作用",
+        "aliases": [
+          "fields"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M157",
+    "topics": [
+      {
+        "name": "地理空间分析",
+        "aliases": [
+          "geospatial analysis"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M158",
+    "topics": [
+      {
+        "name": "语文项目素材",
+        "aliases": [
+          "International Linguistics Olympiad"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "场与相互作用",
+        "aliases": [
+          "fields"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M159",
+    "topics": [
+      {
+        "name": "生物项目素材",
+        "aliases": [
+          "HHMI BioInteractive"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M160",
+    "topics": [
+      {
+        "name": "生物项目素材",
+        "aliases": [
+          "NSTA Classroom Resources"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M161",
+    "topics": [
+      {
+        "name": "化学探究",
+        "aliases": [
+          "chemistry inquiry"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M162",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "PBS LearningMedia Collections"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M163",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "CommonLit 360 Curriculum"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M164",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "British Council Project Work"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M165",
+    "topics": [
+      {
+        "name": "公共卫生数据",
+        "aliases": [
+          "public health data",
+          "health statistics"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M166",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "UNHCR Teaching About Refugees"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M167",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "ESA Education Classroom Resources"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M168",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "NREL Learning Resources"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M169",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "Raspberry Pi Classroom Projects"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M170",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "Google Applied Digital Skills"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M171",
+    "topics": [
+      {
+        "name": "环境科学项目素材",
+        "aliases": [
+          "World Air Quality Index Data"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M172",
+    "topics": [
+      {
+        "name": "环境科学项目素材",
+        "aliases": [
+          "IUCN Red List"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M173",
+    "topics": [
+      {
+        "name": "经济项目素材",
+        "aliases": [
+          "UNDP Human Development Data Center"
+        ],
+        "relevance": "primary"
+      },
+      {
+        "name": "气候与环境数据",
+        "aliases": [
+          "climate data"
+        ],
+        "relevance": "supporting"
+      }
+    ]
+  },
+  {
+    "materialId": "M174",
+    "topics": [
+      {
+        "name": "经济项目素材",
+        "aliases": [
+          "UN Women Data Hub"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M175",
+    "topics": [
+      {
+        "name": "经济项目素材",
+        "aliases": [
+          "World Food Programme Hunger Map"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M176",
+    "topics": [
+      {
+        "name": "统计推断",
+        "aliases": [
+          "statistical inference"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M177",
+    "topics": [
+      {
+        "name": "生物项目素材",
+        "aliases": [
+          "Global Health Data Exchange"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M178",
+    "topics": [
+      {
+        "name": "历史项目素材",
+        "aliases": [
+          "UNESCO World Heritage List"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M179",
+    "topics": [
+      {
+        "name": "计算机项目素材",
+        "aliases": [
+          "OpenAlex Scholarly Metadata"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M180",
+    "topics": [
+      {
+        "name": "环境科学项目素材",
+        "aliases": [
+          "National Water Resources Bulletin"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M181",
+    "topics": [
+      {
+        "name": "法语语言与文化课程框架",
+        "aliases": [
+          "AP French Language and Culture",
+          "French Language and Culture curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M182",
+    "topics": [
+      {
+        "name": "西班牙语语言与文化课程框架",
+        "aliases": [
+          "AP Spanish Language and Culture",
+          "Spanish Language and Culture curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M183",
+    "topics": [
+      {
+        "name": "西班牙文学与文化课程框架",
+        "aliases": [
+          "AP Spanish Literature and Culture",
+          "Spanish Literature and Culture curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M184",
+    "topics": [
+      {
+        "name": "德语语言与文化课程框架",
+        "aliases": [
+          "AP German Language and Culture",
+          "German Language and Culture curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M185",
+    "topics": [
+      {
+        "name": "日语语言与文化课程框架",
+        "aliases": [
+          "AP Japanese Language and Culture",
+          "Japanese Language and Culture curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M186",
+    "topics": [
+      {
+        "name": "拉丁语课程框架",
+        "aliases": [
+          "AP Latin",
+          "Latin curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M187",
+    "topics": [
+      {
+        "name": "音乐理论课程框架",
+        "aliases": [
+          "AP Music Theory",
+          "Music Theory curriculum framework"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M188",
+    "topics": [
+      {
+        "name": "Environmental Systems and Societies课程指南",
+        "aliases": [
+          "IB DP Environmental Systems and Societies",
+          "Environmental Systems and Societies guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M189",
+    "topics": [
+      {
+        "name": "History课程指南",
+        "aliases": [
+          "IB DP History",
+          "History guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M190",
+    "topics": [
+      {
+        "name": "Philosophy课程指南",
+        "aliases": [
+          "IB DP Philosophy",
+          "Philosophy guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M191",
+    "topics": [
+      {
+        "name": "Language A: Literature课程指南",
+        "aliases": [
+          "IB DP Language A: Literature",
+          "Language A: Literature guide"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M192",
+    "topics": [
+      {
+        "name": "地理项目素材",
+        "aliases": [
+          "普通高中地理课程资源"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M193",
+    "topics": [
+      {
+        "name": "历史项目素材",
+        "aliases": [
+          "普通高中历史课程资源"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M194",
+    "topics": [
+      {
+        "name": "数学项目素材",
+        "aliases": [
+          "普通高中数学课程资源"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M195",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "OER Commons Open Library"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M196",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "Khan Academy Course Library"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M197",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "CK-12 FlexBooks"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M198",
+    "topics": [
+      {
+        "name": "计算机项目素材",
+        "aliases": [
+          "MIT OpenCourseWare Portal"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M199",
+    "topics": [
+      {
+        "name": "计算机项目素材",
+        "aliases": [
+          "MIT OCW 6.0001 Python"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M200",
+    "topics": [
+      {
+        "name": "数学项目素材",
+        "aliases": [
+          "Khan Academy Math"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M201",
+    "topics": [
+      {
+        "name": "数学项目素材",
+        "aliases": [
+          "CK-12 Main Portal"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M202",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "IB Primary Years Programme (PYP) Public Statement"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M203",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "IB Middle Years Programme (MYP) Public Statement"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M204",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "IB Diploma Programme (DP) Public Statement"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  },
+  {
+    "materialId": "M205",
+    "topics": [
+      {
+        "name": "跨学科项目素材",
+        "aliases": [
+          "IB Career-related Programme (CP) Public Statement"
+        ],
+        "relevance": "primary"
+      }
+    ]
+  }
+]

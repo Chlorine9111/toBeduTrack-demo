@@ -1,0 +1,248 @@
+<!-- Deskmate | About -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Deskmate - Building for Teachers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#fef9ef",
+              "surface": "#fef9ef",
+              "surface-container": "#f4eddf",
+              "on-background": "#363225",
+              "error": "#9e422c",
+              "secondary-fixed": "#d4e3ff",
+              "on-error-container": "#742410",
+              "on-tertiary-fixed": "#494a48",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "error-container": "#fe8b70",
+              "surface-variant": "#e9e2ce",
+              "on-secondary-container": "#005397",
+              "background": "#fef9ef",
+              "primary-fixed-dim": "#d9d4cb",
+              "on-tertiary-fixed-variant": "#666664",
+              "inverse-on-surface": "#a09c95",
+              "surface-container-low": "#f9f3e7",
+              "on-secondary": "#f8f8ff",
+              "on-secondary-fixed": "#004077",
+              "primary": "#615e57",
+              "on-tertiary-container": "#5b5c5a",
+              "outline-variant": "#b8b29f",
+              "on-primary": "#fdf7ee",
+              "inverse-surface": "#0f0e09",
+              "on-primary-fixed-variant": "#5e5b54",
+              "surface-container-high": "#eee8d6",
+              "on-secondary-fixed-variant": "#005ca8",
+              "primary-dim": "#55524c",
+              "secondary-dim": "#005499",
+              "secondary-container": "#d4e3ff",
+              "tertiary-container": "#f4f3f0",
+              "surface-tint": "#615e57",
+              "on-tertiary": "#faf9f6",
+              "surface-container-highest": "#e9e2ce",
+              "primary-fixed": "#e7e2d9",
+              "primary-container": "#e7e2d9",
+              "on-primary-fixed": "#413f39",
+              "secondary-fixed-dim": "#bcd6ff",
+              "tertiary-dim": "#525351",
+              "inverse-primary": "#fef9ef",
+              "on-error": "#fff7f6",
+              "surface-dim": "#e1dac3",
+              "tertiary-fixed": "#f4f3f0",
+              "on-surface": "#363225",
+              "error-dim": "#5c1202",
+              "secondary": "#0060ae",
+              "tertiary": "#5e5f5d",
+              "outline-solid": "#7f7b6a",
+              "on-primary-container": "#54514b",
+              "on-surface-variant": "#635f4f",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .tonal-transition { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#37352F]/80 backdrop-blur-md shadow-[0_4px_20px_rgba(55,53,47,0.04)]">
+<div class="flex justify-between items-center px-8 h-16 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-[#37352F] dark:text-[#FFFFFF] tracking-tighter">Deskmate</div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] text-sm font-medium tracking-tight">
+<a class="text-[#37352F]/60 dark:text-[#F7F6F3]/60 hover:text-[#2383E2] transition-colors duration-200" href="#">Product</a>
+<a class="text-[#37352F]/60 dark:text-[#F7F6F3]/60 hover:text-[#2383E2] transition-colors duration-200" href="#">Pricing</a>
+<a class="text-[#2383E2] font-semibold transition-colors duration-200" href="/about">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Inter'] text-sm font-medium text-[#37352F]/60 dark:text-[#F7F6F3]/60 hover:text-[#2383E2] transition-colors scale-95 active:scale-90">Sign In</button>
+<button class="bg-[#37352F] text-[#FFFFFF] px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-all scale-95 active:scale-90">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative px-8 py-24 md:py-32 overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col items-start">
+<span class="text-secondary font-semibold tracking-wider text-[0.6875rem] uppercase mb-6">Our Mission</span>
+<h1 class="text-5xl md:text-[3.5rem] font-bold text-[#37352F] leading-[1.1] tracking-[-0.02em] max-w-3xl mb-8">
+                    We're building the tools teachers actually want.
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                    The classroom is moving faster than the software built to support it. We're here to bridge the gap between administrative requirements and the creative spark of teaching.
+                </p>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-20 top-20 w-96 h-96 bg-surface-container rounded-full blur-3xl opacity-50 -z-10"></div>
+</section>
+<!-- The Story Section -->
+<section class="px-8 py-24 bg-surface-container-low">
+<div class="max-w-[720px] mx-auto">
+<h2 class="text-[1.75rem] font-semibold text-[#37352F] leading-[1.2] tracking-[-0.01em] mb-10 text-center">Our Story</h2>
+<div class="space-y-6 text-[0.875rem] leading-[1.6] text-on-surface-variant">
+<p>
+                        Deskmate didn't start in a boardroom or a tech incubator. It started in the quiet moments between third and fourth period, when a group of frustrated educators realized they were spending more time battling rigid spreadsheets than mentoring students.
+                    </p>
+<p>
+                        We saw brilliant teachers burning out—not because of the kids, but because of the "everything else." The generic templates, the clunky portals, and the data entry that felt like screaming into a void. We knew there had to be a way to create tools that respected a teacher's expertise instead of trying to replace it.
+                    </p>
+<p>
+                        Our first prototype was just a better way to organize lesson depth. Today, Deskmate is a growing ecosystem, but our goal remains unchanged: to give you back your Sunday nights and your creative energy.
+                    </p>
+</div>
+<div class="mt-12 flex justify-center">
+<div class="w-12 h-px bg-outline-variant/30"></div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="px-8 py-32 max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="text-[1.75rem] font-semibold text-[#37352F] mb-4">What we believe.</h2>
+<p class="text-on-surface-variant max-w-xl">Our core principles guide every line of code we write and every feature we design.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Value 1 -->
+<div class="p-8 rounded-xl bg-surface-container-low flex flex-col h-full hover:bg-surface-container transition-colors duration-300">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+</div>
+<h3 class="text-lg font-semibold text-[#37352F] mb-3">Output quality first</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        We don't do "drafts." Every resource generated or managed through Deskmate is designed to be classroom-ready the moment you hit export.
+                    </p>
+</div>
+<!-- Value 2 -->
+<div class="p-8 rounded-xl bg-surface-container-low flex flex-col h-full hover:bg-surface-container transition-colors duration-300">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center mb-6 text-[#976D57]">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<h3 class="text-lg font-semibold text-[#37352F] mb-3">Teacher time is sacred</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        If a task takes more than three clicks, we've failed. We optimize for speed and focus, so you can spend your time where it matters most: with your students.
+                    </p>
+</div>
+<!-- Value 3 -->
+<div class="p-8 rounded-xl bg-surface-container-low flex flex-col h-full hover:bg-surface-container transition-colors duration-300">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center mb-6 text-[#4D7C0F]">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+</div>
+<h3 class="text-lg font-semibold text-[#37352F] mb-3">Subject depth</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Generic templates help no one. Our tools are built with pedagogical nuance for specific subjects, ensuring academic rigor isn't sacrificed for convenience.
+                    </p>
+</div>
+<!-- Value 4 -->
+<div class="p-8 rounded-xl bg-surface-container-low flex flex-col h-full hover:bg-surface-container transition-colors duration-300">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center mb-6 text-[#CC772F]">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+</div>
+<h3 class="text-lg font-semibold text-[#37352F] mb-3">Continuous iteration</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Deskmate is a living product. We ship updates weekly based on direct teacher feedback, ensuring we solve real classroom pain points in real-time.
+                    </p>
+</div>
+</div>
+</section>
+<!-- CTA Section (Asymmetric Editorial Style) -->
+<section class="px-8 py-24 mb-20">
+<div class="max-w-7xl mx-auto bg-[#37352F] rounded-2xl p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative">
+<div class="relative z-10 max-w-xl">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">Ready to reclaim your desk?</h2>
+<p class="text-white/70 text-lg mb-8">Join 15,000+ educators who are reimagining their workflow with Deskmate.</p>
+<button class="bg-[#FFFFFF] text-[#37352F] px-8 py-4 rounded-lg font-semibold hover:bg-[#F7F6F3] transition-all transform hover:-translate-y-1">Get Started Today</button>
+</div>
+<div class="relative z-10 w-full md:w-1/3 aspect-square rounded-xl overflow-hidden bg-white/5 backdrop-blur-xs p-4 flex items-center justify-center">
+<img alt="Teacher working on a clean laptop interface" class="w-full h-full object-cover rounded-lg" data-alt="A clean modern workspace with educational software" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHOLEoIyUliYmJJsUtzzK8FSMYYLZjMHT-Ghu79zpqY7azdwVttfOfawQsgcZAp8mym8Bb-iKba3zq2RC5sYL-eGT1uCr1kzwYapaOaQQ47sBMNSoyStnIZcPkrQkdKR8kDMjgWAncNwvXDbHaYcaYjB8KajHFxQ_AzNwLh5AX3HQT2L_X2A2uddMH3lrb6hC67bOEZV3_vcMNChZOjUjfEqCgHvs2wB8oO6MkC9zSIACJA8xONZ0xpaLYmtC2SoDdf5iBeSGnnw"/>
+</div>
+<!-- Abstract Background Circle -->
+<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-[#2383E2]/20 rounded-full blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F7F6F3] dark:bg-[#2A2823] w-full rounded-t-3xl">
+<div class="grid grid-cols-4 gap-12 px-16 py-20 max-w-7xl mx-auto">
+<div class="col-span-4 md:col-span-1">
+<div class="text-lg font-bold text-[#37352F] mb-6">Deskmate</div>
+<p class="font-['Inter'] text-xs leading-relaxed text-[#37352F]/70 dark:text-[#F7F6F3]/70 mb-4">
+                    The digital curator for modern educators.
+                </p>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="font-bold text-sm mb-4 text-[#37352F]">Product</h4>
+<ul class="space-y-3 font-['Inter'] text-xs">
+<li><a class="text-[#37352F]/70 dark:text-[#F7F6F3]/70 hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="#">Features</a></li>
+<li><a class="text-[#37352F]/70 dark:text-[#F7F6F3]/70 hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="#">Pricing</a></li>
+<li><a class="text-[#37352F]/70 dark:text-[#F7F6F3]/70 hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="#">Integrations</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="font-bold text-sm mb-4 text-[#37352F]">Company</h4>
+<ul class="space-y-3 font-['Inter'] text-xs">
+<li><a class="text-[#2383E2] hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="/about">About Us</a></li>
+<li><a class="text-[#37352F]/70 dark:text-[#F7F6F3]/70 hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="#">Careers</a></li>
+<li><a class="text-[#37352F]/70 dark:text-[#F7F6F3]/70 hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-4 md:col-span-1">
+<h4 class="font-bold text-sm mb-4 text-[#37352F]">Legal</h4>
+<ul class="space-y-3 font-['Inter'] text-xs">
+<li><a class="text-[#37352F]/70 dark:text-[#F7F6F3]/70 hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-[#37352F]/70 dark:text-[#F7F6F3]/70 hover:underline decoration-[#2383E2] underline-offset-4 transition-opacity" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-16 py-8 border-t border-[#37352F]/5 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-xs leading-relaxed text-[#37352F]/70 dark:text-[#F7F6F3]/70">© 2024 Deskmate. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="text-[#37352F]/40 hover:text-[#2383E2] transition-colors" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="text-[#37352F]/40 hover:text-[#2383E2] transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Blog | List (V1) -->

@@ -1,0 +1,234 @@
+<!-- Agent | Home -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#fe8b70",
+              "outline-variant": "#b8b29f",
+              "secondary-container": "#d4e3ff",
+              "primary": "#615e57",
+              "on-tertiary": "#faf9f6",
+              "primary-fixed": "#e7e2d9",
+              "on-primary-container": "#54514b",
+              "secondary-fixed": "#d4e3ff",
+              "on-error": "#fff7f6",
+              "tertiary": "#5e5f5d",
+              "secondary-dim": "#005499",
+              "secondary": "#0060ae",
+              "inverse-surface": "#0f0e09",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-tint": "#615e57",
+              "inverse-on-surface": "#a09c95",
+              "surface-container-highest": "#e9e2ce",
+              "on-secondary-fixed": "#004077",
+              "surface-container": "#f4eddf",
+              "on-secondary": "#f8f8ff",
+              "surface-variant": "#e9e2ce",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#fef9ef",
+              "tertiary-container": "#f4f3f0",
+              "on-primary": "#fdf7ee",
+              "tertiary-dim": "#525351",
+              "on-tertiary-container": "#5b5c5a",
+              "on-tertiary-fixed": "#494a48",
+              "on-error-container": "#742410",
+              "tertiary-fixed": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "primary-fixed-dim": "#d9d4cb",
+              "on-surface-variant": "#635f4f",
+              "error-dim": "#5c1202",
+              "surface-bright": "#fef9ef",
+              "error": "#9e422c",
+              "background": "#fef9ef",
+              "secondary-fixed-dim": "#bcd6ff",
+              "outline-solid": "#7f7b6a",
+              "on-primary-fixed-variant": "#5e5b54",
+              "on-primary-fixed": "#413f39",
+              "on-background": "#363225",
+              "inverse-primary": "#fef9ef",
+              "surface-dim": "#e1dac3",
+              "primary-dim": "#55524c",
+              "on-secondary-container": "#005397",
+              "on-tertiary-fixed-variant": "#666664",
+              "surface-container-low": "#f9f3e7",
+              "on-surface": "#363225",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "primary-container": "#e7e2d9"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .sidebar-transition {
+            transition: width 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full w-[56px] hover:w-[240px] sidebar-transition z-50 overflow-hidden flex flex-col py-4 px-2 bg-[#F7F6F3] dark:bg-slate-900 shadow-none group">
+<!-- Header -->
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 rounded-lg bg-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-surface text-xl">smart_toy</span>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-hidden whitespace-nowrap">
+<div class="text-lg font-semibold text-[#37352F] dark:text-white">Deskmate</div>
+<div class="text-[0.6875rem] font-medium tracking-wider text-on-surface-variant uppercase">Editorial Workspace</div>
+</div>
+</div>
+<!-- Main Tabs -->
+<nav class="flex-1 space-y-1">
+<!-- Active Tab: Agent Workspace -->
+<a class="flex items-center gap-3 px-2 py-2 bg-white dark:bg-slate-800 text-[#2383E2] font-semibold rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="smart_toy">smart_toy</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-[0.875rem]">Agent Workspace</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:bg-[#F7F6F3] dark:hover:bg-slate-800 hover:text-[#37352F] dark:hover:text-white rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="local_library">local_library</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-[0.875rem]">Library</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:bg-[#F7F6F3] dark:hover:bg-slate-800 hover:text-[#37352F] dark:hover:text-white rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="quiz">quiz</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-[0.875rem]">Question Bank</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:bg-[#F7F6F3] dark:hover:bg-slate-800 hover:text-[#37352F] dark:hover:text-white rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="rule">rule</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-[0.875rem]">Grading</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:bg-[#F7F6F3] dark:hover:bg-slate-800 hover:text-[#37352F] dark:hover:text-white rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="edit_note">edit_note</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-[0.875rem]">Lesson Studio</span>
+</a>
+</nav>
+<!-- Footer Tabs -->
+<div class="pt-4 mt-4 border-t border-[#37352f0d] space-y-1">
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:bg-[#F7F6F3] dark:hover:bg-slate-800 hover:text-[#37352F] dark:hover:text-white rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="settings">settings</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-[0.875rem]">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:bg-[#F7F6F3] dark:hover:bg-slate-800 hover:text-[#37352F] dark:hover:text-white rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="person">person</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-[0.875rem]">Profile</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar Anchor -->
+<header class="fixed top-0 right-0 left-[56px] h-14 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md flex items-center justify-between px-6 border-b border-[#37352f0d] dark:border-slate-800">
+<div class="flex items-center gap-4">
+<span class="text-[1.0rem] font-semibold text-[#37352F] dark:text-slate-100">Agent Workspace</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-[#37352F]/60 hover:text-[#37352F] transition-colors duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</div>
+<div class="flex items-center gap-2 text-[#37352F]/60 hover:text-[#37352F] transition-colors duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-[#37352f0d]">
+<img alt="User Profile Avatar" data-alt="User profile placeholder avatar circular" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASWs35Dlcte6dDORWMIjUOuAnx2nDMc_gJbA3Q_OnGa8ErTODEg7jac2822wRD52nCZ76MhaFQE_e-2BHsJmslGSa7ZWcluOg_m7p1i6-xrQjNh1r-3u3nDXbcdZiOk3KTNmfdKoYNr8yGH_fORME-pF-Ej5nNEpsgy-e6X_jHPDydvQQnpqZAmoON73_-SmH8OFj_fazNcvzDVzoMgU7YMdlCG-srvKR7qi3HJxGQxKmPHNYTbU8KFwg5SZvf_xSTysQFUNaMPw"/>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pl-[56px] pt-14 min-h-screen flex items-center justify-center">
+<div class="w-full max-w-5xl px-8 py-16 flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-700">
+<!-- Greeting -->
+<div class="text-center mb-12">
+<h1 class="text-[28px] font-semibold text-[#37352F] tracking-tight mb-2">What would you like to create?</h1>
+<p class="text-on-surface-variant/60 text-[0.875rem]">Select a starting point or use the assistant below.</p>
+</div>
+<!-- Quick Action Cards Row -->
+<div class="flex flex-wrap justify-center gap-4 mb-16 w-full">
+<!-- Rubric (Green) -->
+<button class="flex flex-col items-start p-4 w-[140px] h-[120px] rounded-xl bg-surface-container-low hover:bg-[#F7F6F3] transition-all duration-200 group text-left">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-colors duration-200" style="background-color: rgba(221, 237, 234, 0.8)">
+<span class="material-symbols-outlined text-[#4D7C0F]" data-icon="view_list">view_list</span>
+</div>
+<span class="text-[14px] font-semibold text-[#37352F] block mb-1">Rubric</span>
+<span class="text-[12px] text-[#37352F]/60 leading-tight">Criteria &amp; levels</span>
+</button>
+<!-- Worksheet (Blue) -->
+<button class="flex flex-col items-start p-4 w-[140px] h-[120px] rounded-xl bg-surface-container-low hover:bg-[#F7F6F3] transition-all duration-200 group text-left">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-colors duration-200" style="background-color: rgba(221, 235, 241, 0.8)">
+<span class="material-symbols-outlined text-[#2383E2]" data-icon="description">description</span>
+</div>
+<span class="text-[14px] font-semibold text-[#37352F] block mb-1">Worksheet</span>
+<span class="text-[12px] text-[#37352F]/60 leading-tight">Practice materials</span>
+</button>
+<!-- Exam (Orange) -->
+<button class="flex flex-col items-start p-4 w-[140px] h-[120px] rounded-xl bg-surface-container-low hover:bg-[#F7F6F3] transition-all duration-200 group text-left">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-colors duration-200" style="background-color: rgba(250, 235, 221, 0.8)">
+<span class="material-symbols-outlined text-[#CC772F]" data-icon="quiz">quiz</span>
+</div>
+<span class="text-[14px] font-semibold text-[#37352F] block mb-1">Exam</span>
+<span class="text-[12px] text-[#37352F]/60 leading-tight">Tests &amp; assessments</span>
+</button>
+<!-- Lesson Plan (Purple) -->
+<button class="flex flex-col items-start p-4 w-[140px] h-[120px] rounded-xl bg-surface-container-low hover:bg-[#F7F6F3] transition-all duration-200 group text-left">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-colors duration-200" style="background-color: rgba(234, 228, 242, 0.8)">
+<span class="material-symbols-outlined text-[#9065B0]" data-icon="auto_stories">auto_stories</span>
+</div>
+<span class="text-[14px] font-semibold text-[#37352F] block mb-1">Lesson Plan</span>
+<span class="text-[12px] text-[#37352F]/60 leading-tight">Guided structure</span>
+</button>
+<!-- PBL (Pink) -->
+<button class="flex flex-col items-start p-4 w-[140px] h-[120px] rounded-xl bg-surface-container-low hover:bg-[#F7F6F3] transition-all duration-200 group text-left">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-colors duration-200" style="background-color: rgba(245, 224, 233, 0.8)">
+<span class="material-symbols-outlined text-[#D44C47]" data-icon="lightbulb">lightbulb</span>
+</div>
+<span class="text-[14px] font-semibold text-[#37352F] block mb-1">PBL</span>
+<span class="text-[12px] text-[#37352F]/60 leading-tight">Project-based flows</span>
+</button>
+</div>
+<!-- Search / Input Area -->
+<div class="w-full max-w-[640px] flex flex-col items-center">
+<div class="relative w-full group">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-xl group-focus-within:bg-primary/10 transition-all duration-500"></div>
+<div class="relative flex items-center bg-white dark:bg-slate-900 rounded-full p-2 border border-[#37352f0d] shadow-xs hover:shadow-md transition-all duration-300">
+<input class="flex-1 bg-transparent border-none focus:ring-0 px-6 py-3 text-[0.875rem] text-on-surface placeholder-[#37352F]/40 font-body" placeholder="Describe what you need, or pick an action above..." type="text"/>
+<button class="w-10 h-10 rounded-full bg-[#37352F] text-white flex items-center justify-center hover:bg-[#55524C] active:scale-95 transition-all duration-200 shrink-0 mr-1">
+<span class="material-symbols-outlined" data-icon="arrow_upward">arrow_upward</span>
+</button>
+</div>
+</div>
+<!-- Tip Text -->
+<div class="mt-4 flex items-center gap-2 text-[#37352F]/40 text-[0.75rem] font-medium tracking-tight">
+<span class="material-symbols-outlined text-[1rem]" data-icon="tips_and_updates">tips_and_updates</span>
+<span>Tip: Try "Create a 5th grade rubric for a science fair project on renewable energy"</span>
+</div>
+</div>
+<!-- Subtle Background Accents -->
+<div class="fixed bottom-0 right-0 p-12 -z-10 opacity-20">
+<div class="w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+</div>
+<div class="fixed top-20 left-64 p-12 -z-10 opacity-20">
+<div class="w-48 h-48 bg-secondary/10 rounded-full blur-[60px]"></div>
+</div>
+</div>
+</main>
+</body></html>
+
+<!-- PBL | Project Detail -->

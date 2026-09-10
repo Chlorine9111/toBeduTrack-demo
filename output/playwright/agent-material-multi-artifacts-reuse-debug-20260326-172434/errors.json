@@ -1,0 +1,58 @@
+{
+  "static404s": [],
+  "consoleErrors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "http://127.0.0.1:3001/api/agent/chat",
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "apiFailures": [
+    {
+      "stage": "agent_chat",
+      "prompt": "请根据我刚上传并引用的资料生成一份给学生上课直接使用的 worksheet。要求：guided notes + 一个课堂活动单，围绕小说章节内容，不要题库组卷，不要另外生成练习题。",
+      "status": 403,
+      "url": "http://127.0.0.1:3001/api/agent/chat",
+      "headers": {
+        "connection": "keep-alive",
+        "date": "Thu, 26 Mar 2026 09:25:07 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "content-type": "application/json",
+        "server-timing": "response_ready;dur=541.3",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-quota-grace-buffer": "50",
+        "x-quota-period-end": "2026-04-20T07:27:47.770656+00:00",
+        "x-quota-plan": "beta_teacher",
+        "x-quota-remaining": "0",
+        "x-quota-snapshot": "admission",
+        "x-quota-soft-remaining": "50",
+        "x-quota-status": "active",
+        "x-quota-total": "300",
+        "x-quota-used": "300"
+      },
+      "raw": "{\"error\":{\"code\":\"QUOTA_EXHAUSTED\",\"message\":\"当前测试期使用量已达上限，请等待下个周期重置后继续。\",\"details\":{\"plan\":\"beta_teacher\",\"status\":\"active\",\"quotaTotal\":300,\"quotaUsed\":300,\"quotaRemaining\":0,\"periodEnd\":\"2026-04-20T07:27:47.770656+00:00\",\"requestedUnits\":2,\"reason\":\"quota_exhausted\"}}}",
+      "parsed": {
+        "error": {
+          "code": "QUOTA_EXHAUSTED",
+          "message": "当前测试期使用量已达上限，请等待下个周期重置后继续。",
+          "details": {
+            "plan": "beta_teacher",
+            "status": "active",
+            "quotaTotal": 300,
+            "quotaUsed": 300,
+            "quotaRemaining": 0,
+            "periodEnd": "2026-04-20T07:27:47.770656+00:00",
+            "requestedUnits": 2,
+            "reason": "quota_exhausted"
+          }
+        }
+      }
+    }
+  ]
+}

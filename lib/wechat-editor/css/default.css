@@ -1,0 +1,21 @@
+#wechat-output .h2,
+#wechat-output .h3 {
+  position: relative;
+  padding-left: 0.55em;
+}
+
+#wechat-output .h2::before,
+#wechat-output .h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.22em;
+  bottom: 0.22em;
+  width: 3px;
+  border-radius: 9999px;
+  background: var(--wechat-primary-color, #FF5B5B);
+}
+
+#wechat-output .blockquote {
+  border-radius: 0 8px 8px 0;
+}

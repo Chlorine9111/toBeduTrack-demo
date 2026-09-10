@@ -1,0 +1,32 @@
+[
+    {
+        "question_text": "The diagram above shows an economy's current production possibilities curve for capital goods and consumer goods. If society chooses point B over point A, society is choosing\n\n![\u9898\u76ee\u9644\u56fe 1](/api/pdf/scan-image?path=question-images%2F18cdee1d-5c50-44ff-a946-073b3d60157b%2F44b6c150-b591-47d5-bc5f-09f85e2a98ba%2F6ce1b52fd6e0bbae9f91378b40955395.png)",
+        "options": [
+            {
+                "text": "more future consumption in exchange for less current consumption",
+                "label": "A",
+                "isCorrect": false
+            },
+            {
+                "text": "more current capital goods in exchange for less future consumption",
+                "label": "B",
+                "isCorrect": false
+            },
+            {
+                "text": "more future and current consumption",
+                "label": "C",
+                "isCorrect": false
+            },
+            {
+                "text": "less future consumption in exchange for more current consumption",
+                "label": "D",
+                "isCorrect": false
+            },
+            {
+                "text": "less current capital goods in exchange for greater future consumption",
+                "label": "E",
+                "isCorrect": false
+            }
+        ]
+    }
+]

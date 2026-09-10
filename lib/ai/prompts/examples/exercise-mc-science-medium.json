@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "subject": "science",
+  "exerciseType": "MC",
+  "difficultyLabel": "medium",
+  "description": "科学学科 MC 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "科学 MC medium：实验控制变量",
+      "block": {
+        "questionText": "A student tests whether fertilizer increases bean plant height. She places the fertilized plants on a sunny windowsill and the unfertilized plants in a shaded corner. Which flaw most seriously weakens her conclusion?",
+        "type": "MC",
+        "questionType": "MCQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "science-experimental-design-controls",
+        "loIds": ["SCI-EXP-1"],
+        "ekIds": ["SCI-EXP-1.1"],
+        "options": [
+          {
+            "label": "A",
+            "text": "The sample includes too many bean plants.",
+            "isCorrect": false
+          },
+          {
+            "label": "B",
+            "text": "Light exposure is not controlled between the two groups.",
+            "isCorrect": true
+          },
+          {
+            "label": "C",
+            "text": "Bean plants are unsuitable organisms for controlled experiments.",
+            "isCorrect": false
+          },
+          {
+            "label": "D",
+            "text": "Fertilizer should only be added after flowering begins.",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "B",
+        "solutionSteps": "The experiment changes two variables at once: fertilizer and light. Because the fertilized group also gets more sunlight, the student cannot tell which factor caused any height difference. The lack of a controlled light condition makes B the best answer.",
+        "commonMistakes": [
+          "Focusing on sample size instead of the uncontrolled variable.",
+          "Assuming the organism is the problem rather than the setup.",
+          "Suggesting a procedural preference that does not address the core confounding variable."
+        ],
+        "distractor_rationale": {
+          "A": "Scale confusion: a larger sample is not the main problem when the design has a confounding variable.",
+          "C": "Method misunderstanding: bean plants can be used in controlled experiments if conditions are properly matched.",
+          "D": "Irrelevant procedure change: it does not fix the fact that light exposure differs across groups."
+        }
+      }
+    }
+  ]
+}

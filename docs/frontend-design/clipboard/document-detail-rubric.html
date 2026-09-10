@@ -1,0 +1,235 @@
+<!-- Document Detail | Rubric -->
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#615e57",
+              "outline-variant": "#b8b29f",
+              "on-error": "#fff7f6",
+              "primary-dim": "#55524c",
+              "primary-fixed": "#e7e2d9",
+              "tertiary-container": "#f4f3f0",
+              "surface": "#fef9ef",
+              "on-secondary-container": "#005397",
+              "secondary": "#0060ae",
+              "on-primary-fixed": "#413f39",
+              "tertiary-dim": "#525351",
+              "surface-variant": "#e9e2ce",
+              "on-primary-fixed-variant": "#5e5b54",
+              "background": "#fef9ef",
+              "outline-solid": "#7f7b6a",
+              "surface-dim": "#e1dac3",
+              "primary-container": "#e7e2d9",
+              "on-background": "#363225",
+              "on-surface-variant": "#635f4f",
+              "tertiary": "#5e5f5d",
+              "secondary-container": "#d4e3ff",
+              "surface-container-highest": "#e9e2ce",
+              "on-tertiary": "#faf9f6",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-fixed": "#494a48",
+              "secondary-dim": "#005499",
+              "on-tertiary-container": "#5b5c5a",
+              "tertiary-fixed": "#f4f3f0",
+              "on-surface": "#363225",
+              "on-error-container": "#742410",
+              "surface-container-low": "#f9f3e7",
+              "primary": "#615e57",
+              "on-secondary": "#f8f8ff",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#004077",
+              "on-primary": "#fdf7ee",
+              "surface-container": "#f4eddf",
+              "on-secondary-fixed-variant": "#005ca8",
+              "primary-fixed-dim": "#d9d4cb",
+              "secondary-fixed": "#d4e3ff",
+              "inverse-on-surface": "#a09c95",
+              "error-dim": "#5c1202",
+              "secondary-fixed-dim": "#bcd6ff",
+              "surface-bright": "#fef9ef",
+              "on-tertiary-fixed-variant": "#666664",
+              "inverse-primary": "#fef9ef",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#eee8d6",
+              "on-primary-container": "#54514b",
+              "error": "#9e422c",
+              "inverse-surface": "#0f0e09"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFFFFF;
+        color: #37352F;
+      }
+      .ghost-border { border: 1px solid rgba(55, 53, 47, 0.08); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Anchor -->
+<header class="bg-white dark:bg-[#1A1916] font-['Inter'] font-semibold text-sm tracking-tight docked full-width top-0 z-40 flex justify-between items-center w-full px-6 py-3 sticky">
+<div class="flex items-center space-x-4">
+<button class="flex items-center justify-center p-1.5 hover:bg-[#F7F6F3] rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[#37352F]/60">arrow_back</span>
+</button>
+<div class="flex items-center space-x-3">
+<h1 class="text-lg font-bold text-[#37352F] dark:text-white tracking-tighter">AP Biology | Cell Structure Rubric</h1>
+<div class="flex space-x-2">
+<span class="px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-[0.03em] bg-[rgba(221,237,234,0.5)] text-[#4D7C0F]">Rubric</span>
+<span class="px-2 py-0.5 rounded text-[0.6875rem] font-medium tracking-[0.03em] bg-[rgba(221,235,241,0.5)] text-[#2383E2]">Science</span>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="p-2 hover:bg-[#F7F6F3] rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[#37352F]/60">star</span>
+</button>
+<button class="px-3 py-2 text-[#37352F]/70 hover:bg-[#F7F6F3] rounded-lg transition-colors flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm">edit</span>
+<span>Edit</span>
+</button>
+<button class="px-3 py-2 text-[#37352F]/70 hover:bg-[#F7F6F3] rounded-lg transition-colors flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span>Duplicate</span>
+</button>
+<button class="bg-[#37352F] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#55524C] transition-colors flex items-center space-x-2 ml-2">
+<span>Export</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="p-2 hover:bg-[#F7F6F3] rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[#37352F]/60">more_horiz</span>
+</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-12 py-16">
+<!-- Editorial Header Section -->
+<div class="mb-12">
+<div class="flex items-center space-x-3 text-[#37352F]/40 mb-4">
+<span class="material-symbols-outlined text-lg">description</span>
+<span class="text-[0.6875rem] uppercase font-semibold tracking-widest">Assessment Framework</span>
+</div>
+<h2 class="text-[3.5rem] font-bold leading-[1.1] tracking-tight text-[#37352F] mb-6">Cell Structure &amp; Function</h2>
+<p class="text-on-surface-variant max-w-2xl text-[0.875rem] leading-[1.6]">
+                This comprehensive rubric evaluates students' understanding of cellular compartmentalization, organelle interactions, and membrane permeability. Designed for AP Biology Unit 2 assessment standards.
+            </p>
+</div>
+<!-- Rubric Table Container -->
+<div class="bg-white rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(55,53,47,0.04)]">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#37352F] text-white">
+<th class="px-6 py-4 text-[0.875rem] font-semibold w-[20%]">Criteria</th>
+<th class="px-6 py-4 text-[0.875rem] font-semibold">Excellent (4)</th>
+<th class="px-6 py-4 text-[0.875rem] font-semibold">Proficient (3)</th>
+<th class="px-6 py-4 text-[0.875rem] font-semibold">Developing (2)</th>
+<th class="px-6 py-4 text-[0.875rem] font-semibold">Beginning (1)</th>
+</tr>
+</thead>
+<tbody class="text-[0.875rem] text-[#37352F]">
+<!-- Row 1 -->
+<tr class="bg-white hover:bg-[#F7F6F3]/50 transition-colors">
+<td class="px-6 py-8 font-semibold align-top border-r border-[#37352F]/5 bg-[#F7F6F3]">Organelle Function</td>
+<td class="px-6 py-8 leading-relaxed align-top">Clearly articulates the role of all major organelles and how they interact to maintain homeostasis.</td>
+<td class="px-6 py-8 leading-relaxed align-top">Identifies all major organelles and correctly describes their primary individual functions.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Identifies most organelles but lacks detail in functional description.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Limited identification of organelles or incorrect functional descriptions.</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-[#F7F6F3] hover:bg-[#ECEBE8] transition-colors">
+<td class="px-6 py-8 font-semibold align-top border-r border-[#37352F]/5">Membrane Transport</td>
+<td class="px-6 py-8 leading-relaxed align-top">Mastery of active vs. passive transport mechanisms with specific protein examples.</td>
+<td class="px-6 py-8 leading-relaxed align-top">Correctly distinguishes between active and passive transport in various scenarios.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Inconsistent application of transport principles. Some terminology errors.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Confuses active and passive transport mechanisms frequently.</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-white hover:bg-[#F7F6F3]/50 transition-colors">
+<td class="px-6 py-8 font-semibold align-top border-r border-[#37352F]/5 bg-[#F7F6F3]">Surface Area to Volume</td>
+<td class="px-6 py-8 leading-relaxed align-top">Sophisticated mathematical modeling showing impact on nutrient exchange efficiency.</td>
+<td class="px-6 py-8 leading-relaxed align-top">Accurately calculates and explains why high SA:V ratios are essential for cells.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Recognizes the concept but struggles with calculating ratios or implications.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Shows little understanding of the physical constraints on cell size.</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-[#F7F6F3] hover:bg-[#ECEBE8] transition-colors">
+<td class="px-6 py-8 font-semibold align-top border-r border-[#37352F]/5">Evolutionary Origins</td>
+<td class="px-6 py-8 leading-relaxed align-top">Detailed evidence for Endosymbiosis (DNA, Ribosomes, Membranes) expertly integrated.</td>
+<td class="px-6 py-8 leading-relaxed align-top">Explains Endosymbiotic Theory with at least two pieces of supporting evidence.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Mentions Endosymbiosis but provides incomplete or vague evidence.</td>
+<td class="px-6 py-8 leading-relaxed align-top text-on-surface-variant">Unable to describe the origins of complex eukaryotic organelles.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Metadata Sidebar-like section (Asymmetric Layout) -->
+<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="md:col-span-2 space-y-6">
+<h3 class="text-sm font-semibold uppercase tracking-widest text-[#37352F]/40">Notes for Instructors</h3>
+<div class="bg-[#F7F6F3] p-8 rounded-lg leading-[1.8] text-[0.875rem]">
+                    This rubric is designed for both peer-review and summative assessment. When grading the "Excellent" category for Organelle Function, look for students who can explain the pathway of a secreted protein (ER → Golgi → Vesicle) rather than just listing what each part does.
+                </div>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-[0.6875rem] font-semibold uppercase tracking-widest text-[#37352F]/40 mb-4">Properties</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#37352F]/60 flex items-center"><span class="material-symbols-outlined text-xs mr-2">person</span> Owner</span>
+<span class="font-medium">Dr. Helena Vance</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#37352F]/60 flex items-center"><span class="material-symbols-outlined text-xs mr-2">calendar_today</span> Created</span>
+<span class="font-medium">Oct 12, 2023</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#37352F]/60 flex items-center"><span class="material-symbols-outlined text-xs mr-2">group</span> Shared with</span>
+<span class="text-[#2383E2] font-medium">Biology Faculty</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-[#37352F]/10">
+<h3 class="text-[0.6875rem] font-semibold uppercase tracking-widest text-[#37352F]/40 mb-4">Linked Resources</h3>
+<div class="space-y-3">
+<a class="flex items-center p-2 rounded-lg hover:bg-[#F7F6F3] transition-all group" href="#">
+<span class="material-symbols-outlined text-[#37352F]/40 group-hover:text-[#37352F] mr-3">attach_file</span>
+<span class="text-sm">Cell Lab Worksheet.pdf</span>
+</a>
+<a class="flex items-center p-2 rounded-lg hover:bg-[#F7F6F3] transition-all group" href="#">
+<span class="material-symbols-outlined text-[#37352F]/40 group-hover:text-[#37352F] mr-3">link</span>
+<span class="text-sm">Unit 2 Slide Deck</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Space -->
+<footer class="mt-24 py-12 px-6 bg-[#F7F6F3] text-center border-t border-[rgba(55,53,47,0.08)]">
+<p class="text-[0.6875rem] font-medium uppercase tracking-[0.03em] text-[#37352F]/40">Deskmate Editorial Workspace • Internal Use Only</p>
+</footer>
+</body></html>
+
+<!-- Auth | Login -->

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "subject": "economics",
+  "exerciseType": "MC",
+  "difficultyLabel": "medium",
+  "description": "经济学学科 MC 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "经济学 MC medium：公开市场操作",
+      "block": {
+        "questionText": "The central bank buys government securities on the open market. In the short run, which outcome is most likely?",
+        "type": "MC",
+        "questionType": "MCQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "economics-monetary-policy-open-market",
+        "loIds": ["ECO-4.C"],
+        "ekIds": ["ECO-4.C.1"],
+        "options": [
+          {
+            "label": "A",
+            "text": "The money supply decreases and nominal interest rates rise.",
+            "isCorrect": false
+          },
+          {
+            "label": "B",
+            "text": "The money supply increases and nominal interest rates fall.",
+            "isCorrect": true
+          },
+          {
+            "label": "C",
+            "text": "Short-run aggregate supply shifts left because wages immediately increase.",
+            "isCorrect": false
+          },
+          {
+            "label": "D",
+            "text": "Government spending automatically decreases because bond prices rise.",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "B",
+        "solutionSteps": "When the central bank buys securities, it pays with newly created reserves. Bank reserves rise, the money supply expands, and the increased supply of loanable funds puts downward pressure on nominal interest rates. Therefore B is the best answer.",
+        "commonMistakes": [
+          "Reversing the effect of an open-market purchase and describing it as contractionary.",
+          "Jumping from monetary policy to aggregate supply instead of tracing the money-market channel.",
+          "Confusing central-bank bond purchases with fiscal-policy changes in government spending."
+        ],
+        "distractor_rationale": {
+          "A": "Policy reversal: it describes the effects of selling securities, not buying them.",
+          "C": "Macroeconomic channel confusion: it incorrectly moves from monetary policy to SRAS instead of money supply and interest rates.",
+          "D": "Fiscal and monetary confusion: open-market operations do not automatically reduce government spending."
+        }
+      }
+    }
+  ]
+}

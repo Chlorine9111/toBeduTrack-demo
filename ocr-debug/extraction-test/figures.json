@@ -1,0 +1,62 @@
+[
+  {
+    "page": 1,
+    "bbox": [
+      233,
+      60,
+      520,
+      380
+    ],
+    "description": "Cost vs Quantity graph showing LRATC curve and five SRATC curves (SRATC₁ through SRATC₅) with quantity points Q₁ through Q₅ marked on the x-axis"
+  },
+  {
+    "page": 2,
+    "bbox": [
+      249,
+      80,
+      701,
+      380
+    ],
+    "description": "表格：显示产出数量、总收益和总成本的关系数据"
+  },
+  {
+    "page": 3,
+    "bbox": [
+      51,
+      145,
+      520,
+      420
+    ],
+    "description": "经济学图表：显示完全竞争市场中企业的边际成本(MC)、平均总成本(ATC)和平均可变成本(AVC)曲线，以及不同价格水平(P1-P4)和产量水平(Q1-Q4)的标注"
+  },
+  {
+    "page": 4,
+    "bbox": [
+      51,
+      79,
+      473,
+      251
+    ],
+    "description": "Production function table showing Number of Workers vs Total Product (units)"
+  },
+  {
+    "page": 5,
+    "bbox": [
+      200,
+      280,
+      800,
+      520
+    ],
+    "description": "Cost curves graph showing MC, ATC, and AVC curves with quantity on horizontal axis and price on vertical axis, marked with points Q1 through Q5 and prices P1, P2, P3"
+  },
+  {
+    "page": 7,
+    "bbox": [
+      280,
+      150,
+      920,
+      480
+    ],
+    "description": "短期成本曲线图表，显示MC、ATC、AVC曲线和价格P0，以及数量Q0、Q1、Q2、Q3的标注"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "static404s": [],
+  "consoleErrors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING",
+      "location": {
+        "url": "http://127.0.0.1:3001/api/agent/chat",
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "pageErrors": []
+}

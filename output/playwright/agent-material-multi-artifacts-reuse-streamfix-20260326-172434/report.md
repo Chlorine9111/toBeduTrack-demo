@@ -1,0 +1,29 @@
+## UX 验证报告
+
+- 验证级别: L1
+- 最终结论: PASS
+- 素材来源: 复用现有资料 Chapter_11_Of_Rats_and_Men.pdf
+- 上传资产 ID: 复用现有资产（未读取 id）
+- 上传后到 ready: 214120ms
+- 验证范围:
+  - 同一份 PDF 资料在同一会话里连续生成 worksheet / rubric / lesson plan / exam
+  - 每轮请求都继续携带 contentAssetIds
+  - 右侧 Canvas 能显示对应产物正文
+- 关键接口耗时:
+  - POST /api/agent/preflight: 1.80s (200)
+  - POST /api/agent/chat: 9.77s (200)
+  - POST /api/agent/preflight: 1.99s (200)
+  - POST /api/agent/chat: 7.62s (200)
+  - POST /api/agent/preflight: 1.79s (200)
+  - POST /api/agent/chat: 5.94s (200)
+  - POST /api/agent/preflight: 1.05s (200)
+  - POST /api/agent/chat: 12.22s (200)
+- 错误统计:
+  - 静态资源 404: 0
+  - console error: 0
+  - pageerror: 0
+- 截图:
+  - verify-1-agent-loaded.png
+  - verify-2-material-multi-artifacts.png
+- 产物目录:
+  - output/playwright/agent-material-multi-artifacts-reuse-streamfix-20260326-172434

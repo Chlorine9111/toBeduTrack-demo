@@ -1,0 +1,82 @@
+## UX 验证报告
+
+- 验证级别: L1
+- 最终结论: PASS
+- 侧栏上传素材: Chapter_11_Of_Rats_and_Men.pdf
+- 上传资产 ID: dbe87b07-2152-447c-a87b-bbea3f21177d
+- 上传后到 ready: 126128ms
+- 关键断言:
+  - Agent 右侧上下文侧栏上传命中 /api/content-assets/upload
+  - 未命中 /api/pdf/upload-scan 与 /api/pdf/process-scan
+  - 首轮问答命中 contentAssetIds 与资料内容
+  - 第二轮 worksheet 命中文档型 workflow
+- 关键接口耗时:
+  - POST /api/content-assets/upload: 6.42s (200)
+  - POST /api/content-assets/status: 0.38s (200)
+  - POST /api/content-assets/status: 2.32s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.42s (200)
+  - POST /api/content-assets/status: 0.39s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.42s (200)
+  - POST /api/content-assets/status: 0.46s (200)
+  - POST /api/content-assets/status: 0.42s (200)
+  - POST /api/content-assets/status: 0.42s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.39s (200)
+  - POST /api/content-assets/status: 0.45s (200)
+  - POST /api/content-assets/status: 0.56s (200)
+  - POST /api/content-assets/status: 1.16s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.43s (200)
+  - POST /api/content-assets/status: 0.59s (200)
+  - POST /api/content-assets/status: 0.38s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 1.14s (200)
+  - POST /api/content-assets/status: 0.45s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.42s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.49s (200)
+  - POST /api/content-assets/status: 0.45s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.61s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.39s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.39s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.39s (200)
+  - POST /api/content-assets/status: 0.39s (200)
+  - POST /api/content-assets/status: 0.43s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 1.00s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.63s (200)
+  - POST /api/content-assets/status: 0.44s (200)
+  - POST /api/content-assets/status: 0.42s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.40s (200)
+  - POST /api/content-assets/status: 0.41s (200)
+  - POST /api/content-assets/status: 0.39s (200)
+  - POST /api/content-assets/status: 0.44s (200)
+  - POST /api/content-assets/status: 1.00s (200)
+  - POST /api/content-assets/status: 0.80s (200)
+  - POST /api/content-assets/status: 0.37s (200)
+  - POST /api/agent/preflight: 2.59s (200)
+  - POST /api/agent/chat: 7.77s (200)
+  - POST /api/agent/preflight: 1.09s (200)
+  - POST /api/agent/chat: 6.13s (200)
+- 错误统计:
+  - 静态资源 404: 0
+  - console error: 0
+  - pageerror: 0
+- 截图:
+  - verify-1-agent-loaded.png
+  - verify-2-material-upload-result.png
+- 产物目录:
+  - output/playwright/agent-context-sidebar-material-upload-close-rerun-20260326-202525

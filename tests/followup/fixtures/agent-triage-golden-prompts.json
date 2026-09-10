@@ -1,0 +1,48 @@
+[
+  {
+    "id": "worksheet_with_answer_key",
+    "prompt": "根据 AP Biology Unit 3 生成一份 worksheet，并附答案解析",
+    "expected": {
+      "workflow": "worksheet",
+      "artifactIntent": "primary_plus_auxiliary"
+    }
+  },
+  {
+    "id": "question_bank_retrieval",
+    "prompt": "从题库里找 AP Chemistry Unit 7 的 FRQ，组一份课堂练习",
+    "expected": {
+      "workflow": "question_bank"
+    }
+  },
+  {
+    "id": "lesson_plan",
+    "prompt": "帮我做一份 AP Calculus AB Unit 5 的 45 分钟 lesson plan",
+    "expected": {
+      "workflow": "lesson_plan"
+    }
+  },
+  {
+    "id": "rubric",
+    "prompt": "给这份 AP Lang rhetorical analysis essay 做一个 rubric",
+    "expected": {
+      "workflow": "rubric"
+    }
+  },
+  {
+    "id": "greeting_general_chat",
+    "prompt": "hi",
+    "expected": {
+      "workflow": "general_chat",
+      "allowedToolsCount": 0
+    }
+  },
+  {
+    "id": "search_summary_tendency",
+    "prompt": "帮我联网查一下今年 AP Physics 官方课程更新并总结",
+    "expected": {
+      "workflow": "general_chat",
+      "retrievalSourcesOneOf": ["web", "mixed"]
+    }
+  }
+]
+

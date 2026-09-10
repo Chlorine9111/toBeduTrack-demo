@@ -1,0 +1,42 @@
+[
+  {
+    "stage": "upload",
+    "uploadedAssetId": null,
+    "uploadedAssetTitle": "Chapter_11_Of_Rats_and_Men.pdf",
+    "route": "content-assets/existing-selection",
+    "uploadToReadyMs": 2092
+  },
+  {
+    "stage": "worksheet",
+    "toolCalls": [
+      "generate_document_worksheet",
+      "generate_document_worksheet"
+    ],
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "canvasPreview": "练习卷可下载练习卷Export自动同步内容库Of Rats and Men — Chapter 11 课堂学习单小说： Midnight in Peking · Chapter 11: Of Rats and Men 课时： 45 分钟 | 姓名：\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ 日期：\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ 学习目标 读完本章并完...正"
+  },
+  {
+    "stage": "rubric",
+    "toolCalls": [
+      "generate_rubric",
+      "generate_rubric"
+    ],
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "canvasPreview": "Rubric评分量表Export自动同步内容库Chapter Discussion and Reading Response RubricContent Understanding · Evidence Citation · Analytical Depth · Expression Quality正在连接统一文档...Academic RubricChapter Discussion and R"
+  },
+  {
+    "stage": "lesson_plan",
+    "toolCalls": [
+      "generate_lesson_plan_workflow",
+      "generate_lesson_plan_workflow"
+    ],
+    "contentAssetIds": [
+      "8f9d69d7-2341-42a0-a4e1-853ec880e3a5"
+    ],
+    "canvasPreview": "教案完整教案Export自动同步内容库Of Rats and Men — Chapter 11 Close Reading & Discussion (45 min)Of Rats and Men — Chapter 11 Close Reading & Discussion (45 min)正在连接统一文档...Lesson PlanOf Rats and Men — Chapter 11 Cl"
+  }
+]

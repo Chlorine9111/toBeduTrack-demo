@@ -1,0 +1,205 @@
+<!-- Auth | Register -->
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#615e57",
+              "outline-variant": "#b8b29f",
+              "on-error": "#fff7f6",
+              "primary-dim": "#55524c",
+              "primary-fixed": "#e7e2d9",
+              "tertiary-container": "#f4f3f0",
+              "surface": "#fef9ef",
+              "on-secondary-container": "#005397",
+              "secondary": "#0060ae",
+              "on-primary-fixed": "#413f39",
+              "tertiary-dim": "#525351",
+              "surface-variant": "#e9e2ce",
+              "on-primary-fixed-variant": "#5e5b54",
+              "background": "#fef9ef",
+              "outline-solid": "#7f7b6a",
+              "surface-dim": "#e1dac3",
+              "primary-container": "#e7e2d9",
+              "on-background": "#363225",
+              "on-surface-variant": "#635f4f",
+              "tertiary": "#5e5f5d",
+              "secondary-container": "#d4e3ff",
+              "surface-container-highest": "#e9e2ce",
+              "on-tertiary": "#faf9f6",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-tertiary-fixed": "#494a48",
+              "secondary-dim": "#005499",
+              "on-tertiary-container": "#5b5c5a",
+              "tertiary-fixed": "#f4f3f0",
+              "on-surface": "#363225",
+              "on-error-container": "#742410",
+              "surface-container-low": "#f9f3e7",
+              "primary": "#615e57",
+              "on-secondary": "#f8f8ff",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#004077",
+              "on-primary": "#fdf7ee",
+              "surface-container": "#f4eddf",
+              "on-secondary-fixed-variant": "#005ca8",
+              "primary-fixed-dim": "#d9d4cb",
+              "secondary-fixed": "#d4e3ff",
+              "inverse-on-surface": "#a09c95",
+              "error-dim": "#5c1202",
+              "secondary-fixed-dim": "#bcd6ff",
+              "surface-bright": "#fef9ef",
+              "on-tertiary-fixed-variant": "#666664",
+              "inverse-primary": "#fef9ef",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#eee8d6",
+              "on-primary-container": "#54514b",
+              "error": "#9e422c",
+              "inverse-surface": "#0f0e09"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        input:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #2383E2;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex items-center justify-center">
+<!-- Auth Shell Layout -->
+<main class="w-full max-w-7xl h-[921px] flex flex-col md:flex-row overflow-hidden shadow-xs bg-surface-container-lowest rounded-xl">
+<!-- Left Panel: Brand / Marketing Image -->
+<section class="hidden md:flex md:w-5/12 bg-surface-container relative p-12 flex-col justify-between overflow-hidden">
+<div class="z-10">
+<div class="flex items-center gap-2 mb-16">
+<span class="text-2xl font-bold tracking-tighter text-on-surface">Deskmate</span>
+</div>
+<h1 class="text-5xl font-bold leading-[1.1] tracking-tight text-on-surface mb-6">
+                    The Digital Curator for Modern Educators.
+                </h1>
+<p class="text-on-surface-variant text-lg max-w-sm">
+                    A spacious, tactile workspace designed for intentional teaching and editorial clarity.
+                </p>
+</div>
+<!-- Decorative Element (Abstract Gradient) -->
+<div class="absolute bottom-0 left-0 w-full h-2/3 bg-linear-to-t from-surface-container-high to-transparent opacity-50 pointer-events-none"></div>
+<div class="relative z-10 w-full aspect-square bg-surface-container-lowest rounded-2xl shadow-xs p-6 overflow-hidden">
+<img alt="Minimalist desk setup with paper and fountain pen" class="w-full h-full object-cover rounded-lg" data-alt="Minimalist desk setup with paper and fountain pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLvBic_0-JDSSe3Z6RZux19LxGXA0jGGOq7de0TBLKqBvyOzNu4VvqETVpRu3R_f3HducvBJotQeWcUtt8bZ9TDGzHnNg-H-i-ejD6dxu3T5S32-Pd-bfEx9e7P8R70d-ol-pthlR6GMjEjdzrUK194Xy33QDm_u-I0-t4lgDlBOZqTBHUSqYuAmigQzeF76GlUhIjxFpI86FbJ6s_dG3xKuSZrXheSCFJ2hlz1tiw8xY-foTw6pjlRaHI_JLxXHxJ00AIELDIRQ"/>
+</div>
+</section>
+<!-- Right Panel: Registration Form -->
+<section class="w-full md:w-7/12 p-8 md:p-16 overflow-y-auto bg-surface-container-lowest">
+<div class="max-w-md mx-auto">
+<header class="mb-10 text-center md:text-left">
+<h2 class="text-3xl font-semibold tracking-tight text-on-surface mb-2">Create your account</h2>
+<p class="text-on-surface-variant text-sm">Join the community of intentional educators.</p>
+</header>
+<!-- Social Auth -->
+<button class="w-full flex items-center justify-center gap-3 px-4 py-3 border border-outline-variant rounded-lg hover:bg-surface-container-low transition-colors duration-200 mb-8">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Google colorful logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlFZ6PyRKw-yMafTAX2F_MK7dHWqHsIkCirRrKXCNGGI7jKsbTKKspd3wPrj63cY5rCB7KqnKX3-UxJJrWGKxGJYGjynLK4sZtCyFF912-vNYkQkDsH6Z0NdGWPmpOy5vmpbAngxrE8obhr2EY7SMvA9yT83N__KnkPBW68MgIpZ6qJjjjT5cHqECbb2qcTmn7KSgsOPnjKKcUHSeb3c6xXQMq0miqbg8gX2Sa54uKmg_FRSz2dBXiOztQVg9lvw04nvI6nyMHfg"/>
+<span class="text-sm font-medium text-on-surface">Sign up with Google</span>
+</button>
+<div class="relative flex items-center mb-8">
+<div class="grow border-t border-outline-variant/30"></div>
+<span class="px-4 text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">or register with email</span>
+<div class="grow border-t border-outline-variant/30"></div>
+</div>
+<!-- Registration Form -->
+<form class="space-y-5">
+<div class="grid grid-cols-1 gap-5">
+<div class="group">
+<label class="block text-[0.6875rem] font-medium text-on-surface-variant uppercase tracking-wider mb-1.5 ml-1">Full Name</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant/50 px-4 py-3 rounded-t-lg transition-all focus:bg-surface-container text-sm" placeholder="Johnathan Doe" type="text"/>
+</div>
+<div class="group">
+<label class="block text-[0.6875rem] font-medium text-on-surface-variant uppercase tracking-wider mb-1.5 ml-1">Email Address</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant/50 px-4 py-3 rounded-t-lg transition-all focus:bg-surface-container text-sm" placeholder="name@workspace.com" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="group">
+<label class="block text-[0.6875rem] font-medium text-on-surface-variant uppercase tracking-wider mb-1.5 ml-1">Password</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant/50 px-4 py-3 rounded-t-lg transition-all focus:bg-surface-container text-sm" placeholder="••••••••" type="password"/>
+</div>
+<div class="group">
+<label class="block text-[0.6875rem] font-medium text-on-surface-variant uppercase tracking-wider mb-1.5 ml-1">Confirm Password</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant/50 px-4 py-3 rounded-t-lg transition-all focus:bg-surface-container text-sm" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Subject Selection Area -->
+<div class="pt-2">
+<label class="block text-[0.6875rem] font-medium text-on-surface-variant uppercase tracking-wider mb-3 ml-1">What subjects do you teach?</label>
+<div class="flex flex-wrap gap-2">
+<!-- AP Course Pills (Using 9-Tone Grid logic) -->
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#f5e0d9]/50 text-[#976D57] hover:bg-[#f5e0d9] transition-colors" type="button">AP Biology</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#ddedf1]/50 text-[#2383E2] hover:bg-[#ddedf1] transition-colors" type="button">AP Computer Science</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#faebdd]/50 text-[#CC772F] hover:bg-[#faebdd] transition-colors border border-[#CC772F]/20" type="button">AP World History</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#fdf3d0]/50 text-[#AD7F24] hover:bg-[#fdf3d0] transition-colors" type="button">AP English Lit</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#ddebe1]/50 text-[#4D7C0F] hover:bg-[#ddebe1] transition-colors" type="button">AP Environmental Science</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#eae4f2]/50 text-[#9065B0] hover:bg-[#eae4f2] transition-colors" type="button">AP Psychology</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+                                Add Course
+                            </button>
+</div>
+</div>
+<!-- Terms Checkbox -->
+<div class="flex items-start gap-3 pt-2">
+<div class="relative flex items-center h-5">
+<input class="h-4 w-4 rounded border-outline-variant text-secondary focus:ring-secondary/20" id="terms" type="checkbox"/>
+</div>
+<label class="text-xs text-on-surface-variant leading-tight" for="terms">
+                            I agree to the <a class="text-secondary hover:underline" href="#">Terms of Service</a> and <a class="text-secondary hover:underline" href="#">Privacy Policy</a>. I understand that my workspace will be curated for educational use.
+                        </label>
+</div>
+<!-- Primary Action -->
+<div class="pt-4">
+<button class="w-full bg-primary hover:bg-primary-dim text-white font-semibold py-3.5 rounded-lg shadow-xs transition-all duration-200 transform active:scale-[0.98]" type="submit">
+                            Create Account
+                        </button>
+</div>
+</form>
+<footer class="mt-8 text-center">
+<p class="text-sm text-on-surface-variant">
+                        Already have an account? 
+                        <a class="text-secondary font-medium hover:underline" href="#">Sign in</a>
+</p>
+</footer>
+</div>
+</section>
+</main>
+</body></html>
+
+<!-- Onboarding | Subjects -->

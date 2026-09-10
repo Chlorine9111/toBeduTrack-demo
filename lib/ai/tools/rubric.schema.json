@@ -1,0 +1,37 @@
+{
+  "name": "return_rubric",
+  "description": "Return a rubric with dimensions and four performance levels.",
+  "input_schema": {
+    "type": "object",
+    "required": ["title", "dimensions"],
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "dimensions": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "required": ["name", "description", "weight", "levels"],
+          "properties": {
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "weight": { "type": "number" },
+            "levels": {
+              "type": "object",
+              "required": ["excellent", "good", "passing", "failing"],
+              "properties": {
+                "excellent": { "type": "string" },
+                "good": { "type": "string" },
+                "passing": { "type": "string" },
+                "failing": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "subject": "math",
+  "exerciseType": "FR",
+  "difficultyLabel": "medium",
+  "description": "数学学科 FR 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "数学 FR medium：链式法则与切线方程",
+      "block": {
+        "questionText": "Consider $g(x) = (2x - 1)^3$.\\n(a) Find $g'(x)$.\\n(b) Find the equation of the tangent line to the graph of $g$ at $x=2$.\\n(c) Explain why the tangent slope at $x=2$ is positive.",
+        "type": "FR",
+        "questionType": "FRQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "calculus-chain-rule-tangent-line",
+        "loIds": ["FUN-3.C"],
+        "ekIds": ["FUN-3.C.1"],
+        "parts": {
+          "a": { "prompt": "Find $g'(x)$.", "points": 2 },
+          "b": { "prompt": "Find the tangent line at $x=2$.", "points": 2 },
+          "c": { "prompt": "Explain why the slope at $x=2$ is positive.", "points": 1 }
+        },
+        "totalPoints": 5,
+        "correctAnswer": "(a) $g'(x)=6(2x-1)^2$; (b) tangent line: $y=54x-81$; (c) the slope is positive because $g'(2)=6\\cdot 3^2=54>0$.",
+        "solutionSteps": "Part (a): Apply the chain rule. Let $u=2x-1$, so $g(x)=u^3$. Then $g'(x)=3u^2\\cdot u'=3(2x-1)^2\\cdot 2=6(2x-1)^2$.\\nPart (b): First find the point on the curve: $g(2)=(4-1)^3=3^3=27$. Next find the slope: $g'(2)=6(3^2)=54$. Use point-slope form: $y-27=54(x-2)$. Simplifying gives $y=54x-81$.\\nPart (c): The derivative is $6(2x-1)^2$, which is a positive constant times a square. At $x=2$, both factors are nonnegative and the value is $54$, so the tangent slope is positive.",
+        "commonMistakes": [
+          "Writing $g'(x)=3(2x-1)^2$ and forgetting to multiply by the inner derivative.",
+          "Using the correct slope but the wrong point on the curve when forming the tangent line.",
+          "Claiming the slope is positive without referencing the derivative expression or its value."
+        ]
+      }
+    }
+  ]
+}

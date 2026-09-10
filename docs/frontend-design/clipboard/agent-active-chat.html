@@ -1,0 +1,349 @@
+<!-- Agent | Active Chat -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deskmate | Agent Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error-container": "#fe8b70",
+                        "outline-variant": "#b8b29f",
+                        "secondary-container": "#d4e3ff",
+                        "primary": "#615e57",
+                        "on-tertiary": "#faf9f6",
+                        "primary-fixed": "#e7e2d9",
+                        "on-primary-container": "#54514b",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-error": "#fff7f6",
+                        "tertiary": "#5e5f5d",
+                        "secondary-dim": "#005499",
+                        "secondary": "#0060ae",
+                        "inverse-surface": "#0f0e09",
+                        "on-secondary-fixed-variant": "#005ca8",
+                        "surface-tint": "#615e57",
+                        "inverse-on-surface": "#a09c95",
+                        "surface-container-highest": "#e9e2ce",
+                        "on-secondary-fixed": "#004077",
+                        "surface-container": "#f4eddf",
+                        "on-secondary": "#f8f8ff",
+                        "surface-variant": "#e9e2ce",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fef9ef",
+                        "tertiary-container": "#f4f3f0",
+                        "on-primary": "#fdf7ee",
+                        "tertiary-dim": "#525351",
+                        "on-tertiary-container": "#5b5c5a",
+                        "on-tertiary-fixed": "#494a48",
+                        "on-error-container": "#742410",
+                        "tertiary-fixed": "#f4f3f0",
+                        "surface-container-high": "#eee8d6",
+                        "primary-fixed-dim": "#d9d4cb",
+                        "on-surface-variant": "#635f4f",
+                        "error-dim": "#5c1202",
+                        "surface-bright": "#fef9ef",
+                        "error": "#9e422c",
+                        "background": "#fef9ef",
+                        "secondary-fixed-dim": "#bcd6ff",
+                        "outline-solid": "#7f7b6a",
+                        "on-primary-fixed-variant": "#5e5b54",
+                        "on-primary-fixed": "#413f39",
+                        "on-background": "#363225",
+                        "inverse-primary": "#fef9ef",
+                        "surface-dim": "#e1dac3",
+                        "primary-dim": "#55524c",
+                        "on-secondary-container": "#005397",
+                        "on-tertiary-fixed-variant": "#666664",
+                        "surface-container-low": "#f9f3e7",
+                        "on-surface": "#363225",
+                        "tertiary-fixed-dim": "#e6e5e2",
+                        "primary-container": "#e7e2d9"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #37352F;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(55, 53, 47, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-hidden">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full w-[56px] hover:w-[240px] transition-all duration-300 ease-in-out z-50 bg-[#F7F6F3] dark:bg-slate-900 flex flex-col py-4 px-2 overflow-hidden shadow-none group">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 rounded bg-[#37352F] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-sm" data-icon="smart_toy">smart_toy</span>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+<p class="text-lg font-semibold text-[#37352F] dark:text-white leading-none">Deskmate</p>
+<p class="text-[0.6875rem] text-[#37352F]/60 dark:text-slate-400 mt-1 uppercase tracking-wider font-medium">Editorial Workspace</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-2 py-2 bg-white dark:bg-slate-800 text-[#2383E2] font-semibold rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="smart_toy">smart_toy</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Agent Workspace</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="local_library">local_library</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Library</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="quiz">quiz</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Question Bank</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="rule">rule</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Grading</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="edit_note">edit_note</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Lesson Studio</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1">
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="settings">settings</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="person">person</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Profile</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-[56px] h-14 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md flex items-center justify-between px-6 w-full border-b border-[#37352f0d] dark:border-slate-800">
+<div class="flex items-center gap-4">
+<h1 class="text-[1.0rem] font-semibold text-[#37352F] dark:text-white tracking-tight">Agent Workspace</h1>
+<div class="h-4 w-px bg-[#37352F]/10"></div>
+<div class="flex items-center gap-2 text-[#37352F]/40">
+<span class="text-sm font-medium">Curriculum Analysis</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative flex items-center bg-[#F7F6F3] rounded-md px-3 py-1.5 w-64">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-[0.875rem] w-full text-[#37352F]" placeholder="Search workspace..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1.5 text-[#37352F]/60 hover:text-[#37352F] transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-1.5 text-[#37352F]/60 hover:text-[#37352F] transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="pt-14 ml-[56px] h-screen flex">
+<!-- Left Column: Chat Workspace (40%) -->
+<section class="w-[40%] flex flex-col h-full bg-white relative">
+<!-- Task Type Header -->
+<div class="px-6 py-4 flex items-center justify-between border-b border-[#37352f0d]">
+<div class="flex items-center gap-2 bg-blue-50 text-[#2383E2] px-3 py-1 rounded-full border border-blue-100">
+<span class="material-symbols-outlined text-[16px]" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-[0.75rem] font-semibold tracking-wide uppercase">Rubric Generation</span>
+</div>
+<button class="text-[#37352F]/40 hover:text-[#37352F]">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<!-- Chat Scrollable Area -->
+<div class="flex-1 overflow-y-auto px-6 py-8 custom-scrollbar space-y-8">
+<!-- User Message -->
+<div class="flex flex-col items-end">
+<div class="max-w-[85%] bg-[#F7F6F3] p-4 rounded-2xl rounded-tr-none text-[#37352F] text-[0.875rem] leading-[1.6]">
+                        Can you create a high-level rubric for a 10th-grade persuasive essay? I need it focused on critical thinking, structural integrity, and citation accuracy. Use a 4-point scale.
+                    </div>
+<span class="text-[0.6875rem] text-[#37352F]/40 mt-2 font-medium">Just now</span>
+</div>
+<!-- Assistant Message -->
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 border border-[#37352f1a]">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]" data-icon="smart_toy">smart_toy</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="text-[#37352F] text-[0.875rem] leading-[1.6]">
+                            Certainly. I've drafted a persuasive essay rubric centered on those specific pillars. I've optimized the descriptors for 10th-grade developmental benchmarks. You can review the structure in the preview pane to the right.
+                        </div>
+<div class="mt-4 p-4 border border-[#37352f0d] rounded-xl flex items-center justify-between bg-white">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600" data-icon="task_alt">task_alt</span>
+<span class="text-[0.8125rem] font-medium">Rubric Draft v1.0 Generated</span>
+</div>
+<button class="text-[0.8125rem] text-[#2383E2] font-semibold">View Details</button>
+</div>
+<span class="text-[0.6875rem] text-[#37352F]/40 mt-2 font-medium">Assistant · 1 min ago</span>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-col items-end">
+<div class="max-w-[85%] bg-[#F7F6F3] p-4 rounded-2xl rounded-tr-none text-[#37352F] text-[0.875rem] leading-[1.6]">
+                        This looks good, but let's make the "Critical Thinking" criteria more rigorous. Shift the 4-point descriptor to include identifying counter-arguments.
+                    </div>
+<span class="text-[0.6875rem] text-[#37352F]/40 mt-2 font-medium">45s ago</span>
+</div>
+</div>
+<!-- Fixed Input Bar -->
+<div class="p-6 bg-white border-t border-[#37352f0d]">
+<div class="flex gap-2 mb-3">
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#F7F6F3] hover:bg-[#37352f0d] text-[#37352F] text-[0.75rem] font-semibold rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-[16px]" data-icon="refresh">refresh</span>
+                        Regenerate
+                    </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#F7F6F3] hover:bg-[#37352f0d] text-[#37352F] text-[0.75rem] font-semibold rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-[16px]" data-icon="file_download">file_download</span>
+                        Export
+                    </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#F7F6F3] hover:bg-[#37352f0d] text-[#37352F] text-[0.75rem] font-semibold rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-[16px]" data-icon="edit">edit</span>
+                        Edit
+                    </button>
+</div>
+<div class="relative">
+<textarea class="w-full bg-[#F7F6F3] border-none rounded-xl p-4 pr-12 text-[0.875rem] focus:ring-1 focus:ring-[#37352f1a] resize-none min-h-[50px] custom-scrollbar" placeholder="Ask Deskmate to refine or iterate..." rows="1"></textarea>
+<button class="absolute right-3 bottom-3 w-8 h-8 bg-[#37352F] text-white rounded-lg flex items-center justify-center hover:bg-[#55524c] transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_upward">arrow_upward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Column: Document Preview (60%) -->
+<section class="w-[60%] bg-[#F7F6F3] border-l border-[#37352f0d] flex flex-col h-full overflow-hidden">
+<!-- Preview Toolbar -->
+<div class="h-14 bg-white px-8 flex items-center justify-between border-b border-[#37352f0d] shrink-0">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#37352F]/40" data-icon="description">description</span>
+<span class="text-[0.875rem] font-semibold text-[#37352F]">Persuasive Essay Rubric (10th Grade)</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-3 py-1.5 text-[0.8125rem] font-semibold text-[#37352F] hover:bg-[#F7F6F3] rounded-md transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="share">share</span>
+                        Share
+                    </button>
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-[#37352F] text-white text-[0.8125rem] font-semibold rounded-md hover:bg-[#55524c] transition-colors">
+                            Export
+                            <span class="material-symbols-outlined text-[18px]" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Preview Canvas (Notion Aesthetic) -->
+<div class="flex-1 overflow-y-auto custom-scrollbar">
+<div class="max-w-[800px] mx-auto my-12 bg-white shadow-xs min-h-screen p-16 rounded-sm">
+<!-- Document Header -->
+<div class="mb-12">
+<div class="flex items-center gap-2 text-[#37352F]/40 mb-4">
+<span class="text-[0.75rem] font-medium tracking-widest uppercase">Rubric v1.0</span>
+</div>
+<h2 class="text-[1.75rem] font-bold text-[#37352F] tracking-tight leading-tight">Persuasive Essay &amp; Rhetorical Analysis Rubric</h2>
+<div class="mt-6 flex items-center gap-4 text-[0.875rem] text-[#37352F]/60">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="person">person</span>
+                                10th Grade Humanities
+                            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="calendar_today">calendar_today</span>
+                                May 2024
+                            </div>
+</div>
+</div>
+<!-- Rubric Table -->
+<div class="overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F7F6F3]">
+<th class="p-4 border border-[#37352f14] text-[0.75rem] font-bold uppercase tracking-wider w-[20%] text-[#37352F]/60">Criteria</th>
+<th class="p-4 border border-[#37352f14] text-[0.75rem] font-bold uppercase tracking-wider text-[#37352F]/60 text-center">Exemplary (4)</th>
+<th class="p-4 border border-[#37352f14] text-[0.75rem] font-bold uppercase tracking-wider text-[#37352F]/60 text-center">Proficient (3)</th>
+<th class="p-4 border border-[#37352f14] text-[0.75rem] font-bold uppercase tracking-wider text-[#37352F]/60 text-center">Developing (2)</th>
+</tr>
+</thead>
+<tbody class="text-[0.875rem] leading-[1.6]">
+<tr>
+<td class="p-4 border border-[#37352f14] font-bold text-[#37352F] align-top bg-[#F7F6F3]/50">Critical Thinking</td>
+<td class="p-4 border border-[#37352f14] align-top">Advanced analysis of counter-arguments; utilizes high-level synthesis of disparate sources.</td>
+<td class="p-4 border border-[#37352f14] align-top">Clear position with logical support; acknowledges opposing views with moderate depth.</td>
+<td class="p-4 border border-[#37352f14] align-top">Position is identifiable but support is inconsistent or lacks nuance.</td>
+</tr>
+<tr>
+<td class="p-4 border border-[#37352f14] font-bold text-[#37352F] align-top bg-[#F7F6F3]/50">Structural Integrity</td>
+<td class="p-4 border border-[#37352f14] align-top">Seamless transitions; compelling introduction and a conclusion that resonates.</td>
+<td class="p-4 border border-[#37352f14] align-top">Logical flow of ideas; consistent use of paragraphing and signposting.</td>
+<td class="p-4 border border-[#37352f14] align-top">Structure is apparent but transitions between ideas feel forced or abrupt.</td>
+</tr>
+<tr>
+<td class="p-4 border border-[#37352f14] font-bold text-[#37352F] align-top bg-[#F7F6F3]/50">Citation Accuracy</td>
+<td class="p-4 border border-[#37352f14] align-top">Flawless MLA/APA formatting throughout; diverse selection of peer-reviewed sources.</td>
+<td class="p-4 border border-[#37352f14] align-top">Consistent formatting with minor errors; primary sources are appropriately cited.</td>
+<td class="p-4 border border-[#37352f14] align-top">Citations are present but inconsistent in format; limited source variety.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Editorial Notes Area -->
+<div class="mt-12 p-8 border-l-4 border-[#2383E2] bg-blue-50/30">
+<h4 class="text-[1rem] font-semibold text-[#37352F] mb-2">Internal Editor's Note</h4>
+<p class="text-[0.875rem] text-[#37352F]/80 italic">
+                            "This rubric emphasizes the rhetorical triangle (Ethos, Pathos, Logos) in alignment with Common Core State Standards for ELA Grade 10. The 'Critical Thinking' weight has been adjusted per the user's recent request for higher rigor."
+                        </p>
+</div>
+<!-- Footer Content -->
+<div class="mt-20 pt-8 border-t border-[#37352f0d]">
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h5 class="text-[0.6875rem] font-bold uppercase tracking-widest text-[#37352F]/40 mb-3">AI Model Metadata</h5>
+<ul class="text-[0.75rem] text-[#37352F]/60 space-y-1">
+<li>Model: Deskmate-L-3.1</li>
+<li>Temperature: 0.2 (Precision)</li>
+<li>Tokens: 842</li>
+</ul>
+</div>
+<div class="text-right flex flex-col items-end">
+<img alt="Official Stamp" class="w-12 h-12 opacity-20 grayscale mb-2" data-alt="Official digital stamp watermark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALDfIscW0L7EtPt3GT2cM4bZVb5tuLDKwV-n8tcac7w4hZSj3PZfk-eOMT1r3Y2M6dr4MSs_N0Zw4DstIM-a5rz_pYBA5Jdku758L1JXy43OGsZ5aAxgLlQKExcpw4QAJfhNnrS_MbZw90uzTlIIl5bxLaBZKa9UWgaP-3JsluEUsVDLhIQpUPSoVpvejoBZysoDdoOOTxtJ6JvO9Qva6mKFsRg8jRaphM5ohOFx2sP0n5MjchZJumlararckJlG8dFXsw8Fk-hA"/>
+<span class="text-[0.75rem] font-medium text-[#37352F]/40">Verified by Deskmate Editorial</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
+
+<!-- Question Bank -->

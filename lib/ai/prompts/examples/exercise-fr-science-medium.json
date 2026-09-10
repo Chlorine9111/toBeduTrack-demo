@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "subject": "science",
+  "exerciseType": "FR",
+  "difficultyLabel": "medium",
+  "description": "科学学科 FR 静态 fallback 示例（medium）",
+  "examples": [
+    {
+      "label": "科学 FR medium：温度与化学平衡",
+      "block": {
+        "questionText": "The equilibrium system $N_2O_4(g) \\rightleftharpoons 2NO_2(g)$ is endothermic in the forward direction. $NO_2$ is brown and $N_2O_4$ is colorless.\\n(a) Predict what happens to the color of the mixture when temperature increases.\\n(b) Use Le Chatelier's principle to explain the equilibrium shift.\\n(c) State one observation that would show a new equilibrium has been reached.",
+        "type": "FR",
+        "questionType": "FRQ",
+        "difficulty": 2,
+        "difficultyLabel": "medium",
+        "topicId": "science-chemical-equilibrium-temperature",
+        "loIds": ["SCI-CHEM-3"],
+        "ekIds": ["SCI-CHEM-3.1"],
+        "parts": {
+          "a": { "prompt": "Predict the color change.", "points": 1 },
+          "b": { "prompt": "Explain the shift using Le Chatelier's principle.", "points": 3 },
+          "c": { "prompt": "State one sign of a new equilibrium.", "points": 1 }
+        },
+        "totalPoints": 5,
+        "correctAnswer": "(a) The mixture becomes darker brown. (b) Increasing temperature favors the endothermic forward reaction, producing more $NO_2$. (c) A new equilibrium is reached when the color stops changing and remains constant.",
+        "solutionSteps": "Part (a): The mixture becomes darker brown because the concentration of brown $NO_2$ increases.\\nPart (b): By Le Chatelier's principle, adding heat favors the endothermic direction. Since the forward reaction is endothermic, the system shifts right, converting more $N_2O_4$ into $NO_2$.\\nPart (c): One valid observation is that the color intensity stops changing over time, indicating the forward and reverse reaction rates have become equal again.",
+        "commonMistakes": [
+          "Reversing the direction of the equilibrium shift when heat is added.",
+          "Describing equilibrium as a complete stop rather than equal forward and reverse rates.",
+          "Giving an observation that does not actually indicate the system has stabilized."
+        ]
+      }
+    }
+  ]
+}

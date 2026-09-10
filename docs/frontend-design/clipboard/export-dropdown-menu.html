@@ -1,0 +1,283 @@
+<!-- Export Dropdown Menu -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dim": "#55524c",
+              "tertiary": "#5e5f5d",
+              "error-container": "#fe8b70",
+              "surface-container-low": "#f9f3e7",
+              "surface-dim": "#e1dac3",
+              "on-tertiary-fixed": "#494a48",
+              "on-secondary-fixed": "#004077",
+              "primary-fixed": "#e7e2d9",
+              "on-surface-variant": "#635f4f",
+              "error": "#9e422c",
+              "on-error": "#fff7f6",
+              "inverse-surface": "#0f0e09",
+              "tertiary-container": "#f4f3f0",
+              "surface": "#fef9ef",
+              "outline-solid": "#7f7b6a",
+              "secondary-fixed-dim": "#bcd6ff",
+              "on-error-container": "#742410",
+              "tertiary-dim": "#525351",
+              "secondary": "#0060ae",
+              "on-tertiary-fixed-variant": "#666664",
+              "primary-fixed-dim": "#d9d4cb",
+              "inverse-on-surface": "#a09c95",
+              "primary-container": "#e7e2d9",
+              "on-primary": "#fdf7ee",
+              "background": "#fef9ef",
+              "surface-bright": "#fef9ef",
+              "outline-variant": "#b8b29f",
+              "secondary-dim": "#005499",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-container": "#5b5c5a",
+              "surface-variant": "#e9e2ce",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d4e3ff",
+              "inverse-primary": "#fef9ef",
+              "on-surface": "#363225",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-container": "#f4eddf",
+              "on-tertiary": "#faf9f6",
+              "on-primary-container": "#54514b",
+              "on-secondary-container": "#005397",
+              "on-secondary": "#f8f8ff",
+              "on-background": "#363225",
+              "surface-container-highest": "#e9e2ce",
+              "on-primary-fixed": "#413f39",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-primary-fixed-variant": "#5e5b54",
+              "tertiary-fixed": "#f4f3f0",
+              "surface-container-high": "#eee8d6",
+              "error-dim": "#5c1202",
+              "surface-tint": "#615e57",
+              "primary": "#615e57"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+            font-size: 18px;
+        }
+        .cloud-shadow {
+            box-shadow: 0px 4px 20px rgba(55, 53, 47, 0.04);
+        }
+        .ghost-border {
+            border: 1px solid rgba(55, 53, 47, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Sidebar Shell -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col py-4 px-2 bg-[#F7F6F3] dark:bg-stone-900 font-['Inter'] text-sm antialiased h-screen border-r border-transparent w-[56px] hover:w-[240px] transition-all duration-300 ease-in-out overflow-hidden">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">edit_note</span>
+</div>
+<span class="text-lg font-semibold text-[#37352F] dark:text-stone-100 tracking-tight whitespace-nowrap">Deskmate</span>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">search</span>
+<span class="whitespace-nowrap">Search</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">inbox</span>
+<span class="whitespace-nowrap">Inbox</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-stone-800 text-[#2383E2] font-medium rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="whitespace-nowrap">Drafts</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">auto_awesome_motion</span>
+<span class="whitespace-nowrap">Templates</span>
+</div>
+</nav>
+<div class="mt-auto flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">history</span>
+<span class="whitespace-nowrap">History</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#37352F]/60 dark:text-stone-400 hover:text-[#37352F] hover:bg-stone-200/50 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<span class="whitespace-nowrap">Settings</span>
+</div>
+</div>
+</aside>
+<!-- Top App Bar Shell -->
+<header class="fixed top-0 right-0 left-[56px] z-30 flex justify-between items-center px-6 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md h-14 font-['Inter'] text-[0.875rem] font-medium">
+<div class="flex items-center gap-6">
+<span class="text-xl font-bold text-[#37352F] dark:text-stone-100">Drafts</span>
+<div class="flex gap-4">
+<span class="text-[#37352F]/70 dark:text-stone-400 hover:text-[#37352F] cursor-pointer">Templates</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#37352F]/70 dark:text-stone-400 hover:text-[#37352F] font-medium transition-opacity">Share</button>
+<div class="relative inline-block">
+<!-- Trigger Button for the Dropdown -->
+<button class="flex items-center gap-2 px-3 py-1.5 bg-primary text-white rounded-lg font-medium hover:bg-primary-dim transition-colors">
+                    Export
+                    <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<!-- EXPORT DROPDOWN MENU (The Task Content) -->
+<div class="absolute right-0 mt-2 w-[240px] bg-white rounded-lg cloud-shadow ghost-border z-50 p-1 flex flex-col animate-in fade-in slide-in-from-top-2 duration-200">
+<!-- Section: Format -->
+<div class="py-2 px-2">
+<span class="block px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant/50 mb-1">Format</span>
+<div class="flex flex-col gap-0.5">
+<button class="flex items-center gap-3 w-full px-2 py-1.5 text-sm text-on-surface hover:bg-surface-container transition-colors rounded">
+<span class="material-symbols-outlined text-on-surface-variant">picture_as_pdf</span>
+                                PDF
+                            </button>
+<button class="flex items-center gap-3 w-full px-2 py-1.5 text-sm text-on-surface hover:bg-surface-container transition-colors rounded">
+<span class="material-symbols-outlined text-on-surface-variant">description</span>
+                                DOCX
+                            </button>
+<button class="flex items-center gap-3 w-full px-2 py-1.5 text-sm text-on-surface hover:bg-surface-container transition-colors rounded">
+<span class="material-symbols-outlined text-on-surface-variant">print</span>
+                                Print
+                            </button>
+<button class="flex items-center gap-3 w-full px-2 py-1.5 text-sm text-on-surface hover:bg-surface-container transition-colors rounded">
+<span class="material-symbols-outlined text-on-surface-variant">content_copy</span>
+                                Copy to Clipboard
+                            </button>
+</div>
+</div>
+<div class="h-px bg-surface-container mx-2"></div>
+<!-- Section: Version -->
+<div class="py-2 px-2">
+<span class="block px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant/50 mb-1">Version</span>
+<div class="flex flex-col gap-0.5">
+<button class="flex items-center justify-between w-full px-2 py-1.5 text-sm text-on-surface hover:bg-surface-container transition-colors rounded">
+<span>Teacher</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<button class="flex items-center justify-between w-full px-2 py-1.5 text-sm text-on-surface hover:bg-surface-container transition-colors rounded">
+<span>Student</span>
+</button>
+<button class="flex items-center justify-between w-full px-2 py-1.5 text-sm text-on-surface hover:bg-surface-container transition-colors rounded">
+<span>Classroom</span>
+</button>
+</div>
+</div>
+<div class="h-px bg-surface-container mx-2"></div>
+<!-- Section: Settings -->
+<div class="py-2 px-2">
+<span class="block px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant/50 mb-2">Settings</span>
+<div class="px-2 mb-3">
+<div class="text-[11px] text-on-surface-variant mb-1.5">Paper Size</div>
+<div class="flex p-0.5 bg-surface-container-high rounded-lg">
+<button class="flex-1 py-1 text-[11px] font-medium bg-white rounded-md cloud-shadow">A4</button>
+<button class="flex-1 py-1 text-[11px] font-medium text-on-surface-variant/60">Letter</button>
+</div>
+</div>
+<div class="px-2 mb-2">
+<div class="text-[11px] text-on-surface-variant mb-1.5">Layout</div>
+<div class="flex p-0.5 bg-surface-container-high rounded-lg">
+<button class="flex-1 py-1 text-[11px] font-medium bg-white rounded-md cloud-shadow">Standard</button>
+<button class="flex-1 py-1 text-[11px] font-medium text-on-surface-variant/60">Compact</button>
+</div>
+</div>
+</div>
+<!-- Bottom CTA -->
+<div class="p-2 pt-0">
+<button class="w-full py-2 bg-on-surface text-white rounded-lg text-sm font-semibold hover:bg-primary-dim transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                            Export
+                        </button>
+</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" data-alt="Teacher profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOhQlLCn_uhYxhycwmdwnsou0SoSKjxpsCLq1ccyydfjfXlF1oE5iZ35F76WwBsxQqACrDAtLWZw3y36CEXFNXPl9L1yjDgd4GembVZx8GtKkGctjeAQq4ogWTPnuUGoxKpmdGzqj3X_0wjuAq6uls22_eTMIwy8S-j_0sSvOYsOSQRQHI1Aw-LUBOrgTLfkvmDQvPbScIVX9LkZfLfRXaB-ND4dD7aJgjdTYlPBoe-oBk-yJGuhdsM7aKo2JLqW4ZIzMvqxJ7nA"/>
+</div>
+</div>
+</header>
+<!-- Main Content Area (Background Context) -->
+<main class="pt-14 ml-[56px] min-h-screen bg-surface">
+<div class="max-w-4xl mx-auto px-16 py-20">
+<!-- Editorial Title Section -->
+<div class="mb-12">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-0.5 bg-[rgba(221,235,241,0.5)] text-[#2383E2] text-xs font-medium rounded-md">Draft</span>
+<span class="text-on-surface-variant/40 text-xs tracking-widest uppercase">Last edited 2h ago</span>
+</div>
+<h1 class="font-headline text-[3.5rem] font-bold leading-tight tracking-tight text-on-surface mb-6">
+                    Curating the Modern <br/>Classroom Experience
+                </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl font-light italic">
+                    A comprehensive framework for designing editorial-first educational materials that prioritize digital calm and focus.
+                </p>
+</div>
+<!-- Bento Content Grid -->
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-8 p-8 bg-surface-container-low rounded-xl min-h-[400px]">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-xl font-semibold">Content Architecture</h2>
+<span class="material-symbols-outlined text-on-surface-variant/40">more_horiz</span>
+</div>
+<div class="space-y-6">
+<div class="h-4 w-3/4 bg-on-surface/5 rounded-full"></div>
+<div class="h-4 w-full bg-on-surface/5 rounded-full"></div>
+<div class="h-4 w-5/6 bg-on-surface/5 rounded-full"></div>
+<div class="h-4 w-2/3 bg-on-surface/5 rounded-full"></div>
+<div class="pt-4 grid grid-cols-2 gap-4">
+<div class="aspect-video rounded-lg bg-white/50 border border-transparent flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant/20 text-4xl">image</span>
+</div>
+<div class="aspect-video rounded-lg bg-white/50 border border-transparent flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant/20 text-4xl">auto_graph</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-4 flex flex-col gap-6">
+<div class="p-6 bg-[rgba(234,228,242,0.5)] rounded-xl flex-1 flex flex-col justify-between">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[#9065B0]">school</span>
+</div>
+<div>
+<h3 class="font-semibold text-[#9065B0] mb-1">Education Strategy</h3>
+<p class="text-xs text-[#9065B0]/70 leading-normal">Optimizing lesson flow for high-engagement sessions.</p>
+</div>
+</div>
+<div class="p-6 bg-[rgba(221,237,234,0.5)] rounded-xl flex-1 flex flex-col justify-between">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[#4D7C0F]">psychology</span>
+</div>
+<div>
+<h3 class="font-semibold text-[#4D7C0F] mb-1">Cognitive Load</h3>
+<p class="text-xs text-[#4D7C0F]/70 leading-normal">Reducing visual noise to increase student retention.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
+
+<!-- Agent History Panel -->

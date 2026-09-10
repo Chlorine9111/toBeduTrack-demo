@@ -1,0 +1,229 @@
+<!-- Settings | Profile -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - Deskmate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#525351",
+              "on-secondary-container": "#005397",
+              "surface-container-high": "#eee8d6",
+              "surface": "#fef9ef",
+              "error-dim": "#5c1202",
+              "secondary-fixed-dim": "#bcd6ff",
+              "primary-dim": "#55524c",
+              "on-primary": "#fdf7ee",
+              "surface-container-low": "#f9f3e7",
+              "inverse-on-surface": "#a09c95",
+              "inverse-surface": "#0f0e09",
+              "on-tertiary-fixed-variant": "#666664",
+              "on-secondary-fixed": "#004077",
+              "primary-fixed-dim": "#d9d4cb",
+              "on-surface-variant": "#635f4f",
+              "error": "#9e422c",
+              "on-tertiary": "#faf9f6",
+              "primary-fixed": "#e7e2d9",
+              "secondary": "#2383E2",
+              "on-primary-container": "#54514b",
+              "outline-variant": "#b8b29f",
+              "inverse-primary": "#fef9ef",
+              "on-primary-fixed": "#413f39",
+              "secondary-dim": "#005499",
+              "surface-dim": "#e1dac3",
+              "surface-container-highest": "#e9e2ce",
+              "on-tertiary-fixed": "#494a48",
+              "surface-tint": "#615e57",
+              "error-container": "#fe8b70",
+              "primary-container": "#e7e2d9",
+              "outline-solid": "#7f7b6a",
+              "on-surface": "#363225",
+              "surface-variant": "#e9e2ce",
+              "on-secondary": "#f8f8ff",
+              "on-secondary-fixed-variant": "#005ca8",
+              "surface-container": "#f4eddf",
+              "on-error": "#fff7f6",
+              "on-primary-fixed-variant": "#5e5b54",
+              "background": "#fef9ef",
+              "tertiary": "#5e5f5d",
+              "on-tertiary-container": "#5b5c5a",
+              "surface-bright": "#fef9ef",
+              "tertiary-fixed-dim": "#e6e5e2",
+              "on-background": "#363225",
+              "tertiary-fixed": "#f4f3f0",
+              "secondary-container": "#d4e3ff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#f4f3f0",
+              "secondary-fixed": "#d4e3ff",
+              "primary": "#615e57",
+              "on-error-container": "#742410"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #37352F; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-[#37352F] antialiased">
+<div class="flex h-screen overflow-hidden">
+<!-- Main Sidebar Anchor -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col py-6 px-3 w-60 bg-[#F7F6F3] dark:bg-zinc-900 transition-all duration-300 ease-in-out">
+<div class="px-3 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#37352F] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm" data-icon="token">token</span>
+</div>
+<div>
+<h1 class="text-lg font-semibold text-[#37352F] dark:text-zinc-100 leading-tight">Deskmate</h1>
+<p class="text-[0.6875rem] font-medium tracking-wide uppercase text-[#37352F]/40 dark:text-zinc-500">Product Workspace</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="smart_toy">smart_toy</span>
+<span class="text-[0.875rem]">Agent Workspace</span>
+</div>
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_library">local_library</span>
+<span class="text-[0.875rem]">Library</span>
+</div>
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="quiz">quiz</span>
+<span class="text-[0.875rem]">Question Bank</span>
+</div>
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="grading">grading</span>
+<span class="text-[0.875rem]">Grading</span>
+</div>
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit_note">edit_note</span>
+<span class="text-[0.875rem]">Lesson Studio</span>
+</div>
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard_customize">dashboard_customize</span>
+<span class="text-[0.875rem]">Templates</span>
+</div>
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="chat">chat</span>
+<span class="text-[0.875rem]">WeChat Editor</span>
+</div>
+</nav>
+<div class="mt-auto pt-6 space-y-1">
+<div class="px-3 py-2 text-[#2383E2] font-semibold bg-[#FFFFFF] dark:bg-zinc-800 rounded-lg flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span class="text-[0.875rem]">Settings</span>
+</div>
+<div class="px-3 py-2 text-[#37352F]/60 dark:text-zinc-400 hover:text-[#37352F] hover:bg-[#FFFFFF]/50 rounded-lg transition-colors flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="account_circle">account_circle</span>
+<span class="text-[0.875rem]">User Profile</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-60 flex bg-white overflow-y-auto no-scrollbar">
+<!-- Settings Sub-Navigation -->
+<nav class="w-[200px] pt-20 px-4 sticky top-0 h-screen">
+<h2 class="px-3 mb-6 text-[0.6875rem] font-bold tracking-widest text-[#37352F]/30 uppercase">Account Settings</h2>
+<ul class="space-y-0.5">
+<li><a class="block px-3 py-1.5 text-[0.875rem] font-semibold text-[#37352F] bg-[#F7F6F3] rounded-lg" href="#">Profile</a></li>
+<li><a class="block px-3 py-1.5 text-[0.875rem] text-[#37352F]/60 hover:bg-[#F7F6F3] rounded-lg transition-colors" href="#">Account</a></li>
+<li><a class="block px-3 py-1.5 text-[0.875rem] text-[#37352F]/60 hover:bg-[#F7F6F3] rounded-lg transition-colors" href="#">Preferences</a></li>
+<li><a class="block px-3 py-1.5 text-[0.875rem] text-[#37352F]/60 hover:bg-[#F7F6F3] rounded-lg transition-colors" href="#">Subscription</a></li>
+<li><a class="block px-3 py-1.5 text-[0.875rem] text-[#37352F]/60 hover:bg-[#F7F6F3] rounded-lg transition-colors" href="#">Security</a></li>
+<li><a class="block px-3 py-1.5 text-[0.875rem] text-[#37352F]/60 hover:bg-[#F7F6F3] rounded-lg transition-colors" href="#">API Keys</a></li>
+</ul>
+</nav>
+<!-- Form Area -->
+<div class="flex-1 pt-20 pb-32 pl-10">
+<div class="max-w-[560px]">
+<header class="mb-10">
+<h1 class="text-[1.75rem] font-semibold tracking-tight text-[#37352F]">My Profile</h1>
+<p class="text-[#37352F]/60 mt-1 text-[0.875rem]">Manage your public presence and account information.</p>
+</header>
+<section class="mb-10">
+<div class="flex items-center gap-6">
+<img alt="User avatar" class="w-16 h-16 rounded-full object-cover ring-2 ring-white" data-alt="Professional portrait of a male educator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxshRm6mHLFWCghRa57uyeUCGJFyJpmu8OsBKeWfAn5McC_Pr6BhdD0S4COx6u9u2tbuIvKZm0ggxLqDoEC5BA24RPQk3lKsbTOwdgz3XWFQ26RoC8VZeBDUTNNnwpsxSd6Tjuyxb_EUfxulnLgt0h9XvteifNwxaOL0313pWPALDKH39iZSmSku6hKURs1bwuGvW5msYZgtqgwNoursWdHPQmF5xAaO9Z8ijFPgILQTyba-blxTTyPF2g4pYPpp5XQIM6IQMAwA"/>
+<div class="space-y-1">
+<button class="text-[0.875rem] font-medium text-[#2383E2] hover:underline block">Change photo</button>
+<button class="text-[0.875rem] font-medium text-error hover:underline block">Remove</button>
+</div>
+</div>
+</section>
+<form class="space-y-8">
+<!-- Display Name -->
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-wider text-[#37352F]/40 uppercase">Display name</label>
+<input class="w-full bg-[#F7F6F3] border-none rounded-lg px-4 py-3 text-[0.875rem] focus:ring-1 focus:ring-[#2383E2] focus:bg-white transition-all text-[#37352F]" type="text" value="Julian Montgomery"/>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-wider text-[#37352F]/40 uppercase">Email address</label>
+<div class="flex items-center gap-4 bg-[#F7F6F3] rounded-lg px-4 py-3">
+<span class="text-[0.875rem] text-[#37352F]/50 flex-1">j.montgomery@university.edu</span>
+<button class="text-[0.8125rem] font-semibold text-[#2383E2] hover:underline" type="button">Change</button>
+</div>
+</div>
+<!-- Role -->
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-wider text-[#37352F]/40 uppercase">Your Role</label>
+<div class="relative">
+<select class="w-full bg-[#F7F6F3] border-none rounded-lg px-4 py-3 text-[0.875rem] appearance-none focus:ring-1 focus:ring-[#2383E2] focus:bg-white transition-all text-[#37352F]">
+<option value="teacher">Teacher</option>
+<option selected="" value="tutor">Tutor</option>
+<option value="admin">Administrator</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#37352F]/40">
+<span class="material-symbols-outlined text-sm">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Organization -->
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-wider text-[#37352F]/40 uppercase">School / Organization</label>
+<input class="w-full bg-[#F7F6F3] border-none rounded-lg px-4 py-3 text-[0.875rem] focus:ring-1 focus:ring-[#2383E2] focus:bg-white transition-all text-[#37352F]" placeholder="e.g. Stanford University" type="text"/>
+</div>
+<!-- Bio -->
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-wider text-[#37352F]/40 uppercase">Bio</label>
+<textarea class="w-full bg-[#F7F6F3] border-none rounded-lg px-4 py-3 text-[0.875rem] focus:ring-1 focus:ring-[#2383E2] focus:bg-white transition-all text-[#37352F] resize-none" placeholder="Share a brief introduction..." rows="4"></textarea>
+<p class="text-[0.75rem] text-[#37352F]/40 italic">Brief description for your workspace profile.</p>
+</div>
+<!-- Footer Actions -->
+<div class="pt-6 flex items-center gap-6">
+<button class="px-8 py-2.5 bg-[#37352F] text-white rounded-lg text-[0.875rem] font-semibold hover:bg-[#55524c] transition-colors shadow-xs active:scale-[0.98] duration-200" type="button">
+                                Save changes
+                            </button>
+<div class="flex items-center gap-2 text-[#4D7C0F]">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[0.875rem] font-medium">Saved</span>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+</body></html>
+
+<!-- Feedback Center -->

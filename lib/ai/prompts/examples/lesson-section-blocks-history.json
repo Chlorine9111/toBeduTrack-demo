@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "subject": "history",
+  "description": "历史与社会科学类（AP US History / AP World History / AP Government）教案 section block 生成的 few-shot 示例",
+  "examples": [
+    {
+      "label": "高质量 example block（史料分析 - 门罗主义）",
+      "block": {
+        "type": "example",
+        "content": {
+          "prompt": "分析以下史料：James Monroe 在 1823 年国情咨文中写道 \"The American continents...are henceforth not to be considered as subjects for future colonization by any European powers.\" 要求从来源、背景、论点、多视角四个维度进行评价。",
+          "steps": [
+            "步骤 1：来源鉴定。这段话出自 1823 年 12 月 2 日 Monroe 总统向国会发表的年度国情咨文（Annual Message to Congress）。作为总统的正式外交声明，它代表美国政府的官方立场，但不具有国际法效力——它是单方面宣言，未经任何条约或国际组织认可。",
+            "步骤 2：写作背景。1820 年代拉丁美洲掀起独立浪潮（墨西哥 1821、巴西 1822、秘鲁 1824），西班牙和法国的神圣同盟威胁要帮助西班牙恢复殖民统治。英国外交大臣 Canning 提议美英联合声明反对干预，但国务卿 John Quincy Adams 建议美国独立发声，以避免成为英国的'附庸'。",
+            "步骤 3：核心论点提取。Monroe 的声明包含两个核心原则：① 不殖民原则（Non-Colonization）——欧洲列强不得在美洲建立新殖民地；② 不干涉原则（Non-Intervention）——欧洲不得干预已独立的美洲国家。作为交换，美国承诺不干涉欧洲事务。",
+            "步骤 4：多视角评价。美国视角：Monroe Doctrine 是保护美洲独立、抵抗欧洲帝国主义的正义之举。拉美视角：美国在宣布'保护'拉美的同时，自身对拉美的干预在 19-20 世纪不断加剧（如 1898 年美西战争、Roosevelt Corollary），Doctrine 实际上成为美国霸权的法理依据。欧洲视角：1823 年的美国军事实力远不足以执行这一声明，真正阻止欧洲干预的是英国海军——Monroe Doctrine 的实际效力依赖英国默许。",
+            "步骤 5：历史意义与延续。Monroe Doctrine 定义了美国外交政策的基本框架长达一个世纪，其核心逻辑——'西半球是美国的势力范围'——延伸到了 Theodore Roosevelt 的 Big Stick Policy（1904）、冷战时期的 Cuban Missile Crisis（1962）、乃至 21 世纪对委内瑞拉的政策。它是理解美国外交的'元文件'。"
+          ]
+        }
+      }
+    },
+    {
+      "label": "高质量 paragraph block（DBQ 写作教学脚本）",
+      "block": {
+        "type": "paragraph",
+        "content": {
+          "text": "Teacher: 在投影上展示两份关于美国工业化的一手史料：① 1892 年 Andrew Carnegie 的《The Gospel of Wealth》节选（\"The man of wealth thus becoming the mere agent and trustee for his poorer brethren\"）；② 1892 年 Homestead 钢铁厂工人的罢工传单（\"We are fighting for our homes, our families, and our rights as American citizens\"）。提问：Carnegie 和工人对'财富'和'责任'的定义有什么根本分歧？Student: 先独立阅读两份史料各 2 分钟，在文本上划出关键词并在边栏写下'这份文件的作者想说服谁相信什么'。然后四人一组，两人代表 Carnegie 立场、两人代表工人立场，用 3 分钟进行迷你辩论。辩论后每人写一段 thesis statement（3-4 句），要求同时引用两份史料并明确表达自己的历史论点。Key: DBQ 的核心能力是'用多份史料构建论证'，而不是'概括每份史料说了什么'。学生必须在 thesis 中展示史料之间的张力和矛盾。Note: 对于只总结史料内容而不提出论点的学生，提供句式模板：'Although [Source A] argues..., [Source B] reveals that..., suggesting that [你的论点]。'"
+        }
+      }
+    },
+    {
+      "label": "高质量 definition block（Containment 遏制政策）",
+      "block": {
+        "type": "definition",
+        "content": {
+          "term": "Containment（遏制政策）",
+          "explanation": "定义：Containment 是冷战时期（1947-1991）美国的核心外交战略，指通过军事联盟、经济援助和政治手段阻止共产主义意识形态和苏联势力范围的进一步扩张，但不寻求推翻已有的共产主义政权。时代背景：该战略源于 1946 年美国驻苏联外交官 George Kennan 的'长电报'（Long Telegram）和 1947 年发表于《Foreign Affairs》的'X Article'。Kennan 认为苏联具有天然的扩张倾向，但可以通过'耐心而坚定的遏制'使其内部矛盾逐渐积累，最终自行瓦解。相关概念对比：Containment（遏制）vs Rollback（回推）——遏制是守势策略，接受苏联势力范围的现状并阻止其扩大；回推是攻势策略，要求主动收缩苏联影响力（如 MacArthur 主张在朝鲜战争中直取中国大陆）。Truman 和 Eisenhower 政府都选择了遏制而非回推，因为回推可能引发核战争。"
+        }
+      }
+    },
+    {
+      "label": "高质量 quiz block（因果推理 - 大萧条）",
+      "block": {
+        "type": "quiz",
+        "content": {
+          "question": "1929-1933 年美国大萧条期间，GDP 下降约 30%，失业率从 3% 飙升至 25%。以下哪项最准确地解释了经济危机从股市崩盘（1929）扩展为全面萧条的因果机制？",
+          "options": [
+            { "id": "A", "text": "银行挤兑浪潮导致信贷体系崩溃：储户恐慌取款 → 银行被迫收回贷款 → 企业资金链断裂 → 裁员减产 → 消费进一步萎缩，形成恶性循环" },
+            { "id": "B", "text": "1930 年 Smoot-Hawley 关税法案是主因：美国提高进口关税 → 贸易伙伴报复性加税 → 国际贸易崩溃 → 全球经济联动下滑" },
+            { "id": "C", "text": "股市崩盘直接摧毁了大多数美国家庭的财富，导致消费断崖式下跌" },
+            { "id": "D", "text": "联邦储备系统故意紧缩货币供应，以惩罚 1920 年代的投机行为" }
+          ],
+          "correctOptionId": "A",
+          "explanation": "A 正确：银行体系的连锁崩溃是股市暴跌转化为全面经济萧条的关键传导机制。1930-1933 年间超过 9,000 家银行倒闭（占全部银行的 40%），信贷冻结使得即使健康的企业也无法获得运营资金。B 片面：Smoot-Hawley 关税确实恶化了国际贸易（美国出口从 52 亿降至 17 亿美元），但它是加剧因素而非主因——大萧条在关税法案通过之前就已开始。C 错误：1929 年只有约 2.5% 的美国人直接持有股票，股市崩盘对大多数家庭的直接财富影响有限，其影响主要通过信心危机和银行体系间接传导。D 过于简化：美联储确实在 1928-29 年加息以抑制投机，但大萧条后其政策错误是消极不作为（未充当最后贷款人），而非'故意惩罚'。"
+        }
+      }
+    },
+    {
+      "label": "高质量 steps block（时间线与因果链构建活动）",
+      "block": {
+        "type": "steps",
+        "content": {
+          "title": "分组活动：构建'通往一战之路'的因果链",
+          "items": [
+            "[3 分钟] Teacher 在白板上画一条 1870-1914 的时间线，标出 5 个关键节点：1871 德意志统一、1882 三国同盟、1894 法俄同盟、1905 第一次摩洛哥危机、1914 萨拉热窝事件。提问：这些事件之间是'巧合'还是因果链？Student 先独立在笔记本上尝试用箭头连接这些事件。",
+            "[5 分钟] 四人小组，每组领到一张 A3 空白纸。要求在纸上重建因果链，必须在每个箭头旁写上'为什么 A 导致了 B'的一句话解释。例如：'德意志统一 → 法国感到东部威胁 → 法俄结盟'。不允许只写时间顺序，必须写因果关系。",
+            "[4 分钟] 每组把因果链贴在墙上。Teacher 带领全班走一圈，提出反驳：'如果 Bismarck 没有在 1890 年下台，三国同盟体系会不会维持和平？'——引导学生思考 contingency vs inevitability 的史学辩论。Student 在自己的因果链上用红笔标出'最脆弱的一环'——如果这个环节不发生，一战是否可以避免？",
+            "[3 分钟] 收尾：Teacher 总结两种历史解释框架——结构主义（长期趋势使战争不可避免）vs 偶然论（关键决策者的选择导致战争）。每个学生写 2-3 句话：你认为一战更接近哪种解释？用你因果链上的一个具体环节作为证据。"
+          ]
+        }
+      }
+    },
+    {
+      "label": "低质量 definition block（无史料来源、无年份、无因果链）",
+      "isNegativeExample": true,
+      "block": {
+        "type": "definition",
+        "content": {
+          "term": "Cold War（冷战）",
+          "explanation": "冷战是美国和苏联之间的对抗。两个超级大国在政治、经济、军事等方面进行了激烈的竞争。冷战对世界格局产生了深远的影响。"
+        }
+      }
+    }
+  ]
+}

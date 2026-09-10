@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "subject": "english",
+  "description": "英语语言与写作类（AP English Language / AP English Literature）教案 section block 生成的 few-shot 示例",
+  "examples": [
+    {
+      "label": "高质量 example block（修辞分析 - 演讲文本）",
+      "block": {
+        "type": "example",
+        "content": {
+          "prompt": "分析 Martin Luther King Jr.《Letter from Birmingham Jail》中以下段落的修辞策略：\"Injustice anywhere is a threat to justice everywhere. We are caught in an inescapable network of mutuality, tied in a single garment of destiny.\" 要求识别至少两种修辞手法并评价其效果。",
+          "steps": [
+            "步骤 1：识别第一个修辞手法——Antithesis（对比）。\"Injustice\" 与 \"justice\"、\"anywhere\" 与 \"everywhere\" 形成对称的反义对比。这样做的目的是：通过将不正义与正义并置，迫使读者意识到二者不可分割，一处不正义会波及全局。",
+            "步骤 2：识别第二个修辞手法——Metaphor（隐喻）。\"inescapable network of mutuality\" 把人类社会比作一张逃不掉的网，\"single garment of destiny\" 把命运比作一件共同穿着的衣服。这两个隐喻都指向同一个核心意象：人与人之间的联结不可切断。",
+            "步骤 3：分析作者意图（Purpose）。King 写这封信是回应八位白人牧师的公开信——他们认为伯明翰的抗议是'外人'多管闲事。King 用这段话直接反驳：不存在'外人'，因为不正义是一张网，所有人都在网中。这是典型的 Logos + Pathos 融合策略。",
+            "步骤 4：评价对目标读者的效果。King 的目标读者是温和派白人牧师——他们认同基督教的 brotherhood 理念。'network of mutuality' 和 'garment of destiny' 唤起的是圣经中'肢体相连'的意象，让读者在自身信仰框架内无法反驳 King 的论点。",
+            "步骤 5：总结可迁移的分析框架：修辞分析 = 识别手法（What）→ 引用文本证据（Where）→ 解释作者为什么选择这种手法（Why）→ 评价对特定读者的效果（So What）。这个 What-Where-Why-So What 框架适用于所有修辞分析题。"
+          ]
+        }
+      }
+    },
+    {
+      "label": "高质量 paragraph block（批注式阅读教学脚本）",
+      "block": {
+        "type": "paragraph",
+        "content": {
+          "text": "Teacher: 在投影上展示 George Orwell《Politics and the English Language》第二段的打印文本，预先在 \"dying metaphors\"、\"verbal false limbs\"、\"pretentious diction\" 三处用黄色高亮标出。朗读该段并在 \"dying metaphors\" 处停顿，提问：Orwell 为什么用 \"dying\" 而不是 \"dead\" 或 \"old\" 来形容这些隐喻？这个词的选择暗示了什么？Student: 先独立在自己的文本副本上用蓝色笔圈出所有 Orwell 使用的负面形容词（dying, false, pretentious），用红色笔标出他用的修辞手法（parallel structure: 三个名词短语并列），用时 2 分钟。随后与同桌交换标注结果，讨论 30 秒：你们标注了相同的词吗？有没有遗漏？Key: 学生必须区分'Orwell 在描述什么现象'（内容层）和'Orwell 用了什么手法来描述'（修辞层），这是 AP 英语分析的核心能力。Note: 对于直接跳到修辞手法而忽略语境理解的学生，先要求他们用一句话总结 Orwell 在这段话里要表达什么观点，再分析怎么表达的。"
+        }
+      }
+    },
+    {
+      "label": "高质量 definition block（Anaphora 定义）",
+      "block": {
+        "type": "definition",
+        "content": {
+          "term": "Anaphora（首语重复）",
+          "explanation": "定义：Anaphora 是一种修辞手法，指在连续的句子或从句开头重复使用相同的词或短语，以产生强调和节奏效果。文本示例：Churchill 在 1940 年的演讲中写道 \"We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills.\" ——\"We shall fight\" 重复了四次，每次后面跟不同的地点，形成一种不可阻挡的累积气势，传达出绝不投降的决心。术语辨析：Anaphora（首语重复）vs Epistrophe（尾语重复）——Anaphora 重复的是句首词语，Epistrophe 重复的是句尾词语。例如 Lincoln 的 \"of the people, by the people, for the people\" 是 Epistrophe，因为 \"the people\" 出现在每个短语的末尾。两者都能产生节奏感和强调效果，但 Anaphora 更适合传达坚定决心，Epistrophe 更适合强化核心概念。"
+        }
+      }
+    },
+    {
+      "label": "高质量 quiz block（基于文本的修辞识别题）",
+      "block": {
+        "type": "quiz",
+        "content": {
+          "question": "阅读以下段落，然后回答问题：\n\"The city was asleep. The streets were asleep. The lights were asleep. Only the river moved, dark and silent, carrying the weight of a thousand unspoken stories.\"\n\n作者在前三句中使用的主要修辞策略是什么？它如何为第四句的转折做铺垫？",
+          "options": [
+            { "id": "A", "text": "Anaphora + Personification：通过重复 \"was/were asleep\" 的结构建立静态画面，使第四句中河流的动态（\"moved\"）形成鲜明对比" },
+            { "id": "B", "text": "Metaphor + Hyperbole：将城市比作沉睡的人，夸张地说 \"a thousand stories\"，营造神秘氛围" },
+            { "id": "C", "text": "Parallelism + Simile：三句平行结构如同催眠曲，暗示城市像婴儿一样安睡" },
+            { "id": "D", "text": "Repetition + Alliteration：重复 \"asleep\" 并使用头韵 \"dark and silent\"，制造声音效果" }
+          ],
+          "correctOptionId": "A",
+          "explanation": "A 正确：前三句严格符合 Anaphora（句式结构重复）和 Personification（把非人事物赋予人的状态'asleep'）的定义。更关键的是功能分析——三句静态描写建立了一个完全静止的画面，使第四句的 'Only the river moved' 产生强烈的反差效果。B 错误：没有 simile 的标志词（like/as），且 'a thousand stories' 更接近 hyperbole 但不是主要手法。C 错误：文中没有使用 simile（无 like/as）。D 错误：'dark and silent' 不构成 alliteration（首字母不同），且 repetition 的说法过于笼统，未识别出具体手法名称 Anaphora。"
+        }
+      }
+    },
+    {
+      "label": "高质量 callout block（think 类型 - 作者选词分析）",
+      "block": {
+        "type": "callout",
+        "subtype": "think",
+        "content": {
+          "title": "思考：为什么 Orwell 在《1984》中选择 \"doublethink\" 而不是 \"contradiction\"？",
+          "text": "\"Doublethink\" 是 Orwell 的造词（neologism），意思是同时接受两个矛盾的信念。如果他直接用 \"contradiction\"，读者会用日常经验去理解——矛盾是可以被发现和纠正的。但 \"doublethink\" 暗示这不是一个错误，而是一种被训练出来的能力——极权社会要求公民主动拥抱矛盾并视为正常。请思考：造词这种策略在非虚构写作中也能用吗？找一个你熟悉的当代例子（如 'greenwashing'、'mansplaining'），分析它的造词逻辑和修辞效果。"
+        }
+      }
+    },
+    {
+      "label": "低质量 example block（无原文引用、分析空泛、步骤不足）",
+      "isNegativeExample": true,
+      "block": {
+        "type": "example",
+        "content": {
+          "prompt": "分析一篇文章的修辞手法。",
+          "steps": [
+            "步骤 1：这篇文章用了很多修辞手法，写得很有感染力。",
+            "步骤 2：作者的语言很生动，表达了深刻的思想。",
+            "步骤 3：总结一下，这篇文章的修辞手法运用得很成功。"
+          ]
+        }
+      }
+    }
+  ]
+}

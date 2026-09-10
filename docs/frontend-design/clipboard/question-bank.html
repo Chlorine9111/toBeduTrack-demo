@@ -1,0 +1,406 @@
+<!-- Question Bank -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Question Bank | Deskmate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error-container": "#fe8b70",
+                        "outline-variant": "#b8b29f",
+                        "secondary-container": "#d4e3ff",
+                        "primary": "#615e57",
+                        "on-tertiary": "#faf9f6",
+                        "primary-fixed": "#e7e2d9",
+                        "on-primary-container": "#54514b",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-error": "#fff7f6",
+                        "tertiary": "#5e5f5d",
+                        "secondary-dim": "#005499",
+                        "secondary": "#0060ae",
+                        "inverse-surface": "#0f0e09",
+                        "on-secondary-fixed-variant": "#005ca8",
+                        "surface-tint": "#615e57",
+                        "inverse-on-surface": "#a09c95",
+                        "surface-container-highest": "#e9e2ce",
+                        "on-secondary-fixed": "#004077",
+                        "surface-container": "#f4eddf",
+                        "on-secondary": "#f8f8ff",
+                        "surface-variant": "#e9e2ce",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fef9ef",
+                        "tertiary-container": "#f4f3f0",
+                        "on-primary": "#fdf7ee",
+                        "tertiary-dim": "#525351",
+                        "on-tertiary-container": "#5b5c5a",
+                        "on-tertiary-fixed": "#494a48",
+                        "on-error-container": "#742410",
+                        "tertiary-fixed": "#f4f3f0",
+                        "surface-container-high": "#eee8d6",
+                        "primary-fixed-dim": "#d9d4cb",
+                        "on-surface-variant": "#635f4f",
+                        "error-dim": "#5c1202",
+                        "surface-bright": "#fef9ef",
+                        "error": "#9e422c",
+                        "background": "#fef9ef",
+                        "secondary-fixed-dim": "#bcd6ff",
+                        "outline-solid": "#7f7b6a",
+                        "on-primary-fixed-variant": "#5e5b54",
+                        "on-primary-fixed": "#413f39",
+                        "on-background": "#363225",
+                        "inverse-primary": "#fef9ef",
+                        "surface-dim": "#e1dac3",
+                        "primary-dim": "#55524c",
+                        "on-secondary-container": "#005397",
+                        "on-tertiary-fixed-variant": "#666664",
+                        "surface-container-low": "#f9f3e7",
+                        "on-surface": "#363225",
+                        "tertiary-fixed-dim": "#e6e5e2",
+                        "primary-container": "#e7e2d9"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .knowledge-tree-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .knowledge-tree-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .knowledge-tree-scroll::-webkit-scrollbar-thumb {
+            background: #e9e2ce;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full w-[56px] hover:w-[240px] transition-all duration-300 ease-in-out z-50 flex flex-col py-4 px-2 overflow-hidden bg-[#F7F6F3] dark:bg-slate-900 shadow-none font-['Inter'] antialiased text-[0.875rem] leading-[1.6] tracking-normal group">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-hidden whitespace-nowrap">
+<h1 class="text-lg font-semibold text-[#37352F] dark:text-white">Deskmate</h1>
+<p class="text-[10px] text-[#37352F]/60 uppercase tracking-widest">Editorial Workspace</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 p-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">smart_toy</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Agent Workspace</span>
+</a>
+<a class="flex items-center gap-3 p-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">local_library</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Library</span>
+</a>
+<!-- Active State: Question Bank -->
+<a class="flex items-center gap-3 p-2 bg-white dark:bg-slate-800 text-[#2383E2] font-semibold rounded-lg shrink-0" href="#">
+<span class="material-symbols-outlined shrink-0" style="font-variation-settings: 'FILL' 1;">quiz</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Question Bank</span>
+</a>
+<a class="flex items-center gap-3 p-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">rule</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Grading</span>
+</a>
+<a class="flex items-center gap-3 p-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white hover:bg-[#F7F6F3] dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg group/item" href="#">
+<span class="material-symbols-outlined shrink-0">edit_note</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Lesson Studio</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 space-y-1">
+<a class="flex items-center gap-3 p-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white rounded-lg" href="#">
+<span class="material-symbols-outlined shrink-0">settings</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Settings</span>
+</a>
+<div class="flex items-center gap-3 p-2 text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] dark:hover:text-white rounded-lg cursor-pointer">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">Profile</span>
+</div>
+</div>
+</aside>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-[56px] h-14 z-40 flex items-center justify-between px-6 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-[#37352f0d] dark:border-slate-800 font-['Inter']">
+<div class="flex items-center gap-4">
+<span class="text-[1.0rem] font-semibold text-[#37352F] dark:text-slate-100">Question Bank</span>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<nav class="flex gap-4">
+<a class="text-[#2383E2] border-b-2 border-[#2383E2] pb-0.5" href="#">Explore</a>
+<a class="text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] transition-opacity" href="#">Recent</a>
+<a class="text-[#37352F]/60 dark:text-slate-400 hover:text-[#37352F] transition-opacity" href="#">Drafts</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-[#37352F]/40">search</span>
+<input class="bg-[#F7F6F3] border-none rounded-lg pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-secondary/20 transition-all outline-hidden" placeholder="Search questions..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-[#37352F]/60 hover:text-[#37352F] transition-opacity"><span class="material-symbols-outlined">notifications</span></button>
+<button class="p-2 text-[#37352F]/60 hover:text-[#37352F] transition-opacity"><span class="material-symbols-outlined">help_outline</span></button>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="ml-[56px] mt-14 flex h-[calc(100vh-3.5rem)]">
+<!-- Left: Knowledge Point Tree -->
+<aside class="w-[280px] bg-surface-container-low border-r border-[#37352f0d] flex flex-col overflow-hidden shrink-0">
+<div class="p-6 pb-2">
+<h2 class="text-[10px] font-bold text-[#37352F]/40 uppercase tracking-widest mb-4">Knowledge Base</h2>
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+                        Curriculum Tree
+                    </span>
+<button class="text-[#2383E2]"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto knowledge-tree-scroll px-3 space-y-1">
+<!-- Node: Physics -->
+<div class="space-y-1">
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-white transition-colors cursor-pointer group">
+<div class="flex items-center gap-2 overflow-hidden">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/60">keyboard_arrow_down</span>
+<span class="material-symbols-outlined text-[18px] text-[#976D57]" style="font-variation-settings: 'FILL' 1;">folder</span>
+<span class="text-[13px] font-medium truncate">Physics 101</span>
+</div>
+<span class="text-[10px] bg-white px-1.5 py-0.5 rounded text-[#37352F]/40 font-bold">124</span>
+</div>
+<!-- Sub-nodes -->
+<div class="pl-6 space-y-1 border-l border-[#37352f0d] ml-4">
+<div class="flex items-center justify-between p-2 rounded-lg bg-white/80 text-[#2383E2] font-medium cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">article</span>
+<span class="text-[13px]">Mechanics</span>
+</div>
+<span class="text-[10px] opacity-60">42</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-white transition-colors cursor-pointer group/node">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40">article</span>
+<span class="text-[13px] text-[#37352F]/80">Thermodynamics</span>
+</div>
+<span class="text-[10px] text-[#37352F]/40">18</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-white transition-colors cursor-pointer group/node">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/40">article</span>
+<span class="text-[13px] text-[#37352F]/80">Electromagnetism</span>
+</div>
+<span class="text-[10px] text-[#37352F]/40">64</span>
+</div>
+</div>
+</div>
+<!-- Node: Chemistry -->
+<div class="space-y-1 pt-2">
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-white transition-colors cursor-pointer">
+<div class="flex items-center gap-2 overflow-hidden">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/60">keyboard_arrow_right</span>
+<span class="material-symbols-outlined text-[18px] text-[#AD7F24]" style="font-variation-settings: 'FILL' 1;">folder</span>
+<span class="text-[13px] font-medium truncate">Chemistry Advanced</span>
+</div>
+<span class="text-[10px] bg-white px-1.5 py-0.5 rounded text-[#37352F]/40 font-bold">89</span>
+</div>
+</div>
+<!-- Node: Math -->
+<div class="space-y-1 pt-2">
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-white transition-colors cursor-pointer">
+<div class="flex items-center gap-2 overflow-hidden">
+<span class="material-symbols-outlined text-[18px] text-[#37352F]/60">keyboard_arrow_right</span>
+<span class="material-symbols-outlined text-[18px] text-[#2383E2]" style="font-variation-settings: 'FILL' 1;">folder</span>
+<span class="text-[13px] font-medium truncate">Calculus BC</span>
+</div>
+<span class="text-[10px] bg-white px-1.5 py-0.5 rounded text-[#37352F]/40 font-bold">210</span>
+</div>
+</div>
+</div>
+<div class="p-4 bg-[#F7F6F3]/50 border-t border-[#37352f0d]">
+<button class="w-full flex items-center justify-center gap-2 py-2 px-4 bg-[#37352F] text-white rounded-lg text-xs font-semibold hover:bg-primary-dim transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    New Knowledge Point
+                </button>
+</div>
+</aside>
+<!-- Right: Question List Area -->
+<section class="flex-1 bg-white flex flex-col overflow-hidden">
+<!-- Filter Bar -->
+<div class="h-16 px-8 flex items-center justify-between border-b border-[#37352f0d] shrink-0">
+<div class="flex items-center gap-6">
+<h3 class="text-sm font-semibold text-[#37352F]">Mechanics <span class="text-[#37352F]/40 font-normal ml-1">/ 42 questions</span></h3>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-[#DDEDEA] text-[#4D7C0F]">Easy</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-[#FAEBDE] text-[#CC772F]">Medium</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#37352f0d] text-[13px] hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filters
+                    </button>
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#37352f0d] text-[13px] hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+                        Sort
+                    </button>
+</div>
+</div>
+<!-- List Content -->
+<div class="flex-1 overflow-y-auto p-8 space-y-6">
+<!-- Question Card 1: Expanded -->
+<div class="bg-surface-container-lowest border border-[#37352f0d] rounded-xl overflow-hidden shadow-xs">
+<div class="p-6 border-b border-[#37352f0d]">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-[#37352F]/30 tracking-tighter uppercase">#MECH-042</span>
+<div class="flex gap-2">
+<span class="px-2 py-0.5 rounded bg-orange-100/50 text-[#CC772F] text-[10px] font-semibold">Medium</span>
+<span class="px-2 py-0.5 rounded bg-blue-100/50 text-[#2383E2] text-[10px] font-semibold">Multiple Choice</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-1.5 hover:bg-surface-container rounded-md text-[#37352F]/60 transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1.5 hover:bg-surface-container rounded-md text-[#37352F]/60 transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<p class="text-[16px] leading-relaxed text-[#37352F] font-medium mb-8">
+                            A block of mass 2.0 kg is pushed against a spring with spring constant k = 500 N/m, compressing it by 0.1 m. When released, the block slides across a horizontal surface with a coefficient of kinetic friction μ = 0.2. What is the velocity of the block after it has traveled 0.5 m from the equilibrium position?
+                        </p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center p-4 rounded-lg bg-[#F7F6F3] border border-transparent hover:border-outline-variant/20 cursor-pointer group transition-all">
+<span class="w-8 h-8 rounded bg-white flex items-center justify-center font-bold text-xs mr-4 shadow-xs">A</span>
+<span class="text-[14px] flex-1">1.25 m/s</span>
+</div>
+<div class="flex items-center p-4 rounded-lg bg-[#DDEDEA] border border-[#4D7C0F]/20 cursor-pointer group transition-all">
+<span class="w-8 h-8 rounded bg-white flex items-center justify-center font-bold text-xs mr-4 shadow-xs text-[#4D7C0F]">B</span>
+<span class="text-[14px] flex-1 font-medium text-[#4D7C0F]">2.45 m/s</span>
+<span class="material-symbols-outlined text-[#4D7C0F] text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center p-4 rounded-lg bg-[#F7F6F3] border border-transparent hover:border-outline-variant/20 cursor-pointer group transition-all">
+<span class="w-8 h-8 rounded bg-white flex items-center justify-center font-bold text-xs mr-4 shadow-xs">C</span>
+<span class="text-[14px] flex-1">3.12 m/s</span>
+</div>
+<div class="flex items-center p-4 rounded-lg bg-[#F7F6F3] border border-transparent hover:border-outline-variant/20 cursor-pointer group transition-all">
+<span class="w-8 h-8 rounded bg-white flex items-center justify-center font-bold text-xs mr-4 shadow-xs">D</span>
+<span class="text-[14px] flex-1">0.85 m/s</span>
+</div>
+</div>
+<div class="bg-[#F7F6F3] rounded-lg p-5">
+<div class="flex items-center gap-2 text-[11px] font-bold text-[#37352F]/40 uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-[16px]">info</span>
+                                Explanation
+                            </div>
+<p class="text-[13px] leading-relaxed text-[#37352F]/80">
+                                First, calculate the potential energy stored in the spring: PE = ½kx² = ½(500)(0.1)² = 2.5 J. As the block moves, work is done by friction: W = μmgd = 0.2(2.0)(9.8)(0.5) = 1.96 J. By the work-energy theorem, KE_final = PE_initial - W_friction = 2.5 - 1.96 = 0.54 J. Finally, v = sqrt(2KE/m) = sqrt(2 * 0.54 / 2.0) ≈ 2.45 m/s.
+                            </p>
+</div>
+</div>
+<div class="px-6 py-4 bg-white flex items-center justify-end gap-3">
+<button class="px-4 py-2 text-xs font-semibold text-[#37352F]/60 hover:text-[#37352F] transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+                            Archive
+                        </button>
+<button class="px-4 py-2 text-xs font-semibold bg-[#2383E2] text-white rounded-lg hover:opacity-90 transition-all flex items-center gap-2 shadow-xs">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+                            Add to Exam
+                        </button>
+</div>
+</div>
+<!-- Question Card 2: Collapsed -->
+<div class="bg-surface-container-lowest border border-[#37352f0d] rounded-xl hover:shadow-md transition-all cursor-pointer">
+<div class="p-6">
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-[#37352F]/40">keyboard_arrow_right</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-[11px] font-bold text-[#37352F]/30 tracking-tight">#MECH-043</span>
+<div class="flex gap-2">
+<span class="px-2 py-0.5 rounded bg-green-100/50 text-[#4D7C0F] text-[10px] font-semibold">Easy</span>
+<span class="px-2 py-0.5 rounded bg-blue-100/50 text-[#2383E2] text-[10px] font-semibold">Multiple Choice</span>
+</div>
+</div>
+<h4 class="text-[15px] font-medium text-[#37352F] line-clamp-1">Definition of centripetal force and its relation to orbital velocity...</h4>
+<p class="text-[13px] text-[#37352F]/50 mt-1 line-clamp-2">Which of the following describes the necessary condition for a satellite to maintain a stable circular orbit around a planet of mass M at a distance R from the center?</p>
+</div>
+<button class="p-2 bg-surface-container-low hover:bg-secondary-container transition-colors rounded-lg group">
+<span class="material-symbols-outlined text-[20px] text-[#37352F]/60 group-hover:text-secondary transition-colors">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Question Card 3: Collapsed -->
+<div class="bg-surface-container-lowest border border-[#37352f0d] rounded-xl hover:shadow-md transition-all cursor-pointer">
+<div class="p-6">
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-[#37352F]/40">keyboard_arrow_right</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-[11px] font-bold text-[#37352F]/30 tracking-tight">#MECH-044</span>
+<div class="flex gap-2">
+<span class="px-2 py-0.5 rounded bg-pink-100/50 text-[#D44C47] text-[10px] font-semibold">Hard</span>
+<span class="px-2 py-0.5 rounded bg-purple-100/50 text-[#9065B0] text-[10px] font-semibold">Multiple Choice</span>
+</div>
+</div>
+<h4 class="text-[15px] font-medium text-[#37352F] line-clamp-1">Inelastic collisions in two dimensions with momentum conservation...</h4>
+<p class="text-[13px] text-[#37352F]/50 mt-1 line-clamp-2">Two particles of mass m and 2m collide inelastically at right angles. If their initial speeds were v and v/2 respectively, find the final velocity vector...</p>
+</div>
+<button class="p-2 bg-surface-container-low hover:bg-secondary-container transition-colors rounded-lg group">
+<span class="material-symbols-outlined text-[20px] text-[#37352F]/60 group-hover:text-secondary transition-colors">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Stats -->
+<div class="h-10 px-8 border-t border-[#37352f0d] flex items-center justify-between bg-surface-container-low/30 shrink-0">
+<div class="text-[10px] text-[#37352F]/40 font-medium">
+                    Showing 1-10 of 42 Questions in Mechanics
+                </div>
+<div class="flex gap-4">
+<button class="text-[10px] text-[#37352F]/60 hover:text-[#37352F] flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">arrow_back</span> Previous</button>
+<button class="text-[10px] text-[#37352F]/60 hover:text-[#37352F] flex items-center gap-1">Next <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button: Add Question -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="group flex items-center gap-3 bg-[#37352F] text-white pl-4 pr-6 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="text-sm font-semibold tracking-wide">New Question</span>
+</button>
+</div>
+</body></html>
+
+<!-- Library | All Documents -->
